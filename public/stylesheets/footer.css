@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
+#footer_line{
+background: #ff0000;
+color: white;
+text-align: center;
+padding: 5px;
+font-size: 20px;
+/*font-family: 'Raleway', sans-serif;*/
+}
+#footer_line a{
+    color: white;
+}
+#footer{
+    background: white;
+}
+#footer_oheo{
+    font-family: 'Pacifico', cursive;
+    color: #ADB0B6;
+    margin-top:5px;
+    margin-bottom: 0px;
+}
+#footer_lines{
+    color: #ADB0B6;
+    /*margin-left: 50px;*/
+    font-size: 12px;
+    margin-top: 20px;
+    /*font-family: 'Raleway', sans-serif;*/
+}
+footer{
+    background-color: #282C35;
+    padding-top: 10px;
+}
+#categories_footer a{
+    color: #ADB0B6;
+    list-style: none;
+    /*font-family: 'Raleway', sans-serif;*/
+    font-size: 13px;
+}
+#links_footer a{
+    color: #ADB0B6;
+    list-style: none;
+    /*font-family: 'Raleway', sans-serif;*/
+    font-size: 13px;
+}
+#footer_cat_head{
+    color: #ADB0B6;
+    font-size: 18px;
+    font-weight: 700;
+    /*font-family: 'Raleway', sans-serif;*/
+}
+#footer_links_head{
+    color: #ADB0B6;
+    font-size: 18px;
+    font-weight: 700;
+    /*font-family: 'Raleway', sans-serif;*/
+}
+#footer_madeby,#footer_madeby a{
+    color: #ADB0B6;
+    margin-top: 50px;
+}
+#footer_mail_head{
+    color: #ADB0B6;
+    font-size: 18px;
+    font-weight: 700;
+}
+#footer_mail_link{
+    color: #ADB0B6;
+    margin-bottom: 20px;
+}
+#footer_phone_head{
+    color: #ADB0B6;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+#footer_phone_link{
+    color: #ADB0B6;
+    margin-bottom: 10px;
+}
+#footer_followus_head{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #ADB0B6;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+}
+#footer_social_fb{
+    margin-right: 5px;
+    color: #ADB0B6;
+}
+#footer_social_g+{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #ADB0B6;
+}
+#footer_social_tweeter{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #ADB0B6;
+}
+#footer_social_insta{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #ADB0B6;
+}
+#footer_oheoLink a{
+	color: #ADB0B6;
+}
+#footer_oheoLink a:hover{
+	color: white;
+}
+#fb_btn{
+	background-color:  #3b5998;
+	color: white;
+	font-weight: bold;
+	margin: 3px;
+}
+#fb_btn:hover{
+	background-color:  white;
+	color: #3b5998;
+	border-color: #3b5998;
+}
+#instagram_btn{
+	background-color:  #fb3958;
+	color: white;
+	font-weight: bold;
+	margin: 3px;
+}
+#instagram_btn:hover{
+	background-color:  white;
+	color: #fb3958;
+	border-color: #fb3958;
+}

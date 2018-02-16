@@ -1,0 +1,95 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Redgini | Order placed!</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/products.css"/>
+    <link rel="stylesheet" href="/stylesheets/footer.css"/>
+    <link rel="stylesheet" href="/stylesheets/plainNav.css"/>
+    <link rel="stylesheet" href="/stylesheets/pickaday.css"/>
+    <link rel="stylesheet" href="/stylesheets/final.css"/>
+    <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+  </head> 
+  <body id="final">
+    {{>plainNav}}
+
+    <div class="container">
+      <div class="row">
+      <div class="col-md-8">
+         <div class="card shadow_depth_1" id="frame">
+            <h1 id="thankYou">THANK YOU...</h1>
+            <h5 id="orderNo">Order number : #NSK007</h5>
+            <p id="msg">We received your order and it has been confirmed. We will give you confirmation call as soon as possible. You will receive an email confirmation shortly regarding the order. </p>
+             <p id="delTime"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;Delivery time and date:&nbsp;&nbsp;&nbsp;&nbsp;<label id="time">8:30 PM</label>&nbsp;&nbsp;&nbsp;<label id="date">14th Oct, 2017</label>&nbsp;<label id="day">(Saturday)</label></p>
+             <p id="delAddress"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Delivery address:</p>
+             <p id="address">Flat no - 7, Ganguteli ki society, bhadwapati road, aage jake left, pune, United states of randwas, PIN - 696969</p>
+             <div class="row">
+                 <div class="col-md-4"><a href="/products"><button id="shopBtn" class="btn">Add more cakes!</button></a></div>
+                 <div class="col-md-4"></div>
+                 <div class="col-md-4"></div>
+             </div>
+         </div>
+      </div>
+      
+      <div class="col-md-4">
+         <div class="card shadow_depth_1" id="frame">
+         <h3 id="orderHeading">My order summary</h3>
+            <ul id="summaryOfItems">
+                <li id="listHeader">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">Product</div>
+                        <div class="col-md-2 col-sm-2">Qty</div>
+                        <div class="col-md-4 col-sm-4">Net Cost</div>
+                    </div>
+                </li>
+                <hr style="background-color:black">
+                <li class="listItems">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">White forest</div>
+                        <div class="col-md-2 col-sm-2">2</div>
+                        <div class="col-md-4 col-sm-4">Rs. 350</div>
+                    </div>
+                </li>
+                <li class="listItems">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">Chocolate truffle</div>
+                        <div class="col-md-2 col-sm-2">2</div>
+                        <div class="col-md-4 col-sm-4">Rs. 450</div>
+                    </div>
+                </li>
+                <li class="listItems">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">Choco pastries</div>
+                        <div class="col-md-2 col-sm-2">6</div>
+                        <div class="col-md-4 col-sm-4">Rs. 500</div>
+                    </div>
+                </li>
+                <li class="listItems">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">Mixed fruit cake with extra chocolate</div>
+                        <div class="col-md-2 col-sm-2">10</div>
+                        <div class="col-md-4 col-sm-4">Rs. 1000</div>
+                    </div>
+                </li>
+                <hr style="background-color:black">
+                <li class="totalItems">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">Total</div>
+                        <div class="col-md-2 col-sm-2">20</div>
+                        <div class="col-md-4 col-sm-4">Rs. 2300</div>
+                    </div>
+                </li>
+            </ul>
+
+         </div>
+      </div>
+     </div>
+   </div>
+   <br><br>
+    {{>footer}}
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+  </body>
