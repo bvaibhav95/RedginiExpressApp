@@ -20,15 +20,29 @@ body#checkout #cake_id_btn{
   color: white;
   font-weight: bold;
 }
-body#checkout #order_table{
-  padding:40px;
-}
 body#checkout #order_table th{
   font-size: 12px;
 }
 body#checkout .form-group{
   margin: 0 0 10px 40px;
   font-size: 12px;
+}
+body#checkout #addrow{
+  border-color: #cc0000;
+  color: #cc0000;
+  font-weight: bold;
+  background-color: white;
+}
+body#checkout #removeCake{
+  background-color: #cc0000;
+  color: white;
+  font-weight: bold;
+}
+body#checkout #removeCake:hover{
+  background-color: white;
+  color: #cc0000;
+  border-color: #cc0000;
+  cursor: pointer;
 }
 body#checkout .timeSlotHeader{
     font-size: 15px;
@@ -63,12 +77,14 @@ body#checkout #std_del_list li{
 body#checkout .time_header{
   font-size: 18px;
 }
-body#checkout #pay_btn{
+/* body#checkout #pay_btn{
   width: 100%;
   text-align: center;
   margin-top: 30px;
-}
+} */
 body#checkout .myBtn{
+  width: 100%;
+  text-align: center;
   color: white;
   background-color: #CC0000;
   font-weight: bold;
