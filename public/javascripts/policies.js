@@ -34,27 +34,5 @@ $(".link").click(function(e) {
       $('.mdb-select').material_select();
     });
     //===================//
-   //==========counter function starts=========//
-     $('.start_count').each(function () {
-       $(this).prop('Counter',0).animate({
-           Counter: $(this).text()
-       }, {
-           duration: 7000,
-           easing: 'swing',
-           step: function (now) {
-               $(this).text(Math.ceil(now));
-           }
-       });
-   });
-   //=============counter function ends============//
-   //==============contact message sent starts=============//
-   $('#msg_sent').hide();
-   $('#form_submit').click(function(){
-     $('#msg_sent').show();
-   });
-   //==============contact message sent ends=============//
    
-   //===========pop_pdt_hover_action starts===================//
-   
-   //===========pop_pdt_hover_action ends===================//
    

@@ -6,18 +6,18 @@
 			<div class="col-sm-3"></div>
 
 			<div class="col-sm-6">
-				<form class="" id="contact_form" action="#" method="POST">
+				<form id="contact_form" action="/sent" method="POST">
 
 					<div class="form-group">
 						<label for="form_name">Your Name</label>
-						<input type="text" class="form-control form-control-sm" id="form_name"name="contactform_name" value="" placeholder="">
+						<input type="text" class="form-control form-control-sm" id="form_name" name="contactform_name" value="" placeholder="">
 					</div>
 
 					<div class="form-group">
 					<label for="form_phone">Your phone</label>
  					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
 	 				<div class="input-group-addon">+91</div>
-            <input type="tel" class="form-control form-control-sm" id="form_phone" placeholder="">
+            			<input type="tel" class="form-control form-control-sm" id="form_phone" placeholder="" name="contactform_phone">
 					</div>
 					</div>
 
@@ -32,20 +32,20 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-4">
-							<button type="submit" name="contactform_submit" class="btn btn-danger btn-sm" id="form_submit">Send Message</button>
+							<button type="submit" class="btn btn-danger btn-sm" id="form_submit">Send Message</button>
 						</div>
 						<div class="col-sm-8">
-							<div class="alert alert-success" role="alert" id="msg_sent">
-               <strong>Thank you!</strong> Your message has been sent successfully
-              </div>
+							<div class="{{showClass}}" role="alert" id="msg_sent">
+               					<strong>{{msg1}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;{{msg2}}
+              				</div>
 						</div>
 					</div>
 
-						</form>
-					</div>
+				</form>
+			</div>
 
-					<div class="col-sm-3"></div>
-				</div>
-			  <hr class="style2">
+			<div class="col-sm-3"></div>
+		</div>
+		<hr class="style2">
 		</div>
   </div>
