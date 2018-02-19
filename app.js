@@ -21,8 +21,8 @@ var app = express();
 mongoose.connect('mongodb://bvaibhav.95:K1r9v9d5vul@ds241658.mlab.com:41658/redgini');
 // view engine setup
 app.engine('.hbs',expressHbs({extname: '.hbs', defaultLayout: 'layout'}));
-app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', '.hbs');
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
