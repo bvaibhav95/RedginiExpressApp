@@ -2,7 +2,7 @@ var Cake = require('../models/Cake');
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/shopping');
+mongoose.connect('mongodb://bvaibhav.95:K1r9v9d5vul@ds241658.mlab.com:41658/redgini');
 
 var cakes = [
     // Black forest cakes//

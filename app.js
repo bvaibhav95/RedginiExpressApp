@@ -18,7 +18,7 @@ var index = require('./routes/generalRoutes');
 var product = require('./routes/productRoutes');
 //========================================================================================
 var app = express();
-mongoose.connect('mongodb://localhost:27017/shopping');
+mongoose.connect('mongodb://bvaibhav.95:K1r9v9d5vul@ds241658.mlab.com:41658/redgini');
 // view engine setup
 app.engine('.hbs',expressHbs({extname: '.hbs', defaultLayout: 'layout'}));
 app.set('view engine', '.hbs');

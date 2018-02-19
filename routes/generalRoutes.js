@@ -3,7 +3,7 @@ var nodemailer = require('nodemailer');
 var mongoose = require('mongoose');
 var router = express.Router();
 
-mongoose.connect('mongodb://localhost:27017/shopping');
+mongoose.connect('mongodb://bvaibhav.95:K1r9v9d5vul@ds241658.mlab.com:41658/redgini');
 
 var Cake = require('../models/Cake');
 var Order = require('../models/Order');
