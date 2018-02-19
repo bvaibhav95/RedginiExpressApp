@@ -20,11 +20,17 @@ var product = require('./routes/productRoutes');
 var app = express();
 mongoose.connect('mongodb://bvaibhav.95:K1r9v9d5vul@ds241658.mlab.com:41658/redgini');
 // view engine setup
-app.engine('.hbs',expressHbs({extname: '.hbs', defaultLayout: 'layout'}));
-app.set('views', path.join(__dirname, 'views'));
+//app.engine('.hbs',expressHbs({extname: '.hbs', defaultLayout: 'layout'}));
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', '.bhs');
+app.engine('.hbs', expressHbs({
+  extname: '.hbs',
+  partialsDir: path.join(__dirname, 'views/partials'),
+  layoutsDir: path.join(__dirname, 'views/layouts')
+}));
 app.set('view engine', '.hbs');
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.set('views',path.join(__dirname,'views'))
+
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
