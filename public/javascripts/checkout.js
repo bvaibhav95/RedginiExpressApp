@@ -21,21 +21,24 @@ $("input[name=delTime]").on("change", function() {
         var newRow = $("<tr>");
         var cols = "";
 
-        cols += '<td class="col-md-2"><input id="" class="form-control form-control-sm cake_id" type="text"></td>'+
-        '<td class="col-md-3">Exotic black forest</td>'+
-        '<td class="col-md-1">Rs.360</td>'+
+        cols += '<td class="col-md-3"><div class="form-group">'+
+            '<select class="form-control form-control-sm" id="cake_ids">'+
+                '<option>Select</option>'+
+                '{{# each cakeIds}}'+
+                    '<option>{{this.id}}</option>'+
+                '{{/each}}'+
+            '</select>'+
+        '</div></td>'+
+        '<td class="col-md-3">{{cakeDeta}}Choose Cake ID</td>'+
+        '<td class="col-md-1">Rs.X</td>'+
         '<td class="col-md-2">'+
             '<div class="form-group">'+
                 '<select class="form-control form-control-sm" id="available_cake_weight">'+
-                '<option>1</option>'+
-                '<option>2</option>'+
-                '<option>3</option>'+
-                '<option>4</option>'+
-                '<option>5</option>'+
+                    '<option>?</option>'+
                 '</select>'+
             '</div>'+
         '</td>'+
-        '<td class="col-md-3">'+
+        '<td class="col-md-2">'+
             '<input id="" class="form-control form-control-sm" type="text">'+
         '</td>'; 
 
@@ -51,15 +54,31 @@ $("input[name=delTime]").on("change", function() {
     });
 
 // Cake ID autocomplete
-    var cakeIDs = [
-        "BF001",
-        "BF002",
-        "BF003",
-        "BS001",
-        "BS002",
-        "BS003",
-        "CC001",
-      ];
-      $(".cake_id").autocomplete({
-        source: cakeIDs
-      });
+
+    $("#cake_ids").change(function(){
+        $.ajax({
+            type: "GET",
+            url:"/detailsFromId/"+$(this).val(),
+            success: function(data){
+                $('#cake_name').html(data.name);
+                $('#cake_price').html('Rs.'+data.halfKgPrice);
+                for(var i=0; i<data.availableWeights.length; i++){
+                    $('#available_cake_weight').append('<option value="' + data.availableWeights[i] + '">' + data.availableWeights[i] + '</option>');
+                }
+            }
+        });
+    });
+
+    $("#available_cake_weight").change(function(){
+       $.ajax({
+            type: "GET",
+            url:"/detailsFromId/"+$('#cake_ids').val(),
+            success: function(data){
+                if(!isNaN($('#available_cake_weight').val())){
+                    $('#cake_price').html('Rs.'+data.halfKgPrice * $('#available_cake_weight').val() * 2);
+                }else{
+                    $('#cake_price').html('Rs.X');
+                }
+            }
+        }); 
+    });

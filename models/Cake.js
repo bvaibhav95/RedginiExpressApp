@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var schema = new Schema({
+var cakeSchema = new Schema({
     id : {type:String, required:true},
     name: {type: String, required: true},
     category: {type: String, required: true},
@@ -9,4 +9,4 @@ var schema = new Schema({
     halfKgPrice: {type: Number, required: true}
 });
 
-module.exports = mongoose.model('Cake', schema);
+module.exports = mongoose.model('Cake', cakeSchema);

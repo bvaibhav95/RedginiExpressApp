@@ -14,7 +14,8 @@ var validator = require('express-validator');
 var MongoStore = require('connect-mongo')(session);
 var nodeMailer = require('nodemailer');
 //Custom require js
-var index = require('./routes/index');
+var index = require('./routes/generalRoutes');
+var product = require('./routes/productRoutes');
 //========================================================================================
 var app = express();
 mongoose.connect('mongodb://localhost:27017/shopping');
@@ -28,9 +29,17 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(session({
+  secret: 'mysupersecret', 
+  resave: false, 
+  saveUninitialized: false,
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
+  cookie: { maxAge: 1 * 10 * 1000 }
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/products', product);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

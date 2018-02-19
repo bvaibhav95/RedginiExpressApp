@@ -22,6 +22,10 @@ body#checkout #cake_id_btn{
 }
 body#checkout #order_table th{
   font-size: 12px;
+  text-align: center;
+}
+body#checkout #order_table td{
+  text-align: center;
 }
 body#checkout .form-group{
   margin: 0 0 10px 40px;
@@ -43,6 +47,14 @@ body#checkout #removeCake:hover{
   color: #cc0000;
   border-color: #cc0000;
   cursor: pointer;
+}
+body#checkout #available_cake_weight{
+  width: 100%;
+}
+body#checkout #cake_ids{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 70%;
 }
 body#checkout .timeSlotHeader{
     font-size: 15px;
@@ -68,7 +80,7 @@ body#checkout #datepicker{
   margin-bottom: 30px;
   width: 40%;
 }
-body#checkout #std_del_list{
+body#checkout #std_del_list,#payModeList{
   list-style: none;
 }
 body#checkout #std_del_list li{

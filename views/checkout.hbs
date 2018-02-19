@@ -27,38 +27,43 @@
                         <table id="order_table" class="table table-bordered table-sm table-responsive-md order-list">
                             <thead>
                                 <tr>
-                                    <th class="col-md-2" scope="col">Cake ID</th>
+                                    <th class="col-md-3" scope="col">Cake ID</th>
                                     <th class="col-md-3" scope="col">Name</th>
                                     <th class="col-md-1" scope="col">Cost</th>
                                     <th class="col-md-2" scope="col">Weight</th>
-                                    <th class="col-md-3" scope="col">Message on cake!</th>
+                                    <th class="col-md-2" scope="col">Message on cake!</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="">
-                                    <td class="col-md-2"><input id="" class="form-control form-control-sm cake_id" type="text"></td>
-                                    <td class="col-md-3">Exotic black forest</td>
-                                    <td class="col-md-1">Rs.360</td>
+                                    <td class="col-md-3">
+                                        <div class="form-group">
+                                            <select class="form-control form-control-sm" id="cake_ids" name="cakeIds">
+                                                <option>Select</option>
+                                            {{# each cakeIds}}
+                                                <option>{{this.id}}</option>
+                                            {{/each}}
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td id="cake_name" name="cakeName" class="col-md-3">Choose Cake ID</td>
+                                    <td id="cake_price" name="cakePrice" class="col-md-1">Rs.X</td>
                                     <td class="col-md-2">
                                         <div class="form-group">
-                                            <select class="form-control form-control-sm" id="available_cake_weight">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <select class="form-control form-control-sm" id="available_cake_weight" name="orderWeight">
+                                                <option>?</option>
                                             </select>
                                         </div>
                                     </td>
                                     <td class="col-md-3">
-                                        <input id="" class="form-control form-control-sm" type="text">
+                                        <input id="msgOnCake" name="msgOnCake" class="form-control form-control-sm" type="text">
                                     </td>
-                                    <td class="col-md-1">
+                                    {{!-- <td class="col-md-1">
                                         <a class="deleteRow"></a>
-                                    </td>
+                                    </td> --}}
                                 </tr>
                             </tbody>
-                            <tfoot>
+                            {{!-- <tfoot>
                                 <tr>
                                     <td colspan="5" style="text-align: left;">
                                         <input type="button" class="btn btn-sm btn-block" id="addrow" value="Add more cakes!" />
@@ -66,8 +71,21 @@
                                 </tr>
                                 <tr>
                                 </tr>
-                            </tfoot>
+                            </tfoot> --}}
                         </table>
+                    </div>
+
+                    <div class="col-md-12">
+                        <h6><i class="fa fa-check-circle" aria-hidden="true"></i> Payment mode</h6>
+                        <p>We will get in touch with you regarding the payment, don't worry!</p>
+                        <ul id="payModeList">
+                            <li><input type="radio" name="payMode" value="Cash on delivery" id="payMode1" checked>
+                            <label for="payMode1">&nbsp;Cash on delivery</label></li>
+                            <li><input type="radio" name="payMode" value="Paytm on +91 9730807012" id="payMode2">
+                            <label for="payMode2">&nbsp;Paytm on +91 9730807012</label></li>
+                            <li><input type="radio" name="payMode" value="Google Tez on +91 9730807012" id="payMode3">
+                            <label for="payMode3">&nbsp;Google Tez on +91 9730807012</label></li>
+                        </ul>
                     </div>
 
                     <div class="col-md-12" id="">
@@ -75,22 +93,33 @@
                         <p>Enter your address details so that we can deliver your product to you as soon as possible !</p>
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control form-control-sm" id="name" value="" placeholder="">
+                            <input type="text" class="form-control form-control-sm" id="name" value="" name="userName">
+                        </div>
+
+                        <div class="row justify-content-start">
+                            <div class="form-group col-4">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control form-control-sm" id="email" value="" name="userEmail">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="phone">Mobile</label>
+                                <input type="text" class="form-control form-control-sm" id="phone" value="" name="userPhone">
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label for="form_flat">Flat / House / Office No.</label>
-                            <input type="text" class="form-control form-control-sm" id="form_flat" value="" placeholder="">
+                            <input type="text" class="form-control form-control-sm" id="form_flat" value="" name="userAddressLine1">
                         </div>
 
                         <div class="form-group">
                             <label for="form_street">Street / Society / Office Name</label>
-                            <input type="text" class="form-control form-control-sm" id="form_street" value="" placeholder="">
+                            <input type="text" class="form-control form-control-sm" id="form_street" value="" name="userAddressLine2">
                         </div>
 
                         <div class="form-group">
                             <label for="form_area">Area</label>
-                            <select class="form-control form-control-sm" id="form_area">
+                            <select class="form-control form-control-sm" id="form_area" name="userAddressLine3">
                                 <option>Gangapur road</option>
                                 <option>College road</option>
                                 <option>Indira nagar</option>
@@ -100,16 +129,17 @@
                                 <option>Gangapur gaon, Aanandwali, etc.</option>
                                 <option>Govind nagar</option>
                             </select>
-                        </div>
+                        </div> 
 
                         <div class="form-group">
                             <label for="form_city">City</label>
-                            <input type="text" class="form-control form-control-sm" id="form_state" placeholder="Nashik" disabled>
+                            <input type="text" class="form-control form-control-sm" id="form_state" placeholder="Nashik" value="Nashik" name="userCity" disabled>
                         </div>
                         <div class="form-group">
                             <label for="form_state">State</label>
-                            <input type="text" class="form-control form-control-sm" id="form_state" placeholder="Maharashtra" disabled>
+                            <input type="text" class="form-control form-control-sm" id="form_state" placeholder="Maharashtra" value="Maharashtra" name="userState" disabled>
                         </div>
+
                     </div>
                     
                     <hr>
@@ -118,27 +148,27 @@
                         <h6><i class="fa fa-check-circle" aria-hidden="true"></i> Delivery date & time</h6>
                         <p>Choose the time which is convenient to you...please checkout our delivery policies carefully !</p>
                         <p>Choose delivery date</p>
-                        <p><input type="text" id="datepicker" class="form-control form-control-sm"></p>
+                        <p><input type="text" id="datepicker" class="form-control form-control-sm" name="delDate"></p>
                         <p>Choose delivery time</p>
                         <ul id="std_del_list">
                             <p class="timeSlotHeader">Standard delivery</p>
-                            <li><input type="radio" name="delTime" value="1" id="delTime1" checked><label                                              for="delTime1">&nbsp;04:00PM - 06:00PM</label></li>
-                            <li><input type="radio" name="delTime" value="2" id="delTime2"><label                                              for="delTime2">&nbsp;06:00PM - 08:00PM</label></li>
-                            <li><input type="radio" name="delTime" value="3" id="delTime3"><label                                              for="delTime3">&nbsp;08:00PM - 11:00PM</label></li>
+                            <li><input type="radio" name="delTime" value="04:00PM - 06:00PM" id="delTime1" checked><label for="delTime1">&nbsp;04:00PM - 06:00PM</label></li>
+                            <li><input type="radio" name="delTime" value="06:00PM - 08:00PM" id="delTime2"><label for="delTime2">&nbsp;06:00PM - 08:00PM</label></li>
+                            <li><input type="radio" name="delTime" value="08:00PM - 11:00PM" id="delTime3"><label for="delTime3">&nbsp;08:00PM - 11:00PM</label></li>
                             <p class="timeSlotHeader">Mid night delivery</p>
-                            <li><input type="radio" name="delTime" value="4" id="delTime4"><label                                              for="delTime4">&nbsp;11:00PM - 11:30PM</label></li>
-                            <li><input type="radio" name="delTime" value="5" id="delTime5"><label                                              for="delTime5">&nbsp;11:30PM - 11:59PM</label></li>
+                            <li><input type="radio" name="delTime" value="11:00PM - 11:30PM" id="delTime4"><label for="delTime4">&nbsp;11:00PM - 11:30PM</label></li>
+                            <li><input type="radio" name="delTime" value="11:30PM - 11:59PM" id="delTime5"><label for="delTime5">&nbsp;11:30PM - 11:59PM</label></li>
                             <p class="timeSlotHeader">Morning delivery</p>
-                            <li><input type="radio" name="delTime" value="6" id="delTime6"><label                                              for="delTime6">&nbsp;09:00AM - 11:00AM</label></li>
-                            <li><input type="radio" name="delTime" value="7" id="delTime7"><label                                             for="delTime7">&nbsp;11:00AM - 01:00PM</label></li>
-                            <li><input type="radio" name="delTime" value="8" id="delTime8"><label                                              for="delTime8">&nbsp;01:00PM - 04:00PM</label></li>
+                            <li><input type="radio" name="delTime" value="09:00AM - 11:00AM" id="delTime6"><label for="delTime6">&nbsp;09:00AM - 11:00AM</label></li>
+                            <li><input type="radio" name="delTime" value="11:00AM - 01:00PM" id="delTime7"><label for="delTime7">&nbsp;11:00AM - 01:00PM</label></li>
+                            <li><input type="radio" name="delTime" value="01:00PM - 04:00PM" id="delTime8"><label for="delTime8">&nbsp;01:00PM - 04:00PM</label></li>
                         </ul>
                     </div>
 
                     <hr>
 
                     <div class="col-md-12">
-                        <p><button type="submit" class="btn myBtn" id="confirm_btn" name="confirm_btn">Confirm my order!</button></p>
+                        <p><button type="submit" class="btn myBtn" id="confirm_btn">Confirm my order!</button></p>
                     </div>
                 </div>
                 </form>
