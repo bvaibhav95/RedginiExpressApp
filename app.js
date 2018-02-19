@@ -20,9 +20,6 @@ var product = require('./routes/productRoutes');
 var app = express();
 mongoose.connect('mongodb://bvaibhav.95:K1r9v9d5vul@ds241658.mlab.com:41658/redgini');
 // view engine setup
-//app.engine('.hbs',expressHbs({extname: '.hbs', defaultLayout: 'layout'}));
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', '.bhs');
 app.engine('.hbs', expressHbs({
   extname: '.hbs',
   partialsDir: path.join(__dirname, 'views/partials'),
