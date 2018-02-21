@@ -150,7 +150,7 @@ router.post('/sent', function(req, res, next) {
         console.log('Message sent: %s', info.messageId);
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-        res.render('index', {showClass: 'alert alert-success', msg1: 'Thank you!', msg2:'We will contact you soon...'});
+        res.render('index', {showClass: 'alert alert-success', msg1: 'Thank you!', msg2:'We will contact you soon...', title: 'Redgini | Love in every bite'});
     });
 });
 
