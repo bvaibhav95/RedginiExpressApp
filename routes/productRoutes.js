@@ -35,6 +35,17 @@ router.get('/chocolate', function(req, res, next) {
   });
 });
 
+router.get('/oreo', function(req, res, next) {
+  Cake.find({category:'or'},function(err, docs){
+    var cakeChunks = [];
+    var chunkSize = 3;
+    for (var i = 0; i < docs.length; i += chunkSize) {
+        cakeChunks.push(docs.slice(i, i + chunkSize));
+    }
+    res.render('products', {cakes: cakeChunks});
+  });
+});
+
 router.get('/fruit', function(req, res, next) {
   Cake.find({category:'fc'},function(err, docs){
     var cakeChunks = [];

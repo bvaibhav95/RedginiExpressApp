@@ -218,16 +218,14 @@ body#cake_product_page .cake_box_row{
 	padding: 5px 0px 5px 0px;
 
 }
-/* body#cake_product_page .cake_box{
-
-} */
 body#cake_product_page .cake_box:hover{
 	cursor: pointer;
 }
 body#cake_product_page .cake_box img{
-	height: 150px;
-	margin-top: 10px;
-	border-radius: 7px;
+	height: 250px;
+	width: 100%;
+	/* margin-top: 10px; */
+	/* border-radius: 7px; */
 	vertical-align: middle;
 }
 body#cake_product_page .addToCart_btn{
@@ -265,11 +263,11 @@ body#cake_product_page input.qtyminus {
 	 height:20px;
 }
 body#cake_product_page .cake_name{
-	font-size: 18px;
+	font-size: 15px;
 	font-family: 'Quicksand', sans-serif;
 }
 body#cake_product_page .cake_id{
-	font-size: 18px;
+	font-size: 15px;
 	font-family: 'Quicksand', sans-serif;
 }
 body#cake_product_page .available_weight{

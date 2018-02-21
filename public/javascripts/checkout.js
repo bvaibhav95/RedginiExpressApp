@@ -56,6 +56,7 @@ $("input[name=delTime]").on("change", function() {
 // Cake ID autocomplete
 
     $("#cake_ids").change(function(){
+        $('#available_cake_weight').find('option').remove();
         $.ajax({
             type: "GET",
             url:"/detailsFromId/"+$(this).val(),

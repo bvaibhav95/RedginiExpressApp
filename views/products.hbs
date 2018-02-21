@@ -59,6 +59,7 @@
           <a href="/products/blackforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">Black forest cakes</a>
           <a href="/products/butterscotch" class="list-group-item list-group-item-action sidebar_cake_cat_items">Butterscotch cakes</a>
           <a href="/products/chocolate" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate cakes</a>
+          <a href="/products/oreo" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate oreo cakes</a>
           <a href="/products/fruit" class="list-group-item list-group-item-action sidebar_cake_cat_items">Fruit cakes</a>
           <a href="/products/pineapple" class="list-group-item list-group-item-action sidebar_cake_cat_items">Pineapple cakes</a>
           <a href="/products/redvelvet" class="list-group-item list-group-item-action sidebar_cake_cat_items">Red velvet cakes</a>
@@ -80,9 +81,9 @@
               <div class="row" style="margin: 10px 0px 10px 0px;">
                 {{# each this}}
                   <div class="col-md-4">
-                      <div class="card collection-card shadow">
+                      <div class="card collection-card shadow cake_box">
                           <div class="view hm-zoom cake_images">
-                              <img src="/images/cake18.jpg" class="img-fluid" alt="">
+                              <img src="/images/{{this.id}}.jpg" class="img-fluid" alt="">
                               <a>
                                   <div class="mask  waves-light"></div>
                               </a>
@@ -91,7 +92,7 @@
                           <div class="card-block text-center">
                               <div class="row">
                               <div class="col-lg-6">
-                                <p class="cake_name">Name</p>
+                                <p class="cake_name">{{this.name}}</p>
                               </div>
                               <div class="col-lg-6">
                                 <p class="cake_id">ID - {{this.id}}</p>
@@ -99,10 +100,10 @@
                               </div>
                               <div class="row">
                               <div class="col-sm-6">
-                                <p class="cake_price">1/2 kg - Rs.350</p>
+                                <p class="cake_price"><b>1/2 kg - Rs.{{this.halfKgPrice}}</b></p>
                               </div>
                               <div class="col-sm-6">
-                                <p class="cake_weight">Blackforest</p>
+                                <p class="cake_weight"></p>
                               </div>
                               </div>
                               <div class="row justify-content-center">
