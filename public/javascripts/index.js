@@ -1,3 +1,13 @@
+// $('#cake_card').click(function(){
+//     alert("clicked");
+//     $.ajax({
+//         type: "GET",
+//         url:"/products/blackforest",
+//         success: function(data){
+            
+//         }
+//     });
+// });
 //==========counter function starts=========//
 $('.start_count').each(function () {
     $(this).prop('Counter',0).animate({

@@ -132,21 +132,21 @@ var cakes = [
         name: 'Belgium truffle',
         category: 'tf',
         availableWeights: [0.5,1],
-        halfKgPrice: 350
+        halfKgPrice: 370
     }),
     new Cake({
         id: 'bt002',
         name: 'Belgium truffle',
         category: 'tf',
         availableWeights: [0.5,1],
-        halfKgPrice: 370
+        halfKgPrice: 400
     }),
     new Cake({
         id: 'bt003',
         name: 'Belgium truffle',
         category: 'tf',
         availableWeights: [0.5,1],
-        halfKgPrice: 370
+        halfKgPrice: 380
     }),
     //Chocolate chip cakes
     new Cake({
@@ -154,21 +154,21 @@ var cakes = [
         name: 'Chocolate chips',
         category: 'ch',
         availableWeights: [0.5,1],
-        halfKgPrice: 370
+        halfKgPrice: 380
     }),
     new Cake({
         id: 'cc002',
         name: 'Chocolate chips',
         category: 'ch',
         availableWeights: [0.5,1],
-        halfKgPrice: 350
+        halfKgPrice: 380
     }),
     new Cake({
         id: 'cc003',
         name: 'Chocolate chips',
         category: 'ch',
         availableWeights: [0.5,1],
-        halfKgPrice: 350
+        halfKgPrice: 380
     }),
     new Cake({
         id: 'cc005',
@@ -183,14 +183,14 @@ var cakes = [
         name: 'Chocolate kitkat',
         category: 'ch',
         availableWeights: [0.5,1],
-        halfKgPrice: 350
+        halfKgPrice: 390
     }),
     new Cake({
         id: 'ck002',
         name: 'Chocolate kitkat',
         category: 'ch',
         availableWeights: [0.5,1],
-        halfKgPrice: 350
+        halfKgPrice: 390
     }),
     new Cake({
         id: 'ck006',
@@ -204,7 +204,7 @@ var cakes = [
         name: 'Chocolate kitkat',
         category: 'ch',
         availableWeights: [0.5,1],
-        halfKgPrice: 350
+        halfKgPrice: 390
     }),
     //chocolate truufle cakes
     new Cake({
@@ -212,7 +212,7 @@ var cakes = [
         name: 'Chocolate truffle',
         category: 'tf',
         availableWeights: [0.5,1],
-        halfKgPrice: 360
+        halfKgPrice: 380
     }),
     new Cake({
         id: 'ct002',
@@ -234,7 +234,7 @@ var cakes = [
         name: 'Dutch truffle',
         category: 'tf',
         availableWeights: [0.5,1],
-        halfKgPrice: 360
+        halfKgPrice: 380
     }),
     //Fruit cake
     new Cake({
@@ -242,14 +242,14 @@ var cakes = [
         name: 'Vanilla Fruit cake',
         category: 'fc',
         availableWeights: [0.5,1],
-        halfKgPrice: 350
+        halfKgPrice: 370
     }),
     new Cake({
         id: 'fc003',
         name: 'vanilla Fruit cake',
         category: 'fc',
         availableWeights: [0.5,1],
-        halfKgPrice: 360
+        halfKgPrice: 370
     }),
     new Cake({
         id: 'fc005',
@@ -321,7 +321,7 @@ var cakes = [
         name: 'Chocolate oreo',
         category: 'or',
         availableWeights: [0.5,1],
-        halfKgPrice: 360
+        halfKgPrice: 380
     }),
     new Cake({
         id: 'or006',
@@ -479,7 +479,7 @@ var cakes = [
         name: 'Strawberry vanilla',
         category: 'sv',
         availableWeights: [0.5,1],
-        halfKgPrice: 360
+        halfKgPrice: 380
     }),
     new Cake({
         id: 'sv006',
