@@ -508,3 +508,33 @@ body#cake_product_page #facebook_btn:hover{
 	border-color: #3b5998;
 }
 /*========social section ends========*/
+@media (min-width: 350px) {
+	body#cake_product_page .cake_images img{
+	    width: 100%;
+	    height: 180px;
+	}
+}
+@media (min-width: 575px) {
+	body#cake_product_page .cake_images img{
+	    width: 100%;
+	    height: 160px;
+	}
+}
+@media (min-width: 768px) {
+	body#cake_product_page .cake_images img{
+	    width: 100%;
+	    height: 160px;
+	}
+}
+@media (min-width: 992px) {
+	body#cake_product_page .cake_images img{
+	    width: 100%;
+	    height: 220px;
+	}
+}
+@media (min-width: 1200px) {
+	body#cake_product_page .cake_images img{
+	    width: 100%;
+	    height: 220px;
+	}
+}
