@@ -107,8 +107,14 @@ body#final .totalItems{
     body#final #delTime{
         font-size: 12px;
     }
+    body#final #time{
+        font-size: 12px;
+    }
+    body#final #date{
+        font-size: 12px;
+    }
     body#final #delAddress{
-        font-size: 15px;
+        font-size: 13px;
     }
     body#final #address{
         font-size: 10px; 
@@ -131,6 +137,12 @@ body#final .totalItems{
         font-size: 10px;
     }
     body#final #delTime{
+        font-size: 18px;
+    }
+    body#final #time{
+        font-size: 18px;
+    }
+    body#final #date{
         font-size: 18px;
     }
     body#final #delAddress{
@@ -159,6 +171,12 @@ body#final .totalItems{
     body#final #delTime{
         font-size: 20px;
     }
+    body#final #time{
+        font-size: 20px;
+    }
+    body#final #date{
+        font-size: 20px;
+    }
     body#final #delAddress{
         font-size: 20px;
     }
@@ -185,6 +203,12 @@ body#final .totalItems{
     body#final #delTime{
         font-size: 22px;
     }
+    body#final #time{
+        font-size: 22px;
+    }
+    body#final #date{
+        font-size: 22px;
+    }
     body#final #delAddress{
         font-size: 22px;
     }
@@ -209,6 +233,12 @@ body#final .totalItems{
         font-size: 14px;
     }
     body#final #deltime{
+        font-size: 25px;
+    }
+    body#final #time{
+        font-size: 25px;
+    }
+    body#final #date{
         font-size: 25px;
     }
     body#final #delAddress{
