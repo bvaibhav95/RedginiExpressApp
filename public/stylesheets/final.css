@@ -94,7 +94,7 @@ body#final .totalItems{
     color:black;
     padding: 3px 0px 3px 0px;
 }
-@media (min-width: 350px) {
+@media (max-width: 574px) {
 	body#final #thankYou{
 	    font-size: 30px;
     }
@@ -105,7 +105,7 @@ body#final .totalItems{
         font-size: 9px;
     }
     body#final #delTime{
-        font-size: 15px;
+        font-size: 12px;
     }
     body#final #delAddress{
         font-size: 15px;
