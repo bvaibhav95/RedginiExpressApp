@@ -18,50 +18,44 @@
     {{>orderCancel}}
     <div class="container">
       <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-sm-12 col-xs-12">
          <div class="card shadow_depth_1" id="frame">
             <h1 id="thankYou">THANK YOU...</h1>
             <h5 id="orderNo">Order number : #NSK007</h5>
-            <p id="msg">We received your order and it has been confirmed. We will give you confirmation call as soon as possible. You will receive an email confirmation shortly regarding the order. </p>
-             <p id="delTime"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;Delivery time and date:&nbsp;&nbsp;<label id="time">{{orderDetails.delTime}}</label>&nbsp;|&nbsp;<label id="date">{{orderDetails.delDate}}</label></p>
+            <p id="msg">We have received your order and it has been confirmed. We will give you confirmation call as soon as possible. You will receive an email confirmation shortly regarding the order. </p>
+             <p id="delTime"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;Delivery time and date:&nbsp;&nbsp;<br><label id="time">{{orderDetails.delTime}}</label>&nbsp;|&nbsp;<label id="date">{{orderDetails.delDate}}</label></p>
              <p id="delAddress"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Delivery address:</p>
              <p id="address">{{orderDetails.userAddressLine1}},{{orderDetails.userAddressLine2}},{{orderDetails.userAddressLine3}},Nashik,Maharashtra</p>
              <div class="row">
-                 <div class="col-md-4"><a href="/products/blackforest"><button id="shopBtn" class="btn">Place new order here!</button></a></div>
-                 <div class="col-md-4"><button id="shopBtn" class="btn" data-toggle="modal" data-target="#changeOrCancel">Order change/cancellation?</button></div>
+                 <div class="col-md-4 col-sm-6 col-xs-6"><a href="/products/blackforest"><button id="shopBtn" class="btn btn-sm">Place new order here!</button></a></div>
+                 <div class="col-md-4 col-sm-6 col-xs-6"><button id="shopBtn" class="btn btn-sm" data-toggle="modal" data-target="#changeOrCancel">Order change/cancellation?</button></div>
                  <div class="col-md-4"></div>
              </div>
          </div>
       </div>
       
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-12 col-xs-12">
          <div class="card shadow_depth_1" id="frame">
          <h3 id="orderHeading">My order summary</h3>
-            <ul id="summaryOfItems">
-                <li id="listHeader">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">Product</div>
-                        <div class="col-md-2 col-sm-2">Qty</div>
-                        <div class="col-md-4 col-sm-4">Net Cost</div>
-                    </div>
-                </li>
+            <div id="summaryOfItems">
+                <div id="listHeader" class="row">
+                    <div class="col-6">Product</div>
+                    <div class="col-2">Qty</div>
+                    <div class="col-4">Net Cost</div>
+                </div>
                 <hr style="background-color:black">
-                <li id="listHeader">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">{{orderDetails.cakeName}}</div>
-                        <div class="col-md-2 col-sm-2">1</div>
-                        <div class="col-md-4 col-sm-4">Rs. {{orderDetails.cakePrice}}</div>
-                    </div>
-                </li>
+                <div class="row listItems">
+                    <div class="col-6">{{orderDetails.cakeName}}</div>
+                    <div class="col-2">1</div>
+                    <div class="col-4">Rs. {{orderDetails.cakePrice}}</div>
+                </div>
                 <hr style="background-color:black">
-                <li class="totalItems">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">Total</div>
-                        <div class="col-md-2 col-sm-2">1</div>
-                        <div class="col-md-4 col-sm-4">Rs. {{orderDetails.cakePrice}}</div>
-                    </div>
-                </li>
-            </ul>
+                <div class="row totalItems">
+                    <div class="col-6">Total</div>
+                    <div class="col-2">1</div>
+                    <div class="col-4">Rs. {{orderDetails.cakePrice}}</div>
+                </div>
+            </div>
 
          </div>
       </div>

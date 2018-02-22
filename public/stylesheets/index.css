@@ -70,7 +70,6 @@ body#homepage .spec_header{
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
 	font-weight: bold;
-	text-align: center;
 }
 body#homepage .spec_desc{
 	margin-bottom: 15px;
@@ -116,9 +115,8 @@ body#homepage .cat_desc{
 body#homepage .cat_card_img{
 	height: 150px;
 	width: 100%;
-	/* padding: 5px;  */
 }
-body#homepage .cat_row1,.cat_row2,.cat_row3{
+body#homepage .cat_row .cat_boxes{
 	margin-bottom: 25px;
 }
 
@@ -126,26 +124,6 @@ body#homepage .card:hover{
 	border-color: #A8A8A8;
 }
 
-body#homepage .shadow_depth_1{
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  }
-body#homepage .shadow_depth_2{
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-body#homepage .shadow_depth_3{
-  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  }
-body#homepage .shadow_depth_4{
-   -webkit-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-  -moz-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-  }
 /*=============categories ends============*/
 /*==============counter design starts=============*/
 body#homepage #counter_show{
@@ -250,71 +228,7 @@ body#homepage .blockquote{
 body#homepage .blockquote-footer{
 	margin: 1rem 0 0;
 }
-@media (min-width: 350px) {
-	body#homepage #coverOffers img {
-	    width: 100%;
-	    height: 165px;
-		display: flex;
-		align-items: center;
-	}
-	/* body#homepage .cat_card_img{
-		height: 120px;
-	 	width: 120px;
-		padding: 10px 5px 10px 25px;
-	} */
-}
-@media (min-width: 575px) {
-	body#homepage #coverOffers img {
-	    width: 100%;
-	    height: 200px;
-		display: flex;
-		align-items: center;
-	}
-	/* body#homepage .cat_card_img{
-		height: 130px;
-	 	width: 130px;
-		padding: 10px 5px 10px 25px;
-	} */
-}
-@media (min-width: 768px) {
-	body#homepage #coverOffers img {
-	    width: 100%;
-	    height: 250px;
-		display: flex;
-		align-items: center;
-	}
-	/* body#homepage .cat_card_img{
-		height: 150px;
-		width: 150px;
-		padding: 10px 5px 10px 25px;
-	} */
-}
-@media (min-width: 992px) {
-	body#homepage #coverOffers img {
-	    width: 100%;
-	    height: 350px;
-		display: flex;
-		align-items: center;
-	}
-	/* body#homepage .cat_card_img{
-		height: 150px;
-		width: 150px;
-		padding: 10px 5px 10px 25px;
-	} */
-}
-@media (min-width: 1200px) {
-	body#homepage #coverOffers img {
-	    width: 100%;
-	    height: 400px;
-		display: flex;
-		align-items: center;
-	}
-	/* body#homepage .cat_card_img{
-		height: 170px;
-		width: 170px;
-		padding: 10px 5px 10px 25px;
-	} */
-}
+
 
 body#homepage #coverpage_caption{
 	font-size: 1.4rem;
@@ -373,10 +287,12 @@ body#homepage #testimonials h2 {
 body#homepage .testimonials_desc{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 15px;
+	text-align: center;
 }
 body#homepage .testimonials_names{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
+	font-size: 17px;
+	text-align: center;
 }
 
 body#homepage .carousel-item img {
@@ -475,3 +391,351 @@ body#homepage #input_otp{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+@media (max-width: 574px) {
+	body#homepage #coverOffers img {
+	    width: 100%;
+	    height: 150px;
+	}
+	body#homepage .cat_card_img{
+		height: 100px;
+	 	width: 100%;
+	}
+	body#homepage .cat_name{
+		font-size: 10px;
+	}
+	body#homepage .cat_desc{
+		font-size: 8px;
+	}
+	body#homepage #cat_header h2{
+		font-size: 24px;
+	}
+	body#homepage #aboutus h2{
+		font-size: 24px;
+	}
+	body#homepage #testimonials h2{
+		font-size: 24px;
+	}
+	body#homepage #contactus h2{
+		font-size: 24px;
+	}
+	body#homepage #contactus h5{
+		font-size: 10px;
+	}
+	body#homepage .contactLabels{
+		font-size: 10px;
+	}
+	body#homepage .cat_row .cat_boxes{
+		margin-bottom: 10px;
+	}
+	body#homepage #aboutus p{
+		font-size: 9px;
+	}
+	body#homepage #aboutus h2{
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	body#homepage #speciality{
+		font-size: 20px;
+	}
+	body#homepage .spec_header{
+		font-size: 10px;
+	}
+	body#homepage .spec_desc{
+		font-size: 8px;
+	}
+	body#homepage .testimonials_names{
+		font-size: 10px;
+	}
+	body#homepage .testimonials_desc{
+		font-size: 8px;
+	}
+	body#homepage .testimonials_img{
+		width: 70px;
+		height: 70px;
+	}
+	body#homepage .counter-blk h1{
+		font-size: 20px;
+	}
+	body#homepage .counter-blk p{
+		font-size: 12px;
+	}
+}
+@media (min-width: 575px) {
+	body#homepage #coverOffers img {
+	    width: 100%;
+	    height: 200px;
+	}
+	body#homepage .cat_card_img{
+		height: 100px;
+	 	width: 100%;
+	}
+	body#homepage .cat_name{
+		font-size: 12px;
+	}
+	body#homepage .cat_desc{
+		font-size: 10px;
+	}
+	body#homepage .cat_name{
+		font-size: 12px;
+	}
+	body#homepage .cat_desc{
+		font-size: 9px;
+	}
+	body#homepage #cat_header h2{
+		font-size: 27px;
+	}
+	body#homepage #aboutus h2{
+		font-size: 27px;
+	}
+	body#homepage #contactus h2{
+		font-size: 27px;
+	}
+	body#homepage #contactus h5{
+		font-size: 12px;
+	}
+	body#homepage .contactLabels{
+		font-size: 12px;
+	}
+	body#homepage #testimonials h2{
+		font-size: 27px;
+	}
+	body#homepage #aboutus p{
+		font-size: 10px;
+	}
+	body#homepage #aboutus h2{
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	body#homepage #speciality{
+		font-size: 22px;
+	}
+	body#homepage .spec_header{
+		font-size: 12px;
+	}
+	body#homepage .spec_desc{
+		font-size: 10px;
+	}
+	body#homepage .testimonials_names{
+		font-size: 11px;
+	}
+	body#homepage .testimonials_desc{
+		font-size: 10px;
+	}
+	body#homepage .testimonials_img{
+		width: 80px;
+		height: 80px;
+	}
+	body#homepage .counter-blk h1{
+		font-size: 25px;
+	}
+	body#homepage .counter-blk p{
+		font-size: 16px;
+	}
+}
+@media (min-width: 768px) {
+	body#homepage #coverOffers img {
+	    width: 100%;
+	    height: 250px;
+	}
+	body#homepage .cat_card_img{
+		height: 120px;
+		width: 100%;
+	}
+	body#homepage .cat_name{
+		font-size: 14px;
+	}
+	body#homepage .cat_desc{
+		font-size: 10px;
+	}
+	body#homepage #cat_header h2{
+		font-size: 30px;
+	}
+	body#homepage #aboutus h2{
+		font-size: 30px;
+	}
+	body#homepage #testimonials h2{
+		font-size: 30px;
+	}
+	body#homepage #contactus h2{
+		font-size: 30px;
+	}
+	body#homepage #contactus h5{
+		font-size: 14px;
+	}
+	body#homepage .contactLabels{
+		font-size: 14px;
+	}
+	body#homepage #aboutus p{
+		font-size: 12px;
+	}
+	body#homepage #speciality{
+		font-size: 25px;
+	}
+	body#homepage .spec_header{
+		font-size: 13px;
+	}
+	body#homepage .spec_desc{
+		font-size: 11px;
+	}
+	body#homepage .testimonials_names{
+		font-size: 13px;
+	}
+	body#homepage .testimonials_desc{
+		font-size: 12px;
+	}
+	body#homepage .testimonials_img{
+		width: 100px;
+		height: 100px;
+	}
+	body#homepage .counter-blk h1{
+		font-size: 30px;
+	}
+	body#homepage .counter-blk p{
+		font-size: 18px;
+	}
+}
+@media (min-width: 992px) {
+	body#homepage #coverOffers img {
+	    width: 100%;
+	    height: 350px;
+	}
+	body#homepage .cat_card_img{
+		height: 140px;
+		width: 100%;
+	}
+	body#homepage .cat_name{
+		font-size: 16px;
+	}
+	body#homepage .cat_desc{
+		font-size: 11px;
+	}
+	body#homepage #cat_header h2{
+		font-size: 35px;
+	}
+	body#homepage #aboutus h2{
+		font-size: 35px;
+	}
+	body#homepage #testimonials h2{
+		font-size: 35px;
+	}
+	body#homepage #contactus h2{
+		font-size: 35px;
+	}
+	body#homepage #contactus h5{
+		font-size: 16px;
+	}
+	body#homepage .contactLabels{
+		font-size: 16px;
+	}
+	body#homepage #aboutus p{
+		font-size: 14px;
+	}
+	body#homepage #speciality{
+		font-size: 30px;
+	}
+	body#homepage .spec_header{
+		font-size: 15px;
+	}
+	body#homepage .spec_desc{
+		font-size: 13px;
+	}
+	body#homepage .testimonials_names{
+		font-size: 15px;
+	}
+	body#homepage .testimonials_desc{
+		font-size: 13px;
+	}
+	body#homepage .testimonials_img{
+		width: 120px;
+		height: 120px;
+	}
+	body#homepage .counter-blk h1{
+		font-size: 35px;
+	}
+	body#homepage .counter-blk p{
+		font-size: 21px;
+	}
+}
+@media (min-width: 1200px) {
+	body#homepage #coverOffers img {
+	    width: 100%;
+	    height: 400px;
+	}
+	body#homepage .cat_card_img{
+		height: 160px;
+		width: 100%;
+	}
+	body#homepage .cat_name{
+		font-size: 18px;
+	}
+	body#homepage .cat_desc{
+		font-size: 12px;
+	}
+	body#homepage #cat_header h2{
+		font-size: 40px;
+	}
+	body#homepage #aboutus h2{
+		font-size: 40px;
+	}
+	body#homepage #testimonials h2{
+		font-size: 40px;
+	}
+	body#homepage #contactus h2{
+		font-size: 40px;
+	}
+	body#homepage #contactus h5{
+		font-size: 18px;
+	}
+	body#homepage .contactLabels{
+		font-size: 18px;
+	}
+	body#homepage #aboutus p{
+		font-size: 15px;
+	}
+	body#homepage #speciality{
+		font-size: 35px;
+	}
+	body#homepage .spec_header{
+		font-size: 17px;
+	}
+	body#homepage .spec_desc{
+		font-size: 15px;
+	}
+	body#homepage .testimonials_names{
+		font-size: 17px;
+	}
+	body#homepage .testimonials_desc{
+		font-size: 15px;
+	}
+	body#homepage .testimonials_img{
+		width: 140px;
+		height: 140px;
+	}
+	body#homepage .counter-blk h1{
+		font-size: 40px;
+	}
+	body#homepage .counter-blk p{
+		font-size: 24px;
+	}
+
+}
+body#homepage .shadow_depth_1{
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	}
+body#homepage .shadow_depth_2{
+	-webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+  body#homepage .shadow_depth_3{
+	-webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	}
+  body#homepage .shadow_depth_4{
+	 -webkit-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+	-moz-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+	box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+	}

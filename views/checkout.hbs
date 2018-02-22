@@ -24,57 +24,50 @@
                         <h6><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;Order details</h6>
                         <p>Please enter the order/cake details</p>
                         <a href="/products/blackforest" id="cake_id_btn" class="btn btn-sm">Check Cake ID here</a>
-                        
-                        <table id="order_table" class="table table-bordered table-sm table-responsive-md order-list">
-                            <thead>
-                                <tr>
-                                    <th class="col-md-3" scope="col">Cake ID</th>
-                                    <th class="col-md-3" scope="col">Name</th>
-                                    <th class="col-md-1" scope="col">Cost</th>
-                                    <th class="col-md-2" scope="col">Weight</th>
-                                    <th class="col-md-2" scope="col">Message on cake!</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="">
-                                    <td class="col-md-3">
-                                        <div class="form-group">
-                                            <select class="form-control form-control-sm" id="cake_ids" name="cakeIds">
-                                                <option>Select</option>
-                                            {{# each cakeIds}}
-                                                <option>{{this.id}}</option>
-                                            {{/each}}
-                                            </select>
-                                        </div>
-                                    </td>
-                                    <td id="cake_name" name="cakeName" class="col-md-3">Choose Cake ID</td>
-                                    <td id="cake_price" name="cakePrice" class="col-md-1">Rs.X</td>
-                                    <td class="col-md-2">
-                                        <div class="form-group">
-                                            <select class="form-control form-control-sm" id="available_cake_weight" name="orderWeight">
-                                                <option>?</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                    <td class="col-md-3">
+                        <div id="orderWrapper">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="formLabels" for="cake_ids">Choose cake ID</label>
+                                        <select class="form-control form-control-sm" id="cake_ids" name="cakeIds">
+                                            <option value="select">Select</option>
+                                        {{# each cakeIds}}
+                                            <option>{{this.id}}</option>
+                                        {{/each}}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="formLabels" for="">Cake name</label>
+                                        {{!-- <p class="" id="cake_name">Choose cake ID</p> --}}
+                                        <input disabled class="form-control form-control-sm" type="text" name="cake_name" id="cake_name" value="Choose ID">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="formLabels" for="">Cost</label>
+                                        <input disabled class="form-control form-control-sm" type="text" name="cake_price" id="cake_price" value="Rs.X /-">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="formLabels" for="cake_ids">Weight</label>
+                                        <select class="form-control form-control-sm" id="available_cake_weight" name="orderWeight">
+                                            <option>?</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="formLabels" for="msgOnCake">Message on cake / Extra comment</label>
                                         <input id="msgOnCake" name="msgOnCake" class="form-control form-control-sm" type="text">
-                                    </td>
-                                    {{!-- <td class="col-md-1">
-                                        <a class="deleteRow"></a>
-                                    </td> --}}
-                                </tr>
-                            </tbody>
-                            {{!-- <tfoot>
-                                <tr>
-                                    <td colspan="5" style="text-align: left;">
-                                        <input type="button" class="btn btn-sm btn-block" id="addrow" value="Add more cakes!" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                </tr>
-                            </tfoot> --}}
-                        </table>
-
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-md-12">

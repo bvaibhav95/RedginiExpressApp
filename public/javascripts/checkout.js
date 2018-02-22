@@ -57,17 +57,22 @@ $("input[name=delTime]").on("change", function() {
 
     $("#cake_ids").change(function(){
         $('#available_cake_weight').find('option').remove();
-        $.ajax({
-            type: "GET",
-            url:"/detailsFromId/"+$(this).val(),
-            success: function(data){
-                $('#cake_name').html(data.name);
-                $('#cake_price').html('Rs.'+data.halfKgPrice);
-                for(var i=0; i<data.availableWeights.length; i++){
-                    $('#available_cake_weight').append('<option value="' + data.availableWeights[i] + '">' + data.availableWeights[i] + '</option>');
+        if($(this).val() == 'select'){
+            $('#cake_name').val('Choose ID');
+            $('#cake_price').val('Rs.X /-');
+        }else{
+            $.ajax({
+                type: "GET",
+                url:"/detailsFromId/"+$(this).val(),
+                success: function(data){
+                    $('#cake_name').val(data.name);
+                    $('#cake_price').val('Rs.'+data.halfKgPrice+'/-');
+                    for(var i=0; i<data.availableWeights.length; i++){
+                        $('#available_cake_weight').append('<option value="' + data.availableWeights[i] + '">' + data.availableWeights[i] + '</option>');
+                    }
                 }
-            }
-        });
+            });
+        }
     });
 
     $("#available_cake_weight").change(function(){
@@ -76,9 +81,9 @@ $("input[name=delTime]").on("change", function() {
             url:"/detailsFromId/"+$('#cake_ids').val(),
             success: function(data){
                 if(!isNaN($('#available_cake_weight').val())){
-                    $('#cake_price').html('Rs.'+data.halfKgPrice * $('#available_cake_weight').val() * 2);
+                    $('#cake_price').val('Rs.'+data.halfKgPrice * $('#available_cake_weight').val() * 2+'/-');
                 }else{
-                    $('#cake_price').html('Rs.X');
+                    $('#cake_price').val('Rs.X');
                 }
             }
         }); 

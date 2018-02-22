@@ -54,7 +54,7 @@ body#final #delAddress{
     font-size: 25px;
 }
 body#final #address{
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Montserrat', sans-serif;
     margin: 5px 10px 50px 40px;
 }
@@ -77,7 +77,6 @@ body#final #orderHeading{
     font-family: 'Source Sans Pro', sans-serif;
 }
 body#final #summaryOfItems{
-    list-style: none;
     padding: 0px 10px 0px 10px;
 }
 body#final #listHeader{
@@ -94,6 +93,136 @@ body#final .totalItems{
     font-weight: bolder;
     color:black;
     padding: 3px 0px 3px 0px;
+}
+@media (min-width: 350px) {
+	body#final #thankYou{
+	    font-size: 30px;
+    }
+    body#final #orderNo{
+        font-size: 13px;
+    }
+    body#final #msg{
+        font-size: 9px;
+    }
+    body#final #delTime{
+        font-size: 15px;
+    }
+    body#final #delAddress{
+        font-size: 15px;
+    }
+    body#final #address{
+        font-size: 10px; 
+    }
+    body#final #shopBtn{
+        font-size: 10px;
+    }
+    body#final #listHeader{
+        font-size: 12px;
+    }
+}
+@media (min-width: 575px) {
+	body#final #thankYou{
+	    font-size: 35px;
+    }
+    body#final #orderNo{
+        font-size: 11px;
+    }
+    body#final #msg{
+        font-size: 10px;
+    }
+    body#final #delTime{
+        font-size: 18px;
+    }
+    body#final #delAddress{
+        font-size: 18px;
+    }
+    body#final #address{
+        font-size: 11px; 
+    }
+    body#final #shopBtn{
+        font-size: 11px;
+    }
+    body#final #listHeader{
+        font-size: 12px;
+    }
+}
+@media (min-width: 768px) {
+	body#final #thankYou{
+	    font-size: 12px;
+    }
+    body#final #orderNo{
+        font-size: 15px;
+    }
+    body#final #msg{
+        font-size: 11px;
+    }
+    body#final #delTime{
+        font-size: 20px;
+    }
+    body#final #delAddress{
+        font-size: 20px;
+    }
+    body#final #address{
+        font-size: 12px; 
+    }
+    body#final #shopBtn{
+        font-size: 12px;
+    }
+    body#final #listHeader{
+        font-size: 14px;
+    }
+}
+@media (min-width: 992px) {
+	body#final #thankYou{
+	    font-size: 45px;
+    }
+    body#final #orderNo{
+        font-size: 18px;
+    }
+    body#final #msg{
+        font-size: 12px;
+    }
+    body#final #delTime{
+        font-size: 22px;
+    }
+    body#final #delAddress{
+        font-size: 22px;
+    }
+    body#final #address{
+        font-size: 13px; 
+    }
+    body#final #shopBtn{
+        font-size: 13px;
+    }
+    body#final #listHeader{
+        font-size: 16px;
+    }
+}
+@media (min-width: 1200px) {
+	body#final #thankYou{
+	    font-size: 50px;
+    }
+    body#final #orderNo{
+        font-size: 20px;
+    }
+    body#final #msg{
+        font-size: 14px;
+    }
+    body#final #deltime{
+        font-size: 25px;
+    }
+    body#final #delAddress{
+        font-size: 25px;
+    }
+    body#final #address{
+        font-size: 15px; 
+    }
+    body#final #shopBtn{
+        font-size: 15px;
+    }
+    body#final #listHeader{
+        font-size: 18px;
+    }
 }
 body#final .shadow_depth_1{
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);

@@ -262,6 +262,9 @@ body#cake_product_page input.qtyminus {
 	 width:20px;
 	 height:20px;
 }
+body#cake_product_page .productContainer{
+	margin: 0px;
+}
 body#cake_product_page .cake_name{
 	font-size: 15px;
 	font-family: 'Quicksand', sans-serif;
@@ -424,28 +427,6 @@ body#cake_product_page ul.social-network li {
 }
 
 /* footer social icons */
-body#cake_product_page .social-network a.icoFacebook {
-	background-color:#3B5998;
-}
-body#cake_product_page .social-network a.icoTwitter {
-	background-color:#33ccff;
-}
-body#cake_product_page .social-network a.icoGoogle {
-	background-color:#BD3518;
-}
-body#cake_product_page .social-network a.icoInstagram {
-	background-color:#e4405f;
-}
-body#cake_product_page .social-network a.icoPinterest {
-	background-color:#c92228;
-}
-body#cake_product_page .social-network a.icoYoutube {
-	background-color:#c4302b;
-}
-body#cake_product_page .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
-.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
-	color:#fff;
-}
 body#cake_product_page a.socialIcon:hover, .socialHoverClass {
 	color:#44BCDD;
 }
@@ -508,10 +489,14 @@ body#cake_product_page #facebook_btn:hover{
 	border-color: #3b5998;
 }
 /*========social section ends========*/
-@media (min-width: 350px) {
+@media (max-width: 574px) {
 	body#cake_product_page .cake_images img{
 	    width: 100%;
-	    height: 180px;
+	    height: 140px;
+	}
+	body#cake_product_page #coverOffers img {
+	    width: 100%;
+	    height: 150px;
 	}
 }
 @media (min-width: 575px) {
@@ -519,11 +504,19 @@ body#cake_product_page #facebook_btn:hover{
 	    width: 100%;
 	    height: 160px;
 	}
+	body#cake_product_page #coverOffers img {
+	    width: 100%;
+	    height: 200px;
+	}
 }
 @media (min-width: 768px) {
 	body#cake_product_page .cake_images img{
 	    width: 100%;
 	    height: 160px;
+	}
+	body#cake_product_page #coverOffers img {
+	    width: 100%;
+	    height: 250px;
 	}
 }
 @media (min-width: 992px) {
@@ -531,10 +524,18 @@ body#cake_product_page #facebook_btn:hover{
 	    width: 100%;
 	    height: 220px;
 	}
+	body#cake_product_page #coverOffers img {
+	    width: 100%;
+	    height: 350px;
+	}
 }
 @media (min-width: 1200px) {
 	body#cake_product_page .cake_images img{
 	    width: 100%;
 	    height: 220px;
+	}
+	body#cake_product_page #coverOffers img {
+	    width: 100%;
+	    height: 400px;
 	}
 }

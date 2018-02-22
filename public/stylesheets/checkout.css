@@ -27,6 +27,17 @@ body#checkout #order_table th{
 body#checkout #order_table td{
   text-align: center;
 }
+body#checkout .formLabels{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+body#checkout #cake_name{
+  text-align: center;
+}
+body#checkout #cake_price{
+  text-align: center;
+}
 body#checkout .form-group{
   margin: 0 0 10px 40px;
   font-size: 12px;
@@ -49,7 +60,7 @@ body#checkout #removeCake:hover{
   cursor: pointer;
 }
 body#checkout #available_cake_weight{
-  width: 100%;
+  width: 60%;
 }
 body#checkout #cake_ids{
   overflow-x: hidden;
