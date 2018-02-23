@@ -277,6 +277,7 @@ body#cake_product_page .available_weight{
 	border: 1px black solid;
 	padding: 2px 8px 2px 8px;
 	font-family: 'Quicksand', sans-serif;
+	margin-top: -25px;
 }
 body#cake_product_page .cake_price{
 	font-size: 14px;
@@ -292,203 +293,6 @@ body#cake_product_page .heart_like{
 	margin-top: 10px;
 }
 /*=========styling of cake boxes end============*/
-/*=====Footer start=====*/
-body#cake_product_page #footer_line{
-  background: #ff0000;
-  color: white;
-  text-align: center;
-  padding: 5px;
-  font-size: 20px;
-  /*font-family: 'Raleway', sans-serif;*/
-}
-body#cake_product_page #footer_line a{
-  color: white;
-}
-
-body#cake_product_page #footer{
-	background: white;
-}
-body#cake_product_page #footer_oheo{
-	font-family: 'Pacifico', cursive;
-	color: #ADB0B6;
-	margin-top:5px;
-	margin-bottom: 0px;
-}
-body#cake_product_page #footer_lines{
-	color: #ADB0B6;
-	/*margin-left: 50px;*/
-	font-size: 12px;
-	margin-top: 20px;
-	/*font-family: 'Raleway', sans-serif;*/
-}
-body#cake_product_page footer{
-	background-color: #282C35;
-	padding-top: 10px;
-}
-body#cake_product_page #categories_footer a{
-	color: #ADB0B6;
-	list-style: none;
-	/*font-family: 'Raleway', sans-serif;*/
-	font-size: 13px;
-
-}
-body#cake_product_page #links_footer a{
-	color: #ADB0B6;
-	list-style: none;
-	/*font-family: 'Raleway', sans-serif;*/
-	font-size: 13px;
-
-}
-body#cake_product_page #footer_cat_head{
-	color: #ADB0B6;
-	font-size: 18px;
-	font-weight: 700;
-	/*font-family: 'Raleway', sans-serif;*/
-
-}
-body#cake_product_page #footer_links_head{
-	color: #ADB0B6;
-	font-size: 18px;
-	font-weight: 700;
-	/*font-family: 'Raleway', sans-serif;*/
-}
-body#cake_product_page #footer_madeby,#footer_madeby a{
-	color: #ADB0B6;
-	margin-top: 50px;
-}
-
-body#cake_product_page #footer_mail_head{
-	color: #ADB0B6;
-	font-size: 18px;
-	font-weight: 700;
-}
-body#cake_product_page #footer_mail_link{
-	color: #ADB0B6;
-	margin-bottom: 20px;
-
-}
-body#cake_product_page #footer_phone_head{
-	color: #ADB0B6;
-	font-size: 20px;
-	margin-bottom: 10px;
-	margin-top: 20px;
-}
-body#cake_product_page #footer_phone_link{
-	color: #ADB0B6;
-	margin-bottom: 10px;
-}
-body#cake_product_page #footer_followus_head{
-	margin-bottom: 10px;
-	margin-top: 20px;
-	color: #ADB0B6;
-	font-weight: bold;
-	font-size: 20px;
-	text-decoration: underline;
-
-}
-body#cake_product_page #footer_social_fb{
-	margin-right: 5px;
-	color: #ADB0B6;
-
-}
-body#cake_product_page #footer_social_g+{
-	margin-left: 5px;
-	margin-right: 5px;
-	color: #ADB0B6;
-
-}
-body#cake_product_page #footer_social_tweeter{
-	margin-left: 5px;
-	margin-right: 5px;
-	color: #ADB0B6;
-
-}
-body#cake_product_page #footer_social_insta{
-	margin-left: 5px;
-	margin-right: 5px;
-	color: #ADB0B6;
-
-}
-/*=====Footer end=====*/
-
-/*========social section start========*/
-
-body#cake_product_page .social_network_btns{
-	margin: 40px auto 0 auto;
-}
-body#cake_product_page ul.social-network {
-	list-style: none;
-	display: inline-block;
-	margin: 0 auto 0 auto;
-}
-body#cake_product_page ul.social-network li {
-	display: inline;
-	margin: 0 5px 0 5px;
-}
-
-/* footer social icons */
-body#cake_product_page a.socialIcon:hover, .socialHoverClass {
-	color:#44BCDD;
-}
-
-body#cake_product_page .social-circle li a {
-	display:inline-block;
-	position:relative;
-	margin:0 auto 0 auto;
-	-moz-border-radius:50%;
-	-webkit-border-radius:50%;
-	border-radius:50%;
-	text-align:center;
-	width: 50px;
-	height: 50px;
-	font-size:20px;
-}
-body#cake_product_page .social-circle li i {
-	margin:0;
-	line-height:50px;
-	text-align: center;
-}
-
-body#cake_product_page .social-circle li a:hover i, .triggeredHover {
-	-moz-transform: rotate(360deg);
-	-webkit-transform: rotate(360deg);
-	-ms--transform: rotate(360deg);
-	transform: rotate(360deg);
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	transition: all 0.2s;
-}
-body#cake_product_page .social-circle i {
-	color: #fff;
-	-webkit-transition: all 0.8s;
-	-moz-transition: all 0.8s;
-	-o-transition: all 0.8s;
-	-ms-transition: all 0.8s;
-	transition: all 0.8s;
-}
-
-body#cake_product_page #footer_oheoLink{
-	margin: 10px auto 0 auto;
-}
-body#cake_product_page #footer_oheoLink a{
-	color: #ADB0B6;
-}
-body#cake_product_page #footer_oheoLink a:hover{
-	color: white;
-}
-body#cake_product_page #facebook_btn{
-	background-color:  #3b5998;
-	color: white;
-	font-weight: bold;
-}
-body#cake_product_page #facebook_btn:hover{
-	background-color:  white;
-	color: #3b5998;
-	border-color: #3b5998;
-}
-/*========social section ends========*/
 @media (max-width: 574px) {
 	body#cake_product_page .cake_images img{
 	    width: 100%;
@@ -497,6 +301,26 @@ body#cake_product_page #facebook_btn:hover{
 	body#cake_product_page #coverOffers img {
 	    width: 100%;
 	    height: 150px;
+	}
+	body#cake_product_page .cake_name{
+		font-size: 10px;
+	}
+	body#cake_product_page .cake_id{
+		font-size: 10px;
+	}
+	body#cake_product_page .cake_price{
+		font-size: 12px;
+	}
+	body#cake_product_page .available_weight{
+		padding: 1px 6px 1px 6px;
+		font-size: 12px;
+		margin-top: -25px;
+	}
+	body#cake_product_page .productContainer{
+		margin-bottom: 8px;
+	}
+	body#cake_product_page .orderBefore{
+		font-size: 12px;
 	}
 }
 @media (min-width: 575px) {
@@ -508,6 +332,26 @@ body#cake_product_page #facebook_btn:hover{
 	    width: 100%;
 	    height: 200px;
 	}
+	body#cake_product_page .cake_name{
+		font-size: 11px;
+	}
+	body#cake_product_page .cake_id{
+		font-size: 11px;
+	}
+	body#cake_product_page .cake_price{
+		font-size: 12px;
+	}
+	body#cake_product_page .available_weight{
+		padding: 1px 6px 1px 6px;
+		font-size: 12px;
+		margin-top: -20px;
+	}
+	body#cake_product_page .productContainer{
+		margin-bottom: 10px;
+	}
+	body#cake_product_page .orderBefore{
+		font-size: 12px;
+	}
 }
 @media (min-width: 768px) {
 	body#cake_product_page .cake_images img{
@@ -517,6 +361,26 @@ body#cake_product_page #facebook_btn:hover{
 	body#cake_product_page #coverOffers img {
 	    width: 100%;
 	    height: 250px;
+	}
+	body#cake_product_page .cake_name{
+		font-size: 12px;
+	}
+	body#cake_product_page .cake_id{
+		font-size: 12px;
+	}
+	body#cake_product_page .cake_price{
+		font-size: 13px;
+	}
+	body#cake_product_page .available_weight{
+		padding: 2px 8px 2px 8px;
+		font-size: 13px;
+		margin-top: -15px;
+	}
+	body#cake_product_page .productContainer{
+		margin-bottom: 15px;
+	}
+	body#cake_product_page .orderBefore{
+		font-size: 12px;
 	}
 }
 @media (min-width: 992px) {
@@ -528,6 +392,26 @@ body#cake_product_page #facebook_btn:hover{
 	    width: 100%;
 	    height: 350px;
 	}
+	body#cake_product_page .cake_name{
+		font-size: 13px;
+	}
+	body#cake_product_page .cake_id{
+		font-size: 13px;
+	}
+	body#cake_product_page .cake_price{
+		font-size: 13px;
+	}
+	body#cake_product_page .available_weight{
+		padding: 2px 8px 2px 8px;
+		font-size: 14px;
+		margin-top: -10px;
+	}
+	body#cake_product_page .productContainer{
+		margin-bottom: 15px;
+	}
+	body#cake_product_page .orderBefore{
+		font-size: 13px;
+	}
 }
 @media (min-width: 1200px) {
 	body#cake_product_page .cake_images img{
@@ -537,5 +421,25 @@ body#cake_product_page #facebook_btn:hover{
 	body#cake_product_page #coverOffers img {
 	    width: 100%;
 	    height: 400px;
+	}
+	body#cake_product_page .cake_name{
+		font-size: 15px;
+	}
+	body#cake_product_page .cake_id{
+		font-size: 15px;
+	}
+	body#cake_product_page .cake_price{
+		font-size: 14px;
+	}
+	body#cake_product_page .available_weight{
+		padding: 2px 8px 2px 8px;
+		font-size: 15px;
+		margin-top: -5px;
+	}
+	body#cake_product_page .productContainer{
+		margin-bottom: 20px;
+	}
+	body#cake_product_page .orderBefore{
+		font-size: 15px;
 	}
 }

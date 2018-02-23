@@ -60,20 +60,25 @@ router.post('/order', function(req, res, next) {
 
       let transporter = nodemailer.createTransport({
         host: 'smtp.zoho.com',
-        port: 587,
-        secure: false, 
+        port: 465,
+        secure: true, 
         auth: {
             user: 'support@redgini.com',
-            pass: 'K1r9v9d5&vul'  
+            pass: '25WMjGKX1xCt'  
         },
         tls:{
           rejectUnauthorized: false
-        }
+        },
+        dkim: {
+          domainName: 'redgini.com',
+          keySelector: 'zoho',
+          privateKey: 'v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCjKvFxEMowNquEfvzW2JoIiS/d9tXC9lvW57U0x6ha8+IGwMeQPAdJwarbRpAmrsMn9MUmYlx4QUXvHHlJC+6KO5X4C1udaB3tckDZA0IVXBUPChh6lG2OVwzx1orr2Xkqk5iaz+diVVQSVSekYOmINQBc6Tt7itnBZbZ+EZEzmwIDAQAB'
+      }
     });
 
       let mailOptions = {
           from: '"Redgini,Nashik" <support@redgini.com>',
-          to: 'support@redgini.com, '+req.body.userEmail, 
+          to: 'help@redgini.com, '+req.body.userEmail, 
           subject: 'Redgini,Nashik | Order placed', 
           //text: 'This is testing mail', 
           html: '<b style="font-size: 20px">Redgini,Nashik | Order confirmation</b>'+
@@ -121,20 +126,25 @@ router.post('/sent', function(req, res, next) {
     //mailer.contactUsMail(res);
     let transporter = nodemailer.createTransport({
         host: 'smtp.zoho.com',
-        port: 587,
-        secure: false, 
+        port: 465,
+        secure: true, 
         auth: {
             user: 'support@redgini.com',
-            pass: 'K1r9v9d5&vul'  
+            pass: '25WMjGKX1xCt'  
         },
         tls:{
           rejectUnauthorized: false
-        }
+        },
+        dkim: {
+          domainName: 'redgini.com',
+          keySelector: 'zoho',
+          privateKey: 'v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCjKvFxEMowNquEfvzW2JoIiS/d9tXC9lvW57U0x6ha8+IGwMeQPAdJwarbRpAmrsMn9MUmYlx4QUXvHHlJC+6KO5X4C1udaB3tckDZA0IVXBUPChh6lG2OVwzx1orr2Xkqk5iaz+diVVQSVSekYOmINQBc6Tt7itnBZbZ+EZEzmwIDAQAB'
+      }
     });
 
     let mailOptions = {
-        from: '"Redgini,Nashik" <support@redgini.com>',
-        to: 'support@redgini.com', 
+        from: '"Contacted Redgini!" <support@redgini.com>',
+        to: 'help@redgini.com', 
         subject: 'Enquiry mail!', 
         //text: 'This is testing mail', 
         html: '<b> From, '+req.body.contactform_name+',</b>'+

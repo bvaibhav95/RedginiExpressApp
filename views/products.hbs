@@ -71,7 +71,7 @@
             {{# each cakes}}
               <div class="row" style="margin: 10px 0px 10px 0px;">
                 {{# each this}}
-                  <div class="col-md-4 col-sm-4 col-xs-6 productContainer">
+                  <div class="col-6 col-md-4 col-sm-4 productContainer">
                       <div class="card collection-card shadow cake_box">
                           <div class="view hm-zoom cake_images">
                               <img src="/images/{{this.id}}.jpg" class="" alt="">
@@ -82,10 +82,10 @@
 
                           <div class="card-block text-center">
                               <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-7">
+                                <div class="col-6 col-md-7">
                                   <p class="cake_name">{{this.name}}</p>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-5">
+                                <div class="col-6 col-md-5">
                                   <p class="cake_id">ID - {{this.id}}</p>
                                 </div>
                               </div>
@@ -100,8 +100,8 @@
                               <div class="row justify-content-center">
                                 <p class="available_weight">Available in: half, one, two Kg</p>
                               </div>
-                              <div class="card-footer">
-                                  <small>Order 12 Hrs before</small>
+                              <div class="card-footer orderBeforeBox">
+                                  <small class="orderBefore">Order 12 Hrs before</small>
                               </div>
                           </div>
                       </div>
