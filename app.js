@@ -16,6 +16,7 @@ var nodeMailer = require('nodemailer');
 //Custom require js
 var index = require('./routes/generalRoutes');
 var product = require('./routes/productRoutes');
+var login = require('./routes/loginRoutes');
 //========================================================================================
 var app = express();
 mongoose.connect('mongodb://bvaibhav.95:K1r9v9d5vul@ds241658.mlab.com:41658/redgini');
@@ -41,9 +42,8 @@ app.use(session({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+app.use('/', index, login);
 app.use('/products', product);
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

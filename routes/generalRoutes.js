@@ -86,7 +86,7 @@ router.post('/order', function(req, res, next) {
                 '<p>We would like to inform you that we have succeefully placed your order. Please check the order details and delivery details'+
                 '</p>'+
                 '<p style="margin-bottom: 5px">If you want to cancel or change the order please inform us on below contacts 12 hours before delivery time</p>'+
-                '<a href="">Email - support@redgini.com</a>'+
+                '<a href="">Email - help@redgini.com</a>'+
                 '<p style="margin-top: 2px"><b>Whatsapp on - +91 860 550 7729</b></p>'+
                 '<hr>'+
             

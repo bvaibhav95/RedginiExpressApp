@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
+body#homepage #header {
+    text-align: center;
+	font-weight: bold;
+	margin-top: 50px;
+	margin-bottom: 0px;
+	color: black;
+	padding: 10px;
+	color: #3d3a3a
+}
+body#homepage #partner_desc{
+	margin-bottom: 15px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+@media (max-width: 574px) {
+	body#homepage #header {
+	    font-size: 20px;
+    }
+    body#homepage #partner_desc {
+	    font-size: 8px;
+	}
+}
+@media (min-width: 575px) {
+	body#homepage #header {
+	    font-size: 22px;
+    }
+    body#homepage #partner_desc {
+	    font-size: 10px;
+	}
+}
+@media (min-width: 768px) {
+	body#homepage #header {
+	    font-size: 25px;
+    }
+    body#homepage #partner_desc {
+	    font-size: 11px;
+	}
+}
+@media (min-width: 992px) {
+	body#homepage #header {
+	    font-size: 30px;
+    }
+    body#homepage #partner_desc {
+	    font-size: 13px;
+	}
+}
+@media (min-width: 1200px) {
+	body#homepage #header {
+	    font-size: 35px;
+    }
+    body#homepage #partner_desc {
+	    font-size: 15px;
+	}
+}
