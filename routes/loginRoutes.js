@@ -17,9 +17,9 @@ router.post('/sendotp/:mobileNum', function(req, res, next) {
     var phone = req.params.mobileNum;
     var randNum = Math.floor(100000 + Math.random() * 900000);
     req.session.mobileCredentials = {phone: phone, otp : randNum};
-    sendOtp.send(phone, "REDGNI", randNum, function (error, data, response) {
+    sendOtp.send('91'+phone, "REDGNI", randNum, function (error, data, response) {
         router.post('/verifyotp/:otp', function(req, res, next) {
-            sendOtp.verify(phone, req.params.otp, function (error, data, response) {
+            sendOtp.verify('91'+phone, req.params.otp, function (error, data, response) {
                 console.log(data);
                 if(data.type == 'success'){
                     res.send(JSON.stringify({status : 'success'}));
