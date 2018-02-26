@@ -36,11 +36,15 @@ app.use(cookieParser());
 app.use(session({
   secret: 'mysupersecret', 
   resave: false, 
-  saveUninitialized: false,
+  saveUninitialized: true,
   store: new MongoStore({ mongooseConnection: mongoose.connection }),
-  cookie: { maxAge: 1 * 10 * 1000 }
+  cookie: { maxAge: 60 * 60 * 1000 }
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(function(req, res, next){
+  res.locals.session = req.session;
+  next();
+});
 
 app.use('/', index, login);
 app.use('/products', product);

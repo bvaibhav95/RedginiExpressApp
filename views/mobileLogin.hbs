@@ -19,58 +19,62 @@
         </div>
         <hr class="style2" style="margin-bottom:50px">
         <div class="row" style="background-color:#eaebed">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-6 col-sm-border">
+            <div class="col-sm-4 col-md-4"></div>
+            <div class="col-sm-6 col-md-6 col-sm-border">
                 <h4 style="font-weight:bold; margin-top:30px">Verify your mobile</h4>
                 <hr>
-                <form action="/sendotp" method="POST">
+                {{!-- <form action="/verifyotp" method="POST"> --}}
                     <div class="form-group manual_login">
                         <div class="row">
-                        <label for="enter_mobile" class="col-md-5 col-form-label" style="font-size:13px">Enter mobile number</label>
-                        <div class="col-md-7"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-8">
-                                <input type="tel" class="form-control form-control-sm" id="enter_mobile" name="mobileNum" maxlength="10">
-                                </div>
-                                <div class="col-md-4">
-                                <button class="btn btn-danger btn-sm finish_login_btn" type="submit" style="margin-top:2px">send OTP</button>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="col-md-6"></div>
-                        </div>
-                    </div>
-                </form>
-                <form action="/verifyotp" method="POST">
-                    <div class="form-group manual_login">
-                        <div class="row">
-                            <label for="enter_otp" class="col-md-5 col-form-label" style="font-size:13px">Enter OTP here</label>
-                            <div class="col-md-7"></div>
+                            <label for="enter_mobile" class="col-md-12 col-form-label" style="font-size:13px">Enter mobile number</label>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-7">
-                                <input type="tel" class="form-control form-control-sm" id="enter_otp" name="enterOtp" maxlength="6">
+                                <input type="tel" class="form-control form-control-sm" id="enter_mobile" name="mobileNum" maxlength="10">
                                 </div>
                                 <div class="col-md-5">
-                                <button class="btn btn-danger btn-sm finish_login_btn" type="submit" name="" style="margin-top:2px">Verify</button>
+                                <button id="send_otp_btn" class="btn btn-danger btn-sm finish_login_btn" type="button" onclick="return sendOtp();">send OTP</button>
                                 </div>
                             </div>
                             </div>
                             <div class="col-md-6"></div>
                         </div>
                     </div>
-                </form>
+                <p id="resend_link" style="font-size:12px; color:dodgerblue" onclick="return resendOtp();"></p>
+                
+                    <div class="form-group manual_login">
+                        <div class="row">
+                            <label for="enter_otp" class="col-md-12 col-form-label" style="font-size:13px">Enter OTP here</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-7">
+                                <input type="tel" class="form-control form-control-sm" id="enter_otp" name="enterOtp" maxlength="6" disabled>
+                                </div>
+                                <div class="col-md-5">
+                                <button id="verify_otp_btn" class="btn btn-danger btn-sm finish_login_btn" type="submit" disabled onclick="return verifyOtp();">verify OTP</button>
+                                 
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>
+                    </div>
+                    {{!-- <input type="hidden" name="_csrf" vale="{{csrfToken}}"> --}}
+                {{!-- </form>  --}}
+                <div id="wrongOtpAlert" class="alert-dismissible fade show" role="alert">
+                    <b id="wrongOtpAlertText"></b>
+                </div>
             </div>
-            <div class="col-sm-2"></div>
+            <div class="col-sm-2 col-md-2"></div>
         </div>
     </div>
     {{>footer}}
     <script src="/javascripts/dependencies/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
     <script src="/javascripts/dependencies/bootstrap.min.js"></script>
+    <script src="/javascripts/mobileLogin.js"></script>
 </body>

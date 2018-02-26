@@ -1,12 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Pacifico|Roboto|Montserrat');
-/*
-Color codes in botstrap
-	#d9534f 	(217,83,79)
-	#f9f9f9 	(249,249,249)
-	#5bc0de 	(91,192,222)
-	#5cb85c 	(92,184,92)
-	#428bca 	(66,139,202)
-*/
 html,body{
 	height: 100%;
 }
@@ -32,145 +24,24 @@ body#otp_page hr.style2 {
 	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
     border: 0;
 }
-
-/*navbar styling start*/
-body#otp_page #signIn_navbar {
-    color: #fff;
-    background-color: #cc0000;
-    border-color: #cc0000;
-		font-weight: bold;
-		margin: 5px;
-}
-body#otp_page #Login_navbar {
-    color: #fff;
-    background-color: #cc0000;
-    border-color: #cc0000;
-		font-weight: bold;
-		margin: 5px;
-}
-body#otp_page #signIn_navbar:hover{
-	cursor: pointer;
-	background-color: white;
-	border-color:  #cc0000;
-	color: #cc0000;
-	font-weight: bold;
-}
-body#otp_page #Login_navbar:hover{
-	cursor: pointer;
-	background-color: white;
-	border-color:  #cc0000;
-	color: #cc0000;
-	font-weight: bold;
-}
-/*==========Dropdown-content==============*/
-
-body#otp_page .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-body#otp_page .dropdown-content a {
-    color: black;
-    text-decoration: none;
-    display: block;
-		font-family: 'Roboto', sans-serif;
-}
-
-body#otp_page .dropdown-content a:hover {
-	background-color: #ff3232;
-	font-family: 'Roboto', sans-serif;
-}
-
-body#otp_page .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/*=========================================*/
-
-
-body#otp_page #brand_name{
-	font-family: 'Pacifico', cursive;
-	font-size: 30px;
-	font-weight: bold;
-}
-body#otp_page #navbar_items{
-	font-family: 'Arvo', serif;
-	font-weight: bold;
-}
-body#otp_page #footer_line{
-  background: #ff0000;
-  color: white;
-  text-align: center;
-  padding: 5px;
-  font-size: 20px;
-  font-family: 'Droid Sans', sans-serif;
-}
-body#otp_page #footer_line a{
-  color: white;
-}
-body#otp_page #navbar_main .nav-item:hover {
-  text-decoration: underline; }
-
-body#otp_page	#products_dropdown .dropdown-item:hover {
-	  background-color: #cc0000;
-	  color: white; }
-/*navbar styling ends*/
-
-/* Horizontal line styles end */
-
-/*===========Manual login form starts===========*/
 body#otp_page .finish_login_btn{
 	color: #fff;
 	background-color: #cc0000;
 	border-color: #cc0000;
 	font-weight: bold;
-	margin: 5px 5px 5px 15px;
+	width: 100%;
 }
 body#otp_page .finish_login_btn:hover{
 	cursor: pointer;
 	background-color: white;
 	border-color:  #cc0000;
 	color: #cc0000;
-	font-weight: bold;
 }
 body#otp_page .manual_login{
 	font-family: 'Montserrat', sans-serif;
 }
-/*===========Manual login form ends=================*/
-
-/*=======facebook login button=========*/
-body#otp_page #facebook_login_btn{
-	color: white;
-	background-color: #3b5998;
-	font-weight: bold;
-	margin: 30px 0px 20px 10px;
-
-}
-body#otp_page #facebook_login_btn:hover{
-	color: #3b5998;
-	background-color: white;
+body#otp_page #resend_link:hover{
+	text-decoration: underline;
 	cursor: pointer;
-	border-color: #3b5998;
-	font-weight: bold;
+}
 
-}
-/*=======facebook login button end=========*/
-/*=======google/gmail login button=========*/
-body#otp_page #google_login_btn{
-	color: white;
-	background-color: #dd4b39;
-	font-weight: bold;
-	margin: 25px 0px 20px 10px;
-}
-body#otp_page #google_login_btn:hover{
-	color: #dd4b39;
-	background-color: white;
-	cursor: pointer;
-	border-color: #dd4b39;
-	font-weight: bold;
-}
-/*=======google/gmail login button end=========*/
