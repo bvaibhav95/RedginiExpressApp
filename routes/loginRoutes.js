@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 // var csrf = require('csurf');
 const SendOtp = require('sendotp');
-const sendOtp = new SendOtp('199764ADMDHilazGfL5a924000');
+const sendOtp = new SendOtp('199764AQ6o6VGO839V5a9453a2');
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
 
