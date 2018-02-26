@@ -36,7 +36,7 @@ router.post('/sendotp/:mobileNum', function(req, res, next) {
 
 router.post('/resendotp/:mobileNum', function(req, res, next) {
     var phone = req.params.mobileNum;
-    sendOtp.retry(phone, false, function (error, data, response) {
+    sendOtp.retry('91'+phone, false, function (error, data, response) {
         console.log(data);
     });
 });
