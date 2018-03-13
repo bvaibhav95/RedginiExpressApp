@@ -1,0 +1,66 @@
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    {{!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
+    <meta name="viewport" content="width=device-width">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/dependencies/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/userProfile.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+  </head>
+  <body id="userProfile">
+    {{>header}}
+    
+    <div id="wrapper" class="container">
+        <div class="row" id="contentWrapper">
+            <div class="col-md-3 col-sm-3">
+                <div class="align-self-center" style="flex-direction: column">
+                    <p><img id="userPic" class="rounded-circle testimonials_img" src="images/user.png" alt="user3" width="80" height="80"/></p>
+                    <p id="username">{{user.username}}</p>
+                </div>
+                <div id="userTabs" class="list-group">
+                    <a href="" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#underConstruction"><i class="fas fa-user"></i>&nbsp;&nbsp;My profile</a>
+                    <a href="" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#underConstruction"><i class="fas fa-address-card"></i>&nbsp;&nbsp;My orders</a>
+                    <a href="" class="list-group-item list-group-item-action"  data-toggle="modal" data-target="#underConstruction"><i class="fas fa-book"></i>&nbsp;&nbsp;My addresses</a>
+                    <a href="" class="list-group-item list-group-item-action"  data-toggle="modal" data-target="#underConstruction"><i class="fas fa-credit-card"></i>&nbsp;&nbsp;My wallet</a>
+                    <a href="/auth/logout" class="list-group-item list-group-item-action"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Logout</a>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9">
+                <div class="list-group">
+                    {{#if orderHistory}}
+                        {{#each orderHistory}}
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                {{#each this.cart.items}}
+                                    <h5 class="mb-1">{{this.item.name}} | {{this.cakeWt}}Kg | Qty - {{this.cakeQty}} | Cost - Rs.{{this.netPrice}}</h5>
+                                {{/each}}
+                                <small>{{this.delDate}}</small>
+                                </div>
+                                <small class="">Delivered at : {{this.userAddressLine1}}, {{this.userAddressLine2}}, {{this.userAddressLine3}}, {{this.userCity}}, {{this.userState}}</small>
+                                <small>Payment mode - {{this.payMode}}</small>
+                                <small>Net cost - Rs.{{this.cart.totalPrice}}</small>
+                            </a>
+                        {{/each}}
+                    {{else}}
+                        <p id="noOrderHistory">You haven't placed any order</p>
+                        <div class="container" id="emptyCartMsg">
+                            <div class="row justify-content-center">
+                                <img src="/images/emptycart.jpg" alt="empty shopping cart">
+                                <div class="w-100"></div>
+                                <a id="startShopping" href="/products/blackforest" class="btn" type="button">Order your first cake!</a>
+                            </div>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="/javascripts/dependencies/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+    <script src="/javascripts/dependencies/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/userProfile.js"></script>
+  </body>

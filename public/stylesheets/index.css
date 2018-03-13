@@ -199,7 +199,7 @@ body#homepage .overlay_text {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 }
-body#homepage .add_pop_pdt_to_cart{
+/* body#homepage .add_pop_pdt_to_cart{
     margin: 6px 0px 0px 230px;
     position: absolute;
     background-color: #CC0000;
@@ -217,7 +217,7 @@ body#homepage .card-add-to-cart-btn:hover {
 	border-color: #cc0000;
 	color: #cc0000;
 	background-color: white;
-}
+} */
 /*=============pop_pdt cards ends=============*/
 body#homepage .blockquote{
 	font-size: 106rem;

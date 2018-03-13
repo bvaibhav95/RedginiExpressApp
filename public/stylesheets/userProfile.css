@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
+body#userProfile{
+    background-color: #f0f0f0;
+}
+body#userProfile #wrapper{
+    background-color: white;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    font-family: 'Montserrat', sans-serif;
+}
+body#userProfile #contentWrapper{
+    text-align: center;
+    padding: 50px 0px 50px 0px;
+}
+body#userProfile #userPic {
+    margin-bottom: -5px;
+}
+body#userProfile #username {
+    text-align: center;
+}
+body#userProfile #userTabs {
+    font-size: 14px;
+}
+body#userProfile #noOrderHistory{
+    text-align: center;
+    font-size: 30px;
+}
+body#userProfile #emptyCartMsg{
+    margin-bottom: 20px;
+}
+body#userProfile #startShopping{
+    background-color: #cc0000;
+    color: white;
+    font-weight: bold;
+}
+body#userProfile #startShopping:hover{
+    color: #cc0000;
+    border-color: #cc0000;
+    background-color: white;
+    cursor: pointer;
+}

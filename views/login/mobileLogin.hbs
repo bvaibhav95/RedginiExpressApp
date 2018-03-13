@@ -1,0 +1,81 @@
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width">
+
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/dependencies/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/header.css"/>
+    <link rel="stylesheet" href="/stylesheets/footer.css"/>
+    <link rel="stylesheet" href="/stylesheets/mobileLogin.css"/>
+</head>
+<body id="otp_page">
+    {{>header}}
+    <div class="container" style="margin-bottom:50px;">
+        <div class="page-header">
+            <h3 style="text-align:center; font-weight:bold; margin-top:50px">All set...Go!</h2>
+            <p style="text-align:center">We need your mobile number to get in touch with you!</p>
+        </div>
+        <hr class="style2" style="margin-bottom:50px">
+        <div class="row" style="background-color:#eaebed">
+            <div class="col-sm-4 col-md-4"></div>
+            <div class="col-sm-6 col-md-6 col-sm-border">
+                <h4 style="font-weight:bold; margin-top:30px">Verify your mobile</h4>
+                <hr>
+                {{!-- <form action="/verifyotp" method="POST"> --}}
+                    <div class="form-group manual_login">
+                        <div class="row">
+                            <label for="enter_mobile" class="col-md-12 col-form-label" style="font-size:13px">Enter mobile number</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-7">
+                                <input type="tel" class="form-control form-control-sm" id="enter_mobile" name="mobileNum" maxlength="10">
+                                </div>
+                                <div class="col-md-5">
+                                <button id="send_otp_btn" class="btn btn-danger btn-sm finish_login_btn" type="button" onclick="return sendOtp();">send OTP</button>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>
+                    </div>
+                <p id="resend_link" style="font-size:12px; color:dodgerblue" onclick="return resendOtp();"></p>
+                
+                    <div class="form-group manual_login">
+                        <div class="row">
+                            <label for="enter_otp" class="col-md-12 col-form-label" style="font-size:13px">Enter OTP here</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-7">
+                                <input type="tel" class="form-control form-control-sm" id="enter_otp" name="enterOtp" maxlength="6" disabled>
+                                </div>
+                                <div class="col-md-5">
+                                <button id="verify_otp_btn" class="btn btn-danger btn-sm finish_login_btn" type="submit" disabled onclick="return verifyOtp();">verify OTP</button>
+                                 
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>
+                    </div>
+                    {{!-- <input type="hidden" name="_csrf" vale="{{csrfToken}}"> --}}
+                {{!-- </form>  --}}
+                <a href="/auth/login" id="resend_link" style="font-size:12px;">skip this step</a>
+                <div id="wrongOtpAlert" class="alert-dismissible fade show" role="alert">
+                    <b id="wrongOtpAlertText"></b>
+                </div>
+            </div>
+            <div class="col-sm-2 col-md-2"></div>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="/javascripts/dependencies/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+    <script src="/javascripts/dependencies/bootstrap.min.js"></script>
+    <script src="/javascripts/mobileLogin.js"></script>
+</body>

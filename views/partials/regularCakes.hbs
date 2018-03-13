@@ -1,0 +1,53 @@
+{{#each cakes}}
+    <div class="row" style="margin: 10px 0px 10px 0px;">
+      {{#each this}}
+        <div class="col-6 col-md-4 col-sm-4 productContainer">
+            <div class="card collection-card shadow cake_box">
+                <div class="view hm-zoom cake_images">
+                    <img src="/images/{{this.cakeId}}.jpg" class="" alt="">
+                </div>
+                <div class="card-block text-center">
+                    <div class="row">
+                      <div class="col-12 col-sm-12 col-md-6">
+                        {{!-- ellipsis the name --}}
+                        <p class="cake_name">{{this.name}}</p>
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-6">
+                        <p class="cake_price"><b><small id="specificWt{{this.cakeId}}" style="font-size:15px;font-weight:bold">0.5</small> kg - Rs.<small id="specificWtCost{{this.cakeId}}" style="font-size:15px;font-weight:bold">{{this.halfKgPrice}}</small></b></p>
+                      </div>
+                    </div>
+                    <div class="row" style="margin-right:-25px">
+                      <div class="col-xs-12 col-sm-12 col-md-6">
+                        <p class="cake_id">
+                          <button type="button" class="qtyplus plusMinusBtbn btn btn-danger btn-sm">+</button>
+                          &nbsp;&nbsp;<small id="cakeQty{{this.cakeId}}" class="qty">1</small>&nbsp;&nbsp;
+                          <button type="button" class="qtyminus plusMinusBtbn btn btn-danger btn-sm">-</button>
+                        </p>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="form-group row">
+                              <div class="col-8 col-md-8">
+                                <select class="form-control form-control-sm weightChange" id="cakeWeight{{this.cakeId}}" onchange="updateCost(this.id)">
+                                  {{#each this.availableWeights}}
+                                    <option value="{{this}}">{{this}}</option>
+                                  {{/each}}
+                                </select>
+                              </div>
+                              <label style="margin-left:-20px;" class="col-4 col-md-3" for="cakeWeight{{this.cakeId}}">Kg</label>
+                              <div class="col-md-1"></div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-sm-12 col-md-6">
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-6">
+                        <button id="addToCart{{this.cakeId}}" onclick="addToCart(this.id)" type="submit" class="addTocartBtn btn btn-danger btn-sm">Add to cart</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      {{/each}}
+    </div>
+{{/each}}

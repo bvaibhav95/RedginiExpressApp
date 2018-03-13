@@ -1,45 +1,86 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-// var csrf = require('csurf');
 const SendOtp = require('sendotp');
-const sendOtp = new SendOtp('199764AQ6o6VGO839V5a9453a2');
-// var csrfProtection = csrf();
-// router.use(csrfProtection);
+var keys = require('../config/keys');
+const sendOtp = new SendOtp(keys.msg91.authKey);
+const passport = require('passport');
+const User = require('../models/User');
 
-mongoose.connect('mongodb://bvaibhav.95:K1r9v9d5vul@ds241658.mlab.com:41658/redgini');
+mongoose.connect(keys.mongodb.dbURI);
 
-router.get('/mobileVerify', function(req, res, next) {
-    res.render('mobileLogin', {title: 'Redgini | Verify mobile'});
+var authCheck = function(req,res,next){
+    if(!req.user){
+        res.redirect('/auth/login');
+    }else{
+        next();
+    }
+};
+
+
+router.get('/login', function(req, res, next) {
+    res.render('login/socialLogin', {title: 'Redgini | Social login', show : 'show', cart : req.session.cart});
 });
 
-router.post('/sendotp/:mobileNum', function(req, res, next) {
-    var phone = req.params.mobileNum;
-    var randNum = Math.floor(100000 + Math.random() * 900000);
-    req.session.mobileCredentials = {phone: phone, otp : randNum};
-    sendOtp.send('91'+phone, "REDGNI", randNum, function (error, data, response) {
-        router.post('/verifyotp/:otp', function(req, res, next) {
-            sendOtp.verify('91'+phone, req.params.otp, function (error, data, response) {
-                console.log(data);
-                if(data.type == 'success'){
-                    res.send(JSON.stringify({status : 'success'}));
-                } 
-                if(data.type == 'error'){
-                    res.send(JSON.stringify({status: 'error'}));
-                }
-            });
-        });
-    });
+router.get('/logout', function(req, res, next) {
+    req.logout();
+    req.session = null;
+    res.redirect('/');
 });
 
+router.get('/google', passport.authenticate('google',{
+    scope: [
+        'https://www.googleapis.com/auth/userinfo.profile',
+        'https://www.googleapis.com/auth/userinfo.email'
+    ]
+}));
 
-
-router.post('/resendotp/:mobileNum', function(req, res, next) {
-    var phone = req.params.mobileNum;
-    sendOtp.retry('91'+phone, false, function (error, data, response) {
-        console.log(data);
-    });
+router.get('/google/redirect', passport.authenticate('google'),function(req, res, next){
+    res.redirect('/products/blackforest');
 });
+
+router.get('/facebook', passport.authenticate('facebook'));
+
+router.get('/facebook/redirect', passport.authenticate('facebook', {failureRedirect: '/login' }),function(req, res){
+    res.redirect('/products/blackforest');
+});
+
 module.exports = router;
-// res.setHeader('Content-Type', 'application/json');
-// res.send(JSON.stringify({showError : 'alert alert-danger', msg: 'You entered incorrect OTP!'}));
+// router.get('/mobile', function(req, res, next) {
+//     res.render('login/mobileLogin', {title: 'Redgini | Verify mobile', show : 'show'});
+// });
+
+// router.post('/sendotp/:mobileNum', function(req, res, next) {
+//     var phone = req.params.mobileNum;
+//     var randNum = Math.floor(100000 + Math.random() * 900000);
+//     sendOtp.send('91'+phone, "REDGNI", randNum, function (error, data, response) {
+//         router.get('/verifyotp/:otp', function(req, res, next) {
+//             sendOtp.verify('91'+phone, req.params.otp, function (error, data, response) {
+//                 req.session.mobileCredentials = {phone : phone};
+//                 if(data.type == 'success'){
+//                     User.findOne({phone: phone}, function(err,user){ 
+//                         if(user){
+//                             //req.user = user;
+//                             //here the problem is occusring passport attaches the user object 
+//                             //to req so that we can directly use that using handlesbars...
+//                             //which can't be established using handlebars
+//                             res.send(JSON.stringify({status : 'available', user: user}));
+//                         }else{
+//                             res.send(JSON.stringify({status : 'success'}));
+//                         }
+//                     });
+//                 } 
+//                 if(data.type == 'error'){
+//                     res.send(JSON.stringify({status: 'error'}));
+//                 }
+//             });
+//         });
+//     });
+// });
+
+// router.post('/resendotp/:mobileNum', function(req, res, next) {
+//     var phone = req.params.mobileNum;
+//     sendOtp.retry('91'+phone, false, function (error, data, response) {
+//         console.log(data);
+//     });
+// });

@@ -4,119 +4,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Redgini | Cake & pastries</title>
-    <!--Bootstrap CSS-->
     <link rel="stylesheet" href="/stylesheets/dependencies/bootstrap.min.css">
-    <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/products.css"/>
     <link rel="stylesheet" href="/stylesheets/footer.css"/>
-    <link rel="stylesheet" href="/stylesheets/plainNavWithOrder.css"/>
+    <link rel="stylesheet" href="/stylesheets/header.css"/>
   </head>
   <body id="cake_product_page">
-    {{>plainNavWithOrder}}
+    {{>header}}
     <div class="container">
       {{>coverOffer}}
     </div>
    <hr>
 
-<!--=============sidebar and cake boxes styling starts============-->
-{{>comingSoonModal}}
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm-down">
-      <div class="list-group" id="sidebar_cake_cat">
-        <a href="" class="list-group-item disabled" id="sidebar_header"> Cake categories:</a>
-          <a href="/products/blackforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">Black forest cakes</a>
-          <a href="/products/butterscotch" class="list-group-item list-group-item-action sidebar_cake_cat_items">Butterscotch cakes</a>
-          <a href="/products/chocolate" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate cakes</a>
-          <a href="/products/oreo" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate oreo cakes</a>
-          <a href="/products/fruit" class="list-group-item list-group-item-action sidebar_cake_cat_items">Fruit cakes</a>
-          <a href="/products/pineapple" class="list-group-item list-group-item-action sidebar_cake_cat_items">Pineapple cakes</a>
-          <a href="/products/redvelvet" class="list-group-item list-group-item-action sidebar_cake_cat_items">Red velvet cakes</a>
-          <a href="/products/strawberryvanilla" class="list-group-item list-group-item-action sidebar_cake_cat_items">Strawberry vanilla cakes</a>
-          <a href="/products/truffle" class="list-group-item list-group-item-action sidebar_cake_cat_items">All Truffle cakes</a>
-          <a href="/products/whiteforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">White Forest cakes</a>
-          <a href="/products/special" class="list-group-item list-group-item-action sidebar_cake_cat_items" data-toggle="modal" data-target="#releasingSoon"><b>Special cakes</b></a>
-          <a href="/products/fondant" class="list-group-item list-group-item-action sidebar_cake_cat_items" data-toggle="modal" data-target="#releasingSoon"><b>Fondant cakes</b></a>
-          <a href="/products/designer" class="list-group-item list-group-item-action sidebar_cake_cat_items" data-toggle="modal" data-target="#releasingSoon"><b>Designer cakes</b></a>
-      </div>
-      <hr>
-    </div>
-    <div class="col-md-3 col-sm-12 col-xs-12 hidden-md-up">
-        <div class="row justify-content-center">
-          <div class="dropdown hide">
-            <a style="width:200px; background-color:black; color:white" class="btn dropdown-toggle btn-sm" href="" role="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-              <b>Choose category</b>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="categoryDropdown">
-              <a href="/products/blackforest" class="dropdown-item">Black forest cakes</a>
-              <a href="/products/butterscotch" class="dropdown-item">Butterscotch cakes</a>
-              <a href="/products/chocolate" class="dropdown-item">Chocolate cakes</a>
-              <a href="/products/oreo" class="dropdown-item">Chocolate oreo cakes</a>
-              <a href="/products/fruit" class="dropdown-item">Fruit cakes</a>
-              <a href="/products/pineapple" class="dropdown-item">Pineapple cakes</a>
-              <a href="/products/redvelvet" class="dropdown-item">Red velvet cakes</a>
-              <a href="/products/strawberryvanilla" class="dropdown-item">Strawberry vanilla cakes</a>
-              <a href="/products/truffle" class="dropdown-item">All Truffle cakes</a>
-              <a href="/products/whiteforest" class="dropdown-item">White Forest cakes</a>
-              <a href="/products/special" class="dropdown-item" data-toggle="modal" data-target="#releasingSoon"><b>Special cakes</b></a>
-              <a href="/products/fondant" class="dropdown-item" data-toggle="modal" data-target="#releasingSoon"><b>Fondant cakes</b></a>
-              <a href="/products/designer" class="dropdown-item" data-toggle="modal" data-target="#releasingSoon"><b>Designer cakes</b></a>
+      {{>comingSoonModal}}
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm-down">
+            <div class="list-group" id="sidebar_cake_cat">
+              <a href="" class="list-group-item disabled" id="sidebar_header"> Cake categories:</a>
+                <a href="/products/blackforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">Black forest cakes</a>
+                <a href="/products/butterscotch" class="list-group-item list-group-item-action sidebar_cake_cat_items">Butterscotch cakes</a>
+                <a href="/products/chocolate" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate cakes</a>
+                <a href="/products/oreo" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate oreo cakes</a>
+                <a href="/products/fruit" class="list-group-item list-group-item-action sidebar_cake_cat_items">Fruit cakes</a>
+                <a href="/products/pineapple" class="list-group-item list-group-item-action sidebar_cake_cat_items">Pineapple cakes</a>
+                <a href="/products/redvelvet" class="list-group-item list-group-item-action sidebar_cake_cat_items">Red velvet cakes</a>
+                <a href="/products/strawberryvanilla" class="list-group-item list-group-item-action sidebar_cake_cat_items">Strawberry vanilla cakes</a>
+                <a href="/products/truffle" class="list-group-item list-group-item-action sidebar_cake_cat_items">All Truffle cakes</a>
+                <a href="/products/whiteforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">White Forest cakes</a>
+                <a href="/products/designer-fondant" class="list-group-item list-group-item-action sidebar_cake_cat_items"><b>Designer+Fondant cakes</b></a>
             </div>
+            <hr>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 hidden-md-up">
+              <div class="row justify-content-center">
+                <div class="dropdown hide">
+                  <a style="width:200px; background-color:black; color:white" class="btn dropdown-toggle btn-sm" href="" role="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                    <b>Choose category</b>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="categoryDropdown">
+                    <a href="/products/blackforest" class="dropdown-item">Black forest cakes</a>
+                    <a href="/products/butterscotch" class="dropdown-item">Butterscotch cakes</a>
+                    <a href="/products/chocolate" class="dropdown-item">Chocolate cakes</a>
+                    <a href="/products/oreo" class="dropdown-item">Chocolate oreo cakes</a>
+                    <a href="/products/fruit" class="dropdown-item">Fruit cakes</a>
+                    <a href="/products/pineapple" class="dropdown-item">Pineapple cakes</a>
+                    <a href="/products/redvelvet" class="dropdown-item">Red velvet cakes</a>
+                    <a href="/products/strawberryvanilla" class="dropdown-item">Strawberry vanilla cakes</a>
+                    <a href="/products/truffle" class="dropdown-item">All Truffle cakes</a>
+                    <a href="/products/whiteforest" class="dropdown-item">White Forest cakes</a>
+                    <a href="/products/designer-fondant" class="dropdown-item"><b>Designer+Fondant</b></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-9 col-sm-12 col-xs-12">
+            {{#if designerAndFondant}}
+              {{>designer-fondant}}
+            {{else}}
+              {{>regularCakes}}
+            {{/if}}
           </div>
         </div>
-    </div>
-<!--====================cake category sidebar ends==================-->
-<!--====================cake boxes start==================-->
-      <div class="col-md-9 col-sm-12 col-xs-12">
-            {{# each cakes}}
-              <div class="row" style="margin: 10px 0px 10px 0px;">
-                {{# each this}}
-                  <div class="col-6 col-md-4 col-sm-4 productContainer">
-                      <div class="card collection-card shadow cake_box">
-                          <div class="view hm-zoom cake_images">
-                              <img src="/images/{{this.id}}.jpg" class="" alt="">
-                              <a>
-                                  <div class="mask waves-light"></div>
-                              </a>
-                          </div>
-
-                          <div class="card-block text-center">
-                              <div class="row">
-                                <div class="col-6 col-md-7">
-                                  <p class="cake_name">{{this.name}}</p>
-                                </div>
-                                <div class="col-6 col-md-5">
-                                  <p class="cake_id">ID - {{this.id}}</p>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-7">
-                                  <p class="cake_price"><b>1/2 kg - Rs.{{this.halfKgPrice}}</b></p>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-5">
-                                  <p class="cake_weight"></p>
-                                </div>
-                              </div>
-                              <div class="row justify-content-center">
-                                <p class="available_weight">Available in: half, one, two Kg</p>
-                              </div>
-                              <div class="card-footer orderBeforeBox">
-                                  <small class="orderBefore">Order 12 Hrs before</small>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                {{/each}}
-              </div>
-            {{/each}}
       </div>
 
-      </div>
-      </div>
       {{>footer}}
 
       <script src="/javascripts/dependencies/jquery.min.js" type="text/javascript"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
       <script src="/javascripts/dependencies/bootstrap.min.js" type="text/javascript"></script>
+      <script src="/javascripts/dependencies/jquery.toaster.js" type="text/javascript"></script>
       <script src="/javascripts/products.js" type="text/javascript"></script>
   </body>

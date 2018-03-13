@@ -1,0 +1,46 @@
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width">
+
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/dependencies/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/header.css"/>
+    <link rel="stylesheet" href="/stylesheets/footer.css"/>
+    <link rel="stylesheet" href="/stylesheets/socialLogin.css"/>
+</head>
+<body id="login_details">
+    {{>header}}
+    <div class="container" style="margin-bottom:50px;">
+        <div class="page-header">
+            <h3 style="text-align:center; font-weight:bold; margin-top:100px">Just one step...fellas!</h2>
+            <p style="text-align:center">We need to know your name and email if we want to contact you!</p>
+        </div>
+        <hr class="style2" style="margin-bottom:50px">
+        <div class="row" style="background-color:#eaebed">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4 col-sm-border">
+            <h4 style="font-weight:bold; margin-top:30px">Connect with social network</h4>
+            <hr>
+            <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+            <a href="/auth/facebook" id="facebook_login_btn" type="button" class="btn"><i class="fab fa-facebook-f"></i>&nbsp;&nbsp;Facebook</a>
+                <h6 style="font-weight:bold; margin-top:10px; margin-left: 65px">OR</h6>
+            <a href="/auth/google" id="google_login_btn" type="button" class="btn"><i class="fab fa-google-plus-g"></i>&nbsp;&nbsp;&nbsp;Google</a>
+            </div>
+            <div class="col-sm-6"></div>
+            </div>
+        </div>
+
+        <div class="col-md-4"></div>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="/javascripts/dependencies/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+    <script src="/javascripts/dependencies/bootstrap.min.js"></script>
+</body>
+

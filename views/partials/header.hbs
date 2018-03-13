@@ -1,7 +1,7 @@
 	<!--===================Navbar start============================-->
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="homepageNavbar">
   	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
   	</button>
   	<a class="navbar-brand" href="/" id="brand_name">Redgini</a>
 
@@ -11,7 +11,7 @@
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#aboutus">About us</a>
+        <a class="nav-link" href="/#aboutus">About us</a>
       </li>
 			<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink"
@@ -23,15 +23,13 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#contactus">Contact us</a>
+        <a class="nav-link" href="/#contactus">Contact us</a>
       </li>
-
 		</ul>
-
+    {{#if show}}
+    {{else}}
+      {{>profileNav}}
+    {{/if}}
   </div>
-	{{!-- <a href="shopping_cart.html" id="shop_cart_home"><i class="fa fa-shopping-cart fa-2x  hidden-sm-down" aria-hidden="true" id="shop_cart_home_icon"></i></a>
-	<a class="btn btn-danger pull-right btn-sm hidden-sm-up" href="shopping_cart.html" id="cart_navbar"  data-toggle="" data-target="">
-	Shopping cart</a> --}}
-	{{!-- <a class="btn btn-danger pull-right btn-sm" href="/mobileVerify" id="signIn_navbar">
-	Signup/Login</a> --}}
 </nav>
+{{>construction}}

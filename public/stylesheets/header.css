@@ -1,5 +1,8 @@
-#navbar_main{
+@import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+.nav-link{
 	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
 }
 #signIn_navbar{
     color: #fff;
@@ -47,7 +50,7 @@
     color: black;
     text-decoration: none;
     display: block;
-		font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .dropdown-content a:hover {
@@ -62,14 +65,11 @@
   background-color: #CC0000;
   color: white; }
 
-#navbar_main .nav-item:hover {
-    text-decoration: underline; }
-
 /*=========================================*/
 
 
 #brand_name{
-	font-family: 'Pacifico', cursive;
+	font-family: 'Fredoka One', cursive;
 	font-size: 30px;
 	font-weight: bold;
 }
@@ -92,4 +92,7 @@
 }
 #shop_cart_home_icon:hover{
 	color: black;
+}
+#userprofileDrop{
+	font-weight: bold;
 }

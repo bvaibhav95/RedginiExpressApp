@@ -13,13 +13,18 @@ var flash = require('connect-flash');
 var validator = require('express-validator');
 var MongoStore = require('connect-mongo')(session);
 var nodeMailer = require('nodemailer');
+var cookieSession = require('cookie-session');
+var passportConfig = require('./config/passport-config');
+var keys = require('./config/keys');
 //Custom require js
 var index = require('./routes/generalRoutes');
 var product = require('./routes/productRoutes');
 var login = require('./routes/loginRoutes');
+var profile = require('./routes/profileRoutes');
 //========================================================================================
 var app = express();
-mongoose.connect('mongodb://bvaibhav.95:K1r9v9d5vul@ds241658.mlab.com:41658/redgini');
+mongoose.connect(keys.mongodbDevlopment.dbURI);
+
 // view engine setup
 app.engine('.hbs', expressHbs({
   extname: '.hbs',
@@ -27,27 +32,42 @@ app.engine('.hbs', expressHbs({
   layoutsDir: path.join(__dirname, 'views/layouts')
 }));
 app.set('view engine', '.hbs');
-app.set('views',path.join(__dirname,'views'))
+app.set('views',path.join(__dirname,'views'));
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(session({
-  secret: 'mysupersecret', 
-  resave: false, 
-  saveUninitialized: true,
-  store: new MongoStore({ mongooseConnection: mongoose.connection }),
-  cookie: { maxAge: 60 * 60 * 1000 }
+//cookieSession - No need to use this, this stores on client side which is risky, but cookie 
+//is encrypted using the key given...also avoids the unnecessary load on server and time to fetch 
+//session from server
+app.use(cookieSession({
+  name : 'session',
+  maxAge : 60 * 60 * 1000,
+  keys : [keys.cookieSession.cookieKey]
 }));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(function(req, res, next){
-  res.locals.session = req.session;
-  next();
-});
 
-app.use('/', index, login);
+//express-session -
+//Only use the express session...
+// app.use(session({
+//   secret: 'everyonehasasecret', 
+//   resave: false, 
+//   saveUninitialized: true,
+//   store: new MongoStore({ mongooseConnection: mongoose.connection }),
+//   cookie: {maxAge: 60 * 60 * 1000}
+// }));
+app.use(passport.initialize()); // initializing the passporrt int mongodb session
+app.use(passport.session());
+app.use(express.static(path.join(__dirname, 'public')));
+// app.use(function(req, res, next){
+//   res.locals.session = req.session;
+//   next();
+// });
+
+app.use('/', index);
 app.use('/products', product);
+app.use('/auth', login);
+app.use('/profile', profile);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

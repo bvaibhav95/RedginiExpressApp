@@ -2,13 +2,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var orderSchema = new Schema({
-    cakeIds : {type:String, required:true},
-    cakeName: {type: String, required: true},
-    cakePrice: {type: Number, required: true},
-    orderWeight: {type: Number, required: true},
-    msgOnCake: {type: String, required: true},
-    
-    payMode: {type: String, required: true},
+
+    userId : {type : String, required : true},
+    cart : {type : Object, required : true},
+    msgOnCake: {type: String},
     
     userName: {type: String, required: true},
     userEmail: {type: String, required: true},
@@ -21,6 +18,10 @@ var orderSchema = new Schema({
     
     delDate: {type: String, required: true},
     delTime: {type: String, required: true},
+    
+    payMode: {type: String, required: true},
+
+    txnId : {type: String, required: true},
 });
 
 module.exports = mongoose.model('Order', orderSchema);

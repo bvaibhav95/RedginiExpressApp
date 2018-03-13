@@ -1,0 +1,24 @@
+<ul class="nav navbar-nav navbar-right">
+    {{#if visible}}
+    {{else}}
+        <a href="/cart" id="shop_cart_home"><i class="fas fa-shopping-cart fa-2x  hidden-sm-down" aria-hidden="true" id="shop_cart_home_icon"><span class="badge badge-pill badge-danger" style="font-size:16px">{{cart.totalQty}}</span></i></a>
+        <a class="btn btn-danger pull-right btn-sm hidden-md-up" href="/cart" id="cart_navbar">
+        Shopping cart ({{cart.totalQty}})</a>
+    {{/if}}
+    {{#if user}}
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="userprofileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Hi,&nbsp;{{user.username}}
+            </a>
+            <div class="dropdown-content" aria-labelledby="userprofileDrop" id="products_dropdown">
+                <a class="dropdown-item" href="/profile">My account</a>
+                <a class="dropdown-item" href="/profile">My orders</a>
+                <a class="dropdown-item" href="/auth/logout">Logout</a>
+            </div>
+        </li>
+    {{else}}
+        <a class="btn btn-danger pull-right btn-sm" href="/auth/login" id="signIn_navbar">
+        Signup/Login</a>
+    {{/if}}
+    
+</ul>

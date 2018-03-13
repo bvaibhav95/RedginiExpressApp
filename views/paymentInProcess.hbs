@@ -1,0 +1,39 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redgini | Payment in progress</title>
+    <link rel="stylesheet" href="/stylesheets/dependencies/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+</head>
+
+<body onload="makePayment();">
+    <div style="" class="align-items-center">
+        <h1 style="text-align:center">Payment Request in progress...</h1>
+        <h3 style="text-align:center"><b>Please don't press any key or refresh</b></h3>
+    </div>
+
+    <form action="https://secure.payu.in/_payment"  name="payuform" method="POST">
+        <input type="hidden" name="key" value="{{jsonParams.testKey}}" />
+        <input type="hidden" name="hash" value="{{jsonParams.genHash}}"/>
+        <input type="hidden" name="txnid" value="{{jsonParams.txnId}}"/>
+        <input type="hidden" name="amount" value="1.00"/>
+        <input type="hidden" name="firstname" value="{{jsonParams.firstname}}"/>
+        <input type="hidden" name="email" value="{{jsonParams.email}}"/>
+        <input type="hidden" name="phone" value="{{jsonParams.phone}}"/>
+        <input type="hidden" name="productinfo" value="RedginiCakeAndPastryNashik"/>
+        <input type="hidden" name="service_provider" value="payu_paisa" />
+        {{!-- <input type="hidden" name="surl" size="64" value="localhost:3000/order"/>
+        <input type="hidden" name="furl" size="64" value="localhost:3000/cart"/>
+        <input type="hidden" name="curl" value="localhost:3000/cart" /> --}}
+    </form>
+
+    <script src="/javascripts/dependencies/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+    <script src="/javascripts/dependencies/bootstrap.min.js"></script>
+    <script>
+        function makePayment(){
+            document.forms.payuform.submit();
+        }
+    </script>
+</body>

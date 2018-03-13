@@ -1,124 +1,109 @@
 @import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
-body#cartpage {
+body#cartpage #offerCarousal{
+  padding: 30px 100px 30px 100px;
+}
+body#cartpage #offerCarousal img{
+  height: 200px;
+}
+body#cartpage #header{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+body#cartpage #cartItemList{
+  padding-top: 50px;
+  padding-bottom: 50px;
   font-family: 'Montserrat', sans-serif;
 }
-body#cartpage #checkout_nav{
+body#cartpage .removeItemBtn{
+  color: #cc0000;
+  border-color: #cc0000;
+  background-color: white;
+}
+body#cartpage .removeItemBtn:hover{
+  background-color: #cc0000;
+  color: white;
+  cursor: pointer;
+}
+body#cartpage #checkoutBtn{
+  background-color: #cc0000;
+  color: white;
+  width: 100%;
+  font-weight: bold;
+}
+body#cartpage #checkoutBtn:hover{
+  color: #cc0000;
+  border-color: #cc0000;
+  background-color: white;
+  cursor: pointer;
+}
+body#cartpage #addMoreCakesBtn{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: #cc0000;
+  color: white;
+  font-weight: bold;
+}
+body#cartpage #addMoreCakesBtn:hover{
+  color: #cc0000;
+  border-color: #cc0000;
+  background-color: white;
+  cursor: pointer;
+}
+body#cartpage #emptyCartMsg{
+  margin-top: 50px;
   margin-bottom: 50px;
 }
-body#cartpage #checkout_brand{
-  font-family: 'Pacifico', cursive;
-  font-size: 25px;
+body#cartpage #startShopping{
+  background-color: #cc0000;
+  color: white;
+  font-weight: bold;
 }
-body#cartpage .navbar_lines{
-  color: grey;
-  font-family: 'Montserrat', sans-serif;
+body#cartpage #startShopping:hover{
+  color: #cc0000;
+  border-color: #cc0000;
+  background-color: white;
+  cursor: pointer;
+}
+body#cartpage #paymentDetails{
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+body#cartpage #paymentDetails p{
+  color: green;
   font-size: 13px;
 }
-body#cartpage .navbar_lines:hover{
-  text-decoration: underline;
-}
-body#cartpage #checkout_navbar li{
-  padding: 18px 10px 0 10px;
-}
-body#cartpage #table_header{
+body#cartpage #paymentDetails small{
   font-weight: bold;
-  margin-top: 30px;
-  margin-bottom: 10px;
-	color: black;
-	font-size: 33px;
-	padding: 10px;
-	color: #3d3a3a;
-	font-family: 'Montserrat', sans-serif;
 }
-body#cartpage #cart_checkout{
-  background-color: #CC0000;
-  color: white;
+body#cartpage #upcomingPaymentOptions{
+  margin-top: 50px;
+}
+body#cartpage #upcomingPaymentOptions p{
+  text-align: center;
   font-weight: bold;
-  margin-right: 15px;
 }
-body#cartpage #cart_checkout:hover{
-  border-color: #CC0000;
-  color: #cc0000;
-  background-color: white;
-}
-body#cartpage #cart_back{
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  margin-left: 15px;
-}
-body#cartpage #cart_back:hover{
-  border-color: black;
-  color: black;
-  background-color: white;
-}
-body#cartpage #cart_btn{
-  padding-bottom: 50px;
-}
-body#cartpage .actual_cost{
-  vertical-align: middle;
-}
-body#cartpage.sr_no{
-  vertical-align: middle;
-}
-body#cartpage .cart_img{
-  vertical-align: middle;
-}
-body#cartpage .cake_qty{
-  vertical-align: middle;
-}
-body#cartpage .cart_qty_col{
-  width: 130px;
-  padding: 0px 30px 0px 30px;
-  vertical-align: middle;
-}
-body#cartpage .cart_cake_img{
-  height: 80px;
-  width: 90px;
-  padding: 0 10px 0 0;
-}
-body#cartpage .cart_weight{
-  vertical-align: middle;
-}
-body#cartpage .cart_unitprice{
-  vertical-align: middle;
-}
-body#cartpage .cart_qty{
-  vertical-align: middle;
-}
-body#cartpage .cart_total{
-  vertical-align: middle;
-}
-body#cartpage .cart_remove_btn{
-  vertical-align: middle;
-}
-body#cartpage .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: black;
-  overflow: hidden;
+body#cartpage #upcomingPaymentOptions img{
   width: 100%;
-  height: 0;
-  transition: .5s ease;
-	opacity: 0.7;
-	height: 100%;
+  height: 30px;
 }
-body#cartpage .overlay_text{
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  margin: 65px 0px 10px 15px;
-  font-weight: bold;
+@media (max-width: 574px) {
+
 }
-body#cartpage #pop_pdt_seg .card img{
-	height: 100px;
-  width: 100%;
-  border-radius: 5px;
+@media (min-width: 575px) {
+
 }
-body#cartpage #pop_pdt_seg .card img:hover{
-	cursor: pointer;
+@media (min-width: 768px) {
+
 }
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+
 body#cartpage .shadow_depth_1{
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);

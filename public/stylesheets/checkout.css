@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
 body#checkout #checkout_details{
   background-color: #f7f7f7;
-
+  margin-top: 100px;
 }
 body#checkout #order_details{
   background-color: #f7f7f7;
@@ -93,6 +93,10 @@ body#checkout #datepicker{
 }
 body#checkout #std_del_list,#payModeList{
   list-style: none;
+}
+body#checkout #payModeList{
+  list-style: none;
+  margin-top: 20px;
 }
 body#checkout #std_del_list li{
   padding: 5px 0 5px 0;
