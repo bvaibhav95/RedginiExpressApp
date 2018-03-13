@@ -73,11 +73,11 @@ module.exports = {
             
             '<p style="font-size:18px">Order details</p>'+
             '<ul style="list-style:none; margin-left:-25px">'+
-            for (var orderedItem in req.session.cart.items) {+
+            // for (var orderedItem in req.session.cart.items) {+
                 // '<li>'+req.session.cart.items.item.name+' | '+req.session.cart.items.cakeWt+'</li>'+
                 '<li>Cake -  '+orderedItem.item.cakeId+'&nbsp;&nbsp;|&nbsp;&nbsp;'+ orderedItem.item.name +'&nbsp;&nbsp;|&nbsp;&nbsp;Quantity '+orderedItem.item.cakeQty+'&nbsp;&nbsp;|&nbsp;&nbsp;'+ orderedItem.item.cakeWt+' Kg</li>'+
                 
-            }+
+            // }+
             '<li>Message on cake - '+req.body.msgOnCake+'</li>'+
             '<li>Payment details - Rs.'+req.session.cart.totalPrice+ '&nbsp;&nbsp;|&nbsp;&nbsp;Payment mode - '+req.body.payMode+'</li>'+
             '</ul>'+
