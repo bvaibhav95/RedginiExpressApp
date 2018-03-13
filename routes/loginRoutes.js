@@ -46,41 +46,41 @@ router.get('/facebook/redirect', passport.authenticate('facebook', {failureRedir
 });
 
 module.exports = router;
-// router.get('/mobile', function(req, res, next) {
-//     res.render('login/mobileLogin', {title: 'Redgini | Verify mobile', show : 'show'});
-// });
+/*router.get('/mobile', function(req, res, next) {
+    res.render('login/mobileLogin', {title: 'Redgini | Verify mobile', show : 'show'});
+});
 
-// router.post('/sendotp/:mobileNum', function(req, res, next) {
-//     var phone = req.params.mobileNum;
-//     var randNum = Math.floor(100000 + Math.random() * 900000);
-//     sendOtp.send('91'+phone, "REDGNI", randNum, function (error, data, response) {
-//         router.get('/verifyotp/:otp', function(req, res, next) {
-//             sendOtp.verify('91'+phone, req.params.otp, function (error, data, response) {
-//                 req.session.mobileCredentials = {phone : phone};
-//                 if(data.type == 'success'){
-//                     User.findOne({phone: phone}, function(err,user){ 
-//                         if(user){
-//                             //req.user = user;
-//                             //here the problem is occusring passport attaches the user object 
-//                             //to req so that we can directly use that using handlesbars...
-//                             //which can't be established using handlebars
-//                             res.send(JSON.stringify({status : 'available', user: user}));
-//                         }else{
-//                             res.send(JSON.stringify({status : 'success'}));
-//                         }
-//                     });
-//                 } 
-//                 if(data.type == 'error'){
-//                     res.send(JSON.stringify({status: 'error'}));
-//                 }
-//             });
-//         });
-//     });
-// });
+router.post('/sendotp/:mobileNum', function(req, res, next) {
+    var phone = req.params.mobileNum;
+    var randNum = Math.floor(100000 + Math.random() * 900000);
+    sendOtp.send('91'+phone, "REDGNI", randNum, function (error, data, response) {
+        router.get('/verifyotp/:otp', function(req, res, next) {
+            sendOtp.verify('91'+phone, req.params.otp, function (error, data, response) {
+                req.session.mobileCredentials = {phone : phone};
+                if(data.type == 'success'){
+                    User.findOne({phone: phone}, function(err,user){ 
+                        if(user){
+                            //req.user = user;
+                            //here the problem is occusring passport attaches the user object 
+                            //to req so that we can directly use that using handlesbars...
+                            //which can't be established using handlebars
+                            res.send(JSON.stringify({status : 'available', user: user}));
+                        }else{
+                            res.send(JSON.stringify({status : 'success'}));
+                        }
+                    });
+                } 
+                if(data.type == 'error'){
+                    res.send(JSON.stringify({status: 'error'}));
+                }
+            });
+        });
+    });
+});
 
-// router.post('/resendotp/:mobileNum', function(req, res, next) {
-//     var phone = req.params.mobileNum;
-//     sendOtp.retry('91'+phone, false, function (error, data, response) {
-//         console.log(data);
-//     });
-// });
+router.post('/resendotp/:mobileNum', function(req, res, next) {
+    var phone = req.params.mobileNum;
+    sendOtp.retry('91'+phone, false, function (error, data, response) {
+        console.log(data);
+    });
+});*/
