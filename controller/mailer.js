@@ -75,7 +75,7 @@ module.exports = {
             '<ul style="list-style:none; margin-left:-25px">'+
             // for (var orderedItem in req.session.cart.items) {+
                 // '<li>'+req.session.cart.items.item.name+' | '+req.session.cart.items.cakeWt+'</li>'+
-                '<li>Cake -  '+orderedItem.item.cakeId+'&nbsp;&nbsp;|&nbsp;&nbsp;'+ orderedItem.item.name +'&nbsp;&nbsp;|&nbsp;&nbsp;Quantity '+orderedItem.item.cakeQty+'&nbsp;&nbsp;|&nbsp;&nbsp;'+ orderedItem.item.cakeWt+' Kg</li>'+
+                //'<li>Cake -  '+orderedItem.item.cakeId+'&nbsp;&nbsp;|&nbsp;&nbsp;'+ orderedItem.item.name +'&nbsp;&nbsp;|&nbsp;&nbsp;Quantity '+orderedItem.item.cakeQty+'&nbsp;&nbsp;|&nbsp;&nbsp;'+ orderedItem.item.cakeWt+' Kg</li>'+
                 
             // }+
             '<li>Message on cake - '+req.body.msgOnCake+'</li>'+
