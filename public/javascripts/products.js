@@ -41,15 +41,15 @@ $.ajax({
         success: function(data){
             location.reload();
             $.toaster({ message : 'Cake added', title : 'Shopping cart', priority : 'danger' });
-        //  $('#specificWt'+id).html(cakeWeight);
-        //  $('#specificWtCost'+id).html(data.halfKgPrice * cakeWeight * 2);
         }
     }); 
 }
 function openSideNav() {
     document.getElementById("catSideNav").style.width = "220px";
+    $('#categoryDropdown').hide();
 }
 
 function closeSideNav() {
     document.getElementById("catSideNav").style.width = "0";
+    $('#categoryDropdown').show();
 }
