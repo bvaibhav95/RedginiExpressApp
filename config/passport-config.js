@@ -42,8 +42,9 @@ passport.use(
     callbackURL : '/auth/facebook/redirect',
     clientID : keys.facebook.clientID,
     clientSecret : keys.facebook.clientSecret,
-    // profileFields: ['id','email','displayName']
+    profileFields: ['id','email','displayName']
 }, function(accessToken, refreshToken, profile, done){
+    console.log(profile);
     User.findOne({providerID : profile.id}).then(function(availableUser){
         if(availableUser){
             done(null, availableUser);
@@ -52,7 +53,7 @@ passport.use(
                 providerID : profile.id,
                 provider : profile.provider,
                 username : profile.displayName,
-                //email : profile.emails[0].value, 
+                email : profile.emails[0].value, 
             }).save().then(function (newUser){
                 done(null, newUser);
             });
