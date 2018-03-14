@@ -641,7 +641,7 @@ var cakes = [
         availableWeights: [3.0,3.5,4.0,4.5,5.0],
         halfKgPrice: 584,
         maker : 'Sweet wonders - Harsha balwani',
-        minWtCost : 3.0 * 2 * 584,
+        minWtCost : (3.0 * 2 * 584)-4,
     }),
     new Cake({
         cakeId: 'sw_designer007',
@@ -654,12 +654,12 @@ var cakes = [
     }),
     new Cake({
         cakeId: 'sw_designer008',
-        name: 'Baby shower cake(chocolate)',
+        name: 'Anniversary theme',
         category: 'designer_fondant',
         availableWeights: [3.0,4.0,5.0],
         halfKgPrice: 584,
         maker : 'Sweet wonders - Harsha balwani',
-        minWtCost : 3.0 * 2 * 584,
+        minWtCost : (3.0 * 2 * 584)-4,
     }),
     new Cake({
         cakeId: 'sw_designer009',
@@ -668,7 +668,7 @@ var cakes = [
         availableWeights: [3.0,4.0,5.0],
         halfKgPrice: 584,
         maker : 'Sweet wonders - Harsha balwani',
-        minWtCost : 3.0 * 2 * 584,
+        minWtCost : (3.0 * 2 * 584)-4,
     }),
     new Cake({
         cakeId: 'sw_designer010',
@@ -686,7 +686,7 @@ var cakes = [
         availableWeights: [3.0,4.0,5.0],
         halfKgPrice: 584,
         maker : 'Sweet wonders - Harsha balwani',
-        minWtCost : 3.0 * 2 * 584,
+        minWtCost : (3.0 * 2 * 584)-4,
     }),
     new Cake({
         cakeId: 'sw_designer012',
@@ -695,7 +695,7 @@ var cakes = [
         availableWeights: [3.0,4.0,5.0],
         halfKgPrice: 667,
         maker : 'Sweet wonders - Harsha balwani',
-        minWtCost : 3.0 * 2 * 667,
+        minWtCost : (3.0 * 2 * 667)-2,
     }),
     new Cake({
         cakeId: 'sw_designer013',
@@ -758,7 +758,7 @@ var cakes = [
         availableWeights: [6.0,7.0,8.0],
         halfKgPrice: 584,
         maker : 'Sweet wonders - Harsha balwani',
-        minWtCost : 6.0 * 2 * 584,
+        minWtCost : (6.0 * 2 * 584)-8,
     }),
     new Cake({
         cakeId: 'sw_designer020',
@@ -920,7 +920,7 @@ var cakes = [
         availableWeights: [3.0,4.0,5.0],
         halfKgPrice: 467,
         maker : 'Sweet wonders - Harsha balwani',
-        minWtCost : 3.0 * 2 * 467,
+        minWtCost : (3.0 * 2 * 467)-2,
     }),
     new Cake({
         cakeId: 'sw_designer038',
@@ -1001,7 +1001,7 @@ var cakes = [
         availableWeights: [3.0,4.0,5.0],
         halfKgPrice: 584,
         maker : 'Sweet wonders - Harsha balwani',
-        minWtCost : 3.0 * 2 * 584,
+        minWtCost : (3.0 * 2 * 584)-4,
     }),
     new Cake({
         cakeId: 'sw_designer047',
@@ -1145,7 +1145,7 @@ var cakes = [
         availableWeights: [3.0,4.0,5.0],
         halfKgPrice: 584,
         maker : 'Sweet wonders - Harsha balwani',
-        minWtCost : 3.0 * 2 * 584,
+        minWtCost : (3.0 * 2 * 584)-4,
     }),
     new Cake({
         cakeId: 'sw_designer063',
