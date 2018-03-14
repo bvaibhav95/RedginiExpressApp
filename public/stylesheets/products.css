@@ -211,10 +211,9 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .orderBefore{
 		font-size: 12px;
 	}
-	/* body#cake_product_page .catSideNav {
-		padding-top: 15px;
-		margin-bottom : 20px;
-	} */
+	body#cake_product_page #categoryDropdown {
+		padding : 6px;
+	}
   	body#cake_product_page .catSideNav a {
 		font-size: 15px;
 	}
@@ -248,10 +247,9 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .orderBefore{
 		font-size: 12px;
 	}
-	/* body#cake_product_page .catSideNav {
-		padding-top: 15px;
-		margin-bottom : 20px;
-	} */
+	body#cake_product_page #categoryDropdown {
+		padding : 7px;
+	}
 	body#cake_product_page .catSideNav a {
 		font-size: 17px;
 	}
@@ -285,10 +283,9 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .orderBefore{
 		font-size: 12px;
 	}
-	/* body#cake_product_page .catSideNav {
-		padding-top: 15px;
-		margin-bottom : 20px;
-	} */
+	body#cake_product_page #categoryDropdown {
+		padding : 8px;
+	}
 	body#cake_product_page .catSideNav a {
 		font-size: 18px;
 	}
@@ -322,10 +319,9 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .orderBefore{
 		font-size: 13px;
 	}
-	/* body#cake_product_page .catSideNav {
-		padding-top: 15px;
-		margin-bottom : 20px;
-	} */
+	body#cake_product_page #categoryDropdown {
+		padding : 8px;
+	}
 	body#cake_product_page .catSideNav a {
 		font-size: 18px;
 	}
@@ -359,10 +355,9 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .orderBefore{
 		font-size: 15px;
 	}
-	/* body#cake_product_page .catSideNav {
-		padding-top: 15px;
-		margin-bottom : 20px;
-	} */
+	body#cake_product_page #categoryDropdown {
+		padding : 8px;
+	}
 	body#cake_product_page .catSideNav a {
 		font-size: 18px;
 	}
