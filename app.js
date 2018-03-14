@@ -23,7 +23,7 @@ var login = require('./routes/loginRoutes');
 var profile = require('./routes/profileRoutes');
 //========================================================================================
 var app = express();
-mongoose.connect(keys.mongodbDevlopment.dbURI);
+mongoose.connect(keys.mongodb.dbURI);
 
 // view engine setup
 app.engine('.hbs', expressHbs({

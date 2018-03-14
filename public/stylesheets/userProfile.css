@@ -24,6 +24,7 @@ body#userProfile #userTabs {
 body#userProfile #noOrderHistory{
     text-align: center;
     font-size: 30px;
+
 }
 body#userProfile #emptyCartMsg{
     margin-bottom: 20px;
@@ -38,4 +39,98 @@ body#userProfile #startShopping:hover{
     border-color: #cc0000;
     background-color: white;
     cursor: pointer;
+}
+@media (max-width: 574px) {
+	body#userProfile #emptyListPic {
+        height: 200px;
+        width : 250px;
+    }
+    body#userProfile #startShopping{
+        font-size:12px;
+    }
+    body#userProfile #noOrderHistory{
+        border:1px solid grey;
+        margin-top:20px;
+        font-size: 16px;
+    }
+    body#userProfile #userTabs {
+        font-size: 10px;
+    }
+    body#userProfile #username {
+        font-size:11px; 
+    }
+}
+@media (min-width: 575px) {
+	body#userProfile #emptyListPic {
+        height: 250px;
+        width : 300px;
+    }
+    body#userProfile #startShopping{
+        font-size:13px;
+    }
+    body#userProfile #noOrderHistory{
+        margin-top:20px;
+        font-size: 18px;
+    }
+    body#userProfile #userTabs {
+        font-size: 9px;
+    }
+    body#userProfile #username {
+        font-size: 11px; 
+    }
+}
+@media (min-width: 768px) {
+	body#userProfile #emptyListPic {
+        height: 270px;
+        width : 330px;
+    }
+    body#userProfile #startShopping{
+        font-size:15px;
+    }
+    body#userProfile #noOrderHistory{
+        margin-top:20px;
+        font-size: 20px;
+    }
+    body#userProfile #userTabs {
+        font-size: 11px;
+    }
+    body#userProfile #username {
+        font-size:12px; 
+    }
+}
+@media (min-width: 992px) {
+	body#userProfile #emptyListPic{
+        height: 300px;
+        width : 350px;
+    }
+    body#userProfile #startShopping{
+        font-size:16px;
+    }
+    body#userProfile #noOrderHistory{
+        font-size: 25px;
+    }
+    body#userProfile #userTabs {
+        font-size: 12px;
+    }
+    body#userProfile #username {
+        font-size:13px; 
+    }
+}
+@media (min-width: 1200px) {
+	body#userProfile #emptyListPic {
+        height: 350px;
+        width : 450px;
+    }
+    body#userProfile #startShopping{
+        font-size:18px;
+    }
+    body#userProfile #noOrderHistory{
+        font-size: 30px;
+    }
+    body#userProfile #userTabs{
+        font-size: 14px;
+    }
+    body#userProfile #username {
+        font-size:15px;    
+    }
 }

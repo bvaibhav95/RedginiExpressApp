@@ -17,48 +17,48 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-3 col-sm-4 col-6">
                 <img class="d-block w-100" src="/images/usp1.jpg" alt="First slide">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-sm-4 col-6">
                 <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-sm-4 col-6 hidden-xs-down">
                 <img class="d-block w-100" src="/images/usp1.jpg" alt="First slide">
               </div>
-              <div class="col-md-3">
-                <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-3">
-                <img class="d-block w-100" src="/images/usp1.jpg" alt="First slide">
-              </div>
-              <div class="col-md-3">
-                <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
-              </div>
-              <div class="col-md-3">
-                <img class="d-block w-100" src="/images/usp1.jpg" alt="First slide">
-              </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-sm-4 col-6 hidden-sm-down">
                 <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-3 col-sm-4 col-6">
                 <img class="d-block w-100" src="/images/usp1.jpg" alt="First slide">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-sm-4 col-6">
                 <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-sm-4 col-6 hidden-xs-down">
                 <img class="d-block w-100" src="/images/usp1.jpg" alt="First slide">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-sm-4 col-6 hidden-sm-down">
+                <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 col-6">
+                <img class="d-block w-100" src="/images/usp1.jpg" alt="First slide">
+              </div>
+              <div class="col-md-3 col-sm-4 col-6">
+                <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
+              </div>
+              <div class="col-md-3 col-sm-4 col-6 hidden-xs-down">
+                <img class="d-block w-100" src="/images/usp1.jpg" alt="First slide">
+              </div>
+              <div class="col-md-3 col-sm-4 col-6 hidden-sm-down">
                 <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
               </div>
             </div>
@@ -74,11 +74,11 @@
                   <div class="list-group">
                     {{#each cart.items}}
                       <div class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
+                        <div class="d-flex w-100 justify-content-between cartCakeNameAndCost">
                           <h5 class="mb-1">{{this.item.name}} | {{this.cakeWt}}&nbsp;Kg</h5>
                           <small>Net cost - Rs. {{this.netPrice}}/-</small>
                         </div>
-                        <p class="mb-1">Total quantity - {{this.cakeQty}}</p>
+                        <p class="mb-1 cakeQty">Total quantity - {{this.cakeQty}}</p>
                         <div class="d-flex w-100 justify-content-between">
                           <small>{{this.cakeWt}} Kg cost - Rs.{{this.unitCost}}/-</small>
                           <a href="/remove/{{this.item.cakeId}}{{this.cakeWt}}" class="btn btn-sm removeItemBtn"><i class="fas fa-trash-alt"></i></a>
@@ -86,7 +86,7 @@
                       </div>
                     {{/each}}
                   </div>
-                  <a href="/products/blackforest" id="addMoreCakesBtn" class="btn" type="button">Add more cakes</a>
+                  <a href="/products/blackforest" id="addMoreCakesBtn" class="btn btn-sm" type="button">Add more cakes</a>
               </div>
               <div class="col-md-4">
                   <div id="paymentDetails">
@@ -96,7 +96,7 @@
                         </div>
                     <p>Free home delivery</p>
                   </div>
-                  <a href="/checkout" id="checkoutBtn" type="button" class="btn">Checkout now</a>
+                  <a href="/checkout" id="checkoutBtn" type="button" class="btn btn-sm">Checkout now</a>
                   <div id="upcomingPaymentOptions" class="hidden-sm-down">
                     <p>We accept online payments via</p>
                     <div class="row justify-content-around">
