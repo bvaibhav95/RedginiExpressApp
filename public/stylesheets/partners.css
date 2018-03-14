@@ -13,6 +13,10 @@ body#homepage #partner_desc{
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
 }
+body#homepage .partnerImages img{
+	height: 100%;
+	width: 100%;
+}
 @media (max-width: 574px) {
 	body#homepage #header {
 	    font-size: 20px;
