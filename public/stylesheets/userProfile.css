@@ -59,6 +59,9 @@ body#userProfile #startShopping:hover{
     body#userProfile #username {
         font-size:11px; 
     }
+    body#userProfile .itemList {
+        font-size:14px;    
+    }
 }
 @media (min-width: 575px) {
 	body#userProfile #emptyListPic {
@@ -78,6 +81,9 @@ body#userProfile #startShopping:hover{
     body#userProfile #username {
         font-size: 11px; 
     }
+    body#userProfile .itemList {
+        font-size:14px;    
+    }
 }
 @media (min-width: 768px) {
 	body#userProfile #emptyListPic {
@@ -96,6 +102,8 @@ body#userProfile #startShopping:hover{
     }
     body#userProfile #username {
         font-size:12px; 
+    }body#userProfile .itemList {
+        font-size:15px;    
     }
 }
 @media (min-width: 992px) {
@@ -115,6 +123,9 @@ body#userProfile #startShopping:hover{
     body#userProfile #username {
         font-size:13px; 
     }
+    body#userProfile .itemList {
+        font-size:16px;    
+    }
 }
 @media (min-width: 1200px) {
 	body#userProfile #emptyListPic {
@@ -132,5 +143,8 @@ body#userProfile #startShopping:hover{
     }
     body#userProfile #username {
         font-size:15px;    
+    }
+    body#userProfile .itemList {
+        font-size:18px;    
     }
 }

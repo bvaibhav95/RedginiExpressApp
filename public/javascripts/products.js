@@ -31,18 +31,25 @@ function updateCost(clickedId){
      }); 
  }
 
- function addToCart(clickedId){
-    var id = clickedId.substring(9);
-    var cakeWeight = $('#cakeWeight'+id).val();
-    var cakeQty = $('#cakeQty'+id).text();
-    $.ajax({
-         type: "POST",
-         url:"/add-to-cart/"+id+"/"+cakeWeight+"/"+cakeQty,
-         success: function(data){
-             location.reload();
-             $.toaster({ message : 'Cake added', title : 'Shopping cart', priority : 'danger' });
-            //  $('#specificWt'+id).html(cakeWeight);
-            //  $('#specificWtCost'+id).html(data.halfKgPrice * cakeWeight * 2);
-         }
-     }); 
- }
+function addToCart(clickedId){
+var id = clickedId.substring(9);
+var cakeWeight = $('#cakeWeight'+id).val();
+var cakeQty = $('#cakeQty'+id).text();
+$.ajax({
+        type: "POST",
+        url:"/add-to-cart/"+id+"/"+cakeWeight+"/"+cakeQty,
+        success: function(data){
+            location.reload();
+            $.toaster({ message : 'Cake added', title : 'Shopping cart', priority : 'danger' });
+        //  $('#specificWt'+id).html(cakeWeight);
+        //  $('#specificWtCost'+id).html(data.halfKgPrice * cakeWeight * 2);
+        }
+    }); 
+}
+function openSideNav() {
+    document.getElementById("catSideNav").style.width = "220px";
+}
+
+function closeSideNav() {
+    document.getElementById("catSideNav").style.width = "0";
+}
