@@ -9,7 +9,7 @@
 <p style="font-size:18px">Order details</p>
 <ul style="list-style:none; margin-left:-25px">
     {{#each cakeList}}
-    <li>Cake - {{this.item.name}}&nbsp;&nbsp;|&nbsp;&nbsp;Quantity - {{this.cakeQty}}&nbsp;&nbsp;|&nbsp;&nbsp;{{this.cakeWt}} Kg&nbsp;&nbsp;|&nbsp;&nbsp;Unit cost - Rs.{{this.item.halfKgPrice}}&nbsp;&nbsp;|&nbsp;&nbsp;Net Cost - Rs.{{this.netPrice}}</li>
+    <li>Cake - {{this.item.name}}&nbsp;&nbsp;|&nbsp;&nbsp;Quantity - {{this.cakeQty}}&nbsp;&nbsp;|&nbsp;&nbsp;{{this.cakeWt}} Kg&nbsp;&nbsp;|&nbsp;&nbsp;Net Cost - Rs.{{this.netPrice}}</li>
     {{/each}}
     <li>Message on cake - {{msgOnCake}}</li>
     <li>Payment details - Rs.{{totalPrice}}&nbsp;&nbsp;|&nbsp;&nbsp;Payment mode - {{paymentMode}}</li>
