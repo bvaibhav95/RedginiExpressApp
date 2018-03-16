@@ -1,0 +1,26 @@
+<b style="font-size: 20px">Redgini,Nashik | Order confirmation</b>
+<p>Dear, {{username}}</p>
+<p>We would like to inform you that we have succeefully placed your order. Please check the order details and delivery details</p>
+<p style="margin-bottom: 5px">If you want to cancel or change the order please inform us on below contacts 12 hours before delivery time</p>
+<a href="">Email - help@redgini.com</a>
+<p style="margin-top: 2px"><b>Whatsapp on - +91 860 550 7729</b></p>
+<hr>
+
+<p style="font-size:18px">Order details</p>
+<ul style="list-style:none; margin-left:-25px">
+    {{#each cakeList}}
+    <li>Cake - {{this.item.name}}&nbsp;&nbsp;|&nbsp;&nbsp;Quantity - {{this.cakeQty}}&nbsp;&nbsp;|&nbsp;&nbsp;{{this.cakeWt}} Kg&nbsp;&nbsp;|&nbsp;&nbsp;Unit cost - Rs.{{this.item.halfKgPrice}}&nbsp;&nbsp;|&nbsp;&nbsp;Net Cost - Rs.{{this.netPrice}}</li>
+    {{/each}}
+    <li>Message on cake - {{msgOnCake}}</li>
+    <li>Payment details - Rs.{{totalPrice}}&nbsp;&nbsp;|&nbsp;&nbsp;Payment mode - {{paymentMode}}</li>
+</ul>
+
+<hr>
+
+<p style="font-size:18px">Delivery details</p>
+<ul style="list-style:none; margin-left:-25px">
+    <li>Delivery Date & time - {{deliveryDate}}&nbsp;&nbsp;|&nbsp;&nbsp;{{deliveryTime}}</li>
+    <li>Delivery Address -  {{userAddressLine1}}, {{userAddressLine2}}, {{userAddressLine1}}, Nashik, Maharashtra</li>
+</ul>
+<br>
+<p>Thank you,<br>Redgini,Nashik</p>
