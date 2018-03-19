@@ -9,6 +9,7 @@ var Order = require('../models/Order');
 
 var authCheck = function(req,res,next){
     if(!req.user){
+        req.session.oldUrl = req.url;
         res.redirect('/auth/login');
     }else{
         next();

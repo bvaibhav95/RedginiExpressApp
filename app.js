@@ -14,6 +14,7 @@ var validator = require('express-validator');
 var MongoStore = require('connect-mongo')(session);
 var nodeMailer = require('nodemailer');
 var cookieSession = require('cookie-session');
+var helmet = require('helmet');
 var passportConfig = require('./config/passport-config');
 var keys = require('./config/keys');
 //Custom require js
@@ -23,6 +24,25 @@ var login = require('./routes/loginRoutes');
 var profile = require('./routes/profileRoutes');
 //========================================================================================
 var app = express();
+
+app.use(helmet());
+app.use(helmet.noCache());
+app.use(helmet.referrerPolicy({ policy: 'same-origin' }));
+//after adding the following code snippet...it's disturbing the styles...why?
+// app.use(helmet.contentSecurityPolicy({
+//   directives: {
+//     defaultSrc: ["'self'"],
+//     //styleSrc: ["'self'", 'https://use.fontawesome.com', 'https://fonts.googleapis.com'],
+//     //scriptSrc: ["'self'"],
+//     // browserSniff: false,
+//   }
+// }));
+app.use(helmet.hpkp({
+  maxAge: 7776000,
+  sha256s: ['AbCdEf123=', 'ZyXwVu456='],
+  includeSubdomains: true
+}));
+
 mongoose.connect(keys.mongodb.dbURI);
 
 // view engine setup

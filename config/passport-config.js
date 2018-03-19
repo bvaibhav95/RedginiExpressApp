@@ -44,7 +44,6 @@ passport.use(
     clientSecret : keys.facebook.clientSecret,
     profileFields: ['id','email','displayName']
 }, function(accessToken, refreshToken, profile, done){
-    console.log(profile);
     User.findOne({providerID : profile.id}).then(function(availableUser){
         if(availableUser){
             done(null, availableUser);

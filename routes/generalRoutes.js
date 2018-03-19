@@ -2,6 +2,8 @@ var crypto = require('crypto');
 var express = require('express');
 var nodemailer = require('nodemailer');
 var mongoose = require('mongoose');
+var csrf = require('csurf');
+
 var keys = require('../config/keys');
 var Cart = require('../models/Cart');
 var Order = require('../models/Order');
@@ -17,6 +19,7 @@ var database = require('../controller/database');
 
 const authCheck = function(req,res,next){
   if(!req.user){
+      req.session.oldUrl = req.url;
       res.redirect('/auth/login');
   }else{
       next();
@@ -30,8 +33,11 @@ const isCheckedOut = function(req,res,next){
   }
 };
 
+var csrfProtection = csrf({ cookie: true });
+router.use(csrfProtection);
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Redgini | Love in every bite', user : req.user, cart : req.session.cart});
+  res.render('index', { title: 'Redgini | Love in every bite', user : req.user, cart : req.session.cart, csrfToken: req.csrfToken()});
 });
 
 router.get('/policies', function(req, res, next) {
@@ -62,7 +68,7 @@ router.get('/cart',function(req, res, next) {
     res.render('user/shoppingCart', {visible: 'false', cart : req.session.cart, user: req.user});
 });
 
-router.post('/add-to-cart/:id/:cakeWt/:cakeQty',function(req, res, next) {
+router.get('/add-to-cart/:id/:cakeWt/:cakeQty',function(req, res, next) {
   var productId  = req.params.id;
   var productWt  = req.params.cakeWt;
   var productQty = req.params.cakeQty;
@@ -89,7 +95,7 @@ router.get('/remove/:id', function(req, res, next) {
 router.get('/checkout', authCheck, function(req, res, next) {
   //put validator for field here using express-validator
   var txnid = req.user.providerID;
-  res.render('user/checkout', {user : req.user, cart : req.session.cart});
+  res.render('user/checkout', {user : req.user, cart : req.session.cart, csrfToken: req.csrfToken()});
 });
 
 router.post('/final', function(req, res, next) {

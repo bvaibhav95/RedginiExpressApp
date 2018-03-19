@@ -36,7 +36,7 @@ var id = clickedId.substring(9);
 var cakeWeight = $('#cakeWeight'+id).val();
 var cakeQty = $('#cakeQty'+id).text();
 $.ajax({
-        type: "POST",
+        type: "GET",
         url:"/add-to-cart/"+id+"/"+cakeWeight+"/"+cakeQty,
         success: function(data){
             location.reload();

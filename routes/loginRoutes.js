@@ -11,6 +11,7 @@ mongoose.connect(keys.mongodb.dbURI);
 
 var authCheck = function(req,res,next){
     if(!req.user){
+        req.session.oldUrl = req.url;
         res.redirect('/auth/login');
     }else{
         next();
@@ -36,13 +37,25 @@ router.get('/google', passport.authenticate('google',{
 }));
 
 router.get('/google/redirect', passport.authenticate('google'),function(req, res, next){
-    res.redirect('/products/blackforest');
+    if (req.session.oldUrl) {
+        var oldUrl = req.session.oldUrl;
+        req.session.oldUrl = null;
+        res.redirect(oldUrl);
+    } else {
+        res.redirect('/products/blackforest');
+    }
 });
 
 router.get('/facebook', passport.authenticate('facebook',{ scope: ['email', 'public_profile'] }));
 
 router.get('/facebook/redirect', passport.authenticate('facebook', {failureRedirect: '/login' }),function(req, res){
-    res.redirect('/products/blackforest');
+    if (req.session.oldUrl) {
+        var oldUrl = req.session.oldUrl;
+        req.session.oldUrl = null;
+        res.redirect(oldUrl);
+    } else {
+        res.redirect('/products/blackforest');
+    }
 });
 
 module.exports = router;
