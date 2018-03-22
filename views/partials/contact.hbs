@@ -1,51 +1,40 @@
-  <div class="container" id="contactus">
-    <h2>Contact us</h2>
-		<h5 style="text-align:center;">We will reach out to you as soon as possible...</h5>
-		<hr class="divider">
-		<div class="row">
-			<div class="col-xs-1 col-sm-2 col-md-2"></div>
-
-			<div class="col-xs-10 col-sm-8 col-md-8">
-				<form id="contact_form" action="/sent" method="POST">
+<div id="contactus" class="modal-dialog cascading-modal modal-lg" role="document">
+	<div class="modal-content">
+		<div class="modal-header danger-color white-text">
+			<h2 class="title"><i class="fas fa-pencil-alt"></i>&nbsp;Contact us</h2>
+		</div>
+		<div class="modal-body" >
+			<form id="" action="/sent" method="POST">
 				<input type="hidden" name="_csrf" value="{{csrfToken}}">
-					<div class="form-group">
-						<label for="form_name" class="contactLabels">Your Name</label>
-						<input type="text" class="form-control form-control-sm" id="form_name" name="contactform_name" value="" required>
-					</div>
+				<div class="md-form form-sm">
+					<i class="far fa-user prefix"></i>
+					<input type="text" id="contactform_name" class="form-control form-control-sm" name="contactform_name" required>
+					<label for="contactform_name">Your name</label>
+				</div>
 
-					<div class="form-group">
-						<label for="form_phone" class="contactLabels">Your phone</label>
-						<div class="input-group mb-2 mr-sm-2 mb-sm-0">
-						<div class="input-group-addon">+91</div>
-							<input type="tel" class="form-control form-control-sm" id="form_phone" name="contactform_phone" required>
-						</div>
-					</div>
+				<div class="md-form form-sm">
+					<i class="far fa-envelope prefix"></i>
+					<input type="text" id="contactform_email" class="form-control form-control-sm" name="contactform_email" required>
+					<label for="contactform_email">Your email</label>
+				</div>
 
-					<div class="form-group">
-						<label for="form_email" class="contactLabels">Your Email</label>
-						<input type="email" class="form-control form-control-sm" id="form_email" name="contactform_email" value="" required>
-					</div>
+				<div class="md-form form-sm">
+					<i class="fas fa-mobile-alt prefix"></i>
+					<input maxlength="10" type="text" id="contactform_phone" class="form-control form-control-sm" name="contactform_phone" required>
+					<label for="contactform_phone">Your mobile number</label>
+				</div>
 
-					<div class="form-group">
-						<label for="form_message" class="contactLabels">Your Message</label>
-						<textarea class="form-control input-sm" name="contactform_message" rows="6" cols="80" id="form_message" required></textarea>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<button type="submit" class="btn btn-danger btn-sm" id="form_submit">Send Message</button>
-						</div>
-						<div class="col-sm-8">
-							<div class="{{showClass}}" role="alert" id="msg_sent">
-               					<strong>{{msg1}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;{{msg2}}
-              				</div>
-						</div>
-					</div>
+				<div class="md-form form-sm">
+					<i class="far fa-edit prefix"></i>
+					<textarea type="text" id="contactform_message" class="md-textarea form-control" name="contactform_message" required></textarea>
+					<label for="contactform_message">Your message</label>
+				</div>
 
-				</form>
-			</div>
-
-			<div class="col-xs-1 col-sm-2 col-md-2"></div>
+				<div class="text-center mt-4 mb-2">
+					<button type="submit" class="btn btn-md btn-outline-danger">Send&nbsp;<i class="far fa-paper-plane"></i></button>
+				</div>
+			</form>
 		</div>
-		<hr class="style2">
-		</div>
-  </div>
+	</div>
+</div>
+					

@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Harmattan|Pacifico|Roboto|Montserrat');
-/*
-Color codes in botstrap
-	#d9534f 	(217,83,79)
-	#f9f9f9 	(249,249,249)
-	#5bc0de 	(91,192,222)
-	#5cb85c 	(92,184,92)
-	#428bca 	(66,139,202)
-*/
+@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
+
+/* font-family: 'Fredoka One', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Farsan', cursive; */
 html,body{
 	height: 100%;
 }
@@ -32,106 +33,20 @@ body#policies_page hr.style2 {
 	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
     border: 0;
 }
-
-/*navbar styling start*/
-/* body#policies_page #signIn_navbar {
-    color: #fff;
-    background-color: #cc0000;
-    border-color: #cc0000;
-		font-weight: bold;
-		margin: 5px;
-}
-
-body#policies_page #signIn_navbar:hover{
-	cursor: pointer;
-	background-color: white;
-	border-color:  #cc0000;
-	color: #cc0000;
-	font-weight: bold;
-}
-body#policies_page .modal .sendotp_next_btn {
-    color: #fff;
-    background-color: #cc0000;
-    border-color: #cc0000;
-		font-weight: bold;
-		margin: 5px;
-}
-body#policies_page .modal .sendotp_next_btn:hover{
-	cursor: pointer;
-	background-color: white;
-	border-color:  #cc0000;
-	color: #cc0000;
-	font-weight: bold;
-}
-body#policies_page #input_otp{
-	width: 100px;
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-*/
-/*==========Dropdown-content==============*/
-/*
-body#policies_page .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-body#policies_page .dropdown-content a {
-    color: black;
-    text-decoration: none;
-    display: block;
-		font-family: 'Roboto', sans-serif;
-}
-
-body#policies_page .dropdown-content a:hover {
-	background-color: #cc0000;
-	font-family: 'Roboto', sans-serif;
-}
-
-body#policies_page .dropdown:hover .dropdown-content {
-    display: block;
-}
-*/
-/*=========================================*/
-
-
-/*body#policies_page #brand_name{
-	font-family: 'Pacifico', cursive;
-	font-size: 30px;
-	font-weight: bold;
-}
-body#policies_page #navbar_items{
-	font-family: 'Arvo', serif;
-	font-weight: bold;
-}
-body#policies_page #footer_line{
-  background: #ff0000;
-  color: white;
+body#policies_page #header{
+  font-size: 40px;
+  font-family: 'Fredoka One', cursive;
+  margin-top: 100px;
   text-align: center;
-  padding: 5px;
-  font-size: 20px;
-  font-family: 'Droid Sans', sans-serif;
 }
-body#policies_page #footer_line a{
-  color: white;
+body#policies_page #desc{
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
 }
-body#policies_page #navbar_main .nav-item:hover {
-  text-decoration: underline; }
-
-body#policies_page	#products_dropdown .dropdown-item:hover {
-	  background-color: #cc0000;
-	  color: white; } */
-/*navbar styling ends*/
-
-
-/*==========col-sm-3 styling..dropdown of the policies starts=========*/
 body#policies_page #header_our_policies{
-  background-color: #cc0000;
+  font-family: 'Oswald', sans-serif;
+  background-color: #ff4444;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -141,6 +56,7 @@ body#policies_page #header_our_policies{
 }
 
 body#policies_page #policies_cake{
+  font-family: 'Francois One', sans-serif;
   background-color:  #eaecee;
   color: #454545;
   font-size: 17px;
@@ -177,11 +93,12 @@ body#policies_page #main_categories_cake li{
 body#policies_page .policy_content{
 	max-height: 500px;
 	overflow-y: scroll;
-	font-family: 'Harmattan', sans-serif;
-	font-size: 20px;
+	font-family: 'Comfortaa', cursive;
+	font-size: 15px;
 }
 
 body#policies_page .policy_content_header{
+  font-family: 'Francois One', sans-serif;
 	font-weight:bold;
 	margin:15px 0px 15px 0px;
 	text-decoration: underline;

@@ -1,35 +1,34 @@
-	<!--===================Navbar start============================-->
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="homepageNavbar">
-  	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  	</button>
-  	<a class="navbar-brand" href="/" id="brand_name">Redgini</a>
-
-  <div class="collapse navbar-collapse" id="navbar_main">
-    <ul class="navbar-nav mr-auto mt-2 mt-md-0" id="navbar_items">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/#aboutus">About us</a>
-      </li>
-			<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink"
-					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Products
-        </a>
-        <div class="dropdown-content" aria-labelledby="navbarDropdownMenuLink" id="products_dropdown">
-          <a class="dropdown-item" href="/products/blackforest">Cakes & Pastry</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/#contactus">Contact us</a>
-      </li>
-		</ul>
-    {{#if show}}
-    {{else}}
-      {{>profileNav}}
-    {{/if}}
-  </div>
+<nav class="navbar fixed-top navbar-expand-md navbar-dark danger-color">
+    <a class="navbar-brand" href="/" id="brand_name">Redgini</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar_main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/#aboutus">About us</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/products/blackforest">Cakes & Pastry</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/#contactus">Contact us</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav nav-flex-icons">
+            {{#if show}}
+            {{else}}
+                {{>profileNav}}
+            {{/if}}
+        </ul>
+    </div>
 </nav>
-{{>construction}}
+
+{{>construction}} 
+            

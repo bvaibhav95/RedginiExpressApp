@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Bree+Serif|Lemonada|Montserrat|Pacifico|Quicksand|Roboto|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
 
+/* font-family: 'Fredoka One', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Farsan', cursive; */
 html,body{
 	height: 100%;
 }
@@ -8,10 +16,35 @@ body{
 	text-rendering: optimizelegibility;
 	color: #6c6f73;
 }
-
-/* body#cake_product_page .cake_weight{
-
-} */
+body#cake_product_page #zomatoSideWidget2Header{
+	text-align: center;
+	font-family: 'Fredoka One', cursive;
+}
+body#cake_product_page #zomatoSideWidget1Header{
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	border: 3px solid #ff4444;
+	padding: 8px 5px;
+	color: #ff4444;
+	font-weight: bold;
+}
+body#cake_product_page #zomatoTreadingBlock{
+	margin-top: 100px;
+}
+body#cake_product_page #famousShopBlock{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+body#cake_product_page .famousShopPics{
+	width: 100%;
+	height: 150px;
+}
+body#cake_product_page .famousShopPicsBlock{
+	margin: 5px;
+}
+body#cake_product_page .famousShopNames{
+	font-family: 'Fredoka One', cursive;
+}
 body#cake_product_page .weight_list{
 	text-align: center;
 }
@@ -22,43 +55,12 @@ body#cake_product_page #weight_of_cake label{
 body#cake_product_page .filter_items{
 	font-size: 14px;
 }
-/*=========side bar styling starts===========*/
 
-body#cake_product_page #cake_pdt_page_header{
-	font-family: 'Lemonada', cursive;
-	font-weight: bold;
+body#cake_product_page .cake_id, .wtDesc{
 	text-align: center;
-	margin: 140px 0px 50px 0px;
-	color: #999999;
 }
-
-body#cake_product_page #sidebar_header{
-  background-color: #e5e5e5; /*faint red = #FF4444 and dark red = #CC0000*/
-	color: #7f7f7f;
-	font-size: 18px;
-	font-weight: bold;
-}
-
-body#cake_product_page #sidebar_cake_cat .sidebar_cake_cat_items{
-	font-size: 13px;
-  font-family: 'Montserrat', sans-serif;
-}
-body#cake_product_page #applyFiltersBtn{
-	background-color: #CC0000;
-	color: white;
-	margin-top: 5px;
-	width: 100%;
-}
-body#cake_product_page #applyFiltersBtn:hover{
-	color: #CC0000;
-	border-color: #CC0000;
-	background-color: white;
-}
-/*=========side bar styling ends===========*/
-
-/*=========styling of cake boxes start============*/
-body#cake_product_page .shadow{
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+body#cake_product_page .wtDesc{
+	text-align: center;
 }
 body#cake_product_page .cake_box_row{
 	padding: 5px 0px 5px 0px;
@@ -70,45 +72,18 @@ body#cake_product_page .cake_box:hover{
 body#cake_product_page .cake_box img{
 	height: 250px;
 	width: 100%;
-	/* margin-top: 10px; */
-	/* border-radius: 7px; */
 	vertical-align: middle;
 }
-body#cake_product_page .addToCart_btn{
-	border-radius: 15px;
-	font-size: 11px;
-	margin-top: -3px;
-	margin-left: 17px;
-	background-color: #CC0000;
-}
-body#cake_product_page .addToCart_btn:hover{
-	cursor:pointer;
-	color: #CC0000;
-	border-color: #CC0000;
-	background-color: white;
-}
 body#cake_product_page .plusMinusBtbn{
-	color: #CC0000;
-	border-color: #CC0000;
+	color: #ff4444;
 	background-color: white;
-	border-radius: 15px;
+	border: 0.1rem solid #ff4400;
+	border-radius: 20px;
 }
 body#cake_product_page .plusMinusBtbn:hover{
 	color: white;
-	border-color: #CC0000;
-	background-color: #cc0000;
-}
-body#cake_product_page .addTocartBtn{
-	color: white;
-	font-size: 13px;
-	background-color: #cc0000;
-	text-align: center;
-}
-body#cake_product_page .addTocartBtn:hover{
-	color: #cc0000;
-	border-color: #cc0000;
-	background-color: white;
-	cursor: pointer;
+	border-color: #ff4444;
+	background-color: #ff4444;
 }
 body#cake_product_page .qty {
 	font-size:15px;
@@ -125,6 +100,7 @@ body#cake_product_page .productContainer{
 	margin: 0px;
 }
 body#cake_product_page .cake_name{
+	text-align: center;
 	font-family: 'Quicksand', sans-serif;
 }
 body#cake_product_page .cake_id{
@@ -149,8 +125,8 @@ body#cake_product_page .heart_like{
 	color: pink;
 	margin-top: 10px;
 }
-body#cake_product_page .catSideNav {
-	/* z-index : 1000; */
+/* body#cake_product_page .catSideNav {
+	z-index : 1000;
     height: 100%;
     width: 0;
     position: fixed;
@@ -181,7 +157,7 @@ body#cake_product_page .catSideNav .closebtn {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-}
+} */
 /*=========styling of cake boxes end============*/
 @media (max-width: 574px) {
 	body#cake_product_page .cake_images img{
@@ -194,6 +170,9 @@ body#cake_product_page .catSideNav .closebtn {
 	}
 	body#cake_product_page .cake_name{
 		font-size: 15px;
+	}
+	body#cake_product_page .eggLine{
+		font-size: 11px;
 	}
 	body#cake_product_page .cake_id{
 		font-size: 10px;
@@ -231,6 +210,9 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .cake_name{
 		font-size: 15px;
 	}
+	body#cake_product_page .eggLine{
+		font-size: 12px;
+	}
 	body#cake_product_page .cake_id{
 		font-size: 11px;
 	}
@@ -266,6 +248,9 @@ body#cake_product_page .catSideNav .closebtn {
 	}
 	body#cake_product_page .cake_name{
 		font-size: 15px;
+	}
+	body#cake_product_page .eggLine{
+		font-size: 13px;
 	}
 	body#cake_product_page .cake_id{
 		font-size: 12px;
@@ -303,6 +288,9 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .cake_name{
 		font-size: 16px;
 	}
+	body#cake_product_page .eggLine{
+		font-size: 14px;
+	}
 	body#cake_product_page .cake_id{
 		font-size: 13px;
 	}
@@ -337,6 +325,9 @@ body#cake_product_page .catSideNav .closebtn {
 	    height: 400px;
 	}
 	body#cake_product_page .cake_name{
+		font-size: 16px;
+	}
+	body#cake_product_page .eggLine{
 		font-size: 16px;
 	}
 	body#cake_product_page .cake_id{

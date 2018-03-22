@@ -1,14 +1,28 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    {{!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>{{title}}</title>
-    <link rel="stylesheet" href="/stylesheets/dependencies/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.min.css">
+    <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/dependencies/pickaday.css">
+    <link rel="stylesheet" href="/stylesheets/error.css"/>
+    <link rel="stylesheet" href="/stylesheets/header.css"/>
+    <link rel="stylesheet" href="/stylesheets/footer.css"/>
+    <link rel="stylesheet" href="/stylesheets/socialLogin.css"/>
+    <link rel="stylesheet" href="/stylesheets/index.css"/>
+    <link rel="stylesheet" href="/stylesheets/partners.css"/>
+    <link rel="stylesheet" href="/stylesheets/policies.css">
+    <link rel="stylesheet" href="/stylesheets/products.css"/>
+    <link rel="stylesheet" href="/stylesheets/checkout.css">
+    <link rel="stylesheet" href="/stylesheets/final.css"/>
+    <link rel="stylesheet" href="/stylesheets/shoppingCart.css"/>
     <link rel="stylesheet" href="/stylesheets/userProfile.css">
-    <link rel="stylesheet" href="/stylesheets/header.css">
-    <link rel="stylesheet" href="/stylesheets/footer.css">
   </head>
   <body id="userProfile">
     {{>header}}
@@ -17,7 +31,7 @@
         <div class="row" id="contentWrapper">
             <div class="col-md-3 col-sm-3">
                 <div class="align-self-center" style="flex-direction: column">
-                    <p><img id="userPic" class="rounded-circle testimonials_img" src="images/user.png" alt="user3" width="80" height="80"/></p>
+                    <p style="text-align:center"><img id="userPic" class="rounded-circle testimonials_img" src="images/user.png" alt="user3" width="80" height="80"/></p>
                     <p id="username">{{user.username}}</p>
                 </div>
                 <div id="userTabs" class="list-group">
@@ -31,16 +45,19 @@
             <div class="col-md-9 col-sm-9">
                 <div class="list-group">
                     {{#if orderHistory}}
-                        {{#each orderHistory}}
                         <p id="noOrderHistory">Previous orders...</p>
-                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                                {{#each this.cart.items}}
-                                    <p class="mb-1 itemList"><b>{{this.item.name}} | {{this.cakeWt}}Kg | Qty - {{this.cakeQty}} | Cost - Rs.{{this.netPrice}}</b></p>
-                                {{/each}}
-                                <small>Delivery date - {{this.delDate}}</small>
-                                {{!-- <small class="delAddresses">Delivered at - {{this.userAddressLine1}}, {{this.userAddressLine2}}, {{this.userAddressLine3}}, {{this.userCity}}, {{this.userState}}</small> --}}
-                                <small>Payment mode - {{this.payMode}}</small>
-                                <small>Net cost - Rs.{{this.cart.totalPrice}}</small>
+                        {{#each orderHistory}}
+                            <a href="" class="list-group-item list-group-item-action">
+                                <ul style="list-style:none">
+                                    <li>
+                                        {{#each this.cart.items}}
+                                            <p class="mb-1 itemList"><b>{{this.item.name}} | {{this.cakeWt}}Kg | Qty - {{this.cakeQty}} | Cost - Rs.{{this.netPrice}}</b></p>
+                                        {{/each}}
+                                    </li>
+                                    <li><small>Delivery date - {{this.delDate}}</small></li>
+                                    <li><small>Payment mode - {{this.payMode}}</small></li>
+                                    <li><small>Net cost - Rs.{{this.cart.totalPrice}}</small></li>
+                                </ul>
                             </a>
                         {{/each}}
                     {{else}}
@@ -49,7 +66,7 @@
                             <div class="row justify-content-center">
                                 <img id="emptyListPic" src="/images/emptycart.jpg" alt="empty shopping cart">
                                 <div class="w-100"></div>
-                                <a id="startShopping" href="/products/blackforest" class="btn" type="button">Order your first cake!</a>
+                                <a id="startShopping" href="/products/blackforest" class="btn btn-danger btn-sm" type="button">Order your first cake!</a>
                             </div>
                         </div>
                     {{/if}}
@@ -58,8 +75,9 @@
         </div>
     </div>
     {{>footer}}
-    <script src="/javascripts/dependencies/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
-    <script src="/javascripts/dependencies/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
     <script type="text/javascript" src="/javascripts/userProfile.js"></script>
   </body>

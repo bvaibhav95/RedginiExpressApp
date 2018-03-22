@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
+
+/* font-family: 'Fredoka One', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Farsan', cursive; */
 body#cartpage #offerCarousal{
+  margin-top: 100px;
   padding: 30px 100px 30px 100px;
 }
 body#cartpage #offerCarousal img{
@@ -26,29 +36,13 @@ body#cartpage .removeItemBtn:hover{
   cursor: pointer;
 }
 body#cartpage #checkoutBtn{
-  background-color: #cc0000;
-  color: white;
   width: 100%;
   font-weight: bold;
-}
-body#cartpage #checkoutBtn:hover{
-  color: #cc0000;
-  border-color: #cc0000;
-  background-color: white;
-  cursor: pointer;
 }
 body#cartpage #addMoreCakesBtn{
   margin-top: 30px;
   margin-bottom: 20px;
-  background-color: #cc0000;
-  color: white;
   font-weight: bold;
-}
-body#cartpage #addMoreCakesBtn:hover{
-  color: #cc0000;
-  border-color: #cc0000;
-  background-color: white;
-  cursor: pointer;
 }
 body#cartpage #emptyCartMsg{
   margin-top: 50px;
@@ -81,6 +75,7 @@ body#cartpage #upcomingPaymentOptions{
   margin-top: 50px;
 }
 body#cartpage #upcomingPaymentOptions p{
+  font-family: 'Oswald', sans-serif;
   text-align: center;
   font-weight: bold;
 }
@@ -105,10 +100,10 @@ body#cartpage #upcomingPaymentOptions img{
       font-size : 12px;
     }
     body#cartpage #addMoreCakesBtn{
-      font-size : 13px;
+      font-size : 12px;
     }
     body#cartpage #checkoutBtn{
-      font-size : 13px;
+      font-size : 12px;
     }
 }
 @media (min-width: 575px) {
@@ -128,10 +123,10 @@ body#cartpage #upcomingPaymentOptions img{
       font-size : 13px;
     }
     body#cartpage #addMoreCakesBtn{
-      font-size : 15px;
+      font-size : 13px;
     }
     body#cartpage #checkoutBtn{
-      font-size : 15px;
+      font-size : 13px;
     }
 }
 @media (min-width: 768px) {
@@ -151,10 +146,10 @@ body#cartpage #upcomingPaymentOptions img{
       font-size : 15px;
     }
     body#cartpage #addMoreCakesBtn{
-      font-size : 15px;
+      font-size : 13px;
     }
     body#cartpage #checkoutBtn{
-      font-size : 15px;
+      font-size : 13px;
     }
 }
 @media (min-width: 992px) {
@@ -174,10 +169,10 @@ body#cartpage #upcomingPaymentOptions img{
       font-size : 16px;
     }
     body#cartpage #addMoreCakesBtn{
-      font-size : 16px;
+      font-size : 14px;
     }
     body#cartpage #checkoutBtn{
-      font-size : 16px;
+      font-size : 14px;
     }
 }
 @media (min-width: 1200px) {
@@ -197,30 +192,9 @@ body#cartpage #upcomingPaymentOptions img{
       font-size : 17px;
     }
     body#cartpage #addMoreCakesBtn{
-      font-size : 17px;
+      font-size : 15px;
     }
     body#cartpage #checkoutBtn{
-      font-size : 17px;
+      font-size : 15px;
     }
 }
-
-body#cartpage .shadow_depth_1{
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  }
-body#cartpage .shadow_depth_2{
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-body#cartpage .shadow_depth_3{
-  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  }
-body#cartpage .shadow_depth_4{
-   -webkit-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-  -moz-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-  }

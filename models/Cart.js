@@ -3,10 +3,10 @@ module.exports = function Cart(oldCart) {
     this.totalQty = oldCart.totalQty || 0;
     this.totalPrice = oldCart.totalPrice || 0;
 
-    this.add = function(item, id, wt, qty) {
-        var storedItem = this.items[id+wt];
+    this.add = function(item, id, wt, qty, egg) {
+        var storedItem = this.items[id+wt+egg];
         if (!storedItem) {
-            storedItem = this.items[id+wt] = {item: item, cakeQty: parseInt(qty), netPrice: item.halfKgPrice * parseFloat(wt) * 2 * parseInt(qty), cakeWt: wt, unitCost:item.halfKgPrice * parseFloat(wt) * 2};
+            storedItem = this.items[id+wt+egg] = {item: item, cakeQty: parseInt(qty), netPrice: item.halfKgPrice * parseFloat(wt) * 2 * parseInt(qty), cakeWt: wt, unitCost:item.halfKgPrice * parseFloat(wt) * 2, egg: egg};
             this.totalPrice += item.halfKgPrice * parseFloat(wt) * 2 * parseInt(qty);
         }else{
             storedItem.cakeQty += parseInt(qty);

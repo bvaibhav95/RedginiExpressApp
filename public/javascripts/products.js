@@ -35,12 +35,13 @@ function addToCart(clickedId){
 var id = clickedId.substring(9);
 var cakeWeight = $('#cakeWeight'+id).val();
 var cakeQty = $('#cakeQty'+id).text();
+var isEgg = $('#egg'+id).is(':checked');
 $.ajax({
         type: "GET",
-        url:"/add-to-cart/"+id+"/"+cakeWeight+"/"+cakeQty,
+        url:"/add-to-cart/"+id+"/"+cakeWeight+"/"+cakeQty+"/"+isEgg,
         success: function(data){
             location.reload();
-            $.toaster({ message : 'Cake added', title : 'Shopping cart', priority : 'danger' });
+            $.toaster({ message : 'Cake added', title : 'Shopping cart', priority : 'success' });
         }
     }); 
 }

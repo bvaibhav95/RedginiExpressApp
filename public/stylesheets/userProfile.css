@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
+
+/* font-family: 'Fredoka One', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Farsan', cursive; */
 body#userProfile{
     background-color: #f0f0f0;
 }
@@ -9,7 +18,7 @@ body#userProfile #wrapper{
     font-family: 'Montserrat', sans-serif;
 }
 body#userProfile #contentWrapper{
-    text-align: center;
+    /* text-align: center; */
     padding: 50px 0px 50px 0px;
 }
 body#userProfile #userPic {
@@ -24,29 +33,22 @@ body#userProfile #userTabs {
 body#userProfile #noOrderHistory{
     text-align: center;
     font-size: 30px;
-
+    font-family: 'Oswald', sans-serif;
 }
 body#userProfile #emptyCartMsg{
     margin-bottom: 20px;
 }
 body#userProfile #startShopping{
-    background-color: #cc0000;
-    color: white;
     font-weight: bold;
 }
-body#userProfile #startShopping:hover{
-    color: #cc0000;
-    border-color: #cc0000;
-    background-color: white;
-    cursor: pointer;
-}
+
 @media (max-width: 574px) {
 	body#userProfile #emptyListPic {
         height: 200px;
         width : 250px;
     }
     body#userProfile #startShopping{
-        font-size:12px;
+        font-size:10px;
     }
     body#userProfile #noOrderHistory{
         border:1px solid grey;
@@ -69,7 +71,7 @@ body#userProfile #startShopping:hover{
         width : 300px;
     }
     body#userProfile #startShopping{
-        font-size:13px;
+        font-size:12px;
     }
     body#userProfile #noOrderHistory{
         margin-top:20px;
@@ -91,7 +93,7 @@ body#userProfile #startShopping:hover{
         width : 330px;
     }
     body#userProfile #startShopping{
-        font-size:15px;
+        font-size:12px;
     }
     body#userProfile #noOrderHistory{
         margin-top:20px;
@@ -112,7 +114,7 @@ body#userProfile #startShopping:hover{
         width : 350px;
     }
     body#userProfile #startShopping{
-        font-size:16px;
+        font-size:14px;
     }
     body#userProfile #noOrderHistory{
         font-size: 25px;
@@ -133,7 +135,7 @@ body#userProfile #startShopping:hover{
         width : 450px;
     }
     body#userProfile #startShopping{
-        font-size:18px;
+        font-size:15px;
     }
     body#userProfile #noOrderHistory{
         font-size: 30px;

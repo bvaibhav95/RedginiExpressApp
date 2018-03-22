@@ -1,50 +1,54 @@
 {{#each cakes}}
-    <div class="row" style="margin: 10px 0px 10px 0px;">
+    <div class="row justify-content-start" style="margin: 10px 0px 10px 0px;">
       {{#each this}}
         <div class="col-6 col-md-4 col-sm-4 productContainer">
-            <div class="card collection-card shadow cake_box">
-                <div class="view hm-zoom cake_images">
+            <div class="card collection-card cake_images">
+                <div class="view overlay zoom">
                     <img src="/images/designer-fondant/{{this.cakeId}}.jpg" class="" alt="">
+                    <a><div class="mask rgba-white-slight"></div></a>
                 </div>
-                <div class="card-block text-center">
-                    <div class="row">
-                      <div class="col-12 col-sm-12 col-md-6">
-                        {{!-- ellipsis the name --}}
-                        <p class="cake_name"><b>{{this.name}}</b></p>
+                <div class="card-body">
+                    <div class="row justify-content-between">
+                      <div class="col-md-7 col-12">
+                          <p class="cake_name"><b>{{this.name}}</b>&nbsp;&nbsp;<i class="fas fa-check-circle green-text"></i></p>
                       </div>
-                      <div class="col-12 col-sm-12 col-md-6">
-                        <p class="cake_price"><small id="specificWt{{this.cakeId}}" style="">{{this.availableWeights.[0]}}</small>&nbsp;kg - Rs.&nbsp;<small id="specificWtCost{{this.cakeId}}" style="">{{this.minWtCost}}</small></p>
+                      <div class="col-md-5 col-12">
+                         <p class="wtDesc"><small id="specificWt{{this.cakeId}}" style="">{{this.availableWeights.[0]}}&nbsp;</small> kg - <i class="fas fa-rupee-sign"></i>&nbsp;<small id="specificWtCost{{this.cakeId}}" style="">{{this.minWtCost}}</small></p>
                       </div>
-                    </div>
-                    <div class="row" style="margin-right:-25px">
-                      <div class="col-xs-12 col-sm-12 col-md-6">
+                    </div> 
+                    <div class="row justify-content-between" style="margin-top:5px;">
+                      <div class="col-md-7 col-12">
                         <p class="cake_id">
-                          <button type="button" class="qtyplus plusMinusBtbn btn btn-danger btn-sm">+</button>
+                          <button type="button" class="qtyplus plusMinusBtbn btn-circle">+</button>
                           &nbsp;&nbsp;<small id="cakeQty{{this.cakeId}}" class="qty">1</small>&nbsp;&nbsp;
-                          <button type="button" class="qtyminus plusMinusBtbn btn btn-danger btn-sm">-</button>
+                          <button type="button" class="qtyminus plusMinusBtbn btn-circle">-</button>
                         </p>
                       </div>
-                      <div class="col-xs-12 col-sm-12 col-md-6">
-                          <div class="form-group row">
-                              <div class="col-8 col-md-8">
-                                <select class="form-control form-control-sm weightChange" id="cakeWeight{{this.cakeId}}" onchange="updateCost(this.id)">
-                                  {{#each this.availableWeights}}
-                                    <option value="{{this}}">{{this}}</option>
-                                  {{/each}}
-                                </select>
-                              </div>
-                              <label style="margin-left:-20px;" class="col-4 col-md-3" for="cakeWeight{{this.cakeId}}">Kg</label>
-                              <div class="col-md-1"></div>
+                      <div class="col-md-5 col-12">
+                          <div class="input-group input-group-sm">
+                            <select class="custom-select custom-select-sm weightChange" id="cakeWeight{{this.cakeId}}" onchange="updateCost(this.id)">
+                              {{#each this.availableWeights}}
+                                <option value="{{this}}">{{this}}</option>
+                              {{/each}}
+                            </select> 
+                            <div class="input-group-append">
+                              <label class="input-group-text" for="selectCakeWt">Kg</label>
+                            </div>
                           </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 col-sm-12 col-md-6">
+                    </div> 
+                    <div class="row justify-content-start">
+                      <div class="col-12">
+                          <button id="addToCart{{this.cakeId}}" onclick="addToCart(this.id)" type="submit" class="addTocartBtn btn btn-danger btn-sm">Add to cart</button>
                       </div>
-                      <div class="col-12 col-sm-12 col-md-6">
-                        <button id="addToCart{{this.cakeId}}" onclick="addToCart(this.id)" type="submit" class="addTocartBtn btn btn-danger btn-sm">Add to cart</button>
+                    </div> 
+                    <div class="dropdown-divider"></div>
+                    <div class="row justify-content-between">
+                      <div class="col-9 col-md-10 eggLine">Want Egged cake?</div>
+                      <div class="col-3 col-md-1">
+                          <input class="form-check-input" type="checkbox" name="egged" id="egg{{this.cakeId}}">
                       </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>

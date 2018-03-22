@@ -63,22 +63,24 @@ router.get('/detailsFromId/:cakeID', function(req, res, next) {
 
 router.get('/cart',function(req, res, next) {
     if(!req.session.cart){
-      return res.render('user/shoppingCart', {visible: 'false', cart : null, user: req.user});  
+      return res.render('user/shoppingCart', {visible: 'false', cart : null, user: req.user, title:'Redgini - Shopping cart'});  
     }
-    res.render('user/shoppingCart', {visible: 'false', cart : req.session.cart, user: req.user});
+    res.render('user/shoppingCart', {visible: 'false', cart : req.session.cart, user: req.user, title:'Redgini - Shopping cart'});
 });
 
-router.get('/add-to-cart/:id/:cakeWt/:cakeQty',function(req, res, next) {
+router.get('/add-to-cart/:id/:cakeWt/:cakeQty/:egg',function(req, res, next) {
   var productId  = req.params.id;
   var productWt  = req.params.cakeWt;
   var productQty = req.params.cakeQty;
+  var egg        = req.params.egg;
   var cart = new Cart(req.session.cart ? req.session.cart : {});
   Cake.where({cakeId:productId}).findOne(function(err, cake){
     if (err) {
         return res.render('error');
     }
-    cart.add(cake, productId, productWt, productQty);
+    cart.add(cake, productId, productWt, productQty, egg);
     req.session.cart = cart;
+    console.log(req.session.cart);
     res.redirect('/cart');
   });
 });
@@ -95,7 +97,7 @@ router.get('/remove/:id', function(req, res, next) {
 router.get('/checkout', authCheck, function(req, res, next) {
   //put validator for field here using express-validator
   var txnid = req.user.providerID;
-  res.render('user/checkout', {user : req.user, cart : req.session.cart, csrfToken: req.csrfToken()});
+  res.render('user/checkout', {user : req.user, cart : req.session.cart, csrfToken: req.csrfToken(), title : 'Redgini | Checkout'});
 });
 
 router.post('/final', function(req, res, next) {
@@ -148,7 +150,7 @@ router.get('/order', authCheck, isCheckedOut, function(req, res, next) {
       database.saveOrderInDB(req.session.orderDetails);
       myorder = req.session.cart;
       req.session.cart = {};
-      res.render('user/final', {visible: 'false', orderDetails : req.session.orderDetails, user : req.user, cart : myorder});
+      res.render('user/final', {visible: 'false', orderDetails : req.session.orderDetails, user : req.user, cart : myorder, title : 'Redgini | Order confirmed'});
 });
 
 module.exports = router;

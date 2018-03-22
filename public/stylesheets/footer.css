@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
+
+/* font-family: 'Fredoka One', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Farsan', cursive; */
 #footer_line{
 background: #ff0000;
 color: white;
@@ -22,21 +31,24 @@ font-size: 20px;
 #footer_lines{
     color: #ADB0B6;
     /*margin-left: 50px;*/
+    font-family: 'Comfortaa', cursive;
     font-size: 12px;
     margin-top: 20px;
     /*font-family: 'Raleway', sans-serif;*/
 }
 footer{
-    background-color: #282C35;
+    background-color: #282C35; 
     padding-top: 10px;
 }
 #categories_footer a{
+    font-family: 'Comfortaa', cursive;
     color: #ADB0B6;
     list-style: none;
     /*font-family: 'Raleway', sans-serif;*/
     font-size: 13px;
 }
 #links_footer a{
+    font-family: 'Comfortaa', cursive;
     color: #ADB0B6;
     list-style: none;
     /*font-family: 'Raleway', sans-serif;*/
@@ -84,31 +96,6 @@ footer{
     font-weight: bold;
     font-size: 20px;
     text-decoration: underline;
-}
-#footer_social_fb{
-    margin-right: 5px;
-    color: #ADB0B6;
-}
-#footer_social_g+{
-    margin-left: 5px;
-    margin-right: 5px;
-    color: #ADB0B6;
-}
-#footer_social_tweeter{
-    margin-left: 5px;
-    margin-right: 5px;
-    color: #ADB0B6;
-}
-#footer_social_insta{
-    margin-left: 5px;
-    margin-right: 5px;
-    color: #ADB0B6;
-}
-#footer_oheoLink a{
-	color: #ADB0B6;
-}
-#footer_oheoLink a:hover{
-	color: white;
 }
 #fb_btn{
 	background-color:  #3b5998;

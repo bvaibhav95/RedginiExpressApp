@@ -3,77 +3,173 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Redgini | Cake & pastries</title>
-    <link rel="stylesheet" href="/stylesheets/dependencies/bootstrap.min.css">
+    <title>{{title}}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/products.css"/>
-    <link rel="stylesheet" href="/stylesheets/footer.css"/>
+    <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.min.css">
+    <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/dependencies/pickaday.css">
+    {{!-- <link rel="stylesheet" type="text/css" href="/stylesheets/dependencies/normalize.css" /> --}}
+    {{!-- <link rel="stylesheet" type="text/css" href="/stylesheets/dependencies/demo.css" /> --}}
+    <link rel="stylesheet" type="text/css" href="/stylesheets/dependencies/cs-select.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/dependencies/cs-skin-border.css" />
+    <link rel="stylesheet" href="/stylesheets/error.css"/>
     <link rel="stylesheet" href="/stylesheets/header.css"/>
+    <link rel="stylesheet" href="/stylesheets/footer.css"/>
+    <link rel="stylesheet" href="/stylesheets/socialLogin.css"/>
+    <link rel="stylesheet" href="/stylesheets/index.css"/>
+    <link rel="stylesheet" href="/stylesheets/partners.css"/>
+    <link rel="stylesheet" href="/stylesheets/policies.css">
+    <link rel="stylesheet" href="/stylesheets/products.css"/>
+    <link rel="stylesheet" href="/stylesheets/checkout.css">
+    <link rel="stylesheet" href="/stylesheets/final.css"/>
+    <link rel="stylesheet" href="/stylesheets/shoppingCart.css"/>
+    <link rel="stylesheet" href="/stylesheets/userProfile.css">
   </head>
   <body id="cake_product_page">
-    {{>header}}
-    <div class="container">
-      {{>coverOffer}}
-    </div>
-   <hr>
-
-      {{>comingSoonModal}}
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm-down">
-            <div class="list-group" id="sidebar_cake_cat">
-              <a href="" class="list-group-item disabled" id="sidebar_header"> Cake categories:</a>
-                <a href="/products/blackforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">Black forest cakes</a>
-                <a href="/products/butterscotch" class="list-group-item list-group-item-action sidebar_cake_cat_items">Butterscotch cakes</a>
-                <a href="/products/chocolate" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate cakes</a>
-                <a href="/products/oreo" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate oreo cakes</a>
-                <a href="/products/fruit" class="list-group-item list-group-item-action sidebar_cake_cat_items">Fruit cakes</a>
-                <a href="/products/pineapple" class="list-group-item list-group-item-action sidebar_cake_cat_items">Pineapple cakes</a>
-                <a href="/products/redvelvet" class="list-group-item list-group-item-action sidebar_cake_cat_items">Red velvet cakes</a>
-                <a href="/products/strawberryvanilla" class="list-group-item list-group-item-action sidebar_cake_cat_items">Strawberry vanilla cakes</a>
-                <a href="/products/truffle" class="list-group-item list-group-item-action sidebar_cake_cat_items">All Truffle cakes</a>
-                <a href="/products/whiteforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">White Forest cakes</a>
-                <a href="/products/designer-fondant" class="list-group-item list-group-item-action sidebar_cake_cat_items"><b>Designer+Fondant cakes</b></a>
-            </div>
-            <hr>
-          </div>
-          <div class="col-md-3 col-sm-12 col-xs-12 hidden-md-up">
-              <div class="row justify-content-center">
-                <div class="">
-                  <a style="font-size: 15px;padding: 12px 0px;width:100%; background-color:white; color:black; border:2px solid black" class="fixed-bottom btn btn-sm" onclick="openSideNav()" id="categoryDropdown">
-                    <b>Choose cake category</b>
-                  </a>
+        {{>header}}
+        {{>comingSoonModal}}
+        
+        <div class="container" id="zomatoTreadingBlock">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h4 id="zomatoSideWidget2Header">Trending cake shops & cafes in Nashik !</h4>
+                    <hr>
+                    <div class="widget_wrap" style="width:100%;height:300px;display:inline-block;"><iframe src="https://www.zomato.com/widgets/all_collections.php?language_id=1&theme=red&widgetType=custom" style="position:relative;width:100%;height:100%;" border="0" frameborder="0"></iframe></div>
                 </div>
-              </div>
-          </div>
-          <div id="catSideNav" class="catSideNav">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
-              <a href="/products/blackforest" class="">Black forest cakes</a>
-              <a href="/products/butterscotch" class="">Butterscotch cakes</a>
-              <a href="/products/chocolate" class="">Chocolate cakes</a>
-              <a href="/products/oreo" class="">Chocolate oreo cakes</a>
-              <a href="/products/fruit" class="">Fruit cakes</a>
-              <a href="/products/pineapple" class="">Pineapple cakes</a>
-              <a href="/products/redvelvet" class="">Red velvet cakes</a>
-              <a href="/products/strawberryvanilla" class="">Strawberry vanilla cakes</a>
-              <a href="/products/truffle" class="">All Truffle cakes</a>
-              <a href="/products/whiteforest" class="">White Forest cakes</a>
-              <a href="/products/designer-fondant" class="">Designer+Fondant</a>
-          </div>
-          <div class="col-md-9 col-sm-12 col-xs-12">
-            {{#if designerAndFondant}}
-              {{>designer-fondant}}
-            {{else}}
-              {{>regularCakes}}
-            {{/if}}
-          </div>
+            </div>
         </div>
-      </div>
+        <hr>
 
-      {{>footer}}
-      <script src="/javascripts/dependencies/jquery.min.js" type="text/javascript"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
-      <script src="/javascripts/dependencies/bootstrap.min.js" type="text/javascript"></script>
-      <script src="/javascripts/dependencies/jquery.toaster.js" type="text/javascript"></script>
-      <script src="/javascripts/products.js" type="text/javascript"></script>
+        <div class="container">
+            {{!-- <section>
+				<select class="cs-select cs-skin-border">
+					<option value="" disabled selected>Preferred contact method</option>
+					<option value="email">E-Mail</option>
+					<option value="twitter">Twitter</option>
+					<option value="linkedin">LinkedIn</option>
+				</select>
+			</section>  --}}
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-start">
+            {{!-- <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm-down">
+                <div class="list-group" id="sidebar_cake_cat">
+                <a href="" class="list-group-item disabled" id="sidebar_header"> Cake categories:</a>
+                    <a href="/products/blackforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">Black forest cakes</a>
+                    <a href="/products/butterscotch" class="list-group-item list-group-item-action sidebar_cake_cat_items">Butterscotch cakes</a>
+                    <a href="/products/chocolate" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate cakes</a>
+                    <a href="/products/oreo" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate oreo cakes</a>
+                    <a href="/products/fruit" class="list-group-item list-group-item-action sidebar_cake_cat_items">Fruit cakes</a>
+                    <a href="/products/pineapple" class="list-group-item list-group-item-action sidebar_cake_cat_items">Pineapple cakes</a>
+                    <a href="/products/redvelvet" class="list-group-item list-group-item-action sidebar_cake_cat_items">Red velvet cakes</a>
+                    <a href="/products/strawberryvanilla" class="list-group-item list-group-item-action sidebar_cake_cat_items">Strawberry vanilla cakes</a>
+                    <a href="/products/truffle" class="list-group-item list-group-item-action sidebar_cake_cat_items">All Truffle cakes</a>
+                    <a href="/products/whiteforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">White Forest cakes</a>
+                    <a href="/products/designer-fondant" class="list-group-item list-group-item-action sidebar_cake_cat_items"><b>Designer+Fondant cakes</b></a>
+                </div>
+                <hr>
+            </div> --}}
+            {{!-- <div class="col-md-3 col-sm-12 col-xs-12 hidden-md-up">
+                <div class="row justify-content-center">
+                    <div class="">
+                    <a style="font-size: 15px;padding: 12px 0px;width:100%; background-color:white; color:black; border:2px solid black" class="fixed-bottom btn btn-sm" onclick="openSideNav()" id="categoryDropdown">
+                        <b>Choose cake category</b>
+                    </a>
+                    </div>
+                </div>
+            </div> --}}
+            {{!-- <div id="catSideNav" class="catSideNav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+                <a href="/products/blackforest" class="">Black forest cakes</a>
+                <a href="/products/butterscotch" class="">Butterscotch cakes</a>
+                <a href="/products/chocolate" class="">Chocolate cakes</a>
+                <a href="/products/oreo" class="">Chocolate oreo cakes</a>
+                <a href="/products/fruit" class="">Fruit cakes</a>
+                <a href="/products/pineapple" class="">Pineapple cakes</a>
+                <a href="/products/redvelvet" class="">Red velvet cakes</a>
+                <a href="/products/strawberryvanilla" class="">Strawberry vanilla cakes</a>
+                <a href="/products/truffle" class="">All Truffle cakes</a>
+                <a href="/products/whiteforest" class="">White Forest cakes</a>
+                <a href="/products/designer-fondant" class="">Designer+Fondant</a>
+            </div> --}}
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                {{#if designerAndFondant}}
+                {{>designer-fondant}}
+                {{else}}
+                {{>regularCakes}}
+                {{/if}}
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <h4 id="zomatoSideWidget1Header">Search your favourite cake shop on Zomato?</h4>
+                <hr>
+                <div class="widget_wrap" style="width:100%;height:797px;display:inline-block;"><iframe src="https://www.zomato.com/widgets/res_search_widget.php?city_id=16&language_id=1&theme=dark&sort=popularity" style="position:relative;width:100%;height:100%;" border="0" frameborder="0"></iframe></div>
+            </div>
+            </div>
+        </div>
+
+        <div class="container" id="famousShopBlock">
+            <h4 id="zomatoSideWidget2Header">Famous cake shops in Nashik!</h4>
+            <hr>
+            <div class="row justify-content-center">
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="view overlay famousShopPicsBlock">
+                        <img class="famousShopPics" src="/images/thebakestudio.jpg" class="img-fluid " alt="zoom">
+                        <div class="mask flex-center waves-effect waves-light rgba-black-light rgba-black-light">
+                            <p class="white-text famousShopNames"><b>Bake studio</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="view overlay famousShopPicsBlock">
+                        <img class="famousShopPics" src="/images/pnr.png" alt="zoom">
+                        <div class="mask flex-center waves-effect waves-light rgba-black-light">
+                            <p class="white-text famousShopNames"><b>PnR cake</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="view overlay famousShopPicsBlock">
+                        <img class="famousShopPics" src="/images/bakersbounty.jpg" class="img-fluid " alt="zoom">
+                        <div class="mask flex-center waves-effect waves-light rgba-black-light">
+                            <p class="white-text famousShopNames"><b>Bakers bounty</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="view overlay famousShopPicsBlock">
+                        <img class="famousShopPics" src="/images/bakerslounge.jpg" class="img-fluid " alt="zoom">
+                        <div class="mask flex-center waves-effect waves-light rgba-black-light">
+                            <p class="white-text famousShopNames"><b>Bakers lounge</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="view overlay famousShopPicsBlock">
+                        <img class="famousShopPics" src="/images/jahangirdar.jpg" class="img-fluid " alt="zoom">
+                        <div class="mask flex-center waves-effect waves-light rgba-black-light">
+                            <p class="white-text famousShopNames"><b>Jahangirdar</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{>footer}}
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+        <script src="/javascripts/dependencies/jquery.toaster.js" type="text/javascript"></script>
+        <script src="/javascripts/products.js" type="text/javascript"></script>
+        <script src="/javascripts/dependencies/classie.js"></script>
+        <script src="/javascripts/dependencies/selectFx.js"></script>
+        <script>
+            (function() {
+                [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+                    new SelectFx(el);
+                } );
+            })();
+        </script>
   </body>
