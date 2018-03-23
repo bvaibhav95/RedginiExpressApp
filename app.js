@@ -17,7 +17,7 @@ var cookieSession = require('cookie-session');
 var helmet = require('helmet');
 var passportConfig = require('./config/passport-config');
 var keys = require('./config/keys');
-//Custom require js
+//Custom-user require js
 var index = require('./routes/generalRoutes');
 var product = require('./routes/productRoutes');
 var login = require('./routes/loginRoutes');
