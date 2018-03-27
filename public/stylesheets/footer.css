@@ -19,8 +19,8 @@ font-size: 20px;
 #footer_line a{
     color: white;
 }
-#footer{
-    background: white;
+#footer_line{
+    color: white;
 }
 #footer_oheo{
     font-family: 'Pacifico', cursive;
@@ -40,12 +40,15 @@ footer{
     background-color: #282C35; 
     padding-top: 10px;
 }
-#categories_footer a{
+#categories_footer{
     font-family: 'Comfortaa', cursive;
     color: #ADB0B6;
     list-style: none;
     /*font-family: 'Raleway', sans-serif;*/
     font-size: 13px;
+}
+#categories_footer li{
+    padding: 2px 0px;
 }
 #links_footer a{
     font-family: 'Comfortaa', cursive;

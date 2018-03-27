@@ -32,6 +32,26 @@ body#cake_product_page #zomatoSideWidget1Header{
 body#cake_product_page #zomatoTreadingBlock{
 	margin-top: 100px;
 }
+body#cake_product_page #filter{
+	margin-bottom: 40px;
+}
+body#cake_product_page #filterSection{
+	border: 1px solid gray;
+	padding: 15px;
+}
+body#cake_product_page .filterPart{
+	margin: 5px;
+}
+body#cake_product_page #filterResults{
+	font-weight: bold;
+	font-family: 'Comfortaa', cursive;
+}
+body#cake_product_page #filterBtn{
+	width: 100%;
+}
+body#cake_product_page #applyFiltersBtn{
+	width: 100%;
+}
 body#cake_product_page #famousShopBlock{
 	margin-top: 50px;
 	margin-bottom: 30px;
@@ -126,6 +146,11 @@ body#cake_product_page .heart_like{
 	color: pink;
 	margin-top: 10px;
 }
+body#cake_product_page #notAvailableHeader{
+	font-family: 'Francois One', sans-serif;
+	text-align: center;
+	margin-top: 30px;
+}
 /* body#cake_product_page .catSideNav {
 	z-index : 1000;
     height: 100%;
@@ -161,6 +186,10 @@ body#cake_product_page .catSideNav .closebtn {
 } */
 /*=========styling of cake boxes end============*/
 @media (max-width: 574px) {
+	body#cake_product_page #filterResults{
+		text-align: center;
+		font-size: 12px;
+	}
 	body#cake_product_page .cake_images img{
 	    width: 100%;
 	    height: 140px;
@@ -198,8 +227,14 @@ body#cake_product_page .catSideNav .closebtn {
   	body#cake_product_page .catSideNav a {
 		font-size: 15px;
 	}
+	body#cake_product_page #notAvailableHeader{
+		font-size: 18px;
+	}
 }
 @media (min-width: 575px) {
+	body#cake_product_page #filterResults{
+		font-size: 14px;
+	}
 	body#cake_product_page .cake_images img{
 	    width: 100%;
 	    height: 160px;
@@ -237,8 +272,14 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .catSideNav a {
 		font-size: 17px;
 	}
+	body#cake_product_page #notAvailableHeader{
+		font-size: 20px;
+	}
 }
 @media (min-width: 768px) {
+	body#cake_product_page #filterResults{
+		font-size: 15px;
+	}
 	body#cake_product_page .cake_images img{
 	    width: 100%;
 	    height: 160px;
@@ -276,8 +317,14 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .catSideNav a {
 		font-size: 18px;
 	}
+	body#cake_product_page #notAvailableHeader{
+		font-size: 22px;
+	}
 }
 @media (min-width: 992px) {
+	body#cake_product_page #filterResults{
+		font-size: 16px;
+	}
 	body#cake_product_page .cake_images img{
 	    width: 100%;
 	    height: 220px;
@@ -315,8 +362,14 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .catSideNav a {
 		font-size: 18px;
 	}
+	body#cake_product_page #notAvailableHeader{
+		font-size: 25px;
+	}
 }
 @media (min-width: 1200px) {
+	body#cake_product_page #filterResults{
+		font-size: 18px;
+	}
 	body#cake_product_page .cake_images img{
 	    width: 100%;
 	    height: 220px;
@@ -354,5 +407,7 @@ body#cake_product_page .catSideNav .closebtn {
 	body#cake_product_page .catSideNav a {
 		font-size: 18px;
 	}
-	
+	body#cake_product_page #notAvailableHeader{
+		font-size: 30px;
+	}
 }

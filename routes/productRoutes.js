@@ -1,98 +1,94 @@
 var express = require('express');
 var router = express.Router();
-// https://github.com/helpers/handlebars-helpers
-//Getting specific helper only
-var helpers = require('handlebars-helpers');
-var math = helpers.math();
 var Cake = require('../models/Cake');
+var CakeBrand = require('../models/CakeBrand');
+var Category = require('../models/Category');
+var csrf = require('csurf');
 
-router.get('/blackforest', function(req, res, next) {
-  Cake.find({category:'bf'},function(err, docs){
+var csrfProtection = csrf({ cookie: true });
+router.use(csrfProtection);
+
+router.get('/cakes', async function(req, res, next) {
     var cakeChunks = [];
-    cakeChunks.push(docs); 
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries'});
-  });
+    var finalChunks = [];
+    let cakeBrands = [];
+    let categoryList = [];
+    var bfCakes = await Cake.find({category:'bf'}).limit(3);
+    for(let i=0; i<bfCakes.length; i++){
+      cakeChunks.push(bfCakes[i]);
+    }
+    var rvCakes = await Cake.find({category:'rv'}).limit(3);
+    for(let i=0; i<rvCakes.length; i++){
+      cakeChunks.push(rvCakes[i]);
+    }
+    var wfCakes = await Cake.find({category:'wf'}).limit(3);
+    for(let i=0; i<wfCakes.length; i++){
+      cakeChunks.push(wfCakes[i]);
+    }
+    var chCakes = await Cake.find({category:'ch'}).limit(3);
+    for(let i=0; i<chCakes.length; i++){
+      cakeChunks.push(chCakes[i]);
+    }
+    var orCakes = await Cake.find({category:'or'}).limit(3);
+    for(let i=0; i<orCakes.length; i++){
+      cakeChunks.push(orCakes[i]);
+    }
+    var dfCakes = await Cake.find({category:'designer_fondant'}).limit(10);
+    for(let i=0; i<dfCakes.length; i++){
+      cakeChunks.push(dfCakes[i]);
+    }
+    var tfCakes = await Cake.find({category:'tf'}).limit(3);
+    for(let i=0; i<tfCakes.length; i++){
+      cakeChunks.push(tfCakes[i]);
+    }
+    var svCakes = await Cake.find({category:'sv'}).limit(3);
+    for(let i=0; i<svCakes.length; i++){
+      cakeChunks.push(svCakes[i]);
+    }
+    var bsCakes = await Cake.find({category:'bs'}).limit(3);
+    for(let i=0; i<bsCakes.length; i++){
+      cakeChunks.push(bsCakes[i]);
+    }
+    var fcCakes = await Cake.find({category:'fc'}).limit(3);
+    for(let i=0; i<fcCakes.length; i++){
+      cakeChunks.push(fcCakes[i]);
+    }
+    var paCakes = await Cake.find({category:'pa'}).limit(3);
+    for(let i=0; i<paCakes.length; i++){
+      cakeChunks.push(paCakes[i]);
+    }
+    finalChunks.push(cakeChunks);
+    let brands = await CakeBrand.find();
+    cakeBrands.push(brands);
+    let categories = await Category.find();
+    categoryList.push(categories);
+    await res.render('products', {cakes: finalChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries', categoryList : categoryList, cakeBrands : cakeBrands, csrfToken: req.csrfToken(), brandName : 'Choose cake shop', categoryName : 'Choose category'});
 });
 
-router.get('/butterscotch', function(req, res, next) {
-  Cake.find({category:'bs'},function(err, docs){
+router.post('/filter', function(req, res, next){
+    let cakeBrands = [];
+    let categoryList = [];
+    var chooseCakeShopOrMaker = req.body.chooseCakeShopOrMaker;
+    var chooseCategory        = req.body.chooseCategory;
     var cakeChunks = [];
-    cakeChunks.push(docs); 
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries'});
-  });
+    var brandName = '';
+    var categoryName = '';
+    CakeBrand.find({}, function(err, docs){
+      cakeBrands.push(docs);
+    });
+    Category.find({}, function(err, docs){
+      categoryList.push(docs);
+    });
+    CakeBrand.find({brandId : chooseCakeShopOrMaker}, function(err, docs){
+      brandName = docs[0].brandName;
+    });
+    Category.find({catId : chooseCategory}, function(err, docs){
+      categoryName = docs[0].name;
+    });
+    Cake.find({category:chooseCategory, brandId : chooseCakeShopOrMaker},function(err, docs){
+      cakeChunks.push(docs);
+      res.render('products', {cakes : cakeChunks, title: 'Redgini | Our Policies',user : req.user, cart : req.session.cart, categoryList : categoryList, cakeBrands : cakeBrands,csrfToken: req.csrfToken(), brandName : brandName, categoryName : categoryName });
+    });
 });
-
-router.get('/chocolate', function(req, res, next) {
-  Cake.find({category:'ch'},function(err, docs){
-    var cakeChunks = [];
-    cakeChunks.push(docs);
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries'});
-  });
-});
-
-router.get('/oreo', function(req, res, next) {
-  Cake.find({category:'or'},function(err, docs){
-    var cakeChunks = [];
-    cakeChunks.push(docs);
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries'});
-  });
-});
-
-router.get('/fruit', function(req, res, next) {
-  Cake.find({category:'fc'},function(err, docs){
-    var cakeChunks = [];
-    cakeChunks.push(docs);
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries'});
-  });
-}); 
-
-router.get('/pineapple', function(req, res, next) {
-  Cake.find({category:'pa'},function(err, docs){
-    var cakeChunks = [];
-    cakeChunks.push(docs);
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries'});
-  });
-});
-
-router.get('/redvelvet', function(req, res, next) {
-  Cake.find({category:'rv'},function(err, docs){
-    var cakeChunks = [];
-    cakeChunks.push(docs);
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries'});
-  });
-});
-
-router.get('/strawberryvanilla', function(req, res, next) {
-  Cake.find({category:'sv'},function(err, docs){
-    var cakeChunks = [];
-    cakeChunks.push(docs);
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries'});
-  });
-});
-
-router.get('/truffle', function(req, res, next) {
-  Cake.find({category:'tf'},function(err, docs){
-    var cakeChunks = [];
-    cakeChunks.push(docs);
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries'});
-  });
-});
-
-router.get('/whiteforest', function(req, res, next) {
-  Cake.find({category:'wf'},function(err, docs){
-    var cakeChunks = [];
-    cakeChunks.push(docs);
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries'});
-  });
-});
-
-router.get('/designer-fondant', function(req, res, next) {
-  Cake.find({category:'designer_fondant'},function(err, docs){
-    var cakeChunks = [];
-    cakeChunks.push(docs);
-    res.render('products', {cakes: cakeChunks, user : req.user, cart : req.session.cart, title : 'Redgini | Cakes & pastries', designerAndFondant : 'yes'});
-  });
-});
-
 
 module.exports = router;

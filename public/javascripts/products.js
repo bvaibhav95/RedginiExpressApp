@@ -18,6 +18,8 @@ $('.qtyminus').click(function(e) {
         input_element.text(1);
     }
 });
+
+
 function updateCost(clickedId){
     var id = clickedId.substring(10);
     var cakeWeight = $('#cakeWeight'+id).val();

@@ -48,7 +48,7 @@ router.post('/sent', function(req, res, next) {
     if (mailer.contactUsMail(req) == null){
         res.render('index', {showClass: 'alert alert-success', msg1: 'Thank you!', msg2:'We will contact you soon...', title: 'Redgini | Love in every bite'});
     }else{
-        res.redirect('/policies');
+        res.redirect('/');
     }
 });
 

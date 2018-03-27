@@ -19,7 +19,6 @@ var authCheck = function(req,res,next){
 router.get('/', authCheck, function(req, res, next){
     // orderHistory = database.getOrdersFromUserId(req.user.providerID);
     Order.find({userId : req.user.providerID}, function(error, orderHistory){
-        console.log(orderHistory);
         res.render('user/userProfile', {user : req.user, title : 'Redgini | My profile', cart : req.session.cart, orderHistory:orderHistory});
     });
 });

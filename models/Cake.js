@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 var cakeSchema = new Schema({
     cakeId : {type:String, required:true},
     name: {type: String, required: true},
+    brandId : {type: String, required: true},
     category: {type: String, required: true},
     availableWeights: [],
     halfKgPrice: {type: Number, required: true},

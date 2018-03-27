@@ -1,3 +1,4 @@
+{{#if cakes.[0]}}
 {{#each cakes}}
     <div class="row justify-content-start" style="margin: 10px 0px 10px 0px;">
       {{#each this}}
@@ -13,7 +14,7 @@
                           <p class="cake_name"><b>{{this.name}}</b>&nbsp;&nbsp;<i class="fas fa-check-circle green-text"></i></p>
                       </div>
                       <div class="col-md-5 col-12">
-                        <p class="wtDesc"><small id="specificWt{{this.cakeId}}" style="">0.5&nbsp;</small> kg - <i class="fas fa-rupee-sign"></i>&nbsp;<small id="specificWtCost{{this.cakeId}}" style="">{{this.halfKgPrice}}</small></p>
+                        <p class="wtDesc"><small id="specificWt{{this.cakeId}}" style="">{{this.availableWeights.[0]}}&nbsp;</small> kg - <i class="fas fa-rupee-sign"></i>&nbsp;<small id="specificWtCost{{this.cakeId}}" style="">{{this.minWtCost}}</small></p>
                       </div>
                     </div> 
                     <div class="row justify-content-between" style="margin-top:5px;">
@@ -55,3 +56,6 @@
       {{/each}}
     </div>
 {{/each}}
+{{else}}
+<p class="animated bounce 3s" id="notAvailableHeader">Aaah...{{categoryName}} cakes not available at {{brandName}}</p>
+{{/if}}
