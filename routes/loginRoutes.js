@@ -42,7 +42,7 @@ router.get('/google/redirect', passport.authenticate('google'),function(req, res
         req.session.oldUrl = null;
         res.redirect(oldUrl);
     } else {
-        res.redirect('/products/blackforest');
+        res.redirect('/products/cakes');
     }
 });
 
@@ -54,7 +54,7 @@ router.get('/facebook/redirect', passport.authenticate('facebook', {failureRedir
         req.session.oldUrl = null;
         res.redirect(oldUrl);
     } else {
-        res.redirect('/products/blackforest');
+        res.redirect('/products/cakes');
     }
 });
 
