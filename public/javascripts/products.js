@@ -47,12 +47,7 @@ $.ajax({
         }
     }); 
 }
-function openSideNav() {
-    document.getElementById("catSideNav").style.width = "220px";
-    $('#categoryDropdown').hide();
+function openFilter(){
+    $('#filterModal').modal('show');
 }
-
-function closeSideNav() {
-    document.getElementById("catSideNav").style.width = "0";
-    $('#categoryDropdown').show();
-}
+$('#applyFiltersBtn').modal('hide');

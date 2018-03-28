@@ -95,46 +95,6 @@
         </div>
         <div class="container-fluid">
             <div class="row justify-content-start">
-            {{!-- <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm-down">
-                <div class="list-group" id="sidebar_cake_cat">
-                <a href="" class="list-group-item disabled" id="sidebar_header"> Cake categories:</a>
-                    <a href="/products/blackforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">Black forest cakes</a>
-                    <a href="/products/butterscotch" class="list-group-item list-group-item-action sidebar_cake_cat_items">Butterscotch cakes</a>
-                    <a href="/products/chocolate" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate cakes</a>
-                    <a href="/products/oreo" class="list-group-item list-group-item-action sidebar_cake_cat_items">Chocolate oreo cakes</a>
-                    <a href="/products/fruit" class="list-group-item list-group-item-action sidebar_cake_cat_items">Fruit cakes</a>
-                    <a href="/products/pineapple" class="list-group-item list-group-item-action sidebar_cake_cat_items">Pineapple cakes</a>
-                    <a href="/products/redvelvet" class="list-group-item list-group-item-action sidebar_cake_cat_items">Red velvet cakes</a>
-                    <a href="/products/strawberryvanilla" class="list-group-item list-group-item-action sidebar_cake_cat_items">Strawberry vanilla cakes</a>
-                    <a href="/products/truffle" class="list-group-item list-group-item-action sidebar_cake_cat_items">All Truffle cakes</a>
-                    <a href="/products/whiteforest" class="list-group-item list-group-item-action sidebar_cake_cat_items">White Forest cakes</a>
-                    <a href="/products/designer-fondant" class="list-group-item list-group-item-action sidebar_cake_cat_items"><b>Designer+Fondant cakes</b></a>
-                </div>
-                <hr>
-            </div> --}}
-            {{!-- <div class="col-md-3 col-sm-12 col-xs-12 hidden-md-up">
-                <div class="row justify-content-center">
-                    <div class="">
-                    <a style="font-size: 15px;padding: 12px 0px;width:100%; background-color:white; color:black; border:2px solid black" class="fixed-bottom btn btn-sm" onclick="openSideNav()" id="categoryDropdown">
-                        <b>Choose cake category</b>
-                    </a>
-                    </div>
-                </div>
-            </div> --}}
-            {{!-- <div id="catSideNav" class="catSideNav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
-                <a href="/products/blackforest" class="">Black forest cakes</a>
-                <a href="/products/butterscotch" class="">Butterscotch cakes</a>
-                <a href="/products/chocolate" class="">Chocolate cakes</a>
-                <a href="/products/oreo" class="">Chocolate oreo cakes</a>
-                <a href="/products/fruit" class="">Fruit cakes</a>
-                <a href="/products/pineapple" class="">Pineapple cakes</a>
-                <a href="/products/redvelvet" class="">Red velvet cakes</a>
-                <a href="/products/strawberryvanilla" class="">Strawberry vanilla cakes</a>
-                <a href="/products/truffle" class="">All Truffle cakes</a>
-                <a href="/products/whiteforest" class="">White Forest cakes</a>
-                <a href="/products/designer-fondant" class="">Designer+Fondant</a>
-            </div> --}}
             <div class="col-md-9 col-sm-12 col-xs-12">
                 <p id="filterResults">Showing for - Nashik&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;{{brandName}}&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;{{categoryName}}</p>
                 {{>cakePage}}
@@ -194,6 +154,8 @@
             </div>
         </div>
         {{>footer}}
+        {{>floatingAction}}
+        {{>filterModal}}
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
