@@ -33,6 +33,14 @@ const isCheckedOut = function(req,res,next){
   }
 };
 
+const areOrderDetailsNull = function (req,res,next){
+  if(!req.session.orderDetails){
+    res.redirect('/products/cakes');
+  }else{
+    next();
+  }
+};
+
 var csrfProtection = csrf({ cookie: true });
 router.use(csrfProtection);
 
@@ -146,11 +154,13 @@ router.post('/final', function(req, res, next) {
   }*/
 });
 
-router.get('/order', authCheck, isCheckedOut, function(req, res, next) {
+router.get('/order', authCheck, isCheckedOut, areOrderDetailsNull, function(req, res, next) {
       database.saveOrderInDB(req.session.orderDetails);
+      myorderDetails = req.session.orderDetails;
+      req.session.orderDetails = null;
       myorder = req.session.cart;
       req.session.cart = {};
-      res.render('user/final', {visible: 'false', orderDetails : req.session.orderDetails, user : req.user, cart : myorder, title : 'Redgini | Order confirmed'});
+      res.render('user/final', {visible: 'false', orderDetails : myorderDetails, user : req.user, cart : myorder, title : 'Redgini | Order confirmed'});
 });
 
 module.exports = router;
