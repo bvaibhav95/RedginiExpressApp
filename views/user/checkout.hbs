@@ -104,20 +104,21 @@
                         <p>Choose the time which is convenient to you...please checkout our delivery policies carefully !</p>
                         <p>Choose delivery date</p>
                         <p><input type="text" id="datepicker" class="form-control form-control-sm" name="delDate" required></p>
-                        <p>Choose delivery time</p>
-                        <ul id="std_del_list">
-                            <p class="timeSlotHeader">Standard delivery</p>
-                            <li><input type="radio" name="delTime" value="04:00PM - 06:00PM" id="delTime1" checked><label for="delTime1">&nbsp;04:00PM - 06:00PM</label></li>
-                            <li><input type="radio" name="delTime" value="06:00PM - 08:00PM" id="delTime2"><label for="delTime2">&nbsp;06:00PM - 08:00PM</label></li>
-                            <li><input type="radio" name="delTime" value="08:00PM - 11:00PM" id="delTime3"><label for="delTime3">&nbsp;08:00PM - 11:00PM</label></li>
-                            <p class="timeSlotHeader">Mid night delivery</p>
-                            <li><input type="radio" name="delTime" value="11:00PM - 11:30PM" id="delTime4"><label for="delTime4">&nbsp;11:00PM - 11:30PM</label></li>
-                            <li><input type="radio" name="delTime" value="11:30PM - 11:59PM" id="delTime5"><label for="delTime5">&nbsp;11:30PM - 11:59PM</label></li>
-                            <p class="timeSlotHeader">Morning delivery</p>
-                            <li><input type="radio" name="delTime" value="09:00AM - 11:00AM" id="delTime6"><label for="delTime6">&nbsp;09:00AM - 11:00AM</label></li>
-                            <li><input type="radio" name="delTime" value="11:00AM - 01:00PM" id="delTime7"><label for="delTime7">&nbsp;11:00AM - 01:00PM</label></li>
-                            <li><input type="radio" name="delTime" value="01:00PM - 04:00PM" id="delTime8"><label for="delTime8">&nbsp;01:00PM - 04:00PM</label></li>
-                        </ul>
+                        <p>Choose delivery time <b>( please read NOTE )</b></p>
+                        <div class="form-group">
+                            <select class="form-control form-control-sm" id="del_time" name="delTime" required>
+                                <option>12:00 - 02:00 PM</option>
+                                <option>02:00 - 04:00 PM</option>
+                                <option>04:00 - 06:00 PM</option>
+                                <option>06:00 - 08:00 PM</option>
+                                <option>08:00 - 10:00 PM</option>
+                                <option>10:00 - 11:30 PM</option>
+                                <option>11:30 - 11:59 PM</option>
+                            </select>
+                        </div> 
+                        <p id="time_note">PLEASE NOTE : </p>
+                        <p id="note1">1. Fondant cake - 1 Day before</p>
+                        <p id="note2">2. Other cakes (except fondant cakes) - 8-10 Hours before</p>
                     <hr>
                     </div>
 

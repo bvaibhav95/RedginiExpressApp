@@ -117,3 +117,15 @@ body#checkout #confirm_btn{
 body#checkout #fixed_time{
   margin-left: 25px;
 }
+body#checkout #time_note{
+  color: #cc0000;
+  font-weight: bold;
+}
+body#checkout #note1{
+  color: #cc0000;
+  margin-top: -10px;
+}
+body#checkout #note2{
+  color: #cc0000;
+  margin-top: -15px;
+}
