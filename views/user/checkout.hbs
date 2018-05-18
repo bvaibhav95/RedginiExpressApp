@@ -24,8 +24,9 @@
     <link rel="stylesheet" href="/stylesheets/shoppingCart.css"/>
     <link rel="stylesheet" href="/stylesheets/userProfile.css">
   </head>
-  <body id="checkout">
+  <body id="checkout" onload="showOrderNote()">
     {{>header}}
+    {{>orderBefore}}
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -117,8 +118,8 @@
                             </select>
                         </div> 
                         <p id="time_note">PLEASE NOTE : </p>
-                        <p id="note1">1. Fondant cake - 1 Day before</p>
-                        <p id="note2">2. Other cakes (except fondant cakes) - 8-10 Hours before</p>
+                        <p id="note1">1. Fondant/Themed/Designer cake - <b>1 Day before</b></p>
+                        <p id="note2">2. Other regular cakes (except fondant cakes) - <b>8-10 Hours before</b></p>
                     <hr>
                     </div>
 

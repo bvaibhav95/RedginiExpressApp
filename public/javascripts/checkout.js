@@ -88,3 +88,7 @@ $("input[name=delTime]").on("change", function() {
             }
         }); 
     });
+
+    function showOrderNote(){
+        $('#orderBeforeModal').modal('show');
+    }

@@ -106,19 +106,9 @@ footer{
 	font-weight: bold;
 	margin: 3px;
 }
-#fb_btn:hover{
-	background-color:  white;
-	color: #3b5998;
-	border-color: #3b5998;
-}
 #instagram_btn{
 	background-color:  #fb3958;
 	color: white;
 	font-weight: bold;
 	margin: 3px;
-}
-#instagram_btn:hover{
-	background-color:  white;
-	color: #fb3958;
-	border-color: #fb3958;
 }
