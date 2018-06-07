@@ -1,10 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var csrf = require('csurf');
+var mongoose = require('mongoose');
+
 var Cake = require('../models/Cake');
 var CakeBrand = require('../models/CakeBrand');
 var Category = require('../models/Category');
-var csrf = require('csurf');
-
+var keys = require('../config/keys');
+mongoose.connect(keys.mongodb.dbURI);
+// mongoose.connect(keys.mongodbDevlopment.dbURI);
 var csrfProtection = csrf({ cookie: true });
 router.use(csrfProtection);
 
@@ -13,49 +17,82 @@ router.get('/cakes', async function(req, res, next) {
     var finalChunks = [];
     let cakeBrands = [];
     let categoryList = [];
-    var bfCakes = await Cake.find({category:'bf'}).limit(3);
+    var bfCakes = await Cake.find({category:'bf'});
+    // var bfCakes = await Cake.find({category:'bf'}).limit(3);
     for(let i=0; i<bfCakes.length; i++){
       cakeChunks.push(bfCakes[i]);
     }
-    var rvCakes = await Cake.find({category:'rv'}).limit(3);
+    var rvCakes = await Cake.find({category:'rv'});
     for(let i=0; i<rvCakes.length; i++){
       cakeChunks.push(rvCakes[i]);
     }
-    var wfCakes = await Cake.find({category:'wf'}).limit(3);
+    var wfCakes = await Cake.find({category:'wf'});
     for(let i=0; i<wfCakes.length; i++){
       cakeChunks.push(wfCakes[i]);
     }
-    var chCakes = await Cake.find({category:'ch'}).limit(3);
+    var chCakes = await Cake.find({category:'ch'});
     for(let i=0; i<chCakes.length; i++){
       cakeChunks.push(chCakes[i]);
     }
-    var orCakes = await Cake.find({category:'or'}).limit(3);
+    var orCakes = await Cake.find({category:'or'});
     for(let i=0; i<orCakes.length; i++){
       cakeChunks.push(orCakes[i]);
     }
-    var dfCakes = await Cake.find({category:'designer_fondant'}).limit(10);
-    for(let i=0; i<dfCakes.length; i++){
-      cakeChunks.push(dfCakes[i]);
-    }
-    var tfCakes = await Cake.find({category:'tf'}).limit(3);
+    // var dfCakes = await Cake.find({category:'designer_fondant'}).limit(10);
+    // for(let i=0; i<dfCakes.length; i++){
+    //   cakeChunks.push(dfCakes[i]);
+    // }
+    var tfCakes = await Cake.find({category:'tf'});
     for(let i=0; i<tfCakes.length; i++){
       cakeChunks.push(tfCakes[i]);
     }
-    var svCakes = await Cake.find({category:'sv'}).limit(3);
+    var svCakes = await Cake.find({category:'sv'});
     for(let i=0; i<svCakes.length; i++){
       cakeChunks.push(svCakes[i]);
     }
-    var bsCakes = await Cake.find({category:'bs'}).limit(3);
+    var cvCakes = await Cake.find({category:'cv'});
+    for(let i=0; i<cvCakes.length; i++){
+      cakeChunks.push(cvCakes[i]);
+    }
+    var cfCakes = await Cake.find({category:'cf'});
+    for(let i=0; i<cfCakes.length; i++){
+      cakeChunks.push(cfCakes[i]);
+    }
+    var cmCakes = await Cake.find({category:'cm'});
+    for(let i=0; i<cmCakes.length; i++){
+      cakeChunks.push(cmCakes[i]);
+    }
+    var bbCakes = await Cake.find({category:'bb'});
+    for(let i=0; i<bbCakes.length; i++){
+      cakeChunks.push(bbCakes[i]);
+    }
+    var msCakes = await Cake.find({category:'ms'});
+    for(let i=0; i<msCakes.length; i++){
+      cakeChunks.push(msCakes[i]);
+    }
+    var bnCakes = await Cake.find({category:'bn'});
+    for(let i=0; i<bnCakes.length; i++){
+      cakeChunks.push(bnCakes[i]);
+    }
+    var ifCakes = await Cake.find({category:'if'});
+    for(let i=0; i<ifCakes.length; i++){
+      cakeChunks.push(ifCakes[i]);
+    }
+    var bsCakes = await Cake.find({category:'bs'});
     for(let i=0; i<bsCakes.length; i++){
       cakeChunks.push(bsCakes[i]);
     }
-    var fcCakes = await Cake.find({category:'fc'}).limit(3);
+    var fcCakes = await Cake.find({category:'fc'});
     for(let i=0; i<fcCakes.length; i++){
       cakeChunks.push(fcCakes[i]);
     }
-    var paCakes = await Cake.find({category:'pa'}).limit(3);
+    var paCakes = await Cake.find({category:'pa'});
     for(let i=0; i<paCakes.length; i++){
       cakeChunks.push(paCakes[i]);
+    }
+    var vnCakes = await Cake.find({category:'vn'});
+    for(let i=0; i<vnCakes.length; i++){
+      cakeChunks.push(vnCakes[i]);
     }
     finalChunks.push(cakeChunks);
     let brands = await CakeBrand.find();

@@ -42,8 +42,8 @@
         <hr>
 
         <div class="container" id="filter">
-            <button id="filterBtn" class="btn btn-danger" type="button" data-toggle="collapse" data-target="#filterSection" aria-expanded="false" aria-controls="filterSection"><b><i class="fas fa-filter"></i>&nbsp;Choose cakes here...</b></button>
-            <div class="collapse" id="filterSection">
+            <button id="filterBtn" class="btn btn-danger" type="button"><b><i class="fas fa-filter"></i>&nbsp;Choose cakes here...</b></button>
+            <div id="filterSection">
                 <form action="/products/filter" method="POST">
                 <input type="hidden" name="_csrf" value="{{csrfToken}}">
                     <div class="row justify-content-center">

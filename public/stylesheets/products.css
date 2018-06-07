@@ -184,6 +184,17 @@ body#cake_product_page #container-floating{
 	right: 30px;
 	z-index: 50px;
 }
+body#cake_product_page .makerName{
+	margin-bottom: -5px;
+	font-family: 'Quicksand', sans-serif;
+	border : 1px solid grey;
+	border-radius: 5px;
+	padding : 3px 5px;
+}
+body#cake_product_page .availabilityDetails{
+	margin-bottom: -5px;
+	font-family: 'Quicksand', sans-serif;
+}
 
 @media (max-width: 574px) {
 	body#cake_product_page #filterResults{
@@ -230,6 +241,12 @@ body#cake_product_page #container-floating{
 	body#cake_product_page #notAvailableHeader{
 		font-size: 18px;
 	}
+	body#cake_product_page .makerName{
+		font-size: 10px;
+	}
+	body#cake_product_page .availabilityDetails{
+		font-size: 10px;
+	}
 }
 @media (min-width: 575px) {
 	body#cake_product_page #filterResults{
@@ -274,6 +291,12 @@ body#cake_product_page #container-floating{
 	}
 	body#cake_product_page #notAvailableHeader{
 		font-size: 20px;
+	}
+	body#cake_product_page .makerName{
+		font-size: 10px;
+	}
+	body#cake_product_page .availabilityDetails{
+		font-size: 10px;
 	}
 }
 @media (min-width: 768px) {
@@ -320,6 +343,12 @@ body#cake_product_page #container-floating{
 	body#cake_product_page #notAvailableHeader{
 		font-size: 22px;
 	}
+	body#cake_product_page .makerName{
+		font-size: 11px;
+	}
+	body#cake_product_page .availabilityDetails{
+		font-size: 11px;
+	}
 }
 @media (min-width: 992px) {
 	body#cake_product_page #filterResults{
@@ -365,6 +394,12 @@ body#cake_product_page #container-floating{
 	body#cake_product_page #notAvailableHeader{
 		font-size: 25px;
 	}
+	body#cake_product_page .makerName{
+		font-size: 12px;
+	}
+	body#cake_product_page .availabilityDetails{
+		font-size: 12px;
+	}
 }
 @media (min-width: 1200px) {
 	body#cake_product_page #filterResults{
@@ -409,5 +444,11 @@ body#cake_product_page #container-floating{
 	}
 	body#cake_product_page #notAvailableHeader{
 		font-size: 30px;
+	}
+	body#cake_product_page .makerName{
+		font-size: 13px;
+	}
+	body#cake_product_page .availabilityDetails{
+		font-size: 13px;
 	}
 }

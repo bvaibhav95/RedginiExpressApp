@@ -3,6 +3,7 @@ var keys = require('../config/keys');
 var mongoose = require('mongoose');
 
 mongoose.connect(keys.mongodb.dbURI);
+// mongoose.connect(keys.mongodbDevlopment.dbURI);
 
 var categories = [
     new Category({
@@ -26,13 +27,21 @@ var categories = [
         name: 'Chocolate',
     }),
     new Category({
+        catId : 'cf',
+        name: 'Chocolate coffee',
+    }),
+    new Category({
+        catId : 'cm',
+        name: 'Caramel',
+    }),
+    new Category({
         catId : 'or',
         name: 'Oreo',
     }),
-    new Category({
-        catId : 'designer_fondant',
-        name: 'Fondant-Designer',
-    }),
+    // new Category({
+    //     catId : 'designer_fondant',
+    //     name: 'Fondant-Designer',
+    // }),
     new Category({
         catId : 'tf',
         name: 'All Truffles',
@@ -47,7 +56,31 @@ var categories = [
     }),
     new Category({
         catId : 'sv',
-        name: 'StrawberryVanilla',
+        name: 'Strawberry Vanilla',
+    }),
+    new Category({
+        catId : 'vn',
+        name: 'Plain Vanilla',
+    }),
+    new Category({
+        catId : 'cv',
+        name: 'Coffee vanilla',
+    }),
+    new Category({
+        catId : 'bb',
+        name: 'BlueBerry',
+    }),
+    new Category({
+        catId : 'ms',
+        name: 'Mousse',
+    }),
+    new Category({
+        catId : 'bn',
+        name: 'Brownies',
+    }),
+    new Category({
+        catId : 'if',
+        name: 'Indian flavor twist',
     }),
 ];
 

@@ -31,21 +31,22 @@ function updateCost(clickedId){
              $('#specificWtCost'+id).html(data.halfKgPrice * cakeWeight * 2);
          }
      }); 
- }
+}
 
-function addToCart(clickedId){
-var id = clickedId.substring(9);
-var cakeWeight = $('#cakeWeight'+id).val();
-var cakeQty = $('#cakeQty'+id).text();
-var isEgg = $('#egg'+id).is(':checked');
-$.ajax({
-        type: "GET",
-        url:"/add-to-cart/"+id+"/"+cakeWeight+"/"+cakeQty+"/"+isEgg,
-        success: function(data){
-            location.reload();
-            $.toaster({ message : 'Cake added', title : 'Shopping cart', priority : 'success' });
-        }
-    }); 
+
+ function addToCart(clickedId){
+    var id = clickedId.substring(9);
+    var cakeWeight = $('#cakeWeight'+id).val();
+    var cakeQty = $('#cakeQty'+id).text();
+    var isEgg = $('#egg'+id).is(':checked');
+    $.ajax({
+            type: "GET",
+            url:"/add-to-cart/"+id+"/"+cakeWeight+"/"+cakeQty+"/"+isEgg,
+            success: function(data){
+                location.reload();
+                $.toaster({ message : 'Cake added', title : 'Shopping cart', priority : 'success' });
+            }
+        }); 
 }
 function openFilter(){
     $('#filterModal').modal('show');
