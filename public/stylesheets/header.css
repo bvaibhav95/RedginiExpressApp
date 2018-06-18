@@ -1,32 +1,43 @@
 @import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Chewy');
+.customColor{
+	background-color: white;
+}
+.customColorIcon{
+	color: #cb202d;
+}
+.customColorBtn{
+	background-color: #cb202d;
+}
 .nav-link{
+	font-family: 'Montserrat', cursive;
 	font-weight: bold;
+}
+#navbar_main a{
+	color : #cb202d;
 }
 #brand_name{
-	font-family: 'Fredoka One', cursive;
+	font-family: 'Chewy', cursive;
 	font-size: 30px;
 	font-weight: bold;
+	color : #cb202d;
 }
-#order_now_cover:hover {
-  background-color: black;
-  color: white;
-  border-color: black;
-  font-weight: bold; }
-
 #navbar_items{
 	font-weight: bold;
 }
 /*========shopping cart icon starts==========*/
 #shop_cart_home{
 	margin-right: 20px;
+	color : #cb202d;
 }
 #shop_cart_home_icon{
-	color: #3d3a3a;
+	color : #cb202d;
 }
 #shop_cart_home_icon:hover{
-	color: black;
+	color : #cb202d;
 }
 #userprofileDrop{
 	font-weight: bold;
+	color : #cb202d;
 }

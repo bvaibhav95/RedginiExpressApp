@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
-
+@import url('https://fonts.googleapis.com/css?family=Chewy');
 /* font-family: 'Fredoka One', cursive;
 font-family: 'Quicksand', sans-serif;
 font-family: 'Oswald', sans-serif;
@@ -23,7 +23,7 @@ font-size: 20px;
     color: white;
 }
 #footer_oheo{
-    font-family: 'Pacifico', cursive;
+    font-family: 'Chewy', cursive;
     color: #ADB0B6;
     margin-top:5px;
     margin-bottom: 0px;

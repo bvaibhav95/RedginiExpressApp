@@ -7,6 +7,7 @@ var csrf = require('csurf');
 var keys = require('../config/keys');
 var Cart = require('../models/Cart');
 var Order = require('../models/Order');
+var BakeryPdt = require('../models/BakeryPdt');
 var router = express.Router();
 
 mongoose.connect(keys.mongodb.dbURI);
@@ -70,6 +71,15 @@ router.get('/detailsFromId/:cakeID', function(req, res, next) {
   });
 });
 
+router.get('/pdtDetailsFromId/:pdtID', function(req, res, next) {
+  BakeryPdt.where({pdtId:req.params.pdtID}).findOne(function(err, docs){
+    if (err) return res.render('error');
+    if (docs) {
+      res.send(docs);
+    }
+  });
+});
+
 router.get('/cart',function(req, res, next) {
     if(!req.session.cart){
       return res.render('user/shoppingCart', {visible: 'false', cart : null, user: req.user, title:'Redgini - Shopping cart'});  
@@ -93,6 +103,21 @@ router.get('/add-to-cart/:id/:cakeWt/:cakeQty/:egg',function(req, res, next) {
     res.redirect('/cart');
   });
 });
+
+router.get('/add-to-cart-bake/:id/:pdtWt',function(req, res, next) {
+  var productId  = req.params.id;
+  var productWt  = req.params.pdtWt;
+  var cart = new Cart(req.session.cart ? req.session.cart : {});
+  BakeryPdt.where({pdtId:productId}).findOne(function(err, pdt){
+    if (err) {
+        return res.render('error');
+    }
+    cart.addBake(pdt, productId, productWt);
+    req.session.cart = cart;
+    console.log(req.session.cart);
+    res.redirect('/cart');
+  });
+}); 
 
 router.get('/remove/:id', function(req, res, next) {
   var productId = req.params.id;

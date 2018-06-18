@@ -33,11 +33,29 @@ function updateCost(clickedId){
      }); 
 }
 
+function updatePdtCost(clickedId){
+    var id = clickedId.substring(9);
+    var pdtWeight = $('#pdtWeight'+id).val();
+    $.ajax({
+         type: "GET",
+         url:"/pdtDetailsFromId/"+id,
+         success: function(data){
+             $('#specificWt'+id).html(pdtWeight);
+             if(data.availableWeights[0] === 0.5){
+                 $('#specificWtCost'+id).html(data.minWtCost * pdtWeight * 2);
+             }else{
+                 $('#specificWtCost'+id).html(data.minWtCost * pdtWeight);
+             }
+         }
+     }); 
+}
 
- function addToCart(clickedId){
+
+
+function addToCart(clickedId){
     var id = clickedId.substring(9);
     var cakeWeight = $('#cakeWeight'+id).val();
-    var cakeQty = $('#cakeQty'+id).text();
+    var cakeQty = $('#cakeQty'+id).html();
     var isEgg = $('#egg'+id).is(':checked');
     $.ajax({
             type: "GET",
@@ -48,6 +66,20 @@ function updateCost(clickedId){
             }
         }); 
 }
+
+function addToCartPdt(clickedId){
+    var id = clickedId.substring(12);
+    var pdtWeight = $('#pdtWeight'+id).val();
+    $.ajax({
+            type: "GET",
+            url:"/add-to-cart-bake/"+id+"/"+pdtWeight,
+            success: function(data){
+                location.reload();
+                $.toaster({ message : 'Product added', title : 'Shopping cart', priority : 'success' });
+            }
+        }); 
+}
+
 function openFilter(){
     $('#filterModal').modal('show');
 }

@@ -1461,7 +1461,7 @@ var cakes = [
         //     minWtCost : 0.5 * 2 * 360,
         // }),
         
-        //homelysponge
+        //Sponge
         new Cake({
             cakeId: 'wf001_hsgnsk',
             name: 'White forest',
@@ -1469,7 +1469,7 @@ var cakes = [
             category: 'wf',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1479,7 +1479,7 @@ var cakes = [
             category: 'wf',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1489,7 +1489,7 @@ var cakes = [
             category: 'wf',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1499,7 +1499,7 @@ var cakes = [
             category: 'wf',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1509,7 +1509,7 @@ var cakes = [
             category: 'bb',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 480,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 480,
         }),
         new Cake({
@@ -1519,7 +1519,7 @@ var cakes = [
             category: 'bf',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 430,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 430,
         }),
         new Cake({
@@ -1529,7 +1529,7 @@ var cakes = [
             category: 'bs',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1539,7 +1539,7 @@ var cakes = [
             category: 'cf',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1549,7 +1549,7 @@ var cakes = [
             category: 'cf',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1559,7 +1559,7 @@ var cakes = [
             category: 'bn',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 550,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 550,
         }),
         new Cake({
@@ -1569,7 +1569,7 @@ var cakes = [
             category: 'ch',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 480,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 480,
         }),
         new Cake({
@@ -1579,7 +1579,7 @@ var cakes = [
             category: 'ch',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 480,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 480,
         }),
         new Cake({
@@ -1589,7 +1589,7 @@ var cakes = [
             category: 'ch',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 480,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 480,
         }),
         new Cake({
@@ -1599,7 +1599,7 @@ var cakes = [
             category: 'mm',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 480,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 480,
         }),
         new Cake({
@@ -1609,7 +1609,7 @@ var cakes = [
             category: 'cm',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 530,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 530,
         }),
         new Cake({
@@ -1619,7 +1619,7 @@ var cakes = [
             category: 'cv',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1629,7 +1629,7 @@ var cakes = [
             category: 'cv',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1639,7 +1639,7 @@ var cakes = [
             category: 'cv',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1649,7 +1649,7 @@ var cakes = [
             category: 'cv',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 400,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 400,
         }),
         new Cake({
@@ -1659,7 +1659,7 @@ var cakes = [
             category: 'fc',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 480,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 480,
         }),
         new Cake({
@@ -1669,7 +1669,7 @@ var cakes = [
             category: 'if',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 650,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 650,
         }),
         new Cake({
@@ -1679,7 +1679,7 @@ var cakes = [
             category: 'if',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 700,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 700,
         }),
         new Cake({
@@ -1689,7 +1689,7 @@ var cakes = [
             category: 'or',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 480,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 480,
         }),
         new Cake({
@@ -1699,7 +1699,7 @@ var cakes = [
             category: 'or',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 480,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 480,
         }),
         new Cake({
@@ -1709,7 +1709,7 @@ var cakes = [
             category: 'rv',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 430,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 430,
         }),
         new Cake({
@@ -1719,7 +1719,7 @@ var cakes = [
             category: 'rv',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 430,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 430,
         }),
         new Cake({
@@ -1729,7 +1729,7 @@ var cakes = [
             category: 'rv',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 430,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 430,
         }),
         new Cake({
@@ -1739,7 +1739,7 @@ var cakes = [
             category: 'rv',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 530,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 530,
         }),
         new Cake({
@@ -1749,7 +1749,7 @@ var cakes = [
             category: 'rv',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 530,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 530,
         }),
         new Cake({
@@ -1759,7 +1759,7 @@ var cakes = [
             category: 'rv',
             availableWeights: [0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0],
             halfKgPrice: 530,
-            maker : 'HomelySponge',
+            maker : 'Sponge',
             minWtCost : 0.5 * 2 * 530,
         }),
 
@@ -1815,7 +1815,7 @@ var cakes = [
             minWtCost : 0.5 * 2 * 450,
         }),
         new Cake({
-            cakeId: 'fc002_hsgnsk',
+            cakeId: 'fc002_tctnsk',
             name: 'Kiwi',
             brandId : 'tctnsk',
             category: 'fc',

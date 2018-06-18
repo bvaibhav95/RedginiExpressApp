@@ -1,11 +1,11 @@
-{{#if cakes.[0]}}
-{{#each cakes}}
+{{#if pdts.[0]}}
+{{#each pdts}}
     <div class="row justify-content-start" style="margin: 10px 0px 10px 0px;">
       {{#each this}}
         <div class="col-6 col-md-4 col-sm-4 productContainer">
             <div class="card collection-card cake_images">
                 <div class="view overlay zoom">
-                    <img src="/images/{{this.cakeId}}.jpg" class="" alt="">
+                    <img src="/images/cakes/{{this.cakeId}}.jpg" class="" alt="">
                     <a><div class="mask rgba-white-slight"></div></a>
                 </div>
                 <div class="card-body">
@@ -38,9 +38,9 @@
                           </div>
                       </div>
                     </div> 
-                    <div class="row justify-content-start">
-                      <div class="col-12">
-                          <button id="addToCart{{this.cakeId}}" onclick="addToCart(this.id)" type="submit" class="addTocartBtn btn btn-danger btn-sm"><b>Add to cart</b></button>
+                    <div class="row justify-content-center">
+                      <div class="col-11">
+                          <button id="addToCart{{this.cakeId}}" onclick="addToCart(this.id)" type="submit" class="addTocartBtn btn customColorBtn btn-sm px-2"><b>Add to cart</b></button>
                       </div>
                     </div> 
                     <div class="dropdown-divider"></div>
@@ -61,5 +61,5 @@
     </div>
 {{/each}}
 {{else}}
-<p class="animated bounce 3s" id="notAvailableHeader">Aaah...{{categoryName}} cakes not available at {{brandName}}</p>
+<p class="animated bounce 3s" id="notAvailableHeader">Aaah...Not available! Choose other Shop/Bakers...</p>
 {{/if}}

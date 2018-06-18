@@ -1,0 +1,4 @@
+red   - #cb202d
+black - #2d2d2d
+white - #f4f4f2
+(zomato brand colors)

@@ -32,48 +32,48 @@
           <div class="carousel-item active">
             <div class="row">
               <div class="col-md-3 col-sm-4 col-6">
-                <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
+                <img class="d-block w-100" src="/images/prakashbakery.jpg" alt="First slide">
               </div>
               <div class="col-md-3 col-sm-4 col-6">
-                <img class="d-block w-100" src="/images/usp7.png" alt="First slide">
+                <img class="d-block w-100" src="/images/toccata.jpg" alt="First slide">
               </div>
               <div class="col-md-3 col-sm-4 col-6 d-none d-sm-block">
-                <img class="d-block w-100" src="/images/usp3.jpg" alt="First slide">
+                <img class="d-block w-100" src="/images/buy3get1.jpg" alt="First slide">
               </div>
               <div class="col-md-3 col-sm-4 col-6 d-none d-md-block">
-                <img class="d-block w-100" src="/images/usp4.png" alt="First slide">
+                <img class="d-block w-100" src="/images/vmcelebration.jpg" alt="First slide">
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="row">
               <div class="col-md-3 col-sm-4 col-6">
-                <img class="d-block w-100" src="/images/usp1.jpg" alt="First slide">
+                <img class="d-block w-100" src="/images/midnightdelivery.jpg" alt="First slide">
               </div>
               <div class="col-md-3 col-sm-4 col-6">
-                <img class="d-block w-100" src="/images/usp7.png" alt="First slide">
+                <img class="d-block w-100" src="/images/healthywheat.jpg" alt="First slide">
               </div>
               <div class="col-md-3 col-sm-4 col-6 d-none d-sm-block">
-                <img class="d-block w-100" src="/images/usp4.png" alt="First slide">
+                <img class="d-block w-100" src="/images/surprisedelivery.jpg" alt="First slide">
               </div>
               <div class="col-md-3 col-sm-4 col-6 d-none d-md-block">
-                <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
+                <img class="d-block w-100" src="/images/buy3get1.jpg" alt="First slide">
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="row">
               <div class="col-md-3 col-sm-4 col-6">
-                <img class="d-block w-100" src="/images/usp7.png" alt="First slide">
+                <img class="d-block w-100" src="/images/freehomedelivery.jpg" alt="First slide">
               </div>
               <div class="col-md-3 col-sm-4 col-6">
-                <img class="d-block w-100" src="/images/usp2.jpg" alt="First slide">
+                <img class="d-block w-100" src="/images/rumcake.jpg" alt="First slide">
               </div>
               <div class="col-md-3 col-sm-4 col-6 d-none d-sm-block">
-                <img class="d-block w-100" src="/images/usp6.png" alt="First slide">
+                <img class="d-block w-100" src="/images/toccata.jpg" alt="First slide">
               </div>
               <div class="col-md-3 col-sm-4 col-6 d-none d-md-block">
-                <img class="d-block w-100" src="/images/usp1.jpg" alt="First slide">
+                <img class="d-block w-100" src="/images/prakashbakery.jpg" alt="First slide">
               </div>
             </div>
           </div>
@@ -89,15 +89,23 @@
                     {{#each cart.items}}
                       <div class="list-group-item list-group-item-action flex-column align-items-start">
                         <div class="d-flex w-100 justify-content-between cartCakeNameAndCost">
-                          <h5 class="mb-1">{{this.item.name}} | {{this.cakeWt}}&nbsp;Kg</h5>
+                          <h5 class="mb-1">{{this.item.name}} | {{this.pdtWt}}&nbsp;Kg</h5>
                           <small>Net cost - Rs. {{this.netPrice}}/-</small>
                         </div>
-                        <p class="mb-1 cakeQty">Total quantity - {{this.cakeQty}}</p>
+                        <p class="mb-1 cakeQty">Total quantity - {{this.pdtQty}}</p>
                         <div class="d-flex w-100 justify-content-between">
-                          <small>{{this.cakeWt}} Kg cost - Rs.{{this.unitCost}}/-</small>
-                          <a href="/remove/{{this.item.cakeId}}{{this.cakeWt}}{{this.egg}}" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
+                          {{#if this.bakeInCart}}
+                            <small>{{this.pdtWt}} Kg cost - Rs.{{this.unitCost}}/-</small>
+                            <a href="/remove/{{this.item.pdtId}}{{this.pdtWt}}" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
+                          {{else}}
+                            <small>{{this.pdtWt}} Kg cost - Rs.{{this.unitCost}}/-</small>
+                            <a href="/remove/{{this.item.cakeId}}{{this.pdtWt}}{{this.egg}}" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
+                          {{/if}}
                         </div>
-                        <small>Is cake egged - {{this.egg}}</small>
+                         {{#if this.bakeInCart}}
+                          {{else}}
+                              <small>Is cake egged - {{this.egg}}</small>
+                          {{/if}}
                       </div>
                     {{/each}}
                   </div>

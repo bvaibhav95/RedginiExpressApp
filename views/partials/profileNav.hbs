@@ -1,7 +1,7 @@
     {{#if visible}}
     {{else}}
-        <a class="d-none d-md-block" href="/cart" id="shop_cart_home"><i class="fas fa-shopping-cart fa-2x text-white" aria-hidden="true" id="shop_cart_home_icon"><span class="" style="font-size:18px">({{cart.totalQty}})</span></i></a>
-        <a class="btn btn-outline-white btn-sm d-md-none" href="/cart" id="cart_navbar"><b>Shopping cart ({{cart.totalQty}})</b></a>
+        <a class="d-none d-md-block" href="/cart" id="shop_cart_home"><i class="fas fa-shopping-cart fa-2x customColor" aria-hidden="true" id="shop_cart_home_icon"><span class="" style="font-size:18px">({{cart.totalQty}})</span></i></a>
+        <a class="btn btn-sm d-md-none customColorBtn" href="/cart" id="cart_navbar"><b>Shopping cart ({{cart.totalQty}})</b></a>
     {{/if}}
     {{#if user}}
         <div class="btn-group">
@@ -14,6 +14,6 @@
             </div>
         </div>
     {{else}}
-        <a class="btn btn-outline-white btn-sm" href="/auth/login" id="signIn_navbar">
+        <a class="btn btn-outline customColorBtn btn-sm" href="/auth/login" id="signIn_navbar">
         <b>Signup/Login</b></a>
     {{/if}}

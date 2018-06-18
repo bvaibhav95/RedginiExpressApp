@@ -61,7 +61,7 @@ var cakeBrands = [
     }),
     new CakeBrand({
         brandId : 'hsgnsk',
-        brandName: 'HomelySponge - The home baker',
+        brandName: 'Sponge - The home baker',
         brandEmail: 'homelysponge@gmail.com',
         brandPhone: '7798257722',
         address: {

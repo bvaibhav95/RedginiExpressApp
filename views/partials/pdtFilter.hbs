@@ -1,0 +1,53 @@
+
+<div class="container" id="filter">
+    {{#if pdtTypeFlag}}
+        <p style="font-weight:bold">Showing for - Bakery products</p>
+    {{else}}
+        <p style="font-weight:bold">Showing for - Cakes</p>
+    {{/if}}
+    <div id="filterSection">
+        <form action="/products/filter" method="POST">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <input type="hidden" name="idTag" value="{{idTag}}">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="chooseCity">City</label>
+                </div>
+                <select class="custom-select" id="chooseCity" name="chooseCity">
+                    <option value="nsk">Nashik</option>
+                </select>
+            </div>     
+            <br>   
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="chooseCakeShopOrMaker">Cake brand</label>
+                </div>
+                <select class="custom-select" id="chooseCakeShopOrMaker" name="chooseCakeShopOrMaker">
+                    <option value="all">All</option>
+                    {{#each brands}}
+                        {{#each this}}
+                            <option value="{{this.brandId}}">{{this.brandName}}</option>
+                        {{/each}}
+                    {{/each}}
+                </select>
+            </div>
+            <br> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="chooseCategory">Category</label>
+                </div>
+                <select class="custom-select" id="chooseCategory" name="chooseCategory">
+                    <option value="all">All</option>
+                    {{#each categoryList}}
+                        {{#each this}}
+                            <option value="{{this.catId}}">{{this.name}}</option>
+                        {{/each}}
+                    {{/each}}
+                </select>
+            </div>
+            <br> 
+            <button style="width : 100%; margin-left:0px" id="applyFiltersBtn" type="submit" class="btn btn-sm customColorBtn"><b>Show me !</b></button>
+        </form>
+    </div>
+    <hr>
+</div>

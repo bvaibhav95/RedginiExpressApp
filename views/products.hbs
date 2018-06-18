@@ -29,81 +29,93 @@
   <body id="cake_product_page">
         {{>header}}
         {{>comingSoonModal}}
-        
-        <div class="container" id="zomatoTreadingBlock">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <h4 id="zomatoSideWidget2Header">Trending cake shops & cafes in Nashik !</h4>
-                    <hr>
-                    <div class="widget_wrap" style="width:100%;height:300px;display:inline-block;"><iframe src="https://www.zomato.com/widgets/all_collections.php?language_id=1&theme=red&widgetType=custom" style="position:relative;width:100%;height:100%;" border="0" frameborder="0"></iframe></div>
+        <div id="offerCarousal" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4 col-6">
+                            <img class="d-block w-100" src="/images/buy3get1.jpg" alt="First slide">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-6">
+                            <img class="d-block w-100" src="/images/freehomedelivery.jpg" alt="First slide">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-6 d-none d-sm-block">
+                            <img class="d-block w-100" src="/images/midnightdelivery.jpg" alt="First slide">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-6 d-none d-md-block">
+                            <img class="d-block w-100" src="/images/rumcake.jpg" alt="First slide">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4 col-6">
+                            <img class="d-block w-100" src="/images/healthywheat.jpg" alt="First slide">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-6">
+                            <img class="d-block w-100" src="/images/vmcelebration.jpg" alt="First slide">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-6 d-none d-sm-block">
+                            <img class="d-block w-100" src="/images/rumcake.jpg" alt="First slide">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-6 d-none d-md-block">
+                            <img class="d-block w-100" src="/images/midnightdelivery.jpg" alt="First slide">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4 col-6">
+                            <img class="d-block w-100" src="/images/prakashbakery.jpg" alt="First slide">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-6">
+                            <img class="d-block w-100" src="/images/freehomedelivery.jpg" alt="First slide">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-6 d-none d-sm-block">
+                            <img class="d-block w-100" src="/images/toccata.jpg" alt="First slide">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-6 d-none d-md-block">
+                            <img class="d-block w-100" src="/images/sugarfreecake.jpg" alt="First slide">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <hr>
-
-        <div class="container" id="filter">
-            <button id="filterBtn" class="btn btn-danger" type="button"><b><i class="fas fa-filter"></i>&nbsp;Choose cakes here...</b></button>
-            <div id="filterSection">
-                <form action="/products/filter" method="POST">
-                <input type="hidden" name="_csrf" value="{{csrfToken}}">
-                    <div class="row justify-content-center">
-                        <div class="col-md-2 col-sm-6 col-12 filterPart">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="chooseCity">City</label>
-                                </div>
-                                <select class="custom-select" id="chooseCity" name="chooseCity">
-                                    <option value="nsk">Nashik</option>
-                                </select>
-                            </div>        
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 filterPart">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="chooseCakeShopOrMaker">Cake shop/maker</label>
-                                </div>
-                                <select class="custom-select" id="chooseCakeShopOrMaker" name="chooseCakeShopOrMaker">
-                                    {{#each cakeBrands}}
-                                        {{#each this}}
-                                            <option value="{{this.brandId}}">{{this.brandName}}</option>
-                                        {{/each}}
-                                    {{/each}}
-                                </select>
-                            </div> 
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 filterPart">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="chooseCategory">Category</label>
-                                </div>
-                                <select class="custom-select" id="chooseCategory" name="chooseCategory">
-                                    {{#each categoryList}}
-                                        {{#each this}}
-                                            <option value="{{this.catId}}">{{this.name}}</option>
-                                        {{/each}}
-                                    {{/each}}
-                                </select>
-                            </div> 
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-12 filterPart">
-                            <button id="applyFiltersBtn" type="submit" class="btn btn-sm btn-outline-danger"><b>Show cakes !</b></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <hr>
-        </div>
+        
         <div class="container-fluid">
             <div class="row justify-content-start">
-            <div class="col-md-9 col-sm-12 col-xs-12">
-                <p id="filterResults">Showing for - Nashik&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;{{brandName}}&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;{{categoryName}}</p>
-                {{>cakePage}}
-            </div>
-            <div class="col-md-3 col-sm-12 col-xs-12">
-                <h4 id="zomatoSideWidget1Header">Search your favourite cake shop on Zomato?</h4>
-                <hr>
-                <div class="widget_wrap" style="width:100%;height:797px;display:inline-block;"><iframe src="https://www.zomato.com/widgets/res_search_widget.php?city_id=16&language_id=1&theme=dark&sort=popularity" style="position:relative;width:100%;height:100%;" border="0" frameborder="0"></iframe></div>
-            </div>
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <h4 id="pdtFilter">Choose Cakes / other bakery products...</h4>
+                    <div class="container">
+                        <div class="row justify-content-center" id="chooseCakeVsBake">
+                            <form action="/products/select-category" method="POST">
+                                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="choosePdtCategory">Product</label>
+                                    </div>
+                                    <select class="custom-select" id="choosePdtCategory" name="choosePdtCategory">
+                                        <option value="cake">Cakes</option>
+                                        <option value="bake">Bakery products</option>
+                                    </select>
+                                </div> 
+                                <button style="width : 100%; margin-left:0px; margin-top:10px;" id="selectCategoryBtn" type="submit" class="btn-sm btn customColorBtn"><b>Go now !</b></button>
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4 id="pdtFilter">Choose from your favourite place...</h4>
+                    <hr>
+                    {{>pdtFilter}}
+                </div>
+                <div class="col-md-9 col-sm-12 col-xs-12">
+                    <p id="filterResults">Showing for - Nashik&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;{{brandName}}&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;{{categoryName}}</p>
+                    {{#if pdtTypeFlag}}
+                        {{>bakeryPdts}}
+                    {{else}}
+                        {{>cakePage}}
+                    {{/if}}
+                </div>
             </div>
         </div>
 
@@ -147,7 +159,7 @@
                     <div class="view overlay famousShopPicsBlock">
                         <img class="famousShopPics" src="/images/jahangirdar.jpg" class="img-fluid " alt="zoom">
                         <div class="mask flex-center waves-effect waves-light rgba-black-light">
-                            <p class="white-text famousShopNames"><b>Jahangirdar</b></p>
+                            <p class="white-text famousShopNames"><b>Jahagirdar</b></p>
                         </div>
                     </div>
                 </div>
