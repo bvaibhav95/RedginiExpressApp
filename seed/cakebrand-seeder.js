@@ -72,6 +72,19 @@ var cakeBrands = [
         city : 'Nashik',
         state : 'Maharashtra'
     }),
+    new CakeBrand({
+        brandId : 'vmcnsk',
+        brandName: 'VM Celebrations',
+        brandEmail: '-',
+        brandPhone: '8928004567',
+        address: {
+            residentAddress : 'VM Celebrations, opp Florista, near Model coloney, College road, Nashik - 422013',
+            shopAddress : ['VM Celebrations, opp Florista, near Model coloney, College road, Nashik - 422013'],
+            bakeryAddress : ['Near Carbonnaka bus stop, ABB-Mhindra road, MIDC, Satpur, Nashik'],
+        },
+        city : 'Nashik',
+        state : 'Maharashtra'
+    }),
     
 ];
 

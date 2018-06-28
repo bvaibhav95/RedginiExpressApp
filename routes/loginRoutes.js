@@ -20,7 +20,7 @@ var authCheck = function(req,res,next){
 };
 
 
-router.get('/login', function(req, res, next) {
+router.get('/login',function(req, res, next) {
     res.render('login/socialLogin', {title: 'Redgini | Social login', show : 'show', cart : req.session.cart});
 });
 
