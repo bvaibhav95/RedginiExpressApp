@@ -2218,7 +2218,7 @@ var cakes = [
         }),
         new Cake({
             cakeId: 'nsk_vmc_cak_pnp1_01',
-            name: 'PineApple',
+            name: 'PineApple(300gm)',
             brandId : 'vmcnsk',
             category: 'fc',
             availableWeights: [0.3],
