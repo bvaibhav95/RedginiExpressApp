@@ -47,7 +47,7 @@ router.get('/google/redirect', passport.authenticate('google'),function(req, res
     }
 });
 
-router.get('/facebook', passport.authenticate('facebook',{ scope: ['email', 'public_profile'] }));
+router.get('/facebook', passport.authenticate('facebook', { authType: 'rerequest', scope: ['user_friends', 'manage_pages'] }));
 
 router.get('/facebook/redirect', passport.authenticate('facebook', {failureRedirect: '/login' }),function(req, res){
     if (req.session.oldUrl) {

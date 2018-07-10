@@ -52,7 +52,7 @@ passport.use(
                 providerID : profile.id,
                 provider : profile.provider,
                 username : profile.displayName,
-                email : profile.emails[0].value, 
+                email : profile.emails[0].value,
             }).save().then(function (newUser){
                 done(null, newUser);
             });

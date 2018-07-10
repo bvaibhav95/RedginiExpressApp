@@ -75,7 +75,7 @@ var categories = [
         name: 'Mousse',
     }),
     new Category({
-        catId : 'bn',
+        catId : 'bn', 
         name: 'Brownies',
     }),
     new Category({
