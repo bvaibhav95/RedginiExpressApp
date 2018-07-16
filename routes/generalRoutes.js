@@ -10,8 +10,6 @@ var Order = require('../models/Order');
 var BakeryPdt = require('../models/BakeryPdt');
 var router = express.Router();
 
-mongoose.connect(keys.mongodb.dbURI, { useNewUrlParser: true });
-// mongoose.connect(keys.mongodbDevlopment.dbURI);
 
 var Cake = require('../models/Cake');
 var Order = require('../models/Order');

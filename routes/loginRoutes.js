@@ -7,8 +7,6 @@ const sendOtp = new SendOtp(keys.msg91.authKey);
 const passport = require('passport');
 const User = require('../models/User');
 
-mongoose.connect(keys.mongodb.dbURI, { useNewUrlParser: true });
-// mongoose.connect(keys.mongodbDevlopment.dbURI);
 
 var authCheck = function(req,res,next){
     if(!req.user){

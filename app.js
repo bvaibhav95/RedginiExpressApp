@@ -43,8 +43,7 @@ app.use(helmet.hpkp({
   includeSubdomains: true
 }));
 
-// mongoose.connect(keys.mongodb.dbURI);
-mongoose.connect(keys.mongodb.dbURI, { useNewUrlParser: true });
+mongoose.connect(keys.mongodb.dbURI);
 // view engine setup
 app.engine('.hbs', expressHbs({
   extname: '.hbs',
