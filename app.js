@@ -44,7 +44,7 @@ app.use(helmet.hpkp({
 }));
 
 // mongoose.connect(keys.mongodb.dbURI);
-mongoose.connect(keys.mongodbDevlopment.dbURI);
+mongoose.connect(keys.mongodb.dbURI, { useNewUrlParser: true });
 // view engine setup
 app.engine('.hbs', expressHbs({
   extname: '.hbs',

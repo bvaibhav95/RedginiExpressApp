@@ -10,7 +10,7 @@ var BakeryPdtBrand = require('../models/BakeryPdtBrand');
 var Category = require('../models/Category');
 var BakeryPdtCategory = require('../models/BakeryPdtCategory');
 var keys = require('../config/keys');
-mongoose.connect(keys.mongodb.dbURI);
+mongoose.connect(keys.mongodb.dbURI, { useNewUrlParser: true });
 // mongoose.connect(keys.mongodbDevlopment.dbURI);
 var csrfProtection = csrf({ cookie: true });
 router.use(csrfProtection);
