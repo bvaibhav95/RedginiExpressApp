@@ -1,7 +1,6 @@
 // node_modules require js
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -17,12 +16,10 @@ var cookieSession = require('cookie-session');
 var helmet = require('helmet');
 var passportConfig = require('./config/passport-config');
 var keys = require('./config/keys');
-//Custom-user require js
 var index = require('./routes/generalRoutes');
 var product = require('./routes/productRoutes');
 var login = require('./routes/loginRoutes');
 var profile = require('./routes/profileRoutes');
-//========================================================================================
 var app = express();
 
 app.use(helmet());
@@ -44,7 +41,6 @@ app.use(helmet.hpkp({
 }));
 
 mongoose.connect(keys.mongodb.dbURI);
-// view engine setup
 app.engine('.hbs', expressHbs({
   extname: '.hbs',
   partialsDir: path.join(__dirname, 'views/partials'),
@@ -52,7 +48,6 @@ app.engine('.hbs', expressHbs({
 }));
 app.set('view engine', '.hbs');
 app.set('views',path.join(__dirname,'views'));
-
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
