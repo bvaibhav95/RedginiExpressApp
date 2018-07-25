@@ -1,6 +1,9 @@
 <nav class="navbar fixed-top navbar-expand-md navbar-light customColor">
-    <a class="navbar-brand" href="/" id="brand_name">Redgini</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="/" id="brand_name">
+        <img id="brandImg" src="https://res.cloudinary.com/ddrrpmcto/image/upload/brands/redgini-rectangle-logo.jpg" alt="Redgini">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbar_main"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon customColorIcon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbar_main">
@@ -18,7 +21,8 @@
                     <a class="dropdown-item" href="/products/toasts">Toasts</a>
                     <a class="dropdown-item" href="/products/khari">Khari</a>
                     <a class="dropdown-item" href="/products/biscuits">Healthy biscuits/cookies</a>
-                    {{!-- <a class="dropdown-item" href="/products/breads">Breads</a> --}}
+                    {{!--
+                    <a class="dropdown-item" href="/products/breads">Breads</a> --}}
                 </div>
             </li>
             <li class="nav-item">
@@ -26,13 +30,9 @@
             </li>
         </ul>
         <ul class="navbar-nav nav-flex-icons">
-            {{#if show}}
-            {{else}}
-                {{>profileNav}}
-            {{/if}}
+            {{#if show}} {{else}} {{>profileNav}} {{/if}}
         </ul>
     </div>
 </nav>
 
-{{>construction}} 
-            
+{{>construction}}

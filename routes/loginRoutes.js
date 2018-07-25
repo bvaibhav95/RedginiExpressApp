@@ -1,61 +1,80 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var mongoose = require('mongoose');
-const SendOtp = require('sendotp');
-var keys = require('../config/keys');
+var mongoose = require("mongoose");
+const SendOtp = require("sendotp");
+var keys = require("../config/keys");
 const sendOtp = new SendOtp(keys.msg91.authKey);
-const passport = require('passport');
-const User = require('../models/User');
+const passport = require("passport");
+const User = require("../models/User");
 
-
-var authCheck = function(req,res,next){
-    if(!req.user){
+var authCheck = function(req, res, next) {
+    if (!req.user) {
         req.session.oldUrl = req.url;
-        res.redirect('/auth/login');
-    }else{
+        res.redirect("/auth/login");
+    } else {
         next();
     }
 };
 
-
-router.get('/login',function(req, res, next) {
-    res.render('login/socialLogin', {title: 'Redgini | Social login', show : 'show', cart : req.session.cart});
+router.get("/login", function(req, res, next) {
+    res.render("login/socialLogin", {
+        title: "Redgini | Social login",
+        show: "show",
+        cart: req.session.cart
+    });
 });
 
-router.get('/logout', function(req, res, next) {
+router.get("/logout", function(req, res, next) {
     req.logout();
     req.session = null;
-    res.redirect('/');
+    res.redirect("/");
 });
 
-router.get('/google', passport.authenticate('google',{
-    scope: [
-        'https://www.googleapis.com/auth/userinfo.profile',
-        'https://www.googleapis.com/auth/userinfo.email'
-    ]
-}));
+router.get(
+    "/google",
+    passport.authenticate("google", {
+        scope: [
+            "https://www.googleapis.com/auth/userinfo.profile",
+            "https://www.googleapis.com/auth/userinfo.email"
+        ]
+    })
+);
 
-router.get('/google/redirect', passport.authenticate('google'),function(req, res, next){
+router.get("/google/redirect", passport.authenticate("google"), function(
+    req,
+    res,
+    next
+) {
     if (req.session.oldUrl) {
         var oldUrl = req.session.oldUrl;
         req.session.oldUrl = null;
         res.redirect(oldUrl);
     } else {
-        res.redirect('/products/cakes');
+        res.redirect("/products/cakes");
     }
 });
 
-router.get('/facebook', passport.authenticate('facebook', { authType: 'rerequest', scope: ['user_friends', 'manage_pages'] }));
+router.get(
+    "/facebook",
+    passport.authenticate("facebook", {
+        authType: "rerequest",
+        scope: ["user_friends", "manage_pages"]
+    })
+);
 
-router.get('/facebook/redirect', passport.authenticate('facebook', {failureRedirect: '/login' }),function(req, res){
-    if (req.session.oldUrl) {
-        var oldUrl = req.session.oldUrl;
-        req.session.oldUrl = null;
-        res.redirect(oldUrl);
-    } else {
-        res.redirect('/products/cakes');
+router.get(
+    "/facebook/redirect",
+    passport.authenticate("facebook", { failureRedirect: "/login" }),
+    function(req, res) {
+        if (req.session.oldUrl) {
+            var oldUrl = req.session.oldUrl;
+            req.session.oldUrl = null;
+            res.redirect(oldUrl);
+        } else {
+            res.redirect("/products/cakes");
+        }
     }
-});
+);
 
 module.exports = router;
 /*router.get('/mobile', function(req, res, next) {

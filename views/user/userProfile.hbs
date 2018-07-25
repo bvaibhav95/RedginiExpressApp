@@ -1,4 +1,4 @@
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,64 +11,80 @@
     <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.structure.min.css">
     <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.theme.min.css">
     <link rel="stylesheet" href="/stylesheets/dependencies/pickaday.css">
-    <link rel="stylesheet" href="/stylesheets/error.css"/>
-    <link rel="stylesheet" href="/stylesheets/header.css"/>
-    <link rel="stylesheet" href="/stylesheets/footer.css"/>
-    <link rel="stylesheet" href="/stylesheets/socialLogin.css"/>
-    <link rel="stylesheet" href="/stylesheets/index.css"/>
-    <link rel="stylesheet" href="/stylesheets/partners.css"/>
+    <link rel="stylesheet" href="/stylesheets/error.css" />
+    <link rel="stylesheet" href="/stylesheets/header.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css" />
+    <link rel="stylesheet" href="/stylesheets/socialLogin.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/partners.css" />
     <link rel="stylesheet" href="/stylesheets/policies.css">
-    <link rel="stylesheet" href="/stylesheets/products.css"/>
+    <link rel="stylesheet" href="/stylesheets/products.css" />
     <link rel="stylesheet" href="/stylesheets/checkout.css">
-    <link rel="stylesheet" href="/stylesheets/final.css"/>
-    <link rel="stylesheet" href="/stylesheets/shoppingCart.css"/>
+    <link rel="stylesheet" href="/stylesheets/final.css" />
+    <link rel="stylesheet" href="/stylesheets/shoppingCart.css" />
     <link rel="stylesheet" href="/stylesheets/userProfile.css">
-  </head>
-  <body id="userProfile">
+</head>
+
+<body id="userProfile">
     {{>header}}
-    
+
     <div id="wrapper" class="container">
         <div class="row" id="contentWrapper">
             <div class="col-md-3 col-sm-3">
                 <div class="align-self-center" style="flex-direction: column">
-                    <p style="text-align:center"><img id="userPic" class="rounded-circle testimonials_img" src="images/user.png" alt="user3" width="80" height="80"/></p>
+                    <p style="text-align:center">
+                        <img id="userPic" class="rounded-circle testimonials_img" src="https://res.cloudinary.com/ddrrpmcto/image/upload/redgini-express-app/user.png"
+                            alt="user3" width="80" height="80" />
+                    </p>
                     <p id="username">{{user.username}}</p>
                 </div>
                 <div id="userTabs" class="list-group">
-                    <a href="" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#underConstruction"><i class="fas fa-user"></i>&nbsp;&nbsp;My profile</a>
-                    <a href="" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#underConstruction"><i class="fas fa-address-card"></i>&nbsp;&nbsp;My orders</a>
-                    <a href="" class="list-group-item list-group-item-action"  data-toggle="modal" data-target="#underConstruction"><i class="fas fa-book"></i>&nbsp;&nbsp;Addresses</a>
-                    <a href="" class="list-group-item list-group-item-action"  data-toggle="modal" data-target="#underConstruction"><i class="fas fa-credit-card"></i>&nbsp;&nbsp;Wallets</a>
-                    <a href="/auth/logout" class="list-group-item list-group-item-action"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Logout</a>
+                    <a href="" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#underConstruction">
+                        <i class="fas fa-user"></i>&nbsp;&nbsp;My profile</a>
+                    <a href="/profile/my-orders" class="list-group-item list-group-item-action">
+                        <i class="fas fa-address-card"></i>&nbsp;&nbsp;My orders</a>
+                    <a href="/my-referral-code" class="list-group-item list-group-item-action">
+                        <i class="fas fa-book"></i>&nbsp;&nbsp;Referral code</a>
+                    <a href="" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#underConstruction">
+                        <i class="fas fa-credit-card"></i>&nbsp;&nbsp;Wallets</a>
+                    <a href="/auth/logout" class="list-group-item list-group-item-action">
+                        <i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Logout</a>
                 </div>
             </div>
             <div class="col-md-9 col-sm-9">
                 <div class="list-group">
                     {{#if orderHistory}}
-                        <p id="noOrderHistory">Previous orders...</p>
-                        {{#each orderHistory}}
-                            <a href="" class="list-group-item list-group-item-action">
-                                <ul style="list-style:none">
-                                    <li>
-                                        {{#each this.cart.items}}
-                                            <p class="mb-1 itemList"><b>{{this.item.name}} | {{this.pdtWt}}Kg | Qty - {{this.pdtQty}} | Cost - Rs.{{this.netPrice}}</b></p>
-                                        {{/each}}
-                                    </li>
-                                    <li><small>Delivery date - {{this.delDate}}</small></li>
-                                    <li><small>Payment mode - {{this.payMode}}</small></li>
-                                    <li><small>Net cost - Rs.{{this.cart.totalPrice}}</small></li>
-                                </ul>
-                            </a>
-                        {{/each}}
-                    {{else}}
-                        <p id="noOrderHistory">You haven't placed any order</p>
-                        <div class="container" id="emptyCartMsg">
-                            <div class="row justify-content-center">
-                                <img id="emptyListPic" src="/images/emptycart.jpg" alt="empty shopping cart">
-                                <div class="w-100"></div>
-                                <a id="startShopping" href="/products/cakes" class="btn btn-danger btn-sm" type="button">Order your first cake!</a>
-                            </div>
+                    <p id="noOrderHistory">Previous orders...</p>
+                    {{#each orderHistory}}
+                    <a href="" class="list-group-item list-group-item-action">
+                        <ul style="list-style:none">
+                            <li>
+                                {{#each this.cart.items}}
+                                <p class="mb-1 itemList">
+                                    <b>{{this.item.name}} | {{this.pdtWt}}Kg | Qty - {{this.pdtQty}} | Cost - Rs.{{this.netPrice}}</b>
+                                </p>
+                                {{/each}}
+                            </li>
+                            <li>
+                                <small>Delivery date - {{this.delDate}}</small>
+                            </li>
+                            <li>
+                                <small>Payment mode - {{this.payMode}}</small>
+                            </li>
+                            <li>
+                                <small>Net cost - Rs.{{this.cart.totalPrice}}</small>
+                            </li>
+                        </ul>
+                    </a>
+                    {{/each}} {{else}}
+                    <p id="noOrderHistory">You haven't placed any order</p>
+                    <div class="container" id="emptyCartMsg">
+                        <div class="row justify-content-center">
+                            <img id="emptyListPic" src="/images/emptycart.jpg" alt="empty shopping cart">
+                            <div class="w-100"></div>
+                            <a id="startShopping" href="/products/cakes" class="btn btn-danger btn-sm" type="button">Order your first cake!</a>
                         </div>
+                    </div>
                     {{/if}}
                 </div>
             </div>
@@ -80,4 +96,4 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
     <script type="text/javascript" src="/javascripts/userProfile.js"></script>
-  </body>
+</body>

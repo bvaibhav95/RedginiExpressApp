@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
+@import url("https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500");
 
 /* font-family: 'Fredoka One', cursive;
 font-family: 'Quicksand', sans-serif;
@@ -8,620 +8,625 @@ font-family: 'Anton', sans-serif;
 font-family: 'Francois One', sans-serif;
 font-family: 'Comfortaa', cursive;
 font-family: 'Farsan', cursive; */
-body#homepagebody,body{
-	height: 100%;
+body#homepagebody,
+body {
+    height: 100%;
 }
-body#homepagebody{
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizelegibility;
-	color: #6c6f73;
+body#homepagebody {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    color: #6c6f73;
 }
-body#homepage #coverOffers{
-	margin-top: 70px;
-	padding: 50px 115px 50px 115px;
+body#homepage #coverOffers {
+    padding: 50px 115px 50px 115px;
 }
 /*=======about us=======*/
-body#homepage #aboutusContainer{
-	margin-top: 50px;
-	margin-bottom: 30px;
+body#homepage #aboutusContainer {
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
-body#homepage #zomatoFoodIndexHeader{
-	text-align: center;
-	font-family: 'Fredoka One', cursive;
-	font-size: 20px;
+body#homepage #zomatoFoodIndexHeader {
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+    font-size: 20px;
 }
-body#homepage #zomatoFoodIndexHeader{
-	text-align: center;
-	font-family: 'Fredoka One', cursive;
-	font-size: 20px;
+body#homepage #zomatoFoodIndexHeader {
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+    font-size: 20px;
 }
-body#homepage #zomatoFoodIndex{
-	width: 100%;
-	height: 400px;
-	/* display: inline-block; */
+body#homepage #zomatoFoodIndex {
+    width: 100%;
+    height: 400px;
+    /* display: inline-block; */
 }
-body#homepage #aboutus h1{
-	font-family: 'Oswald', sans-serif;
-	font-weight: bold;
-	color: black;
-	font-size: 40px;
-	color: #3d3a3a;
+body#homepage #aboutus h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 40px;
+    color: #3d3a3a;
 }
 
-body#homepage #aboutus p{
-	margin-bottom: 15px;
-	font-family: 'Comfortaa', cursive;
-	font-size: 15px;
+body#homepage #aboutus p {
+    margin-bottom: 15px;
+    font-family: "Comfortaa", cursive;
+    font-size: 15px;
 }
 /*=======about us ends=======*/
 /*============speciality add on start============*/
-body#homepage #speciality{
-	font-family: 'Fredoka One', cursive;
-	text-align: center;
-	font-weight: bold;
-	margin-top: 50px;
-	margin-bottom: 30px;
-	font-size: 35px;
-	padding: 10px;
-	color: #3d3a3a;
+body#homepage #speciality {
+    font-family: "Fredoka One", cursive;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 35px;
+    padding: 10px;
+    color: #3d3a3a;
 }
-body#homepage .spec_header{
-	font-family: 'Farsan', cursive;
-	text-align: center;
-	font-weight: bold;
+body#homepage .spec_header {
+    font-family: "Farsan", cursive;
+    text-align: center;
+    font-weight: bold;
 }
-body#homepage .spec_desc{
-	margin-bottom: 15px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 12px;
-	text-align: center;
+body#homepage .spec_desc {
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    text-align: center;
 }
 /*============speciality add on end=============*/
 /*=============categories start============*/
-body#homepage .card{
-	background-color:  #fcf9f9;
+body#homepage .card {
+    background-color: #fcf9f9;
 }
 
-body#homepage #cat_header h2{
-	font-family: 'Fredoka One', cursive;
-	font-weight: bold;
-	margin-top: 50px;
-	margin-bottom: 30px;
-	color: black;
-	font-size: 40px;
-	padding: 10px;
-	text-align: center;
-	color: #3d3a3a;
+body#homepage #cat_header h2 {
+    font-family: "Fredoka One", cursive;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+    color: #3d3a3a;
 }
 
-body#homepage .category_card{
-	font-family: 'Montserrat', sans-serif;
+body#homepage .category_card {
+    font-family: "Montserrat", sans-serif;
 }
-body#homepage .cat_name{
-	font-family: 'Oswald', sans-serif;
-	color:  #3d3a3a;
+body#homepage .cat_name {
+    font-family: "Oswald", sans-serif;
+    color: #3d3a3a;
 }
-body#homepage .cat_desc{
-	font-family: 'Comfortaa', cursive;
-	color: grey;
-}
-
-body#homepage .card img{
-	width: 100%;
-	height: 150px;
-}
-body#homepage .cat_row .cat_boxes{
-	margin-bottom: 25px;
+body#homepage .cat_desc {
+    font-family: "Comfortaa", cursive;
+    color: grey;
 }
 
-body#homepage .card:hover{
-	border-color: #A8A8A8;
+body#homepage .card img {
+    width: 100%;
+    height: 150px;
+}
+body#homepage .cat_row .cat_boxes {
+    margin-bottom: 25px;
+}
+
+body#homepage .card:hover {
+    border-color: #a8a8a8;
 }
 
 /*=============categories ends============*/
 /*==============counter design starts=============*/
-body#homepage #counter_show{
-	font-family: 'Montserrat', sans-serif;
-	/*height: 230px;*/
-	width: 100%;
-	background-color: #282C35;
-	margin-top: 50px;
-	margin-bottom: 50px;
+body#homepage #counter_show {
+    font-family: "Montserrat", sans-serif;
+    /*height: 230px;*/
+    width: 100%;
+    background-color: #282c35;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-body#homepage #counter_show h4{
-	font-family: 'Fredoka One', cursive;
-	text-align:center;
-	color: #ADB0B6;
-	font-weight:bold;
-	font-size:30px; 
-	padding-top:20px;
+body#homepage #counter_show h4 {
+    font-family: "Fredoka One", cursive;
+    text-align: center;
+    color: #adb0b6;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 20px;
 }
-body#homepage .counter-blk{
-	font-weight: bold;
-	text-align: center;
-	color: #ADB0B6;
+body#homepage .counter-blk {
+    font-weight: bold;
+    text-align: center;
+    color: #adb0b6;
 }
-body#homepage #counter_segs{
-	margin-top: 40px;
+body#homepage #counter_segs {
+    margin-top: 40px;
 }
 /*==============counter design ends=============*/
 
-
 body#homepage hr.style1:before {
-  display: block;
-  content: "";
-  height: 30px;
-  margin-top: -31px;
-  border-style: solid;
-  border-color: #8c8b8b;
-  border-width: 0 0 1px 0;
-  border-radius: 20px;
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
 body#homepage hr.style2 {
-	height: 6px;
-	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+    height: 6px;
+    background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x
+        0 0;
     border: 0;
 }
 
 /*Testimonials start*/
 body#homepage .carousel-item h5 {
-  text-decoration: none;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #222; 
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #222;
 }
 body#homepage #testimonials h2 {
-	font-family: 'Fredoka One', cursive;
-	text-align: center;
-	font-weight: bold;
-	margin-top: 30px;
-	margin-bottom: 50px;
-	color: black;
-	font-size: 40px;
-	padding: 10px;
-	color: #3d3a3a;
+    font-family: "Fredoka One", cursive;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: black;
+    font-size: 40px;
+    padding: 10px;
+    color: #3d3a3a;
 }
-body#homepage .testimonials_desc{
-	font-family: 'Comfortaa', cursive;
-	font-size: 15px;
-	text-align: center;
+body#homepage .testimonials_desc {
+    font-family: "Comfortaa", cursive;
+    font-size: 15px;
+    text-align: center;
 }
-body#homepage .testimonials_names{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 17px;
-	text-align: center;
+body#homepage .testimonials_names {
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    text-align: center;
 }
 
 body#homepage .carousel-item img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 body#homepage .fa {
-  color: black; }
+    color: black;
+}
 
 body#homepage .carousel-control-next {
-  width: 5%;
-  height: 10%;
-  margin-top: 100px; }
+    width: 5%;
+    height: 10%;
+    margin-top: 100px;
+}
 
 body#homepage .carousel-control-prev {
-  width: 5%;
-  height: 10%;
-  margin-top: 100px; }
+    width: 5%;
+    height: 10%;
+    margin-top: 100px;
+}
 /*Testimonials ends*/
 
-body#homepage #partnerHeader{
-	color: #222;
-	text-align: center;
-	font-family: 'Fredoka One', cursive;
-	margin-top: 40px;
+body#homepage #partnerHeader {
+    color: #222;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+    margin-top: 40px;
 }
 /*Contact us start*/
-body#homepage #contactus{
-	margin-top: 60px;
+body#homepage #contactus {
+    margin-top: 60px;
 }
 
-body#homepage #contactus h2{
-	font-family: 'Fredoka One', cursive;
-	text-align: center;
-	font-weight: bold;
-	color: white;
+body#homepage #contactus h2 {
+    font-family: "Fredoka One", cursive;
+    text-align: center;
+    font-weight: bold;
+    color: white;
 }
-body#homepage #contactus h5{
-	font-family: 'Montserrat', sans-serif;
-}
-
-body#homepage #msg_sent{
-	font-size: 13px;
-	font-family: 'Montserrat', sans-serif;
+body#homepage #contactus h5 {
+    font-family: "Montserrat", sans-serif;
 }
 
-body#homepage .customColorForm{
-	background-color: #cb202d;
+body#homepage #msg_sent {
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
 }
-body#homepage #carouselWrapper{
-	background-color: #222;
+
+body#homepage .customColorForm {
+    background-color: #cb202d;
+}
+body#homepage #carouselWrapper {
+    margin-top: 100px;
+    background-color: #222;
 }
 /*Contact us end*/
 @media (max-width: 574px) {
-	body#homepage #coverOffers img {
-	    width: 100%;
-	    height: 120px;
-	}
-	body#homepage #coverOffers{
-		margin-top: 70px;
-		padding: 10px 30px 10px 30px;
-	}
-	body#homepage .cat_card_img{
-		height: 150px;
-	}
-	body#homepage .cat_name{
-		font-size: 10px;
-	}
-	body#homepage .cat_desc{
-		font-size: 8px;
-	}
-	body#homepage #cat_header h2{
-		font-size: 24px;
-	}
-	body#homepage #aboutus h2{
-		font-size: 24px;
-	}
-	body#homepage #testimonials h2{
-		font-size: 24px;
-	}
-	body#homepage #contactus h2{
-		font-size: 24px;
-	}
-	body#homepage #contactus h5{
-		font-size: 10px;
-	}
-	body#homepage .contactLabels{
-		font-size: 10px;
-	}
-	body#homepage .cat_row .cat_boxes{
-		margin-bottom: 10px;
-	}
-	body#homepage #aboutus p{
-		font-size: 9px;
-	}
-	body#homepage #aboutus h2{
-		margin-top: 10px;
-		margin-bottom: 15px;
-	}
-	body#homepage #speciality{
-		font-size: 20px;
-	}
-	body#homepage .spec_header{
-		font-size: 12px;
-	}
-	body#homepage .spec_desc{
-		font-size: 8px;
-	}
-	body#homepage .testimonials_names{
-		font-size: 10px;
-	}
-	body#homepage .testimonials_desc{
-		font-size: 8px;
-	}
-	body#homepage .testimonials_img{
-		width: 70px;
-		height: 70px;
-	}
-	body#homepage .counter-blk h1{
-		font-size: 20px;
-	}
-	body#homepage .counter-blk p{
-		font-size: 12px;
-	}
-	body#homepage #spec_add_on img{
-		height: 30px;
-		width: 30px;
-	}
-	body#homepage #partnerHeader{
-		font-size: 20px;
-	}
+    body#homepage #coverOffers img {
+        width: 100%;
+        height: 120px;
+    }
+    body#homepage #coverOffers {
+        margin-top: 70px;
+        padding: 10px 30px 10px 30px;
+    }
+    body#homepage .cat_card_img {
+        height: 150px;
+    }
+    body#homepage .cat_name {
+        font-size: 10px;
+    }
+    body#homepage .cat_desc {
+        font-size: 8px;
+    }
+    body#homepage #cat_header h2 {
+        font-size: 24px;
+    }
+    body#homepage #aboutus h2 {
+        font-size: 24px;
+    }
+    body#homepage #testimonials h2 {
+        font-size: 24px;
+    }
+    body#homepage #contactus h2 {
+        font-size: 24px;
+    }
+    body#homepage #contactus h5 {
+        font-size: 10px;
+    }
+    body#homepage .contactLabels {
+        font-size: 10px;
+    }
+    body#homepage .cat_row .cat_boxes {
+        margin-bottom: 10px;
+    }
+    body#homepage #aboutus p {
+        font-size: 9px;
+    }
+    body#homepage #aboutus h2 {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    body#homepage #speciality {
+        font-size: 20px;
+    }
+    body#homepage .spec_header {
+        font-size: 12px;
+    }
+    body#homepage .spec_desc {
+        font-size: 8px;
+    }
+    body#homepage .testimonials_names {
+        font-size: 10px;
+    }
+    body#homepage .testimonials_desc {
+        font-size: 8px;
+    }
+    body#homepage .testimonials_img {
+        width: 70px;
+        height: 70px;
+    }
+    body#homepage .counter-blk h1 {
+        font-size: 20px;
+    }
+    body#homepage .counter-blk p {
+        font-size: 12px;
+    }
+    body#homepage #spec_add_on img {
+        height: 30px;
+        width: 30px;
+    }
+    body#homepage #partnerHeader {
+        font-size: 20px;
+    }
 }
 @media (min-width: 575px) {
-	body#homepage #coverOffers img {
-	    width: 100%;
-	    height: 170px;
-	}
-	body#homepage #coverOffers{
-		margin-top: 70px;
-		padding: 40px 40px 40px 40px;
-	}
-	body#homepage .cat_card_img{
-		height: 180px;
-	}
-	body#homepage .cat_name{
-		font-size: 12px;
-	}
-	body#homepage .cat_desc{
-		font-size: 10px;
-	}
-	body#homepage #cat_header h2{
-		font-size: 27px;
-	}
-	body#homepage #aboutus h2{
-		font-size: 27px;
-	}
-	body#homepage #contactus h2{
-		font-size: 27px;
-	}
-	body#homepage #contactus h5{
-		font-size: 12px;
-	}
-	body#homepage .contactLabels{
-		font-size: 12px;
-	}
-	body#homepage #testimonials h2{
-		font-size: 27px;
-	}
-	body#homepage #aboutus p{
-		font-size: 10px;
-	}
-	body#homepage #aboutus h2{
-		margin-top: 10px;
-		margin-bottom: 15px;
-	}
-	body#homepage #speciality{
-		font-size: 22px;
-	}
-	body#homepage .spec_header{
-		font-size: 14px;
-	}
-	body#homepage .spec_desc{
-		font-size: 10px;
-	}
-	body#homepage .testimonials_names{
-		font-size: 11px;
-	}
-	body#homepage .testimonials_desc{
-		font-size: 10px;
-	}
-	body#homepage .testimonials_img{
-		width: 80px;
-		height: 80px;
-	}
-	body#homepage .counter-blk h1{
-		font-size: 25px;
-	}
-	body#homepage .counter-blk p{
-		font-size: 16px;
-	}
-	body#homepage #spec_add_on img{
-		height: 40px;
-		width: 40px;
-	}
-	body#homepage #partnerHeader{
-		font-size: 25px;
-	}
+    body#homepage #coverOffers img {
+        width: 100%;
+        height: 170px;
+    }
+    body#homepage #coverOffers {
+        margin-top: 70px;
+        padding: 40px 40px 40px 40px;
+    }
+    body#homepage .cat_card_img {
+        height: 180px;
+    }
+    body#homepage .cat_name {
+        font-size: 12px;
+    }
+    body#homepage .cat_desc {
+        font-size: 10px;
+    }
+    body#homepage #cat_header h2 {
+        font-size: 27px;
+    }
+    body#homepage #aboutus h2 {
+        font-size: 27px;
+    }
+    body#homepage #contactus h2 {
+        font-size: 27px;
+    }
+    body#homepage #contactus h5 {
+        font-size: 12px;
+    }
+    body#homepage .contactLabels {
+        font-size: 12px;
+    }
+    body#homepage #testimonials h2 {
+        font-size: 27px;
+    }
+    body#homepage #aboutus p {
+        font-size: 10px;
+    }
+    body#homepage #aboutus h2 {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    body#homepage #speciality {
+        font-size: 22px;
+    }
+    body#homepage .spec_header {
+        font-size: 14px;
+    }
+    body#homepage .spec_desc {
+        font-size: 10px;
+    }
+    body#homepage .testimonials_names {
+        font-size: 11px;
+    }
+    body#homepage .testimonials_desc {
+        font-size: 10px;
+    }
+    body#homepage .testimonials_img {
+        width: 80px;
+        height: 80px;
+    }
+    body#homepage .counter-blk h1 {
+        font-size: 25px;
+    }
+    body#homepage .counter-blk p {
+        font-size: 16px;
+    }
+    body#homepage #spec_add_on img {
+        height: 40px;
+        width: 40px;
+    }
+    body#homepage #partnerHeader {
+        font-size: 25px;
+    }
 }
 @media (min-width: 768px) {
-	body#homepage #coverOffers img {
-	    width: 100%;
-	    height: 180px;
-	}
-	body#homepage #coverOffers{
-		margin-top: 70px;
-		padding: 40px 90px 40px 90px;
-	}
-	body#homepage .cat_card_img{
-		height: 180px;
-	}
-	body#homepage .cat_name{
-		font-size: 14px;
-	}
-	body#homepage .cat_desc{
-		font-size: 10px;
-	}
-	body#homepage #cat_header h2{
-		font-size: 30px;
-	}
-	body#homepage #aboutus h2{
-		font-size: 30px;
-	}
-	body#homepage #testimonials h2{
-		font-size: 30px;
-	}
-	body#homepage #contactus h2{
-		font-size: 30px;
-	}
-	body#homepage #contactus h5{
-		font-size: 14px;
-	}
-	body#homepage .contactLabels{
-		font-size: 14px;
-	}
-	body#homepage #aboutus p{
-		font-size: 12px;
-	}
-	body#homepage #speciality{
-		font-size: 25px;
-	}
-	body#homepage .spec_header{
-		font-size: 15px;
-	}
-	body#homepage .spec_desc{
-		font-size: 11px;
-	}
-	body#homepage .testimonials_names{
-		font-size: 13px;
-	}
-	body#homepage .testimonials_desc{
-		font-size: 12px;
-	}
-	body#homepage .testimonials_img{
-		width: 100px;
-		height: 100px;
-	}
-	body#homepage .counter-blk h1{
-		font-size: 30px;
-	}
-	body#homepage .counter-blk p{
-		font-size: 18px;
-	}
-	body#homepage #spec_add_on img{
-		height: 50px;
-		width: 50px;
-	}
-	body#homepage #partnerHeader{
-		font-size: 30px;
-	}
+    body#homepage #coverOffers img {
+        width: 100%;
+        height: 180px;
+    }
+    body#homepage #coverOffers {
+        margin-top: 70px;
+        padding: 40px 90px 40px 90px;
+    }
+    body#homepage .cat_card_img {
+        height: 180px;
+    }
+    body#homepage .cat_name {
+        font-size: 14px;
+    }
+    body#homepage .cat_desc {
+        font-size: 10px;
+    }
+    body#homepage #cat_header h2 {
+        font-size: 30px;
+    }
+    body#homepage #aboutus h2 {
+        font-size: 30px;
+    }
+    body#homepage #testimonials h2 {
+        font-size: 30px;
+    }
+    body#homepage #contactus h2 {
+        font-size: 30px;
+    }
+    body#homepage #contactus h5 {
+        font-size: 14px;
+    }
+    body#homepage .contactLabels {
+        font-size: 14px;
+    }
+    body#homepage #aboutus p {
+        font-size: 12px;
+    }
+    body#homepage #speciality {
+        font-size: 25px;
+    }
+    body#homepage .spec_header {
+        font-size: 15px;
+    }
+    body#homepage .spec_desc {
+        font-size: 11px;
+    }
+    body#homepage .testimonials_names {
+        font-size: 13px;
+    }
+    body#homepage .testimonials_desc {
+        font-size: 12px;
+    }
+    body#homepage .testimonials_img {
+        width: 100px;
+        height: 100px;
+    }
+    body#homepage .counter-blk h1 {
+        font-size: 30px;
+    }
+    body#homepage .counter-blk p {
+        font-size: 18px;
+    }
+    body#homepage #spec_add_on img {
+        height: 50px;
+        width: 50px;
+    }
+    body#homepage #partnerHeader {
+        font-size: 30px;
+    }
 }
 @media (min-width: 992px) {
-	body#homepage #coverOffers img {
-	    width: 100%;
-	    height: 250px;
-	}
-	body#homepage #coverOffers{
-		margin-top: 70px;
-		padding: 50px 100px 50px 100px;
-	}
-	body#homepage .cat_card_img{
-		height: 250px;
-	}
-	body#homepage .cat_name{
-		font-size: 16px;
-	}
-	body#homepage .cat_desc{
-		font-size: 11px;
-	}
-	body#homepage #cat_header h2{
-		font-size: 35px;
-	}
-	body#homepage #aboutus h2{
-		font-size: 35px;
-	}
-	body#homepage #testimonials h2{
-		font-size: 35px;
-	}
-	body#homepage #contactus h2{
-		font-size: 35px;
-	}
-	body#homepage #contactus h5{
-		font-size: 16px;
-	}
-	body#homepage .contactLabels{
-		font-size: 16px;
-	}
-	body#homepage #aboutus p{
-		font-size: 14px;
-	}
-	body#homepage #speciality{
-		font-size: 30px;
-	}
-	body#homepage .spec_header{
-		font-size: 15px;
-	}
-	body#homepage .spec_desc{
-		font-size: 13px;
-	}
-	body#homepage .testimonials_names{
-		font-size: 15px;
-	}
-	body#homepage .testimonials_desc{
-		font-size: 13px;
-	}
-	body#homepage .testimonials_img{
-		width: 120px;
-		height: 120px;
-	}
-	body#homepage .counter-blk h1{
-		font-size: 35px;
-	}
-	body#homepage .counter-blk p{
-		font-size: 21px;
-	}
-	body#homepage #spec_add_on img{
-		height: 60px;
-		width: 60px;
-	}
-	body#homepage #partnerHeader{
-		font-size: 35px;
-	}
+    body#homepage #coverOffers img {
+        width: 100%;
+        height: 250px;
+    }
+    body#homepage #coverOffers {
+        margin-top: 70px;
+        padding: 50px 100px 50px 100px;
+    }
+    body#homepage .cat_card_img {
+        height: 250px;
+    }
+    body#homepage .cat_name {
+        font-size: 16px;
+    }
+    body#homepage .cat_desc {
+        font-size: 11px;
+    }
+    body#homepage #cat_header h2 {
+        font-size: 35px;
+    }
+    body#homepage #aboutus h2 {
+        font-size: 35px;
+    }
+    body#homepage #testimonials h2 {
+        font-size: 35px;
+    }
+    body#homepage #contactus h2 {
+        font-size: 35px;
+    }
+    body#homepage #contactus h5 {
+        font-size: 16px;
+    }
+    body#homepage .contactLabels {
+        font-size: 16px;
+    }
+    body#homepage #aboutus p {
+        font-size: 14px;
+    }
+    body#homepage #speciality {
+        font-size: 30px;
+    }
+    body#homepage .spec_header {
+        font-size: 15px;
+    }
+    body#homepage .spec_desc {
+        font-size: 13px;
+    }
+    body#homepage .testimonials_names {
+        font-size: 15px;
+    }
+    body#homepage .testimonials_desc {
+        font-size: 13px;
+    }
+    body#homepage .testimonials_img {
+        width: 120px;
+        height: 120px;
+    }
+    body#homepage .counter-blk h1 {
+        font-size: 35px;
+    }
+    body#homepage .counter-blk p {
+        font-size: 21px;
+    }
+    body#homepage #spec_add_on img {
+        height: 60px;
+        width: 60px;
+    }
+    body#homepage #partnerHeader {
+        font-size: 35px;
+    }
 }
 @media (min-width: 1200px) {
-	body#homepage #coverOffers img {
-	    width: 100%;
-	    height: 300px;
-	}
-	body#homepage #coverOffers{
-		margin-top: 70px;
-		padding: 50px 115px 50px 115px;
-	}
-	body#homepage .cat_card_img{
-		height: 300px;
-	}
-	body#homepage .cat_name{
-		font-size: 18px;
-	}
-	body#homepage .cat_desc{
-		font-size: 12px;
-	}
-	body#homepage #cat_header h2{
-		font-size: 40px;
-	}
-	body#homepage #aboutus h2{
-		font-size: 40px;
-	}
-	body#homepage #testimonials h2{
-		font-size: 40px;
-	}
-	body#homepage #contactus h2{
-		font-size: 40px;
-	}
-	body#homepage #contactus h5{
-		font-size: 18px;
-	}
-	body#homepage .contactLabels{
-		font-size: 18px;
-	}
-	body#homepage #aboutus p{
-		font-size: 15px;
-	}
-	body#homepage #speciality{
-		font-size: 35px;
-	}
-	body#homepage .spec_header{
-		font-size: 25px;
-	}
-	body#homepage .spec_desc{
-		font-size: 15px;
-	}
-	body#homepage .testimonials_names{
-		font-size: 17px;
-	}
-	body#homepage .testimonials_desc{
-		font-size: 15px;
-	}
-	body#homepage .testimonials_img{
-		width: 140px;
-		height: 140px;
-	}
-	body#homepage .counter-blk h1{
-		font-size: 40px;
-	}
-	body#homepage .counter-blk p{
-		font-size: 24px;
-	}
-	body#homepage #spec_add_on img{
-		height: 80px;
-		width: 80px;
-	}
-	body#homepage #partnerHeader{
-		font-size: 40px;
-	}
-	body#homepage #instaQR{
-		height: 50%;
-		width: 50%;
-	}
-	body#homepage #facebookQR{
-		height: 50%;
-		width: 50%;
-	}
+    body#homepage #coverOffers img {
+        width: 100%;
+        height: 300px;
+    }
+    body#homepage #coverOffers {
+        margin-top: 70px;
+        padding: 50px 115px 50px 115px;
+    }
+    body#homepage .cat_card_img {
+        height: 300px;
+    }
+    body#homepage .cat_name {
+        font-size: 18px;
+    }
+    body#homepage .cat_desc {
+        font-size: 12px;
+    }
+    body#homepage #cat_header h2 {
+        font-size: 40px;
+    }
+    body#homepage #aboutus h2 {
+        font-size: 40px;
+    }
+    body#homepage #testimonials h2 {
+        font-size: 40px;
+    }
+    body#homepage #contactus h2 {
+        font-size: 40px;
+    }
+    body#homepage #contactus h5 {
+        font-size: 18px;
+    }
+    body#homepage .contactLabels {
+        font-size: 18px;
+    }
+    body#homepage #aboutus p {
+        font-size: 15px;
+    }
+    body#homepage #speciality {
+        font-size: 35px;
+    }
+    body#homepage .spec_header {
+        font-size: 25px;
+    }
+    body#homepage .spec_desc {
+        font-size: 15px;
+    }
+    body#homepage .testimonials_names {
+        font-size: 17px;
+    }
+    body#homepage .testimonials_desc {
+        font-size: 15px;
+    }
+    body#homepage .testimonials_img {
+        width: 140px;
+        height: 140px;
+    }
+    body#homepage .counter-blk h1 {
+        font-size: 40px;
+    }
+    body#homepage .counter-blk p {
+        font-size: 24px;
+    }
+    body#homepage #spec_add_on img {
+        height: 80px;
+        width: 80px;
+    }
+    body#homepage #partnerHeader {
+        font-size: 40px;
+    }
+    body#homepage #instaQR {
+        height: 50%;
+        width: 50%;
+    }
+    body#homepage #facebookQR {
+        height: 50%;
+        width: 50%;
+    }
 }

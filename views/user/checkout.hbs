@@ -1,4 +1,4 @@
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,136 +11,168 @@
     <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.structure.min.css">
     <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.theme.min.css">
     <link rel="stylesheet" href="/stylesheets/dependencies/pickaday.css">
-    <link rel="stylesheet" href="/stylesheets/error.css"/>
-    <link rel="stylesheet" href="/stylesheets/header.css"/>
-    <link rel="stylesheet" href="/stylesheets/footer.css"/>
-    <link rel="stylesheet" href="/stylesheets/socialLogin.css"/>
-    <link rel="stylesheet" href="/stylesheets/index.css"/>
-    <link rel="stylesheet" href="/stylesheets/partners.css"/>
+    <link rel="stylesheet" href="/stylesheets/error.css" />
+    <link rel="stylesheet" href="/stylesheets/header.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css" />
+    <link rel="stylesheet" href="/stylesheets/socialLogin.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/partners.css" />
     <link rel="stylesheet" href="/stylesheets/policies.css">
-    <link rel="stylesheet" href="/stylesheets/products.css"/>
+    <link rel="stylesheet" href="/stylesheets/products.css" />
     <link rel="stylesheet" href="/stylesheets/checkout.css">
-    <link rel="stylesheet" href="/stylesheets/final.css"/>
-    <link rel="stylesheet" href="/stylesheets/shoppingCart.css"/>
+    <link rel="stylesheet" href="/stylesheets/final.css" />
+    <link rel="stylesheet" href="/stylesheets/shoppingCart.css" />
     <link rel="stylesheet" href="/stylesheets/userProfile.css">
-  </head>
-  <body id="checkout" onload="showOrderNote()">
-    {{>header}}
-    {{>orderBefore}}
+</head>
+
+<body id="checkout" onload="showOrderNote()">
+    {{>header}} {{>orderBefore}}
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <form action="/final" method="POST">
-                <input type="hidden" name="_csrf" value="{{csrfToken}}">
-                <input type="hidden" name="checkedOut" value="1">
-                <div class="card shadow_depth_1" id="checkout_details">
-                    <div class="col-md-12" id="">
-                        <h6><i class="fa fa-check-circle" aria-hidden="true"></i> Specific about order</h6>
-                        <p>Please mention extra comment or <b>mesaage on cake</b> (if any*)!</p>
-                        <div class="form-group">
-                            <label for="msgOnCake">Message on cakes or extra comment for us</label>
-                            <input type="text" class="form-control form-control-sm" id="msgOnCake" value="" name="msgOnCake">
-                        </div>
-                    <hr>
-                    </div>
-                    
-
-                    <div class="col-md-12" id="">
-                        <h6><i class="fa fa-check-circle" aria-hidden="true"></i> Delivery Address</h6>
-                        <p>Enter your address details so that we can deliver your product to you as soon as possible !</p>
-                        <div class="form-group">
-                            {{!-- <label for="name">Name</label> --}}
-                            <input type="hidden" class="form-control form-control-sm" id="name" value="{{req.user.username}}" name="firstname" required>
-                        </div>
-
-                        <div class="row justify-content-start">
-                            {{!-- <div class="form-group col-4"> --}}
-                                <input type="hidden" class="form-control form-control-sm" id="email" value="{{req.user.email}}" name="email" required>
-                            {{!-- </div> --}}
-                            <div class="form-group col-4">
-                                <label for="phone">Mobile</label>
-                                <input type="text" class="form-control form-control-sm" id="phone" value="" name="phone" maxlength="10" required>
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                    <input type="hidden" name="checkedOut" value="1">
+                    <div class="card shadow_depth_1" id="checkout_details">
+                        <div class="">
+                            <h6>
+                                <i class="fa fa-check-circle" aria-hidden="true"></i> Specific about order</h6>
+                            <div class="form-group">
+                                <label for="refCode">
+                                    <b>Enter Referral code and get Rs.50-100/- CASHBACK (no terms & conditions)</b>
+                                </label>
+                                <input type="text" class="form-control form-control-sm" id="refCode" value="" name="refCode">
                             </div>
+                            <div class="form-group">
+                                <label for="msgOnCake">Message on cakes or extra comment for us</label>
+                                <input type="text" class="form-control form-control-sm" id="msgOnCake" value="" name="msgOnCake">
+                            </div>
+                            <hr>
                         </div>
 
-                        <div class="form-group">
-                            <label for="form_flat">Flat / House / Office No.</label>
-                            <input type="text" class="form-control form-control-sm" id="form_flat" value="" name="userAddressLine1" required>
+                        <div class="">
+                            <h6>
+                                <i class="fa fa-check-circle" aria-hidden="true"></i> Delivery Address</h6>
+                            <p>Enter your address details so that we can deliver your product to you as soon as possible !</p>
+                            <div class="form-group">
+                                {{!--
+                                <label for="name">Name</label> --}}
+                                <input type="hidden" class="form-control form-control-sm" id="name" value="{{req.user.username}}" name="firstname" required>
+                            </div>
+
+                            <div class="row justify-content-start">
+                                {{!--
+                                <div class="form-group col-4"> --}}
+                                    <input type="hidden" class="form-control form-control-sm" id="email" value="{{req.user.email}}" name="email" required> {{!-- </div> --}}
+                                <div class="form-group col-4">
+                                    <label for="phone">Mobile</label>
+                                    <input type="text" class="form-control form-control-sm" id="phone" value="" name="phone" maxlength="10" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form_flat">Flat / House / Office No.</label>
+                                <input type="text" class="form-control form-control-sm" id="form_flat" value="" name="userAddressLine1" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form_street">Street / Society / Office Name</label>
+                                <input type="text" class="form-control form-control-sm" id="form_street" value="" name="userAddressLine2" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form_area">Area</label>
+                                <select class="form-control form-control-sm" id="form_area" name="userAddressLine3" required>
+                                    <option>Gangapur road</option>
+                                    <option>College road</option>
+                                    <option>Indira nagar</option>
+                                    <option>Satpur</option>
+                                    <option>Cidco</option>
+                                    <option>Nashik-road / Jail-road</option>
+                                    <option>Gangapur gaon, Aanandwali, etc.</option>
+                                    <option>Govind nagar</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form_city">City</label>
+                                <input type="text" class="form-control form-control-sm" id="form_state" placeholder="Nashik" value="Nashik" name="userCity"
+                                    disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="form_state">State</label>
+                                <input type="text" class="form-control form-control-sm" id="form_state" placeholder="Maharashtra" value="Maharashtra" name="userState"
+                                    disabled>
+                            </div>
+
+                            <hr>
                         </div>
 
-                        <div class="form-group">
-                            <label for="form_street">Street / Society / Office Name</label>
-                            <input type="text" class="form-control form-control-sm" id="form_street" value="" name="userAddressLine2" required>
+                        <div class="">
+                            <h6>
+                                <i class="fa fa-check-circle" aria-hidden="true"></i> Delivery date & time</h6>
+                            <p>Choose the time which is convenient to you...please checkout our delivery policies carefully
+                                !
+                            </p>
+                            <p>Choose delivery date</p>
+                            <p>
+                                <input type="text" id="datepicker" class="form-control form-control-sm" name="delDate" required>
+                            </p>
+                            <p>Choose delivery time</p>
+                            <div class="form-group">
+                                <select class="form-control form-control-sm" id="del_time" name="delTime" required>
+                                    <option>12:00 - 02:00 PM</option>
+                                    <option>02:00 - 04:00 PM</option>
+                                    <option>04:00 - 06:00 PM</option>
+                                    <option>06:00 - 08:00 PM</option>
+                                    <option>08:00 - 10:00 PM</option>
+                                    <option>10:00 - 11:30 PM</option>
+                                    <option>11:30 - 11:59 PM</option>
+                                </select>
+                            </div>
+                            {{!--
+                            <p id="time_note">PLEASE NOTE : </p>
+                            <p id="note1">1. Fondant/Themed/Designer & Red-velvet cake -
+                                <b>1 Day before</b>
+                            </p>
+                            <p id="note2">2. Other regular cakes (except fondant cakes) -
+                                <b>8-10 Hours before</b>
+                            </p>
+                            --}}
+                            <hr>
                         </div>
 
-                        <div class="form-group">
-                            <label for="form_area">Area</label>
-                            <select class="form-control form-control-sm" id="form_area" name="userAddressLine3" required>
-                                <option>Gangapur road</option>
-                                <option>College road</option>
-                                <option>Indira nagar</option>
-                                <option>Satpur</option>
-                                <option>Cidco</option>
-                                <option>Nashik-road / Jail-road</option>
-                                <option>Gangapur gaon, Aanandwali, etc.</option>
-                                <option>Govind nagar</option>
-                            </select>
-                        </div> 
-
-                        <div class="form-group">
-                            <label for="form_city">City</label>
-                            <input type="text" class="form-control form-control-sm" id="form_state" placeholder="Nashik" value="Nashik" name="userCity" disabled>
+                        <div class="">
+                            <h6>
+                                <i class="fa fa-check-circle" aria-hidden="true"></i> Payment mode</h6>
+                            {{!--
+                            <p>Pay quickly using
+                                <b>secured</b> online payment</p> --}}
+                            <ul id="payModeList">
+                                {{!--
+                                <li>
+                                    <input type="radio" name="payMode" value="payumoney" id="payMode3" checked>
+                                    <label for="payMode3">&nbsp;Debit/credit card, UPI, Netbanking</label>
+                                </li> --}}
+                                <li>
+                                    <input type="radio" name="payMode" value="Cash on delivery" id="payMode1" checked>
+                                    <label for="payMode1">&nbsp;Cash on delivery</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="payMode" value="Paytm" id="payMode2">
+                                    <label for="payMode2">&nbsp;Paytm or Tez on
+                                        <b>+91 860 550 7729</b>
+                                    </label>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="form-group">
-                            <label for="form_state">State</label>
-                            <input type="text" class="form-control form-control-sm" id="form_state" placeholder="Maharashtra" value="Maharashtra" name="userState" disabled>
-                        </div>
 
-                    <hr>
+                        <div class="">
+                            <p>
+                                <button type="submit" class="btn btn-danger btn-md" id="confirm_btn">Confirm my order!</button>
+                            </p>
+                        </div>
                     </div>
-                    
-
-                    <div class="col-md-12">
-                        <h6><i class="fa fa-check-circle" aria-hidden="true"></i> Delivery date & time</h6>
-                        <p>Choose the time which is convenient to you...please checkout our delivery policies carefully !</p>
-                        <p>Choose delivery date</p>
-                        <p><input type="text" id="datepicker" class="form-control form-control-sm" name="delDate" required></p>
-                        <p>Choose delivery time <b>( please read NOTE )</b></p>
-                        <div class="form-group">
-                            <select class="form-control form-control-sm" id="del_time" name="delTime" required>
-                                <option>12:00 - 02:00 PM</option>
-                                <option>02:00 - 04:00 PM</option>
-                                <option>04:00 - 06:00 PM</option>
-                                <option>06:00 - 08:00 PM</option>
-                                <option>08:00 - 10:00 PM</option>
-                                <option>10:00 - 11:30 PM</option>
-                                <option>11:30 - 11:59 PM</option>
-                            </select>
-                        </div> 
-                        <p id="time_note">PLEASE NOTE : </p>
-                        <p id="note1">1. Fondant/Themed/Designer & Red-velvet cake - <b>1 Day before</b></p>
-                        <p id="note2">2. Other regular cakes (except fondant cakes) - <b>8-10 Hours before</b></p>
-                    <hr>
-                    </div>
-
-
-                    <div class="col-md-12">
-                        <h6><i class="fa fa-check-circle" aria-hidden="true"></i> Payment mode</h6>
-                        {{!-- <p>Pay quickly using <b>secured</b> online payment</p> --}}
-                        <ul id="payModeList">
-                            {{!-- <li><input type="radio" name="payMode" value="payumoney" id="payMode3" checked> 
-                            <label for="payMode3">&nbsp;Debit/credit card, UPI, Netbanking</label></li> --}}
-                            <li><input type="radio" name="payMode" value="Cash on delivery" id="payMode1" checked>
-                            <label for="payMode1">&nbsp;Cash on delivery</label></li>
-                            <li><input type="radio" name="payMode" value="Paytm" id="payMode2">
-                            <label for="payMode2">&nbsp;Paytm on <b>+91 860 550 7729</b></label></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-12">
-                        <p><button type="submit" class="btn btn-danger btn-md" id="confirm_btn">Confirm my order!</button></p>
-                    </div>
-                </div>
                 </form>
             </div>
         </div>
@@ -152,4 +184,4 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
     <script type="text/javascript" src="/javascripts/dependencies/pickaday.js"></script>
     <script type="text/javascript" src="/javascripts/checkout.js"></script>
-  </body>
+</body>

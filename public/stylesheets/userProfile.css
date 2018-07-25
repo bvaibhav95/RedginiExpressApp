@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
+@import url("https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500");
 
 /* font-family: 'Fredoka One', cursive;
 font-family: 'Quicksand', sans-serif;
@@ -8,16 +8,16 @@ font-family: 'Anton', sans-serif;
 font-family: 'Francois One', sans-serif;
 font-family: 'Comfortaa', cursive;
 font-family: 'Farsan', cursive; */
-body#userProfile{
+body#userProfile {
     background-color: #f0f0f0;
 }
-body#userProfile #wrapper{
+body#userProfile #wrapper {
     background-color: white;
     margin-top: 100px;
-    margin-bottom: 150px;
-    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 80px;
+    font-family: "Montserrat", sans-serif;
 }
-body#userProfile #contentWrapper{
+body#userProfile #contentWrapper {
     /* text-align: center; */
     padding: 50px 0px 50px 0px;
 }
@@ -30,123 +30,174 @@ body#userProfile #username {
 body#userProfile #userTabs {
     font-size: 14px;
 }
-body#userProfile #noOrderHistory{
+body#userProfile #noOrderHistory {
     text-align: center;
     font-size: 30px;
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
 }
-body#userProfile #emptyCartMsg{
+body#userProfile #emptyCartMsg {
     margin-bottom: 20px;
 }
-body#userProfile #startShopping{
+body#userProfile #startShopping {
     font-weight: bold;
 }
-
+body#userProfile #referHeader {
+    font-family: "Fredoka One", cursive;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
+}
+body#userProfile #generateRefCodeWrapper {
+}
+body#userProfile #generateRefCodeText {
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    margin-top: 5px;
+}
+body#userProfile #referralRulesList {
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+}
+body#userProfile #cashbackRules {
+    font-family: "Quicksand", sans-serif;
+    font-size: 13px;
+}
+body#userProfile #cashbackRules li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+body#userProfile #showRefCodeWrapper {
+    /* display: flex; */
+}
+body#userProfile #refCodeText {
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+body#userProfile #refCodeUse {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+}
+body#userProfile #userRefCode {
+    font-family: "Fredoka One", cursive;
+    font-size: 25px;
+    background-color: #eeeeee;
+    color: #2d2d2d;
+    padding: 10px;
+    border-radius: 5px;
+}
+body#userProfile #refCodeData li {
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
 @media (max-width: 574px) {
-	body#userProfile #emptyListPic {
+    body#userProfile #emptyListPic {
         height: 200px;
-        width : 250px;
+        width: 250px;
     }
-    body#userProfile #startShopping{
-        font-size:10px;
+    body#userProfile #startShopping {
+        font-size: 10px;
     }
-    body#userProfile #noOrderHistory{
-        border:1px solid grey;
-        margin-top:20px;
+    body#userProfile #noOrderHistory {
+        border: 1px solid grey;
+        margin-top: 20px;
         font-size: 16px;
     }
     body#userProfile #userTabs {
         font-size: 10px;
     }
     body#userProfile #username {
-        font-size:11px; 
+        font-size: 11px;
     }
     body#userProfile .itemList {
-        font-size:14px;    
+        font-size: 14px;
     }
 }
 @media (min-width: 575px) {
-	body#userProfile #emptyListPic {
+    body#userProfile #emptyListPic {
         height: 250px;
-        width : 300px;
+        width: 300px;
     }
-    body#userProfile #startShopping{
-        font-size:12px;
+    body#userProfile #startShopping {
+        font-size: 12px;
     }
-    body#userProfile #noOrderHistory{
-        margin-top:20px;
+    body#userProfile #noOrderHistory {
+        margin-top: 20px;
         font-size: 18px;
     }
     body#userProfile #userTabs {
         font-size: 9px;
     }
     body#userProfile #username {
-        font-size: 11px; 
+        font-size: 11px;
     }
     body#userProfile .itemList {
-        font-size:14px;    
+        font-size: 14px;
     }
 }
 @media (min-width: 768px) {
-	body#userProfile #emptyListPic {
+    body#userProfile #emptyListPic {
         height: 270px;
-        width : 330px;
+        width: 330px;
     }
-    body#userProfile #startShopping{
-        font-size:12px;
+    body#userProfile #startShopping {
+        font-size: 12px;
     }
-    body#userProfile #noOrderHistory{
-        margin-top:20px;
+    body#userProfile #noOrderHistory {
+        margin-top: 20px;
         font-size: 20px;
     }
     body#userProfile #userTabs {
         font-size: 11px;
     }
     body#userProfile #username {
-        font-size:12px; 
-    }body#userProfile .itemList {
-        font-size:15px;    
+        font-size: 12px;
+    }
+    body#userProfile .itemList {
+        font-size: 15px;
     }
 }
 @media (min-width: 992px) {
-	body#userProfile #emptyListPic{
+    body#userProfile #emptyListPic {
         height: 300px;
-        width : 350px;
+        width: 350px;
     }
-    body#userProfile #startShopping{
-        font-size:14px;
+    body#userProfile #startShopping {
+        font-size: 14px;
     }
-    body#userProfile #noOrderHistory{
+    body#userProfile #noOrderHistory {
         font-size: 25px;
     }
     body#userProfile #userTabs {
         font-size: 12px;
     }
     body#userProfile #username {
-        font-size:13px; 
+        font-size: 13px;
     }
     body#userProfile .itemList {
-        font-size:16px;    
+        font-size: 16px;
     }
 }
 @media (min-width: 1200px) {
-	body#userProfile #emptyListPic {
+    body#userProfile #emptyListPic {
         height: 350px;
-        width : 450px;
+        width: 450px;
     }
-    body#userProfile #startShopping{
-        font-size:15px;
+    body#userProfile #startShopping {
+        font-size: 15px;
     }
-    body#userProfile #noOrderHistory{
+    body#userProfile #noOrderHistory {
         font-size: 30px;
     }
-    body#userProfile #userTabs{
+    body#userProfile #userTabs {
         font-size: 14px;
     }
     body#userProfile #username {
-        font-size:15px;    
+        font-size: 15px;
     }
     body#userProfile .itemList {
-        font-size:18px;    
+        font-size: 18px;
     }
 }

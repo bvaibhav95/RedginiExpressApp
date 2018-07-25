@@ -1,131 +1,129 @@
-@import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat');
-body#checkout #checkout_details{
+@import url("https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat");
+body#checkout #checkout_details {
+  padding-left: 10px;
+  padding-right: 20px;
   background-color: #f7f7f7;
   margin-top: 100px;
 }
-body#checkout #order_details{
+body#checkout #order_details {
   background-color: #f7f7f7;
 }
-body#checkout #checkout_details h6{
+body#checkout #checkout_details h6 {
   padding-left: 20px;
   padding-top: 20px;
 }
-body#checkout #checkout_details p{
+body#checkout #checkout_details p {
   padding-left: 40px;
   font-size: 12px;
 }
-body#checkout #cake_id_btn{
+body#checkout #cake_id_btn {
   margin: 0 0 10px 40px;
   background-color: #cc0000;
   color: white;
   font-weight: bold;
 }
-body#checkout #order_table th{
+body#checkout #order_table th {
   font-size: 12px;
   text-align: center;
 }
-body#checkout #order_table td{
+body#checkout #order_table td {
   text-align: center;
 }
-body#checkout .formLabels{
+body#checkout .formLabels {
   font-size: 15px;
   font-weight: bold;
   text-align: center;
 }
-body#checkout #cake_name{
+body#checkout #cake_name {
   text-align: center;
 }
-body#checkout #cake_price{
+body#checkout #cake_price {
   text-align: center;
 }
-body#checkout .form-group{
+body#checkout .form-group {
   margin: 0 0 10px 40px;
   font-size: 12px;
 }
-body#checkout #addrow{
+body#checkout #addrow {
   border-color: #cc0000;
   color: #cc0000;
   font-weight: bold;
   background-color: white;
 }
-body#checkout #removeCake{
+body#checkout #removeCake {
   background-color: #cc0000;
   color: white;
   font-weight: bold;
 }
-body#checkout #removeCake:hover{
+body#checkout #removeCake:hover {
   background-color: white;
   color: #cc0000;
   border-color: #cc0000;
   cursor: pointer;
 }
-body#checkout #available_cake_weight{
+body#checkout #available_cake_weight {
   width: 60%;
 }
-body#checkout #cake_ids{
+body#checkout #cake_ids {
   overflow-x: hidden;
   overflow-y: scroll;
   width: 70%;
 }
-body#checkout .timeSlotHeader{
-    font-size: 15px;
+body#checkout .timeSlotHeader {
+  font-size: 15px;
 }
-body#checkout input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-family: 'Montserrat', sans-serif;
+body#checkout input::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
 }
-body#checkout input::-moz-placeholder { /* Firefox 19+ */
-  font-family: 'Montserrat', sans-serif;
+body#checkout input::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
 }
-body#checkout input:-ms-input-placeholder { /* IE 10+ */
-  font-family: 'Montserrat', sans-serif;
+body#checkout input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
 }
-body#checkout input:-moz-placeholder { /* Firefox 18- */
-  font-family: 'Montserrat', sans-serif;
+body#checkout input:-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
 }
-body#checkout hr{
+body#checkout hr {
   background-color: black;
 }
-body#checkout #datepicker{
-  font-family: 'Montserrat', sans-serif;
+body#checkout #datepicker {
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   margin-bottom: 30px;
   width: 40%;
 }
-body#checkout #std_del_list,#payModeList{
+body#checkout #std_del_list,
+#payModeList {
   list-style: none;
 }
-body#checkout #payModeList{
+body#checkout #payModeList {
   list-style: none;
   margin-top: 20px;
 }
-body#checkout #std_del_list li{
+body#checkout #std_del_list li {
   padding: 5px 0 5px 0;
 }
-body#checkout .time_header{
+body#checkout .time_header {
   font-size: 18px;
 }
-/* body#checkout #pay_btn{
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-} */
-body#checkout #confirm_btn{
+body#checkout #confirm_btn {
   width: 100%;
   text-align: center;
   font-weight: bold;
 }
-body#checkout #fixed_time{
+body#checkout #fixed_time {
   margin-left: 25px;
 }
-body#checkout #time_note{
+body#checkout #time_note {
   color: #cc0000;
   font-weight: bold;
 }
-body#checkout #note1{
+body#checkout #note1 {
   color: #cc0000;
   margin-top: -10px;
 }
-body#checkout #note2{
+body#checkout #note2 {
   color: #cc0000;
   margin-top: -15px;
 }

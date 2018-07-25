@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat|Source+Sans+Pro');
-@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
+@import url("https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Lobster|Pacifico|Roboto|Satisfy|Montserrat|Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500");
 
 /* font-family: 'Fredoka One', cursive;
 font-family: 'Quicksand', sans-serif;
@@ -8,19 +8,19 @@ font-family: 'Anton', sans-serif;
 font-family: 'Francois One', sans-serif;
 font-family: 'Comfortaa', cursive;
 font-family: 'Farsan', cursive; */
-body#errorPage #block{
+body#errorPage #block {
     margin-top: 10%;
     align-items: center;
     text-align: center;
 }
-body#errorPage #header{
-    font-family: 'Fredoka One', cursive;
+body#errorPage #header {
+    font-family: "Fredoka One", cursive;
     font-size: 100px;
 }
-body#errorPage #line{
-    font-family: 'Oswald', sans-serif;
+body#errorPage #line {
+    font-family: "Oswald", sans-serif;
     font-size: 40px;
 }
-body#errorPage #desc{
+body#errorPage #desc {
     font-size: 25px;
 }

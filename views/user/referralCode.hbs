@@ -1,0 +1,166 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{title}}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.min.css">
+    <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/dependencies/pickaday.css">
+    <link rel="stylesheet" href="/stylesheets/error.css" />
+    <link rel="stylesheet" href="/stylesheets/header.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css" />
+    <link rel="stylesheet" href="/stylesheets/socialLogin.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/partners.css" />
+    <link rel="stylesheet" href="/stylesheets/policies.css">
+    <link rel="stylesheet" href="/stylesheets/products.css" />
+    <link rel="stylesheet" href="/stylesheets/checkout.css">
+    <link rel="stylesheet" href="/stylesheets/final.css" />
+    <link rel="stylesheet" href="/stylesheets/shoppingCart.css" />
+    <link rel="stylesheet" href="/stylesheets/userProfile.css">
+</head>
+
+<body id="userProfile">
+    {{>header}}
+    <div id="wrapper" class="container">
+        <div class="row" id="contentWrapper">
+            <div class="col-md-3 col-sm-3">
+                <div class="align-self-center" style="flex-direction: column">
+                    <p style="text-align:center">
+                        <img id="userPic" class="rounded-circle testimonials_img" src="https://res.cloudinary.com/ddrrpmcto/image/upload/redgini-express-app/user.png"
+                            alt="user3" width="80" height="80" />
+                    </p>
+                    <p id="username">{{user.username}}</p>
+                </div>
+                <div id="userTabs" class="list-group">
+                    <a href="" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#underConstruction">
+                        <i class="fas fa-user"></i>&nbsp;&nbsp;My profile</a>
+                    <a href="/profile/my-orders" class="list-group-item list-group-item-action">
+                        <i class="fas fa-address-card"></i>&nbsp;&nbsp;My orders</a>
+                    <a href="/profile/my-referral-code" class="list-group-item list-group-item-action">
+                        <i class="fas fa-book"></i>&nbsp;&nbsp;Referral code</a>
+                    <a href="" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#underConstruction">
+                        <i class="fas fa-credit-card"></i>&nbsp;&nbsp;Wallets</a>
+                    <a href="/auth/logout" class="list-group-item list-group-item-action">
+                        <i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Logout</a>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9">
+                <p id="referHeader">Woohhoo...Refer and Earn some money !</p>
+                <div id="referralRulesWrapper">
+                    <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h5 class="mb-0">
+                                        Generate your referral code
+                                        <i class="fa fa-angle-down rotate-icon"></i>
+                                    </h5>
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordionEx">
+                                <div class="card-body">
+                                    {{#if user.myRefCode}}
+                                    <div id="showRefCodeWrapper">
+                                        <ul id="refCodeData">
+                                            <li id="refCodeText">
+                                                <span>Your referral code</span>
+                                                <br>
+                                                <br>
+                                                <span id="userRefCode">{{user.myRefCode}}</span>
+                                                <br>
+                                                <br>
+                                            </li>
+                                            <li>To earn the
+                                                <b>cashback</b>, simply share this referral code with your friends, colleagues
+                                                and relatives using WhatsApp, Facebook & Instagram or anything !
+                                            </li>
+                                            <li>We have also sent a mail with your referral code in it</li>
+                                        </ul>
+                                    </div>
+                                    {{else}}
+                                    <div id="generateRefCodeWrapper">
+                                        <button id="{{user.username}}" class="btn btn-sm btn-danger" onclick="generateRefCode()">Generate my referral code</button>
+                                        <p id="generateRefCodeText">Click
+                                            <b>"Generate my referral code"</b> to get your referral code and start making some
+                                            money!
+                                        </p>
+                                    </div>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingTwo">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <h5 class="mb-0">
+                                        How to share referral code & Earn ?
+                                        <i class="fa fa-angle-down rotate-icon"></i>
+                                    </h5>
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordionEx">
+                                <div class="card-body">
+                                    <ul id="referralRulesList">
+                                        <li>We have already
+                                            <b>sent you a mail</b> with your referral code in it</li>
+                                        <li>Just share your referral code as mentioned above with your friends, relatives and
+                                            colleagues
+                                            <b>using WhatsApp, Facebook, Instagram or anything</b>
+                                        </li>
+                                        <li>When they enter or message us your referral code while ordering the cake, you will
+                                            receive a notification on mail or WhatsApp
+                                            <b>via automated system</b>
+                                        </li>
+                                        <li>After we will cashback that amount to
+                                            <b>your Paytm/Google tez account</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingThree">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <h5 class="mb-0">
+                                        How much I can earn ?
+                                        <i class="fa fa-angle-down rotate-icon"></i>
+                                    </h5>
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordionEx">
+                                <ul id="referralRulesList">
+                                    <li>If person who used your referral code orders cake
+                                        <ul id="cashbackRules">
+                                            <li>below Rs.500/-, you will get
+                                                <b>Rs.50/- cashback</b>
+                                            </li>
+                                            <li>Rs.500-1000/-, you will get
+                                                <b>Rs.100/- cashback</b>
+                                            </li>
+                                            <li>Rs.1000-1500/-, you will get
+                                                <b>Rs.150/- cashback</b>
+                                            </li>
+                                            <li>and so on!</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+    <script type="text/javascript" src="/javascripts/userProfile.js"></script>
+</body>
