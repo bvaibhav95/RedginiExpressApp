@@ -1,65 +1,80 @@
-{{#if pdts.[0]}}
-{{#each pdts}}
-    <div class="row justify-content-start" style="margin: 10px 0px 10px 0px;">
-      {{#each this}}
-        <div class="col-6 col-md-4 col-sm-4 productContainer">
-            <div class="card collection-card cake_images">
-                <div class="view overlay zoom">
-                    <img src="http://res.cloudinary.com/ddrrpmcto/image/upload/redgini-express-app/cakes/{{this.cakeId}}.jpg" class="" alt="">
-                    <a><div class="mask rgba-white-slight"></div></a>
-                </div>
-                <div class="card-body">  
-                    <div class="row justify-content-between">
-                      <div class="col-md-7 col-12">
-                          <p class="cake_name"><b>{{this.name}}</b>&nbsp;&nbsp;<i class="fas fa-check-circle green-text"></i></p>
-                      </div>
-                      <div class="col-md-5 col-12">
-                        <p class="wtDesc"><small id="specificWt{{this.cakeId}}" style="">{{this.availableWeights.[0]}}&nbsp;</small> kg - <i class="fas fa-rupee-sign"></i>&nbsp;<small id="specificWtCost{{this.cakeId}}" style="">{{this.minWtCost}}</small></p>
-                      </div>
-                    </div> 
-                    <div class="row justify-content-between" style="margin-top:5px;">
-                      <div class="col-md-6 col-12">
-                        <p class="cake_id">
-                          <button type="button" class="qtyplus plusMinusBtbn">+</button>
-                          &nbsp;&nbsp;<small id="cakeQty{{this.cakeId}}" class="qty">1</small>&nbsp;&nbsp;
-                          <button type="button" class="qtyminus plusMinusBtbn">-</button>
+{{#if pdts.[0]}} {{#each pdts}}
+<div class="row justify-content-start" style="margin: 10px 0px 10px 0px;">
+    {{#each this}}
+    <div class="col-6 col-md-4 col-sm-4 productContainer">
+        <div class="card collection-card cake_images">
+            <div class="view overlay zoom">
+                <img src="http://res.cloudinary.com/ddrrpmcto/image/upload/redgini-express-app/cakes/{{this.cakeId}}.jpg" class="" alt="">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-between">
+                    <div class="col-md-7 col-12">
+                        <p class="cake_name">
+                            <b>{{this.name}}</b>&nbsp;&nbsp;
+                            <i class="fas fa-check-circle green-text"></i>
                         </p>
-                      </div>
-                      <div class="col-md-6 col-12">
-                          <div class="input-group input-group-sm">
+                    </div>
+                    <div class="col-md-5 col-12">
+                        <p class="wtDesc">
+                            <small id="specificWt{{this.cakeId}}" style="">{{this.availableWeights.[0]}}&nbsp;</small> kg -
+                            <i class="fas fa-rupee-sign"></i>&nbsp;
+                            <small id="specificWtCost{{this.cakeId}}" style="">{{this.minWtCost}}</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-between" style="margin-top:5px;">
+                    <div class="col-md-6 col-12">
+                        <p class="cake_id">
+                            <button type="button" class="qtyplus plusMinusBtbn">+</button>
+                            &nbsp;&nbsp;
+                            <small id="cakeQty{{this.cakeId}}" class="qty">1</small>&nbsp;&nbsp;
+                            <button type="button" class="qtyminus plusMinusBtbn">-</button>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="input-group input-group-sm">
                             <select class="custom-select custom-select-sm weightChange" id="cakeWeight{{this.cakeId}}" onchange="updateCost(this.id)">
-                              {{#each this.availableWeights}}
+                                {{#each this.availableWeights}}
                                 <option value="{{this}}">{{this}}</option>
-                              {{/each}}
-                            </select> 
+                                {{/each}}
+                            </select>
                             <div class="input-group-append">
-                              <label class="input-group-text" for="selectCakeWt">Kg</label>
+                                <label class="input-group-text" for="selectCakeWt">Kg</label>
                             </div>
-                          </div>
-                      </div>
-                    </div> 
-                    <div class="row justify-content-center">
-                      <div class="col-11">
-                          <button id="addToCart{{this.cakeId}}" onclick="addToCart(this.id)" type="submit" class="addTocartBtn btn customColorBtn btn-sm px-2"><b>Add to cart</b></button>
-                      </div>
-                    </div> 
-                    <div class="dropdown-divider"></div>
-                    <div class="row justify-content-between">
-                      <div class="col-9 col-md-10 eggLine">Want Egged cake?</div>
-                      <div class="col-3 col-md-1">
-                          <input class="form-check-input" type="checkbox" name="egged" id="egg{{this.cakeId}}">
-                      </div>
-                    </div> 
-                    {{!-- <div class="dropdown-divider"></div> --}}
-                    {{!-- <p class="availabilityDetails">Order before - {{this.availability}}</p> --}}
-                    <div class="dropdown-divider"></div>
-                    <p class="makerName">Cake maker - {{this.maker}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-11">
+                        <button id="addToCart{{this.cakeId}}" onclick="addToCart(this.id)" type="submit" class="addTocartBtn btn customColorBtn btn-sm px-2">
+                            <b>Add to cart</b>
+                        </button>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="row justify-content-between">
+                    <div class="col-9 col-md-10 eggLine">Want Egged cake?</div>
+                    <div class="col-3 col-md-1">
+                        <input class="form-check-input" type="checkbox" name="egged" id="egg{{this.cakeId}}">
+                    </div>
+                </div>
+                {{!--
+                <div class="dropdown-divider"></div> --}} {{!--
+                <p class="availabilityDetails">Order before - {{this.availability}}</p> --}}
+                <div class="dropdown-divider"></div>
+                <div class="makerName">
+                    <span>Cake maker - {{this.maker}}</span>
+                    <br>
+                    <span>Order before - {{this.orderBefore}}</span>
                 </div>
             </div>
         </div>
-      {{/each}}
     </div>
-{{/each}}
-{{else}}
+    {{/each}}
+</div>
+{{/each}} {{else}}
 <p class="animated bounce 3s" id="notAvailableHeader">Aaah...Not available! Choose other Shop/Bakers...</p>
 {{/if}}

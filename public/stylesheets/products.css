@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Bree+Serif|Lemonada|Montserrat|Pacifico|Quicksand|Roboto|Raleway');
-@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
+@import url("https://fonts.googleapis.com/css?family=Allan|Arvo|Bree+Serif|Lemonada|Montserrat|Pacifico|Quicksand|Roboto|Raleway");
+@import url("https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500");
 
 /* font-family: 'Fredoka One', cursive;
 font-family: 'Quicksand', sans-serif;
@@ -8,492 +8,494 @@ font-family: 'Anton', sans-serif;
 font-family: 'Francois One', sans-serif;
 font-family: 'Comfortaa', cursive;
 font-family: 'Farsan', cursive; */
-html,body{
-	height: 100%;
-	
+html,
+body {
+    height: 100%;
 }
-body{
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizelegibility;
-	color: #6c6f73;
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    color: #6c6f73;
 }
-body#cake_product_page #zomatoSideWidget2Header{
-	text-align: center;
-	font-family: 'Fredoka One', cursive;
+body#cake_product_page #zomatoSideWidget2Header {
+    text-align: center;
+    font-family: "Fredoka One", cursive;
 }
-body#cake_product_page #pdtFilter{
-	text-align: center;
-	font-family: 'Oswald', sans-serif;
-	border: 3px solid #cb202d;
-	padding: 8px 5px;
-	color: #cb202d;
-	font-weight: bold;
+body#cake_product_page #pdtFilter {
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    border: 0.08rem solid #cb202d;
+    padding: 8px 5px;
+    color: #cb202d;
 }
-body#cake_product_page #zomatoTreadingBlock{
-	margin-top: 100px;
+body#cake_product_page #zomatoTreadingBlock {
+    margin-top: 100px;
 }
-body#cake_product_page #filter{
-	margin-bottom: 40px;
+body#cake_product_page #filter {
+    margin-bottom: 40px;
 }
-body#cake_product_page #filterSection{
-	border: 1px solid gray;
-	padding: 15px;
+body#cake_product_page #filterSection {
+    border: 1px solid gray;
+    padding: 15px;
 }
-body#cake_product_page #chooseCakeVsBake{
-	border: 1px solid gray;
-	padding: 15px;
+body#cake_product_page #chooseCakeVsBake {
+    border: 1px solid gray;
+    padding: 15px;
 }
-body#cake_product_page .filterPart{
-	margin: 5px;
+body#cake_product_page .filterPart {
+    margin: 5px;
 }
-body#cake_product_page #filterResults{
-	font-weight: bold;
-	font-family: 'Comfortaa', cursive;
+body#cake_product_page #filterResults {
+    font-weight: bold;
+    font-family: "Comfortaa", cursive;
 }
-body#cake_product_page #filterHeader{
-	margin-top: 80px;
-	font-size: 25px;
-	text-align: center;
-	font-family: 'Fredoka One', cursive;
+body#cake_product_page #filterHeader {
+    margin-top: 80px;
+    font-size: 25px;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
 }
-body#cake_product_page #famousShopBlock{
-	margin-top: 50px;
-	margin-bottom: 30px;
+body#cake_product_page #famousShopBlock {
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
-body#cake_product_page .famousShopPics{
-	width: 100%;
-	height: 150px;
+body#cake_product_page .famousShopPics {
+    width: 100%;
+    height: 150px;
 }
-body#cake_product_page .famousShopPicsBlock{
-	margin: 5px;
+body#cake_product_page .famousShopPicsBlock {
+    margin: 5px;
 }
-body#cake_product_page .famousShopNames{
-	font-family: 'Fredoka One', cursive;
+body#cake_product_page .famousShopNames {
+    font-family: "Fredoka One", cursive;
 }
-body#cake_product_page .weight_list{
-	text-align: center;
+body#cake_product_page .weight_list {
+    text-align: center;
 }
-body#cake_product_page #weight_of_cake label{
-	font-size: 17px;
-}
-
-body#cake_product_page .filter_items{
-	font-size: 14px;
+body#cake_product_page #weight_of_cake label {
+    font-size: 17px;
 }
 
-body#cake_product_page .cake_id, .wtDesc{
-	text-align: center;
+body#cake_product_page .filter_items {
+    font-size: 14px;
 }
-body#cake_product_page .wtDesc{
-	text-align: center;
-}
-body#cake_product_page .cake_box_row{
-	padding: 5px 0px 5px 0px;
 
+body#cake_product_page .cake_id,
+.wtDesc {
+    text-align: center;
 }
-body#cake_product_page .cake_box:hover{
-	cursor: pointer;
+body#cake_product_page .wtDesc {
+    text-align: center;
 }
-body#cake_product_page .cake_box img{
-	height: 250px;
-	width: 100%;
-	vertical-align: middle;
+body#cake_product_page .cake_box_row {
+    padding: 5px 0px 5px 0px;
 }
-body#cake_product_page .plusMinusBtbn{
-	color: #cb202d;
-	background-color: white;
-	border: 0.1rem solid #ff4400;
-	border-radius: 20px;
+body#cake_product_page .cake_box:hover {
+    cursor: pointer;
 }
-body#cake_product_page .plusMinusBtbn:hover{
-	color: white;
-	border-color: #cb202d;
-	background-color: #cb202d;
+body#cake_product_page .cake_box img {
+    height: 250px;
+    width: 100%;
+    vertical-align: middle;
+}
+body#cake_product_page .plusMinusBtbn {
+    color: #cb202d;
+    background-color: white;
+    border: 0.1rem solid #ff4400;
+    border-radius: 20px;
+}
+body#cake_product_page .plusMinusBtbn:hover {
+    color: white;
+    border-color: #cb202d;
+    background-color: #cb202d;
 }
 body#cake_product_page .qty {
-	font-size:15px;
+    font-size: 15px;
 }
 body#cake_product_page input.qtyplus {
-	width:20px;
-	height:20px;
+    width: 20px;
+    height: 20px;
 }
 body#cake_product_page input.qtyminus {
-	width:20px;
-	height:20px;
+    width: 20px;
+    height: 20px;
 }
-body#cake_product_page .productContainer{
-	margin: 0px;
+body#cake_product_page .productContainer {
+    margin: 0px;
 }
-body#cake_product_page .cake_name{
-	text-align: center;
-	font-family: 'Quicksand', sans-serif;
+body#cake_product_page .cake_name {
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
 }
-body#cake_product_page .cake_id{
-	font-size: 15px;
-	font-family: 'Quicksand', sans-serif;
+body#cake_product_page .cake_id {
+    font-size: 15px;
+    font-family: "Quicksand", sans-serif;
 }
-body#cake_product_page .available_weight{
-	border: 1px black solid;
-	padding: 2px 8px 2px 8px;
-	font-family: 'Quicksand', sans-serif;
-	margin-top: -25px;
+body#cake_product_page .available_weight {
+    border: 1px black solid;
+    padding: 2px 8px 2px 8px;
+    font-family: "Quicksand", sans-serif;
+    margin-top: -25px;
 }
-body#cake_product_page .cake_price{
-	font-family: 'Quicksand', sans-serif;
+body#cake_product_page .cake_price {
+    font-family: "Quicksand", sans-serif;
 }
-body#cake_product_page .cake_weight{
-	font-size: 14px;
-	font-family: 'Quicksand', sans-serif;
+body#cake_product_page .cake_weight {
+    font-size: 14px;
+    font-family: "Quicksand", sans-serif;
 }
-body#cake_product_page .addTocartBtn{
-	margin-top: -1px;
+body#cake_product_page .addTocartBtn {
+    margin-top: -1px;
 }
-body#cake_product_page .heart_like{
-	color: pink;
-	margin-top: 10px;
+body#cake_product_page .heart_like {
+    color: pink;
+    margin-top: 10px;
 }
-body#cake_product_page #notAvailableHeader{
-	font-family: 'Francois One', sans-serif;
-	text-align: center;
-	margin-top: 30px;
+body#cake_product_page #notAvailableHeader {
+    font-family: "Francois One", sans-serif;
+    text-align: center;
+    margin-top: 30px;
 }
-body#cake_product_page #floating-button{
-	width: 55px;
-	height: 55px;
-	border-radius: 50%;
-	background: #2d2d2d;
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	cursor: pointer;
-	box-shadow: 0px 2px 5px #666;
+body#cake_product_page #floating-button {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #2d2d2d;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 500;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #666;
 }
-body#cake_product_page .plus{
-	color: white;
-	position: absolute;
-	top: 30%;
-	display: block;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	text-align: center;
-	padding: 0;
-	margin: 0;
-	line-height: 100px;
-	font-size: 25px;
-	font-weight: 300;
-	animation: plus-out 0.3s;
-	transition: all 0.3s;
+body#cake_product_page .plus {
+    color: white;
+    position: absolute;
+    top: 30%;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 100px;
+    font-size: 25px;
+    font-weight: 300;
+    animation: plus-out 0.3s;
+    transition: all 0.3s;
 }
-body#cake_product_page #container-floating{
-	position: fixed;
-	width: 70px;
-	height: 70px;
-	bottom: 30px;
-	right: 30px;
-	z-index: 50px;
+body#cake_product_page #container-floating {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 50px;
 }
-body#cake_product_page .makerName{
-	margin-bottom: -5px;
-	font-family: 'Quicksand', sans-serif;
-	border : 1px solid grey;
-	border-radius: 5px;
-	padding : 3px 5px;
+body#cake_product_page .makerName {
+    /* margin-bottom: -5px; */
+    font-family: "Quicksand", sans-serif;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 3px 5px;
+    color: #2d2d2d;
+    font-weight: bold;
 }
-body#cake_product_page .availabilityDetails{
-	margin-bottom: -5px;
-	font-family: 'Quicksand', sans-serif;
+body#cake_product_page .availabilityDetails {
+    margin-bottom: -5px;
+    font-family: "Quicksand", sans-serif;
 }
-body#cake_product_page #offerCarousal{
-	margin-top: 90px;
-	margin-bottom: 20px;
+body#cake_product_page #offerCarousal {
+    margin-top: 90px;
+    margin-bottom: 20px;
 }
-body#cake_product_page .customColorBtn{
-	background-color: #cb202d;
+body#cake_product_page .customColorBtn {
+    background-color: #cb202d;
 }
 @media (max-width: 574px) {
-	body#cake_product_page #filterResults{
-		text-align: center;
-		font-size: 12px;
-	}
-	body#cake_product_page .cake_images img{
-	    width: 100%;
-	    height: 140px;
-	}
-	body#cake_product_page #coverOffers img {
-	    width: 100%;
-	    height: 150px;
-	}
-	body#cake_product_page .cake_name{
-		font-size: 15px;
-	}
-	body#cake_product_page .eggLine{
-		font-size: 11px;
-	}
-	body#cake_product_page .cake_id{
-		font-size: 10px;
-	}
-	body#cake_product_page .cake_price{
-		font-size: 14px;
-	}
-	body#cake_product_page .available_weight{
-		padding: 1px 6px 1px 6px;
-		font-size: 12px;
-		margin-top: -25px;
-	}
-	body#cake_product_page .productContainer{
-		margin-bottom: 8px;
-	}
-	body#cake_product_page .orderBefore{
-		font-size: 12px;
-	}
-	body#cake_product_page #categoryDropdown {
-		padding : 6px;
-	}
-  	body#cake_product_page .catSideNav a {
-		font-size: 15px;
-	}
-	body#cake_product_page #notAvailableHeader{
-		font-size: 18px;
-	}
-	body#cake_product_page .makerName{
-		font-size: 10px;
-	}
-	body#cake_product_page .availabilityDetails{
-		font-size: 10px;
-	}
-	body#cake_product_page #offerCarousal img{
-		height: 120px;
-	  }
-	body#cake_product_page #offerCarousal{
-		padding: 2px 10px 2px 10px;
-	}
+    body#cake_product_page #filterResults {
+        text-align: center;
+        font-size: 12px;
+    }
+    body#cake_product_page .cake_images img {
+        width: 100%;
+        height: 140px;
+    }
+    body#cake_product_page #coverOffers img {
+        width: 100%;
+        height: 150px;
+    }
+    body#cake_product_page .cake_name {
+        font-size: 15px;
+    }
+    body#cake_product_page .eggLine {
+        font-size: 11px;
+    }
+    body#cake_product_page .cake_id {
+        font-size: 10px;
+    }
+    body#cake_product_page .cake_price {
+        font-size: 14px;
+    }
+    body#cake_product_page .available_weight {
+        padding: 1px 6px 1px 6px;
+        font-size: 12px;
+        margin-top: -25px;
+    }
+    body#cake_product_page .productContainer {
+        margin-bottom: 8px;
+    }
+    body#cake_product_page .orderBefore {
+        font-size: 12px;
+    }
+    body#cake_product_page #categoryDropdown {
+        padding: 6px;
+    }
+    body#cake_product_page .catSideNav a {
+        font-size: 15px;
+    }
+    body#cake_product_page #notAvailableHeader {
+        font-size: 18px;
+    }
+    body#cake_product_page .makerName {
+        font-size: 10px;
+    }
+    body#cake_product_page .availabilityDetails {
+        font-size: 10px;
+    }
+    body#cake_product_page #offerCarousal img {
+        height: 120px;
+    }
+    body#cake_product_page #offerCarousal {
+        padding: 2px 10px 2px 10px;
+    }
 }
 @media (min-width: 575px) {
-	body#cake_product_page #filterResults{
-		font-size: 14px;
-	}
-	body#cake_product_page .cake_images img{
-	    width: 100%;
-	    height: 160px;
-	}
-	body#cake_product_page #coverOffers img {
-	    width: 100%;
-	    height: 200px;
-	}
-	body#cake_product_page .cake_name{
-		font-size: 15px;
-	}
-	body#cake_product_page .eggLine{
-		font-size: 12px;
-	}
-	body#cake_product_page .cake_id{
-		font-size: 11px;
-	}
-	body#cake_product_page .cake_price{
-		font-size: 14px;
-	}
-	body#cake_product_page .available_weight{
-		padding: 1px 6px 1px 6px;
-		font-size: 12px;
-		margin-top: -20px;
-	}
-	body#cake_product_page .productContainer{
-		margin-bottom: 10px;
-	}
-	body#cake_product_page .orderBefore{
-		font-size: 12px;
-	}
-	body#cake_product_page #categoryDropdown {
-		padding : 7px;
-	}
-	body#cake_product_page .catSideNav a {
-		font-size: 17px;
-	}
-	body#cake_product_page #notAvailableHeader{
-		font-size: 20px;
-	}
-	body#cake_product_page .makerName{
-		font-size: 10px;
-	}
-	body#cake_product_page .availabilityDetails{
-		font-size: 10px;
-	}
-	body#cake_product_page #offerCarousal img{
-		height: 140px;
-	  }
-	body#cake_product_page #offerCarousal{
-		padding: 5px 40px 5px 40px;
-	}
+    body#cake_product_page #filterResults {
+        font-size: 14px;
+    }
+    body#cake_product_page .cake_images img {
+        width: 100%;
+        height: 160px;
+    }
+    body#cake_product_page #coverOffers img {
+        width: 100%;
+        height: 200px;
+    }
+    body#cake_product_page .cake_name {
+        font-size: 15px;
+    }
+    body#cake_product_page .eggLine {
+        font-size: 12px;
+    }
+    body#cake_product_page .cake_id {
+        font-size: 11px;
+    }
+    body#cake_product_page .cake_price {
+        font-size: 14px;
+    }
+    body#cake_product_page .available_weight {
+        padding: 1px 6px 1px 6px;
+        font-size: 12px;
+        margin-top: -20px;
+    }
+    body#cake_product_page .productContainer {
+        margin-bottom: 10px;
+    }
+    body#cake_product_page .orderBefore {
+        font-size: 12px;
+    }
+    body#cake_product_page #categoryDropdown {
+        padding: 7px;
+    }
+    body#cake_product_page .catSideNav a {
+        font-size: 17px;
+    }
+    body#cake_product_page #notAvailableHeader {
+        font-size: 20px;
+    }
+    body#cake_product_page .makerName {
+        font-size: 10px;
+    }
+    body#cake_product_page .availabilityDetails {
+        font-size: 10px;
+    }
+    body#cake_product_page #offerCarousal img {
+        height: 140px;
+    }
+    body#cake_product_page #offerCarousal {
+        padding: 5px 40px 5px 40px;
+    }
 }
 @media (min-width: 768px) {
-	body#cake_product_page #filterResults{
-		font-size: 15px;
-	}
-	body#cake_product_page .cake_images img{
-	    width: 100%;
-	    height: 160px;
-	}
-	body#cake_product_page #coverOffers img {
-	    width: 100%;
-	    height: 250px;
-	}
-	body#cake_product_page .cake_name{
-		font-size: 15px;
-	}
-	body#cake_product_page .eggLine{
-		font-size: 13px;
-	}
-	body#cake_product_page .cake_id{
-		font-size: 12px;
-	}
-	body#cake_product_page .cake_price{
-		font-size: 14px;
-	}
-	body#cake_product_page .available_weight{
-		padding: 2px 8px 2px 8px;
-		font-size: 13px;
-		margin-top: -15px;
-	}
-	body#cake_product_page .productContainer{
-		margin-bottom: 15px;
-	}
-	body#cake_product_page .orderBefore{
-		font-size: 12px;
-	}
-	body#cake_product_page #categoryDropdown {
-		padding : 8px;
-	}
-	body#cake_product_page .catSideNav a {
-		font-size: 18px;
-	}
-	body#cake_product_page #notAvailableHeader{
-		font-size: 22px;
-	}
-	body#cake_product_page .makerName{
-		font-size: 11px;
-	}
-	body#cake_product_page .availabilityDetails{
-		font-size: 11px;
-	}
-	body#cake_product_page #offerCarousal img{
-		height: 160px;
-	  }
-	body#cake_product_page #offerCarousal{
-		padding: 10px 60px 10px 60px;
-	}
+    body#cake_product_page #filterResults {
+        font-size: 15px;
+    }
+    body#cake_product_page .cake_images img {
+        width: 100%;
+        height: 160px;
+    }
+    body#cake_product_page #coverOffers img {
+        width: 100%;
+        height: 250px;
+    }
+    body#cake_product_page .cake_name {
+        font-size: 15px;
+    }
+    body#cake_product_page .eggLine {
+        font-size: 13px;
+    }
+    body#cake_product_page .cake_id {
+        font-size: 12px;
+    }
+    body#cake_product_page .cake_price {
+        font-size: 14px;
+    }
+    body#cake_product_page .available_weight {
+        padding: 2px 8px 2px 8px;
+        font-size: 13px;
+        margin-top: -15px;
+    }
+    body#cake_product_page .productContainer {
+        margin-bottom: 15px;
+    }
+    body#cake_product_page .orderBefore {
+        font-size: 12px;
+    }
+    body#cake_product_page #categoryDropdown {
+        padding: 8px;
+    }
+    body#cake_product_page .catSideNav a {
+        font-size: 18px;
+    }
+    body#cake_product_page #notAvailableHeader {
+        font-size: 22px;
+    }
+    body#cake_product_page .makerName {
+        font-size: 11px;
+    }
+    body#cake_product_page .availabilityDetails {
+        font-size: 11px;
+    }
+    body#cake_product_page #offerCarousal img {
+        height: 160px;
+    }
+    body#cake_product_page #offerCarousal {
+        padding: 10px 60px 10px 60px;
+    }
 }
 @media (min-width: 992px) {
-	body#cake_product_page #filterResults{
-		font-size: 16px;
-	}
-	body#cake_product_page .cake_images img{
-	    width: 100%;
-	    height: 220px;
-	}
-	body#cake_product_page #coverOffers img {
-	    width: 100%;
-	    height: 350px;
-	}
-	body#cake_product_page .cake_name{
-		font-size: 16px;
-	}
-	body#cake_product_page .eggLine{
-		font-size: 14px;
-	}
-	body#cake_product_page .cake_id{
-		font-size: 13px;
-	}
-	body#cake_product_page .cake_price{
-		font-size: 15px;
-	}
-	body#cake_product_page .available_weight{
-		padding: 2px 8px 2px 8px;
-		font-size: 14px;
-		margin-top: -10px;
-	}
-	body#cake_product_page .productContainer{
-		margin-bottom: 15px;
-	}
-	body#cake_product_page .orderBefore{
-		font-size: 13px;
-	}
-	body#cake_product_page #categoryDropdown {
-		padding : 8px;
-	}
-	body#cake_product_page .catSideNav a {
-		font-size: 18px;
-	}
-	body#cake_product_page #notAvailableHeader{
-		font-size: 25px;
-	}
-	body#cake_product_page .makerName{
-		font-size: 12px;
-	}
-	body#cake_product_page .availabilityDetails{
-		font-size: 12px;
-	}
-	body#cake_product_page #offerCarousal img{
-		height: 180px;
-	  }
-	body#cake_product_page #offerCarousal{
-		padding: 20px 80px 20px 80px;
-	}
+    body#cake_product_page #filterResults {
+        font-size: 16px;
+    }
+    body#cake_product_page .cake_images img {
+        width: 100%;
+        height: 220px;
+    }
+    body#cake_product_page #coverOffers img {
+        width: 100%;
+        height: 350px;
+    }
+    body#cake_product_page .cake_name {
+        font-size: 16px;
+    }
+    body#cake_product_page .eggLine {
+        font-size: 14px;
+    }
+    body#cake_product_page .cake_id {
+        font-size: 13px;
+    }
+    body#cake_product_page .cake_price {
+        font-size: 15px;
+    }
+    body#cake_product_page .available_weight {
+        padding: 2px 8px 2px 8px;
+        font-size: 14px;
+        margin-top: -10px;
+    }
+    body#cake_product_page .productContainer {
+        margin-bottom: 15px;
+    }
+    body#cake_product_page .orderBefore {
+        font-size: 13px;
+    }
+    body#cake_product_page #categoryDropdown {
+        padding: 8px;
+    }
+    body#cake_product_page .catSideNav a {
+        font-size: 18px;
+    }
+    body#cake_product_page #notAvailableHeader {
+        font-size: 25px;
+    }
+    body#cake_product_page .makerName {
+        font-size: 12px;
+    }
+    body#cake_product_page .availabilityDetails {
+        font-size: 12px;
+    }
+    body#cake_product_page #offerCarousal img {
+        height: 180px;
+    }
+    body#cake_product_page #offerCarousal {
+        padding: 20px 80px 20px 80px;
+    }
 }
 @media (min-width: 1200px) {
-	body#cake_product_page #filterResults{
-		font-size: 18px;
-	}
-	body#cake_product_page .cake_images img{
-	    width: 100%;
-	    height: 220px;
-	}
-	body#cake_product_page #coverOffers img {
-	    width: 100%;
-	    height: 400px;
-	}
-	body#cake_product_page .cake_name{
-		font-size: 16px;
-	}
-	body#cake_product_page .eggLine{
-		font-size: 16px;
-	}
-	body#cake_product_page .cake_id{
-		font-size: 15px;
-	}
-	body#cake_product_page .cake_price{
-		font-size: 15px;
-	}
-	body#cake_product_page .available_weight{
-		padding: 2px 8px 2px 8px;
-		font-size: 15px;
-		margin-top: -5px;
-	}
-	body#cake_product_page .productContainer{
-		margin-bottom: 20px;
-	}
-	body#cake_product_page .orderBefore{
-		font-size: 15px;
-	}
-	body#cake_product_page #categoryDropdown {
-		padding : 8px;
-	}
-	body#cake_product_page .catSideNav a {
-		font-size: 18px;
-	}
-	body#cake_product_page #notAvailableHeader{
-		font-size: 30px;
-	}
-	body#cake_product_page .makerName{
-		font-size: 13px;
-	}
-	body#cake_product_page .availabilityDetails{
-		font-size: 13px;
-	}
-	body#cake_product_page #offerCarousal img{
-		height: 200px;
-	  }
-	body#cake_product_page #offerCarousal{
-		padding: 30px 100px 30px 100px;
-	}
+    body#cake_product_page #filterResults {
+        font-size: 18px;
+    }
+    body#cake_product_page .cake_images img {
+        width: 100%;
+        height: 220px;
+    }
+    body#cake_product_page #coverOffers img {
+        width: 100%;
+        height: 400px;
+    }
+    body#cake_product_page .cake_name {
+        font-size: 16px;
+    }
+    body#cake_product_page .eggLine {
+        font-size: 16px;
+    }
+    body#cake_product_page .cake_id {
+        font-size: 15px;
+    }
+    body#cake_product_page .cake_price {
+        font-size: 15px;
+    }
+    body#cake_product_page .available_weight {
+        padding: 2px 8px 2px 8px;
+        font-size: 15px;
+        margin-top: -5px;
+    }
+    body#cake_product_page .productContainer {
+        margin-bottom: 20px;
+    }
+    body#cake_product_page .orderBefore {
+        font-size: 15px;
+    }
+    body#cake_product_page #categoryDropdown {
+        padding: 8px;
+    }
+    body#cake_product_page .catSideNav a {
+        font-size: 18px;
+    }
+    body#cake_product_page #notAvailableHeader {
+        font-size: 30px;
+    }
+    body#cake_product_page .makerName {
+        font-size: 13px;
+    }
+    body#cake_product_page .availabilityDetails {
+        font-size: 13px;
+    }
+    body#cake_product_page #offerCarousal img {
+        height: 200px;
+    }
+    body#cake_product_page #offerCarousal {
+        padding: 30px 100px 30px 100px;
+    }
 }

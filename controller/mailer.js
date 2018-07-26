@@ -96,6 +96,7 @@ module.exports = {
                     paymentMode: req.body.payMode,
                     deliveryDate: req.body.delDate,
                     deliveryTime: req.body.delTime,
+                    userPhone: req.body.phone,
                     userAddressLine1: req.body.userAddressLine1,
                     userAddressLine2: req.body.userAddressLine2,
                     userAddressLine3: req.body.userAddressLine3
@@ -113,6 +114,52 @@ module.exports = {
                         // callback(error);
                     } else {
                         console.log("Order placed successfully...");
+                    }
+                });
+            }
+        );
+    },
+
+    refCodeUsedMail: function(refCodePersonName, refCodePersonMail, whoUsed) {
+        let transporter = nodemailer.createTransport({
+            host: "smtp.zoho.com",
+            port: 465,
+            secure: true,
+            auth: {
+                user: "support@redgini.com",
+                pass: keys.zohoDetails.authKey
+            },
+            tls: {
+                rejectUnauthorized: false
+            },
+            dkim: {
+                domainName: "redgini.com",
+                keySelector: "zoho",
+                privateKey: keys.zohoDetails.privateKey
+            }
+        });
+
+        readHTMLFile(
+            __dirname + "/../views/templates/mail/refCodeUsed.hbs",
+            function(err, html) {
+                var template = handlebars.compile(html);
+                var replacements = {
+                    refCodePersonName: refCodePersonName,
+                    whoUsed: whoUsed
+                };
+                var mailContent = template(replacements);
+                var mailOptions = {
+                    from: '"Referral code used! " <support@redgini.com>',
+                    to: refCodePersonMail,
+                    subject: "Redgini | Referral code",
+                    html: mailContent
+                };
+                transporter.sendMail(mailOptions, function(error, response) {
+                    if (error) {
+                        console.log(error);
+                        // callback(error);
+                    } else {
+                        console.log("successfully contacted");
                     }
                 });
             }

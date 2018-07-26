@@ -12,6 +12,7 @@ var router = express.Router();
 
 var Cake = require("../models/Cake");
 var Order = require("../models/Order");
+var User = require("../models/User");
 
 var mailer = require("../controller/mailer");
 var database = require("../controller/database");
@@ -38,12 +39,50 @@ const isCheckedOut = function(req, res, next) {
         next();
     }
 };
-
 const areOrderDetailsNull = function(req, res, next) {
     if (!req.session.orderDetails) {
         res.redirect("/products/cakes");
     } else {
         next();
+    }
+};
+const isOwnRefCode = function(req, res, next) {
+    if (
+        req.body.refCode ==
+        req.user.email.substr(0, req.user.email.indexOf("@"))
+    ) {
+        res.render("user/checkout", {
+            user: req.user,
+            cart: req.session.cart,
+            csrfToken: req.csrfToken(),
+            title: "Redgini | Checkout",
+            ownRefCode: "flex",
+            isValidRefCode: "none"
+        });
+    } else {
+        next();
+    }
+};
+
+const isValidRefCode = function(req, res, next) {
+    console.log(req.body.refCode);
+    if (req.body.refCode == "") {
+        next();
+    } else {
+        User.findOne({ myRefCode: req.body.refCode }, function(err, user) {
+            if (!user) {
+                res.render("user/checkout", {
+                    user: req.user,
+                    cart: req.session.cart,
+                    csrfToken: req.csrfToken(),
+                    title: "Redgini | Checkout",
+                    ownRefCode: "none",
+                    isValidRefCode: "flex"
+                });
+            } else {
+                next();
+            }
+        });
     }
 };
 
@@ -163,11 +202,13 @@ router.get("/checkout", authCheck, isCartEmpty, function(req, res, next) {
         user: req.user,
         cart: req.session.cart,
         csrfToken: req.csrfToken(),
-        title: "Redgini | Checkout"
+        title: "Redgini | Checkout",
+        ownRefCode: "none",
+        isValidRefCode: "none"
     });
 });
 
-router.post("/final", function(req, res, next) {
+router.post("/final", isOwnRefCode, isValidRefCode, function(req, res, next) {
     mailer.orderConfirmationMail(req);
     var orderDetailsReceived = {
         userId: req.user.providerID,
@@ -182,29 +223,49 @@ router.post("/final", function(req, res, next) {
         userAddressLine3: req.body.userAddressLine3,
         userCity: "Nashik",
         userState: "Maharashtra",
-
         delDate: req.body.delDate,
         delTime: req.body.delTime,
-
         payMode: req.body.payMode,
-
         txnId: req.user.providerID
     };
     req.session.orderDetails = orderDetailsReceived;
     req.session.checkedOut = req.body.checkedOut;
     // req.session.cart.totalPrice -- replace this with '1' in parseFloat(1) below line
-    /*var data = keys.payuTest.key+'|'+req.user.providerID+'|'+parseFloat(1).toFixed(2)+'|RedginiCakeAndPastryNashik|'+req.body.firstname+'|'+req.body.email+'|||||||||||'+keys.payuTest.salt;
-    var generatedHash = crypto.createHash('sha512').update(data).digest("hex");
-    var jsonParams = {
-    testKey : keys.payuTest.key,
-    genHash : generatedHash,
-    txnId : req.user.providerID,
-    amount : parseFloat(req.session.cart.totalPrice).toFixed(2),
-    firstname : req.body.firstname,
-    email : req.body.email,
-    phone : req.body.phone,
-    hashString: data,
-  }*/
+    /*
+        var data = keys.payuTest.key+'|'+req.user.providerID+'|'+parseFloat(1).toFixed(2)+'|RedginiCakeAndPastryNashik|'+req.body.firstname+'|'+req.body.email+'|||||||||||'+keys.payuTest.salt;
+        var generatedHash = crypto.createHash('sha512').update(data).digest("hex");
+        var jsonParams = {
+        testKey : keys.payuTest.key,
+        genHash : generatedHash,
+        txnId : req.user.providerID,
+        amount : parseFloat(req.session.cart.totalPrice).toFixed(2),
+        firstname : req.body.firstname,
+        email : req.body.email,
+        phone : req.body.phone,
+        hashString: data,
+    }*/
+    if (req.body.refCode == "") {
+    } else {
+        User.findOneAndUpdate(
+            { myRefCode: req.body.refCode },
+            { $inc: { myRefCodeCount: 1 } },
+            { new: true },
+            function(err, user) {
+                if (!err) {
+                    let refCodePersonName = user.username;
+                    let refCodePersonMail = user.email;
+                    let whoUsed = req.user.username;
+                    mailer.refCodeUsedMail(
+                        refCodePersonName,
+                        refCodePersonMail,
+                        whoUsed
+                    );
+                } else {
+                    console.log(err);
+                }
+            }
+        );
+    }
     return res.redirect("/order");
     /*if(req.body.payMode == 'payumoney'){
     res.render('paymentInProcess', {jsonParams:jsonParams});

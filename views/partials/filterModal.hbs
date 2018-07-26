@@ -2,7 +2,9 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header danger-color">
-                <h5 class="modal-title" id="filterModalLabel" style="color:white"><b>Choose shop & category !</b></h5>
+                <h5 class="modal-title" id="filterModalLabel" style="color:white">
+                    <b>Choose shop & category !</b>
+                </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" style="color:white">&times;</span>
                 </button>
@@ -10,53 +12,54 @@
             <form action="/products/filter" method="POST">
                 <div class="modal-body">
                     <input type="hidden" name="_csrf" value="{{csrfToken}}">
-                        <div class="row justify-content-center">
-                            <div class="col-10 filterPart">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="chooseCity">City</label>
-                                    </div>
-                                    <select class="custom-select" id="chooseCity" name="chooseCity">
-                                        <option value="nsk">Nashik</option>
-                                    </select>
-                                </div>        
+                    <div class="row justify-content-center">
+                        <div class="col-10 filterPart">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="chooseCity">City</label>
+                                </div>
+                                <select class="custom-select" id="chooseCity" name="chooseCity">
+                                    <option value="nsk">Nashik</option>
+                                </select>
                             </div>
-                            <div class="col-10 filterPart">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="chooseCakeShopOrMaker">Cake shop/maker</label>
-                                    </div>
-                                    <select class="custom-select" id="chooseCakeShopOrMaker" name="chooseCakeShopOrMaker">
-                                        {{#each cakeBrands}}
-                                            {{#each this}}
-                                                <option value="{{this.brandId}}">{{this.brandName}}</option>
-                                            {{/each}}
-                                        {{/each}}
-                                    </select>
-                                </div> 
-                            </div>
-                            <div class="col-10 filterPart">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="chooseCategory">Category</label>
-                                    </div>
-                                    <select class="custom-select" id="chooseCategory" name="chooseCategory">
-                                        {{#each categoryList}}
-                                            {{#each this}}
-                                                <option value="{{this.catId}}">{{this.name}}</option>
-                                            {{/each}}
-                                        {{/each}}
-                                    </select>
-                                </div> 
-                            </div>
-                            {{!-- <div class="col-md-2 col-sm-6 col-12 filterPart">
-                                <button id="applyFiltersBtn" type="submit" class="btn btn-sm btn-outline-danger"><b>Show cakes !</b></button>
-                            </div> --}}
                         </div>
+                        <div class="col-10 filterPart">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="chooseCakeShopOrMaker">Cake shop/maker</label>
+                                </div>
+                                <select class="custom-select" id="chooseCakeShopOrMaker" name="chooseCakeShopOrMaker">
+                                    {{#each cakeBrands}} {{#each this}}
+                                    <option value="{{this.brandId}}">{{this.brandName}}</option>
+                                    {{/each}} {{/each}}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-10 filterPart">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="chooseCategory">Category</label>
+                                </div>
+                                <select class="custom-select" id="chooseCategory" name="chooseCategory">
+                                    {{#each categoryList}} {{#each this}}
+                                    <option value="{{this.catId}}">{{this.name}}</option>
+                                    {{/each}} {{/each}}
+                                </select>
+                            </div>
+                        </div>
+                        {{!--
+                        <div class="col-md-2 col-sm-6 col-12 filterPart">
+                            <button id="applyFiltersBtn" type="submit" class="btn btn-sm btn-outline-danger">
+                                <b>Show cakes !</b>
+                            </button>
+                        </div> --}}
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">Close</button>
-                    <button id="applyFiltersBtn" type="submit" class="btn btn-sm btn-outline-danger"><b>Show cakes !</b></button>
+                    <button id="applyFiltersBtn" type="submit" class="btn btn-sm btn-outline-danger">
+                        <b>Show cakes !</b>
+                    </button>
                 </div>
             </form>
         </div>

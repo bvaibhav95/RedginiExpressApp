@@ -1,4 +1,4 @@
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,73 +11,86 @@
     <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.structure.min.css">
     <link rel="stylesheet" href="/stylesheets/dependencies/jquery-ui.theme.min.css">
     <link rel="stylesheet" href="/stylesheets/dependencies/pickaday.css">
-    <link rel="stylesheet" href="/stylesheets/error.css"/>
-    <link rel="stylesheet" href="/stylesheets/header.css"/>
-    <link rel="stylesheet" href="/stylesheets/footer.css"/>
-    <link rel="stylesheet" href="/stylesheets/socialLogin.css"/>
-    <link rel="stylesheet" href="/stylesheets/index.css"/>
-    <link rel="stylesheet" href="/stylesheets/partners.css"/>
+    <link rel="stylesheet" href="/stylesheets/error.css" />
+    <link rel="stylesheet" href="/stylesheets/header.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css" />
+    <link rel="stylesheet" href="/stylesheets/socialLogin.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/partners.css" />
     <link rel="stylesheet" href="/stylesheets/policies.css">
-    <link rel="stylesheet" href="/stylesheets/products.css"/>
+    <link rel="stylesheet" href="/stylesheets/products.css" />
     <link rel="stylesheet" href="/stylesheets/checkout.css">
-    <link rel="stylesheet" href="/stylesheets/final.css"/>
-    <link rel="stylesheet" href="/stylesheets/shoppingCart.css"/>
+    <link rel="stylesheet" href="/stylesheets/final.css" />
+    <link rel="stylesheet" href="/stylesheets/shoppingCart.css" />
     <link rel="stylesheet" href="/stylesheets/userProfile.css">
-  </head>
+</head>
+
 <body id="final">
-    {{>header}}
-    {{>orderCancel}}
+    {{>header}} {{>orderCancel}}
     <div class="container" style="margin-top:150px;">
-      <div class="row" style="margin-top:50px">
-      <div class="col-md-8 col-sm-12 col-xs-12">
-         <div class="card z-depth-1-half" id="frame">
-            <h1 id="thankYou">THANK YOU...</h1>
-            {{!-- <h5 id="orderNo">Order number : #NSK007</h5> --}}
-            <p id="msg">We have received your order and it has been confirmed. We will give you confirmation call as soon as possible. You will receive an email confirmation shortly regarding the order. </p>
-             <p id="delTime"><i class="far fa-clock"></i></i>&nbsp;Delivery time and date:&nbsp;&nbsp;</p>
-             <p id="address">{{orderDetails.delTime}}&nbsp;<b>|</b>&nbsp;{{orderDetails.delDate}}</p>
-             <p id="delAddress"><i class="fas fa-home"></i>&nbsp;Delivery address:</p>
-             <p id="address">{{orderDetails.userAddressLine1}}, {{orderDetails.userAddressLine2}}, {{orderDetails.userAddressLine3}}, Nashik, Maharashtra</p>
-             <div class="row">
-                 <div class="col-md-6 col-sm-6 col-xs-6"><a href="/products/blackforest"><button class="btn btn-sm btn-danger shopBtn">Place&nbsp;&nbsp;new&nbsp;&nbsp;order&nbsp;&nbsp;here!</button></a></div>
-                 <div class="col-md-6 col-sm-6 col-xs-6"><button class="btn btn-sm btn-danger shopBtn" data-toggle="modal" data-target="#changeOrCancel">Order&nbsp;&nbsp;change&nbsp;/&nbsp;cancellation?</button></div>
-             </div>
-         </div>
-      </div>
-      
-      <div class="col-md-4 col-sm-12 col-xs-12">
-         <div class="card z-depth-1-half" id="frame">
-         <h3 id="orderHeading" class="danger-color">My order summary</h3>
-            <div id="summaryOfItems">
-                <div id="listHeader" class="row">
-                    <div class="col-5">Product</div>
-                    <div class="col-3">Qty</div>
-                    <div class="col-4">Net Cost</div>
-                </div>
-                <hr style="background-color:#c9c9c9">
-                {{#each cart.items}}
-                    <div class="row listItems">
-                        <div class="col-5">{{this.item.name}}</div>
-                        <div class="col-3">{{this.pdtQty}}<small> ({{this.pdtWt}}Kg)</small></div>
-                        <div class="col-4">Rs. {{this.netPrice}}</div>
+        <div class="row" style="margin-top:50px">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <div class="card z-depth-1-half" id="frame">
+                    <h1 id="thankYou">THANK YOU...</h1>
+                    {{!--
+                    <h5 id="orderNo">Order number : #NSK007</h5> --}}
+                    <p id="msg">We have received your order and it has been confirmed. We will give you confirmation call as soon as
+                        possible. You will receive an email confirmation shortly regarding the order. </p>
+                    <p id="delTime">
+                        <i class="far fa-clock"></i>
+                        </i>&nbsp;Delivery time and date:&nbsp;&nbsp;</p>
+                    <p id="address">{{orderDetails.delTime}}&nbsp;
+                        <b>|</b>&nbsp;{{orderDetails.delDate}}</p>
+                    <p id="delAddress">
+                        <i class="fas fa-home"></i>&nbsp;Delivery address:</p>
+                    <p id="address">{{orderDetails.userAddressLine1}}, {{orderDetails.userAddressLine2}}, {{orderDetails.userAddressLine3}},
+                        Nashik, Maharashtra</p>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <a href="/products/blackforest">
+                                <button class="btn btn-sm btn-danger shopBtn">Place&nbsp;&nbsp;new&nbsp;&nbsp;order&nbsp;&nbsp;here!</button>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <button class="btn btn-sm btn-danger shopBtn" data-toggle="modal" data-target="#changeOrCancel">Order&nbsp;&nbsp;change&nbsp;/&nbsp;cancellation?</button>
+                        </div>
                     </div>
-                {{/each}}
-                <hr style="background-color:#c9c9c9">
-                <div class="row totalItems">
-                    <div class="col-5">Total</div>
-                    <div class="col-3">{{cart.totalQty}}</div>
-                    <div class="col-4">Rs.{{cart.totalPrice}}</div>
                 </div>
             </div>
 
-         </div>
-      </div>
-     </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="card z-depth-1-half" id="frame">
+                    <h3 id="orderHeading" class="danger-color">My order summary</h3>
+                    <div id="summaryOfItems">
+                        <div id="listHeader" class="row">
+                            <div class="col-5">Product</div>
+                            <div class="col-3">Qty</div>
+                            <div class="col-4">Net Cost</div>
+                        </div>
+                        <hr style="background-color:#c9c9c9"> {{#each cart.items}}
+                        <div class="row listItems">
+                            <div class="col-5">{{this.item.name}}</div>
+                            <div class="col-3">{{this.pdtQty}}
+                                <small> ({{this.pdtWt}}Kg)</small>
+                            </div>
+                            <div class="col-4">Rs. {{this.netPrice}}</div>
+                        </div>
+                        {{/each}}
+                        <hr style="background-color:#c9c9c9">
+                        <div class="row totalItems">
+                            <div class="col-5">Total</div>
+                            <div class="col-3">{{cart.totalQty}}</div>
+                            <div class="col-4">Rs.{{cart.totalPrice}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br><br>
-    {{>footer}}
+    <br>
+    <br> {{>footer}}
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>  
-  </body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+</body>

@@ -30,10 +30,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
+
                 <form action="/final" method="POST">
+
                     <input type="hidden" name="_csrf" value="{{csrfToken}}">
                     <input type="hidden" name="checkedOut" value="1">
                     <div class="card shadow_depth_1" id="checkout_details">
+                        <br>
+                        <div style="display: {{ownRefCode}}" id="ownRefCodeAlert" class="alert alert-danger" role="alert">
+                            <b>You can't enter own referral code!</b>
+                        </div>
+                        <div style="display: {{isValidRefCode}}" id="invalidRefCodeAlert" class="alert alert-danger" role="alert">
+                            <b>Invalid referral code!</b>
+                        </div>
                         <div class="">
                             <h6>
                                 <i class="fa fa-check-circle" aria-hidden="true"></i> Specific about order</h6>
@@ -41,7 +50,7 @@
                                 <label for="refCode">
                                     <b>Enter Referral code and get Rs.50-100/- CASHBACK (no terms & conditions)</b>
                                 </label>
-                                <input type="text" class="form-control form-control-sm" id="refCode" value="" name="refCode">
+                                <input type="text" class="form-control form-control-sm" id="refCode" name="refCode" value="">
                             </div>
                             <div class="form-group">
                                 <label for="msgOnCake">Message on cakes or extra comment for us</label>
