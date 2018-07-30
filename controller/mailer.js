@@ -120,7 +120,13 @@ module.exports = {
         );
     },
 
-    refCodeUsedMail: function(refCodePersonName, refCodePersonMail, whoUsed) {
+    refCodeUsedMail: function(
+        refCodePersonName,
+        refCodePersonMail,
+        whoUsed,
+        cashbackAmount,
+        cashbackPhone
+    ) {
         let transporter = nodemailer.createTransport({
             host: "smtp.zoho.com",
             port: 465,
@@ -145,12 +151,14 @@ module.exports = {
                 var template = handlebars.compile(html);
                 var replacements = {
                     refCodePersonName: refCodePersonName,
-                    whoUsed: whoUsed
+                    whoUsed: whoUsed,
+                    cashbackAmount: cashbackAmount,
+                    cashbackPhone: cashbackPhone
                 };
                 var mailContent = template(replacements);
                 var mailOptions = {
                     from: '"Referral code used! " <support@redgini.com>',
-                    to: refCodePersonMail,
+                    to: "help@redgini.com, " + refCodePersonMail,
                     subject: "Redgini | Referral code",
                     html: mailContent
                 };

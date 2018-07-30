@@ -246,6 +246,8 @@ router.post("/final", isOwnRefCode, isValidRefCode, function(req, res, next) {
     }*/
     if (req.body.refCode == "") {
     } else {
+        req.session.cart.discountedPrice = req.session.cart.totalPrice * 0.1;
+        req.session.cart.netTotal = req.session.cart.totalPrice * 0.9;
         User.findOneAndUpdate(
             { myRefCode: req.body.refCode },
             { $inc: { myRefCodeCount: 1 } },
@@ -258,7 +260,9 @@ router.post("/final", isOwnRefCode, isValidRefCode, function(req, res, next) {
                     mailer.refCodeUsedMail(
                         refCodePersonName,
                         refCodePersonMail,
-                        whoUsed
+                        whoUsed,
+                        req.session.cart.discountedPrice,
+                        user.phone
                     );
                 } else {
                     console.log(err);

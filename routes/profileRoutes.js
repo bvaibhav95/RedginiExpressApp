@@ -36,12 +36,16 @@ router.get("/my-referral-code", authCheck, function(req, res, next) {
     });
 });
 
-router.get("/generate-ref-code", function(req, res, next) {
+router.get("/generate-ref-code/:phone", function(req, res, next) {
     User.findOneAndUpdate(
         { providerID: req.user.providerID },
         {
             $set: {
-                myRefCode: req.user.email.substr(0, req.user.email.indexOf("@"))
+                myRefCode: req.user.email.substr(
+                    0,
+                    req.user.email.indexOf("@")
+                ),
+                phone: req.params.phone
             }
         },
         { new: true },
