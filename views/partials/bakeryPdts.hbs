@@ -1,51 +1,59 @@
-{{#if pdts.[0]}}
-{{#each pdts}}
-    <div class="row justify-content-start" style="margin: 10px 0px 10px 0px;">
-      {{#each this}}
-        <div class="col-6 col-md-4 col-sm-4 productContainer">
-            <div class="card collection-card cake_images">
-                <div class="view overlay zoom">
-                    <img src="http://res.cloudinary.com/ddrrpmcto/image/upload/v1531819816/redgini-express-app/bakerypdts/{{this.pdtId}}.jpg" class="" alt="">
-                    <a><div class="mask rgba-white-slight"></div></a>
+{{#if pdts.[0]}} {{#each pdts}}
+<div class="row justify-content-start" style="margin: 10px 0px 10px 0px;">
+    {{#each this}}
+    <div class="col-6 col-md-4 col-sm-4 productContainer">
+        <div class="card collection-card cake_images">
+            <div class="view overlay zoom">
+                <img src="https://res.cloudinary.com/ddrrpmcto/image/upload/v1531819816/redgini-express-app/bakerypdts/{{this.pdtId}}.jpg"
+                    class="" alt="">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col-md-7 col-12">
+                        <p class="cake_name">
+                            <b>{{this.name}}</b>&nbsp;&nbsp;
+                            <i class="fas fa-check-circle green-text"></i>
+                        </p>
+                    </div>
+                    <div class="col-md-5 col-12">
+                        <p class="wtDesc">
+                            <small id="specificWt{{this.pdtId}}" style="">{{this.availableWeights.[0]}}&nbsp;</small> kg -
+                            <i class="fas fa-rupee-sign"></i>&nbsp;
+                            <small id="specificWtCost{{this.pdtId}}" style="">{{this.minWtCost}}</small>
+                        </p>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                      <div class="col-md-7 col-12">
-                          <p class="cake_name"><b>{{this.name}}</b>&nbsp;&nbsp;<i class="fas fa-check-circle green-text"></i></p>
-                      </div>
-                      <div class="col-md-5 col-12">
-                        <p class="wtDesc"><small id="specificWt{{this.pdtId}}" style="">{{this.availableWeights.[0]}}&nbsp;</small> kg - <i class="fas fa-rupee-sign"></i>&nbsp;<small id="specificWtCost{{this.pdtId}}" style="">{{this.minWtCost}}</small></p>
-                      </div>
-                    </div> 
-                    <div class="row justify-content-center" style="margin-top:5px;">
-                      <div class="col-md-6 col-12">
+                <div class="row justify-content-center" style="margin-top:5px;">
+                    <div class="col-md-6 col-12">
                         <div class="col-12">
-                          <button id="addToCartPdt{{this.pdtId}}" onclick="addToCartPdt(this.id)" type="submit" class="addTocartBtn btn customColorBtn btn-sm px-1">Add to cart</button>
-                      </div>
-                      </div>
-                      <div class="col-md-6 col-12">
-                          <div class="input-group input-group-sm">
+                            <button id="addToCartPdt{{this.pdtId}}" onclick="addToCartPdt(this.id)" type="submit" class="addTocartBtn btn customColorBtn btn-sm px-1">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="input-group input-group-sm">
                             <select class="custom-select custom-select-sm weightChange" id="pdtWeight{{this.pdtId}}" onchange="updatePdtCost(this.id)">
-                              {{#each this.availableWeights}}
+                                {{#each this.availableWeights}}
                                 <option value="{{this}}">{{this}}</option>
-                              {{/each}}
-                            </select> 
+                                {{/each}}
+                            </select>
                             <div class="input-group-append">
-                              <label class="input-group-text" for="selectPdtWt">Kg</label>
+                                <label class="input-group-text" for="selectPdtWt">Kg</label>
                             </div>
-                          </div>
-                      </div>
-                    </div> 
-                    <div class="dropdown-divider"></div>
-                    <p class="availabilityDetails">Order before - {{this.availability}}</p>
-                    <div class="dropdown-divider"></div>
-                    <p class="makerName">Bakers - {{this.maker}}</p>
+                        </div>
+                    </div>
                 </div>
+                <div class="dropdown-divider"></div>
+                <p class="availabilityDetails">Order before - {{this.availability}}</p>
+                <div class="dropdown-divider"></div>
+                <p class="makerName">Bakers - {{this.maker}}</p>
             </div>
         </div>
-      {{/each}}
     </div>
-{{/each}}
-{{else}}
+    {{/each}}
+</div>
+{{/each}} {{else}}
 <p class="animated bounce 3s" id="notAvailableHeader">Aaah...Not available! Choose other Shop/Bakers...</p>
 {{/if}}
