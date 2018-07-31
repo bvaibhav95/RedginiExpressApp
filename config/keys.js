@@ -21,7 +21,7 @@ module.exports = {
     dbURI: "mongodb://bvaibhav.95:1234qwer@ds145193.mlab.com:45193/redginitest"
   },
   msg91: {
-    authKey: "199764AQ6o6VGO839V5a9453a2"
+    authKey: "229165AVF6T1JfwaD5b6071f5"
   },
   cookieSession: {
     cookieKey: "%ginie7102.Red"
