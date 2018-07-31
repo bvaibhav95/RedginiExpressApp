@@ -32,8 +32,10 @@
             <div class="col-md-3 col-sm-3">
                 <div class="align-self-center" style="flex-direction: column">
                     <p style="text-align:center">
+                        {{#if user.profilePic}}
+                        <img id="userPic" class="rounded-circle testimonials_img" src="{{user.profilePic}}" alt="user3" width="80" height="80" /> {{else}}
                         <img id="userPic" class="rounded-circle testimonials_img" src="https://res.cloudinary.com/ddrrpmcto/image/upload/redgini-express-app/user.png"
-                            alt="user3" width="80" height="80" />
+                            alt="user3" width="80" height="80" /> {{/if}}
                     </p>
                     <p id="username">{{user.username}}</p>
                 </div>

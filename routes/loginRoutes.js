@@ -57,14 +57,15 @@ router.get("/google/redirect", passport.authenticate("google"), function(
 router.get(
     "/facebook",
     passport.authenticate("facebook", {
-        authType: "rerequest",
-        scope: ["user_friends", "manage_pages"]
+        authType: "reauthorize"
+        // https, reauthenticate, rerequest, reauthorize
+        // scope: ["user_birthday", "user_friends"]
     })
 );
 
 router.get(
     "/facebook/redirect",
-    passport.authenticate("facebook", { failureRedirect: "/login" }),
+    passport.authenticate("facebook", { failureRedirect: "/auth/login" }),
     function(req, res) {
         if (req.session.oldUrl) {
             var oldUrl = req.session.oldUrl;

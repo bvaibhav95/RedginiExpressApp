@@ -33,8 +33,10 @@
             <div class="col-md-3 col-sm-3">
                 <div class="align-self-center" style="flex-direction: column">
                     <p style="text-align:center">
+                        {{#if user.profilePic}}
+                        <img id="userPic" class="rounded-circle testimonials_img" src="{{user.profilePic}}" alt="user3" width="80" height="80" /> {{else}}
                         <img id="userPic" class="rounded-circle testimonials_img" src="https://res.cloudinary.com/ddrrpmcto/image/upload/redgini-express-app/user.png"
-                            alt="user3" width="80" height="80" />
+                            alt="user3" width="80" height="80" /> {{/if}}
                     </p>
                     <p id="username">{{user.username}}</p>
                 </div>
@@ -80,7 +82,7 @@
                     <p id="noOrderHistory">You haven't placed any order</p>
                     <div class="container" id="emptyCartMsg">
                         <div class="row justify-content-center">
-                            <img id="emptyListPic" src="/images/emptycart.jpg" alt="empty shopping cart">
+                            <img id="emptyListPic" src="https://res.cloudinary.com/ddrrpmcto/image/upload/redgini-express-app/emptycart.jpg" alt="empty shopping cart">
                             <div class="w-100"></div>
                             <a id="startShopping" href="/products/cakes" class="btn btn-danger btn-sm" type="button">Order your first cake!</a>
                         </div>

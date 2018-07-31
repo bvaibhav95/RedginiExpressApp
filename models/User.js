@@ -8,7 +8,8 @@ var userSchema = new Schema({
     email: { type: String, required: true },
     phone: { type: String, required: false },
     myRefCode: { type: String, required: false },
-    myRefCodeCount: { type: Number, required: false, default: 0 }
+    myRefCodeCount: { type: Number, required: false, default: 0 },
+    profilePic: { type: String, required: false }
 });
 
 module.exports = mongoose.model("User", userSchema);
