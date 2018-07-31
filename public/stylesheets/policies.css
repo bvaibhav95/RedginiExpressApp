@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Harmattan|Pacifico|Roboto|Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500');
+@import url("https://fonts.googleapis.com/css?family=Allan|Arvo|Droid+Sans|Harmattan|Pacifico|Roboto|Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Anton|Comfortaa|Farsan|Francois+One|Fredoka+One|Oswald|Quicksand:500");
 
 /* font-family: 'Fredoka One', cursive;
 font-family: 'Quicksand', sans-serif;
@@ -8,103 +8,104 @@ font-family: 'Anton', sans-serif;
 font-family: 'Francois One', sans-serif;
 font-family: 'Comfortaa', cursive;
 font-family: 'Farsan', cursive; */
-html,body{
-	height: 100%;
+html,
+body {
+    height: 100%;
 }
-body{
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizelegibility;
-	color: #6c6f73;
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    color: #6c6f73;
 }
 
 /* Horizontal line styles */
 body#policies_page hr.style1:before {
-  display: block;
-  content: "";
-  height: 30px;
-  margin-top: -31px;
-  border-style: solid;
-  border-color: #8c8b8b;
-  border-width: 0 0 1px 0;
-  border-radius: 20px;
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
 body#policies_page hr.style2 {
-	height: 6px;
-	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+    height: 6px;
+    background: url(https://ibrahimjabbari.com/english/images/hr-12.png)
+        repeat-x 0 0;
     border: 0;
 }
-body#policies_page #header{
-  font-size: 40px;
-  font-family: 'Fredoka One', cursive;
-  margin-top: 100px;
-  text-align: center;
+body#policies_page #header {
+    font-size: 40px;
+    font-family: "Fredoka One", cursive;
+    margin-top: 100px;
+    text-align: center;
 }
-body#policies_page #desc{
-  font-family: 'Anton', sans-serif;
-  text-align: center;
-  margin-bottom: 30px;
+body#policies_page #desc {
+    font-family: "Anton", sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
 }
-body#policies_page #header_our_policies{
-  font-family: 'Oswald', sans-serif;
-  background-color: #cb202d;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  font-size: 25px;
-  border-radius: 5px;
-  padding: 10px 0px 10px 0px;
-}
-
-body#policies_page #policies_cake{
-  font-family: 'Francois One', sans-serif;
-  background-color:  #eaecee;
-  color: #454545;
-  font-size: 17px;
-  padding: 8px 0px 8px 10px;
+body#policies_page #header_our_policies {
+    font-family: "Oswald", sans-serif;
+    background-color: #cb202d;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
 }
 
-body#policies_page #policies_fruits_vegetables{
-  background-color:  #eaecee ;
-  color: #454545;
-  font-size: 17px;
-  padding: 8px 0px 8px 10px;
+body#policies_page #policies_cake {
+    font-family: "Francois One", sans-serif;
+    background-color: #eaecee;
+    color: #454545;
+    font-size: 17px;
+    padding: 8px 0px 8px 10px;
 }
 
-body#policies_page #policies_cake:hover, #policies_fruits_vegetables:hover{
-  background-color:  #eaecee;
-  color: #454545;
-  font-size: 17px;
-  padding: 8px 0px 8px 10px;
-	cursor: pointer;
+body#policies_page #policies_fruits_vegetables {
+    background-color: #eaecee;
+    color: #454545;
+    font-size: 17px;
+    padding: 8px 0px 8px 10px;
 }
 
-body#policies_page #main_categories_cake ul{
-  list-style-type:none;
-  margin-left: -30px;
+body#policies_page #policies_cake:hover,
+#policies_fruits_vegetables:hover {
+    background-color: #eaecee;
+    color: #454545;
+    font-size: 17px;
+    padding: 8px 0px 8px 10px;
+    cursor: pointer;
 }
 
-body#policies_page #main_categories_cake li{
-  padding: 5px 0px 5px 5px;
+body#policies_page #main_categories_cake ul {
+    list-style-type: none;
+    margin-left: -30px;
 }
 
+body#policies_page #main_categories_cake li {
+    padding: 5px 0px 5px 5px;
+}
 
 /*==========col-sm-3 styling..dropdown of the policies ends=========*/
 /*==========col-sm-9 styling...content of the policies ends=========*/
-body#policies_page .policy_content{
-	max-height: 500px;
-	overflow-y: scroll;
-	font-family: 'Comfortaa', cursive;
-	font-size: 15px;
+body#policies_page .policy_content {
+    max-height: 500px;
+    overflow-y: scroll;
+    font-family: "Comfortaa", cursive;
+    font-size: 15px;
 }
 
-body#policies_page .policy_content_header{
-  font-family: 'Francois One', sans-serif;
-	font-weight:bold;
-	margin:15px 0px 15px 0px;
-	text-decoration: underline;
+body#policies_page .policy_content_header {
+    font-family: "Francois One", sans-serif;
+    font-weight: bold;
+    margin: 15px 0px 15px 0px;
+    text-decoration: underline;
 }
 
-body#policies_page .link:hover{
-	cursor: pointer;
+body#policies_page .link:hover {
+    cursor: pointer;
 }
-
