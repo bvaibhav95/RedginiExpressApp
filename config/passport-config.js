@@ -22,6 +22,7 @@ passport.use(
             clientSecret: keys.google.clientSecret
         },
         function(accessToken, refreshToken, profile, done) {
+            console.log(profile);
             User.findOne({ providerID: profile.id }).then(function(
                 availableUser
             ) {
@@ -61,8 +62,8 @@ passport.use(
             callbackURL: "/auth/facebook/redirect",
             clientID: keys.facebook.clientID,
             clientSecret: keys.facebook.clientSecret,
-            profileFields: ["id", "email", "photos", "displayName"],
-            enableProof: true
+            profileFields: ["id", "email", "displayName", "photos"]
+            // enableProof: true
         },
         function(accessToken, refreshToken, profile, done) {
             console.log(profile);

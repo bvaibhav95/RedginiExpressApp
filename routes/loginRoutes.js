@@ -57,9 +57,9 @@ router.get("/google/redirect", passport.authenticate("google"), function(
 router.get(
     "/facebook",
     passport.authenticate("facebook", {
-        authType: "rerequest"
+        authType: "rerequest",
         // https, reauthenticate, rerequest, reauthorize
-        // scope: ["user_birthday", "user_friends"]
+        scope: ["email", "user_friends"]
     })
 );
 
