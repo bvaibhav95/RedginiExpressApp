@@ -86,10 +86,19 @@
                                                 <br>
                                                 <br>
                                             </li>
-                                            <li>To earn the
-                                                <b>cashback</b>, simply share this referral code with your friends, colleagues
-                                                and relatives using WhatsApp, Facebook & Instagram or anything !
+                                            <li id="refCodeMsg">
+                                                Order cake online on
+                                                <code style="color:#c11e2b">https://redgini.com</code> and use my referral code
+                                                <b style="font-size:15px">{{user.myRefCode}}</b> to get
+                                                <b style="font-size:15px">10% discount</b>
+                                                <br> with
+                                                <b style="font-size:15px">FREE HOME DELIVERY</b>
                                             </li>
+                                            <button id="copyToClipboardBtn" class="btn btn-sm btn-elegant waves-effect px-2" onclick="copyReferralCode()" data-clipboard-target="#refCodeMsg">
+                                                <b>Copy referral code
+                                                    <i class="fas fa-arrow-up"></i>
+                                                </b>
+                                            </button>
                                         </ul>
                                     </div>
                                     {{else}}
@@ -178,5 +187,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     <script type="text/javascript" src="/javascripts/userProfile.js"></script>
 </body>

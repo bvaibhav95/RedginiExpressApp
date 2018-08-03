@@ -67,7 +67,9 @@ body#userProfile #cashbackRules li {
     padding-bottom: 5px;
 }
 body#userProfile #showRefCodeWrapper {
-    /* display: flex; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 body#userProfile #refCodeText {
     font-family: "Quicksand", sans-serif;
@@ -86,11 +88,20 @@ body#userProfile #userRefCode {
     padding: 10px;
     border-radius: 5px;
 }
+body#userProfile #refCodeData {
+    justify-content: center;
+    align-items: center;
+}
 body#userProfile #refCodeData li {
     list-style: none;
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 13px;
+}
+body#userProfile #refCodeMsg {
+    text-align: center;
+    border: 1px solid #2d2d2d;
+    padding: 5px;
 }
 @media (max-width: 574px) {
     body#userProfile #emptyListPic {
