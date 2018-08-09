@@ -16,66 +16,66 @@ var authCheck = function(req, res, next) {
     }
 };
 
-router.get("/login", function(req, res, next) {
-    res.render("login/socialLogin", {
-        title: "Redgini | Social login",
-        show: "show",
-        cart: req.session.cart
-    });
-});
+// router.get("/login", function(req, res, next) {
+//     res.render("login/socialLogin", {
+//         title: "Redgini | Social login",
+//         show: "show",
+//         cart: req.session.cart
+//     });
+// });
 
-router.get("/logout", function(req, res, next) {
-    req.logout();
-    req.session = null;
-    res.redirect("/");
-});
+// router.get("/logout", function(req, res, next) {
+//     req.logout();
+//     req.session = null;
+//     res.redirect("/");
+// });
 
-router.get(
-    "/google",
-    passport.authenticate("google", {
-        scope: [
-            "https://www.googleapis.com/auth/userinfo.profile",
-            "https://www.googleapis.com/auth/userinfo.email"
-        ]
-    })
-);
+// router.get(
+//     "/google",
+//     passport.authenticate("google", {
+//         scope: [
+//             "https://www.googleapis.com/auth/userinfo.profile",
+//             "https://www.googleapis.com/auth/userinfo.email"
+//         ]
+//     })
+// );
 
-router.get("/google/redirect", passport.authenticate("google"), function(
-    req,
-    res,
-    next
-) {
-    if (req.session.oldUrl) {
-        var oldUrl = req.session.oldUrl;
-        req.session.oldUrl = null;
-        res.redirect(oldUrl);
-    } else {
-        res.redirect("/products/cakes");
-    }
-});
+// router.get("/google/redirect", passport.authenticate("google"), function(
+//     req,
+//     res,
+//     next
+// ) {
+//     if (req.session.oldUrl) {
+//         var oldUrl = req.session.oldUrl;
+//         req.session.oldUrl = null;
+//         res.redirect(oldUrl);
+//     } else {
+//         res.redirect("/products/cakes");
+//     }
+// });
 
-router.get(
-    "/facebook",
-    passport.authenticate("facebook", {
-        authType: "rerequest",
-        // https, reauthenticate, rerequest, reauthorize
-        scope: ["email", "user_friends"]
-    })
-);
+// router.get(
+//     "/facebook",
+//     passport.authenticate("facebook", {
+//         authType: "rerequest",
+//         // https, reauthenticate, rerequest, reauthorize
+//         scope: ["email", "user_friends"]
+//     })
+// );
 
-router.get(
-    "/facebook/redirect",
-    passport.authenticate("facebook", { failureRedirect: "/auth/login" }),
-    function(req, res) {
-        if (req.session.oldUrl) {
-            var oldUrl = req.session.oldUrl;
-            req.session.oldUrl = null;
-            res.redirect(oldUrl);
-        } else {
-            res.redirect("/products/cakes");
-        }
-    }
-);
+// router.get(
+//     "/facebook/redirect",
+//     passport.authenticate("facebook", { failureRedirect: "/auth/login" }),
+//     function(req, res) {
+//         if (req.session.oldUrl) {
+//             var oldUrl = req.session.oldUrl;
+//             req.session.oldUrl = null;
+//             res.redirect(oldUrl);
+//         } else {
+//             res.redirect("/products/cakes");
+//         }
+//     }
+// );
 
 module.exports = router;
 /*router.get('/mobile', function(req, res, next) {
